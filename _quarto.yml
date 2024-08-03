@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍"
+  title: "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍"
   navbar:
     left:
       - href: index.qmd
