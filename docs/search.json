@@ -39,7 +39,7 @@
     "href": "index.html#일시-및-장소",
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "일시 및 장소",
-    "text": "일시 및 장소\n\n2024년 8월 5일(월) ~ 9일(금) 오후 2~5시 총 5일\n10동 103호"
+    "text": "일시 및 장소\n\n2024년 8월 5일(월) ~ 9일(금) 오후 2~5시 총 5일\n서울대학교 사범대학 10동 103호"
   },
   {
     "objectID": "index.html#참가-혜택",
@@ -79,35 +79,35 @@
   {
     "objectID": "reference.html",
     "href": "reference.html",
-    "title": "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
+    "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "",
     "text": "Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund, 2023, R for Data Science: Import, Tidy, Transform, Visualize, and Model Data, 2nd edition, Boston: O’Reilly. \nBonnell, Jerry, and Mitsunori Ogihara. 2023. Exploring Data Science with R and the Tidyverse. 1st edition. Chapman; Hall/CRC.\nIrizarry, Rafael A. 2024. Introduction to Data Science: Data Wrangling and Visualization with R. 2nd edition, Boca Raton: CRC Press.\n한국알사용자회, 데이터 과학을 지탱하는 기본기, 웹북\n김기환, 2023, R 프로그래밍(개정판), 웹북"
   },
   {
     "objectID": "reference.html#데이터사이언스와-r",
     "href": "reference.html#데이터사이언스와-r",
-    "title": "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
+    "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "",
     "text": "Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund, 2023, R for Data Science: Import, Tidy, Transform, Visualize, and Model Data, 2nd edition, Boston: O’Reilly. \nBonnell, Jerry, and Mitsunori Ogihara. 2023. Exploring Data Science with R and the Tidyverse. 1st edition. Chapman; Hall/CRC.\nIrizarry, Rafael A. 2024. Introduction to Data Science: Data Wrangling and Visualization with R. 2nd edition, Boca Raton: CRC Press.\n한국알사용자회, 데이터 과학을 지탱하는 기본기, 웹북\n김기환, 2023, R 프로그래밍(개정판), 웹북"
   },
   {
     "objectID": "reference.html#쿼토-quarto",
     "href": "reference.html#쿼토-quarto",
-    "title": "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
+    "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "쿼토 Quarto",
     "text": "쿼토 Quarto\n\nQuarto 웹사이트\n한국알사용자회ㆍ이광춘, 2024, 챗GPT쿼토: 인공지능 시대 과학기술 저작 도구, 웹북"
   },
   {
     "objectID": "reference.html#샤이니-shiny",
     "href": "reference.html#샤이니-shiny",
-    "title": "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
+    "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "샤이니 Shiny",
     "text": "샤이니 Shiny\n\nShiny 웹사이트\nWickham, Hadley, 2021, Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Power by R, Sebastopol, CA: O’REILLY. (이영록 옮김, 2022, R 사용자를 위한 Shiny 마스터 가이드, 서울: 인사이트.)\nGranjon, David, 2022, Outstanding User Interfaces with Shiny, Boaca Raton: CRC Press.\nFay, Colin, Vincent Guyader, Sebastien Rochette, and Cervan Girard. 2022, Engineering Production-Grade Shiny Apps, Boca Raton: CRC Press."
   },
   {
     "objectID": "reference.html#시각화",
     "href": "reference.html#시각화",
-    "title": "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
+    "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "시각화",
     "text": "시각화\n\nWickham, Hadley. 2016. ggplot2: Elegant Graphics for Data Analysis. 2nd edition, Switzerland: Springer. (박진수 옮김, 2017. R로 분석한 데이터를 멋진 그래픽으로 ggplot2. 부천: 프리렉.)\nKabacoff, Robert, 2024, Modern Data Visualization with R, Boca Raton: CRC Press."
   },
