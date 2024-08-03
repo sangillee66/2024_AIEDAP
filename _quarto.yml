@@ -10,8 +10,11 @@ website:
         text: 프로그램 개요
       - href: material.qmd
         text: 강의 자료
+      - href: dashboard.qmd
+        text: 교수-학습 대시보드
       - href: reference.qmd
         text: 참고문헌
+
 
 format:
   html:

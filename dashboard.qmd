@@ -1,0 +1,12 @@
+---
+title: ""
+date-modified: last-modified
+---
+
+## 홈페이지형
+
+<https://sangillee.snu.ac.kr/dashboard_examples/>
+
+## 샤이니앱형
+
+<https://sangillee.shinyapps.io/Dashboard_Example/>
