@@ -1,0 +1,481 @@
+---
+title: |
+  | [Day 3]{style="color:coral;font-size:1em"} 
+  | [탐색적 데이터 분석]{style="font-size:1.2em"}
+author: 이상일(서울대학교 지리교육과 교수)
+date: 2024-08-07
+format: 
+  revealjs:
+    logo: aiedap_logo.png
+    footer: "사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    transition: fade
+    transition-speed: fast
+    margin: 0.05
+    # smaller: false
+    # scrollable: false
+    code-link: true
+    code-overflow: scroll
+    slide-number: true
+    pointer:
+      pointerSize: 20
+      color: red
+    menu: true
+    embed-resources: false
+    theme: [default, custom.scss]
+    revealjs-plugins:
+      - pointer
+code-link: true
+execute: 
+  warning: false
+  error: false
+  freeze: auto  
+dpi: 300
+editor: visual
+# suppress-bibliography: true
+editor_options: 
+  chunk_output_type: console
+---
+
+## 데이터사이언스 과정의 심장
+
+![<https://r4ds.hadley.nz/intro>](images/clipboard-4075247197.png){fig-align="center"}
+
+## 탐색적 데이터 분석 {.smaller}
+
+-   탐색적 데이터 분석은 데이터와의 끝임없는 상호작용을 통해 의미있는 결과물을 얻어내는 과정을 의미한다. 데이터사이언스가 데이터로부터 이해, 지식, 통찰력을 획득하는 과정이라고 했을 때, 탐색적 데이터 분석은 [데이터사이언스의 심장]{style="color:coral"}이라 해도 과언이 아니다. 상호작용은 데이터와의 질의응답의 연쇄과정을 의미한다. 의미있는 질문에 답을 얻기 위해서는 거의 반드시 데이터를 변형하거나 시각화해야만 한다.
+
+-   데이터 변형과 데이터 시각화는 개별적으로 탐색적 데이터 분석에 기여한다. 데이터 변형은 데이터를 다른 각도로 바라볼 수 있게 해주고 다양한 요약 통계값을 산출해 준다. 데이터 시각화는 데이터에 차원을 부가함으로써 시각화 되지 않았다면 발견할 수 없었던 것을 발견할 수 있게 해준다.
+
+## 탐색적 데이터 분석 {.smaller}
+
+-   [데이터 변형에서 데이터 시각화로 이어지는 시퀀스]{style="color:coral"}가 탐색적 데이터 분석의 핵심적인 방법론이다. 데이터 변형의 궁극적인 목적은 바로 데이터 시각화를 위한 준비이다. 특정한 형태의 시각화를 위해서는 특정한 형태의 데이터가 필수적이고, 그것이 이해, 지식, 통찰력의 획득으로 나아가게 해주는 주된 경로이다.
+
+-   데이터 [시각화]{style="color:coral"}의 두 가지 목적은 [탐색]{style="color:coral"}과 [커뮤니케이션]{style="color:coral"}이다. 우리가 데이터 시각화를 하는 첫번째 목적은 데이터에 대한 질문에 답을 찾기 위해서이다. 우리가 데이터를 시각화하는 두 번째 목적은 우리가 발견한 것을 다른 사람들과 ‘잘’ 커뮤니케이션하기 위해서이다.
+
+## 탐색적 데이터 분석 {.smaller}
+
+> 대륙별 최대국(인구가 가장 많은 나라)이 소속 대륙 전체에서 차지하는 비중이 어느 정도이고 대륙별로 어느 정도의 차이가 있는지, 그리고 대륙별 최대국의 비중이 시간이 지남에 따라 어떠한 변화 양상을 보여주고 있고, 그러한 양상에 대륙별 차이가 있는지의 여부
+
+::: panel-tabset
+## Data
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(gapminder)
+gapminder
+```
+
+## Graph
+
+```{r}
+#| echo: false
+#| fig-width: 5.5
+#| fig-asp: 0.618
+gapminder |> 
+  group_by(year, continent) |> 
+  mutate(
+    sum_cont = sum(pop),
+    country_prop = pop * 100 / sum_cont
+  ) |> 
+  slice_max(country_prop) |> 
+  ggplot() +
+  geom_line(aes(x = year, y = country_prop, color = continent), linewidth = 1) +
+  labs(x = "Year", y = "% of Population", color = "Continents")
+```
+
+## Code
+
+```{r}
+#| eval: false
+#| echo: true
+gapminder |> 
+  group_by(year, continent) |> 
+  mutate(
+    sum_cont = sum(pop),
+    country_prop = pop * 100 / sum_cont
+  ) |> 
+  slice_max(country_prop) |> 
+  ggplot() +
+  geom_line(aes(x = year, y = country_prop, color = continent), linewidth = 1) +
+  labs(x = "Year", y = "% of Population", color = "Continents") 
+```
+:::
+
+# [데이터 변형하기]{style="color:coral"}
+
+## `dplyr` 패키지
+
+![<https://dplyr.tidyverse.org/>](images/clipboard-3059639685.png){fig-align="center"}
+
+## `dplyr` 기초
+
+-   첫 번째 아규먼트는 항상 [데이터 프레임]{style="color:coral"}이다.
+
+-   그 다음 아규먼트(들)는 데이터 변형에 결부되는 [변수]{style="color:coral"}(들)를 지정한다 .
+
+-   산출물은 항상 [데이터 프레임]{style="color:coral"}이다.
+
+## `dplyr` 함수의 유형
+
+-   행(rows) 함수: 행에 적용되는 함수, 즉 행의 변화를 야기하는 함수
+
+-   열(columns) 함수: 열에 적용되는 함수, 즉 열의 변화를 야기하는 함수
+
+-   그룹(groups) 함수: 그룹에 적용되는 함수
+
+-   테이블(tables) 함수: 테이블 전체에 적용되는 함수
+
+## 
+
+![](images/clipboard-2728894062.png){fig-align="center"}
+
+## 행 함수: 네 개의 주요 함수
+
+-   `filter()`: 특정 변수(들)에 의거한 조건을 만족하는 행(들)을 추출
+
+-   `arrange()`: 특정 변수(들)에 의거해 행(들)의 순서를 변경
+
+-   `distinct()`: 특정 변수(들)에 의거해 (중복을 제거한) 고유한 행(들)을 추출
+
+-   `slice()`: `filter()` 함수처럼 특정 행(들)을 추출
+
+    -   특정 변수와 관계 없이, 행의 위치에 의거해 특정 행(들)을 추출
+
+    -   특정 변수에 따른, 행의 위치에 의거해 행(들)을 추출
+
+## 행 함수 1: `filter()`
+
+![](images/clipboard-565233092.png)
+
+## 행 함수 1: `filter()`
+
+![](images/clipboard-2723506167.png)
+
+## 행 함수 1: `filter()`
+
+![](images/clipboard-409657186.png){fig-align="center"}
+
+## 행 함수 2: `arrange()`
+
+![](images/clipboard-3074305878.png)
+
+## 행 함수 2: `arrange()`
+
+![](images/clipboard-1840428146.png){fig-align="center"}
+
+## 행 함수 3: `distinct()`
+
+![](images/clipboard-3425030843.png)
+
+## 행 함수 3: `distinct()`
+
+![](images/clipboard-370656711.png){fig-align="center"}
+
+## 행 함수 4: `slice()`
+
+![](images/clipboard-1830339037.png)
+
+## 행 함수 4: `slice()`
+
+![](images/clipboard-1031657585.png){fig-align="center"}
+
+## 열 함수: 네 개의 주요 함수
+
+-   `select()`: 변수(들) 중 일부를 추출
+
+-   `mutate()`: 변수(들)를 변형해 새로운 변수를 생성
+
+-   `rename()`: 변수(들)의 이름을 변경
+
+-   `relocate()`: 변수(들)의 위치(순서)를 변경
+
+## 열 함수 1: `select()`
+
+![](images/clipboard-3651470406.png)
+
+## 열 함수 1: `select()`
+
+![](images/clipboard-2864021695.png){fig-align="center"}
+
+## 열 함수 2: `mutate()`
+
+![](images/clipboard-1943055285.png)
+
+## 
+
+![](images/clipboard-417835741.png){fig-align="center"}
+
+## 열 함수 3: `rename()`
+
+![](images/clipboard-654990545.png)
+
+## 
+
+![](images/clipboard-3953189394.png){fig-align="center"}
+
+## 열 함수 3: `rename()`
+
+![](images/clipboard-3019777280.png){fig-align="center"}
+
+## 열 함수 4: `relocate()`
+
+![](images/clipboard-1813959402.png)
+
+## 
+
+![](images/clipboard-2066290782.png){fig-align="center"}
+
+## 그룹 함수: 네 개의 주요 함수
+
+-   `group_by()`: 변수(들)에 의거해 전체 행(들)을 그룹으로 분할
+
+-   `summarize()`: 그룹별로 변수(들)의 통계량을 산출하여 새로운 변수(들)로 저장
+
+-   `count()`: 그룹별로 해당 관측개체의 빈도수를 계산
+
+-   `across()`: 그룹별로 여러 변수에 걸쳐 동일한 통계량을 산출하고 새로운 변수들로 저장
+
+## 그룹 함수 1: `group_by()`
+
+![](images/clipboard-1542658472.png)
+
+## 그룹 함수 1: `group_by()`
+
+![](images/clipboard-1927744566.png){fig-align="center"}
+
+## 그룹 함수 2: `summarize()`
+
+![](images/clipboard-1592063625.png)
+
+## 그룹 함수 1 + 2: `group_by()` + `summarize()`
+
+![](images/clipboard-1318711495.png)
+
+## 그룹 함수 1 + 2: `group_by()` + `summarize()`
+
+![](images/clipboard-293917068.png){fig-align="center"}
+
+## 그룹 함수 3: `count()`
+
+![](images/clipboard-2066641215.png)
+
+## 그룹 함수 3: `count()`
+
+![](images/clipboard-171754169.png){fig-align="center"}
+
+## 그룹 함수 4: `across()`
+
+![](images/clipboard-2112397168.png)
+
+## 
+
+![](images/clipboard-2406373084.png){fig-align="center"}
+
+# [데이터 시각화하기]{style="color:coral"}
+
+## `ggplot2` 패키지
+
+![<https://ggplot2.tidyverse.org/>](images/clipboard-3146270133.png){fig-align="center"}
+
+## Grammar of graphics
+
+![](images/clipboard-3968277018.png){fig-align="center"}
+
+## `ggplot2`의 8대 구성 요소
+
+![<https://initiation.doana-r.com/06-ggplot2#1>](https://sangillee.snu.ac.kr/data_science/images/clipboard-3014854163.png){fig-align="center"}
+
+## 심미성과 기하
+
+-   심미성(aesthetics) 혹은 심미성 매핑(aesthetic mapping)
+
+    -   그래프의 외견을 규정
+
+    -   시각 변수 혹은 속성: color, size, shape 등
+
+-   기하(geometries) 혹은 기하 객체(geometric objects)
+
+    -   그래프의 전체 구조 혹은 형식을 규정
+
+    -   그래프의 유형: bar chart, line chart 등
+
+## 심미성과 기하
+
+::: panel-tabset
+## Code
+
+```{r}
+#| eval: false
+#| echo: true
+gapminder |> 
+  filter(year == 2007) |> 
+  ggplot(aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(color = continent)) +
+  geom_smooth(color = "black")
+```
+
+## Result
+
+```{r}
+#| eval: true
+#| echo: false
+library(tidyverse)
+library(gapminder)
+gapminder |> 
+  filter(year == 2007) |> 
+  ggplot(aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(color = continent)) +
+  geom_smooth(color = "black")
+```
+:::
+
+## 심미성과 기하 {.smaller}
+
+::: columns
+::: column
+-   x-axis, y-axis
+
+-   color, fill
+
+-   shape
+
+-   size
+
+-   alpha
+
+-   position
+:::
+
+::: column
+-   `geom_point()`
+
+-   `geom_line()`
+
+-   `geom_bar(), geom_col()`
+
+-   `geom_histogram(), geom_density()`
+
+-   `geom_smooth()`
+
+-   `geom_boxplot(), geom_violin()`
+
+-   `geom_text(), geom_label()`
+:::
+:::
+
+## 스케일 scale {.smaller}
+
+-   심미성의 구체적 구현
+
+-   x-axis, y-axis
+
+    -   `scale_x_continuous()`, `scale_x_discrete()`
+
+-   color와 fill
+
+    -   `scale_color_brewer()`, `scale_fill_brewer()`
+    -   `scale_color_manual()`, `scale_fill_manual()`
+
+-   others
+
+    -   `scale_shape()`, `scale_size()`
+
+    -   `scale_linetype()`, `scale_linewidth()`
+
+## 패싯 facet
+
+-   다면생성(faceting) 과정을 통해, 하나의 플롯을 여러 개의 하위 플롯으로 분할
+
+-   두 가지 중요 함수
+
+    -   `facet_wrap()`
+
+    -   `facet_grid()`
+
+## 패싯 facet
+
+::: panel-tabset
+## Normal
+
+```{r}
+#| echo: false
+gapminder |> 
+  filter(year == 2007) |> 
+  ggplot(aes(x = log(gdpPercap), y = log(lifeExp))) +
+  geom_point(aes(size = pop)) +
+  geom_smooth()
+```
+
+## Faceting
+
+```{r}
+#| echo: false
+gapminder |> 
+  filter(year == 2007) |> 
+  ggplot(aes(x = log(gdpPercap), y = log(lifeExp))) +
+  geom_point(aes(size = pop)) +
+  geom_smooth() +
+  facet_wrap(~continent)
+```
+:::
+
+## 통계적 변환 Statistical transformation
+
+![<https://r4ds.hadley.nz/layers>](images/clipboard-3826441672.png){fig-align="center"}
+
+## 좌표 Coordinates
+
+-   그래픽 요소들의 위치 결정에 기준이 되는 준거 체계
+
+-   두 가지 중요 함수
+
+    -   `coord_flip()`
+
+    -   `coord_fixed()`
+
+## 테마 Theme
+
+-   그래프의 전체적인 외양(테마)를 수정
+
+    -   8개 테마 제공
+
+-   그래프의 세부 구성 요소를 수정
+
+    -   `theme()`
+
+## 테마 Theme
+
+![<https://r4ds.hadley.nz/communication>](images/clipboard-57653269.png){fig-align="center"}
+
+## 테마 Theme
+
+-   수 많은 옵션 <https://ggplot2.tidyverse.org/reference/theme.html>
+
+    -   axis 관련
+
+    -   legend 관련
+
+    -   plot.title 관련
+
+## ggplot2 익스텐션 Extensions
+
+<https://exts.ggplot2.tidyverse.org/>
+
+-   [`patchwork`](https://patchwork.data-imaginist.com/)
+
+-   [`gganimate`](https://gganimate.com/)
+
+-   [`ggrepel`](https://github.com/slowkow/ggrepel)
+
+-   [`ggiraph`](https://github.com/davidgohel/ggiraph)
+
+-   [`ggplotly`](https://plotly.com/ggplot2/)
+
+-   [`GGally`](https://ggobi.github.io/ggally/)
+
+-   [`ggcorrplot`](https://rpkgs.datanovia.com/ggcorrplot/)
+
+## `patchwork`
+
+![<https://allisonhorst.com/r-packages-functions>](images/clipboard-2622112002.png){fig-align="center"}
