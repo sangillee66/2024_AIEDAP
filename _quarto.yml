@@ -3,12 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "2024_AIEDAP"
+  title: "사회(지리)과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍"
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: 프로그램 개요
+      - href: material.qmd
+        text: 강의 자료
+      - href: reference.qmd
+        text: 참고문헌
 
 format:
   html:
