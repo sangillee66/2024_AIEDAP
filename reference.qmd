@@ -3,38 +3,64 @@ title: ""
 date-modified: last-modified
 ---
 
+> 웹 접근이 가능한 참고문헌을 중심으로 정리하였습니다. 문건 아래에 짧막한 저의 코멘트를 달아 두었으니 참고바랍니다.
+
 ## 데이터사이언스와 R
 
--   Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund, 2023, [*R for Data Science: Import, Tidy, Transform, Visualize, and Model Data*](https://r4ds.hadley.nz/)*,* 2nd edition, Boston: O’Reilly. 
+-   Wickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund, 2023, [*R for Data Science: Import, Tidy, Transform, Visualize, and Model Data*](https://r4ds.hadley.nz/)*,* 2nd edition, Boston: O’Reilly.
 
--   Bonnell, Jerry, and Mitsunori Ogihara. 2023. [*Exploring Data Science with R and the Tidyverse*](https://ds4world.cs.miami.edu/). 1st edition. Chapman; Hall/CRC.
+    -   바이블과 같은 책입니다. 필독을 권합니다. 저의 경우 두 번 정도 읽으니 감이 왔습니다.
 
 -   Irizarry, Rafael A. 2024. [*Introduction to Data Science: Data Wrangling and Visualization with R*](https://rafalab.dfci.harvard.edu/dsbook-part-1/). 2nd edition, Boca Raton: CRC Press.
 
+    -   훌륭한 책입니다. 해들리 위컴의 책을 읽고 난 다음에 읽어 보세요.
+
+-   Bonnell, Jerry, and Mitsunori Ogihara. 2023. [*Exploring Data Science with R and the Tidyverse*](https://ds4world.cs.miami.edu/). 1st edition. Chapman; Hall/CRC.
+
+    -   아직 살펴보지 못했습니다.
+
 -   한국알사용자회, [데이터 과학을 지탱하는 기본기](https://r2bit.com/book_analytics/), 웹북
 
--   김기환, 2023, [R 프로그래밍(개정판)](https://kilhwan.github.io/rprogramming/), 웹북
+    -   한국 알사용자회의 무료 웹북 중의 하나입니다. 데이터 과학과 관련된 다양한 내용으로 구성이 되어 있습니다. 프로그래밍 섹션이 R과 관련된 내용입니다.
+
+-   김길환, 2023, [R 프로그래밍(개정판)](https://kilhwan.github.io/rprogramming/), 웹북
+
+    -   상명대학교 김길환 교수님께서 쓰신 R 기초 웹북입니다. 방대한 주제를 다루고 있습니다. 훌륭한 책이지만 형식이 좀 올드한 느낌이 있긴 합니다. 그래도 한글로 된 R 웹북이 매우 드물다는 의미에서 충분한 가치가 있는 책입니다.
 
 ## 시각화
 
 -   Wickham, Hadley. 2016. [*ggplot2: Elegant Graphics for Data Analysis*](https://ggplot2-book.org/). 2nd edition, Switzerland: Springer. (박진수 옮김, 2017. [R로 분석한 데이터를 멋진 그래픽으로 ggplot2](https://www.yes24.com/Product/Goods/57248968). 부천: 프리렉.)
 
+    -   위의 웹북으로 들어가면 이미 3판이 업데이트되어 있음을 확인할 수 있습니다. 번역서는 2판 기준이므로 원서 웹북을 읽기를 권합니다.
+
 -   Kabacoff, Robert, 2024, [*Modern Data Visualization with R*](https://rkabacoff.github.io/datavis/), Boca Raton: CRC Press.
+
+    -   아직 살펴보지 못했습니다.
 
 ## 쿼토 Quarto
 
 -   [Quarto 웹사이트](https://quarto.org/)
 
+    -   쿼토에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다. 좀 복잡하게 구성되어 있는 느낌이 들긴 하지만 방대한 내용이 잘 다루어져 있습니다.
+
 -   한국알사용자회ㆍ이광춘, 2024, [챗GPT쿼토: 인공지능 시대 과학기술 저작 도구](https://r2bit.com/gpt-quarto/), 웹북
+
+    -   한국알사용자회가 만든 무료 웹북 중의 하나입니다. Quarto에 대한 상세한 내용이 있을 것으로 기대하면 좀 실망하게 되는 책입니다.
 
 ## 샤이니 Shiny
 
 -   [Shiny 웹사이트](https://shiny.posit.co/)
 
+    -   샤이니에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다.
+
 -   Wickham, Hadley, 2021, [*Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Power by R*](https://mastering-shiny.org/)*,* Sebastopol, CA: O’REILLY. (이영록 옮김, 2022, [R 사용자를 위한 Shiny 마스터 가이드](https://www.yes24.com/Product/Goods/116598818), 서울: 인사이트.)
+
+    -   해들리 위컴이 쓴 샤이니 관련 바이블입니다. 원문 웹북을 보기를 권하지만 우선은 번역서도 좋을 것 같습니다.
 
 -   Granjon, David, 2022, [*Outstanding User Interfaces with Shiny*](https://unleash-shiny.rinterface.com/), Boaca Raton: CRC Press.
 
+    -   아직 살펴보지 못했습니다.
+
 -   Fay, Colin, Vincent Guyader, Sebastien Rochette, and Cervan Girard. 2022, [*Engineering Production-Grade Shiny Apps*](https://engineering-shiny.org/), Boca Raton: CRC Press.
 
-## 
+    -   아직 살펴보지 못했습니다.
