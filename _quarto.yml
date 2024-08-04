@@ -5,6 +5,8 @@ project:
 website:
   title: "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍"
   navbar:
+    logo: aiedap_logo.png
+    # background: "#cbd5e8"
     left:
       - href: index.qmd
         text: 프로그램 개요
@@ -21,11 +23,13 @@ website:
         href: mailto:si_lee@snu.ac.kr
       - icon: github
         href: https://github.com/sangillee66
-        
-
+  # comments: 
+  #   hypothesis:
+  #     theme: clean
+  #     openSidebar: false        
 format:
   html:
-    theme: cosmo
+    theme: journal
     css: styles.css
     toc: true
 
