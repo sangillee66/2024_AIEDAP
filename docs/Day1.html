@@ -244,13 +244,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">1</span> Quarto 문서 생성</h2>
 <p>R studio를 열고 <strong>File</strong> &gt; <strong>New File</strong> &gt; <strong>Quarto Document</strong>를 실행한다. Title과 Author란에 적절한 텍스트를 기입하고 아래에 위치한 Create 버튼을 클릭한다.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/new_doc.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1" title="새로운 Quarto 문서 생성"><img src="images/new_doc.png" class="img-fluid figure-img" alt="새로운 Quarto 문서 생성"></a></p>
+<figure class="figure"><p><a href="images/new_doc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="새로운 Quarto 문서 생성"><img src="images/new_doc.png" class="img-fluid figure-img" alt="새로운 Quarto 문서 생성"></a></p>
 <figcaption>새로운 Quarto 문서 생성</figcaption></figure>
 </div>
 <p>그렇다면 아래의 화면이 보일 것이다.</p>
 <div id="fig-initial" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-initial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/initial_page.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/initial_page.png" class="img-fluid figure-img"></a>
+<a href="images/initial_page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/initial_page.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-initial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: 새로 생성된 Quarto 문서
@@ -260,7 +260,7 @@ Figure&nbsp;1: 새로 생성된 Quarto 문서
 <span class="header-section-number">2</span> Quarto 문서의 구조</h2>
 <div id="fig-example" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/rstudio-source-visual.png" class="lightbox" data-glightbox="description: .lightbox-desc-3" data-gallery="quarto-lightbox-gallery-3"><img src="images/rstudio-source-visual.png" class="img-fluid figure-img"></a>
+<a href="images/rstudio-source-visual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="images/rstudio-source-visual.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Quarto의 기본 구조
@@ -464,7 +464,7 @@ Tip
 <span class="header-section-number">3</span> 대시보드의 기본 구조</h2>
 <p>대시보드는 기본적으로 다섯 가지의 구성요소로 이루어진다. 각각은 메인 바디, 헤더, 내비게이터, 사이드바, 푸터이다.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/img/layout.png" class="lightbox" data-glightbox="description: .lightbox-desc-5" data-gallery="quarto-lightbox-gallery-5" title="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"><img src="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/img/layout.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"></a></p>
+<figure class="figure"><p><a href="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/img/layout.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"><img src="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/img/layout.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"></a></p>
 <figcaption><a href="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset" class="uri">https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset</a></figcaption></figure>
 </div>
 <p>첫째, 메인 바디(main body)는 대시보드의 핵심 요소이다. 메인 바디는 카드(card)라고 불리는 기본 단위들로 구성된다. 개별 카드는 다양한 내용 요소(텍스트, 그래프, 표, 지도, 밸류박스 등)를 가질 수 있다. 즉, 어떤 카드 속에는 그래프가 들어가며, 어떤 카드 속에는 지도가 들어간다. 이러한 카드들은 특정한 레이아웃 요소(페이지, 행, 열, 탭셋 등)를 통해 메인 바디에 배열된다. 페이지(page)는 대시보드 레이아웃 요소 중 최상위 레벨인데, 개별 페이지는 다수의 행(row) 혹은 열(column)로 구성된다. 행 혹은 열을 또다른 행 혹은 열이 아닌 탭 클릭 방식으로 분할하고 싶을 때 탭셋(tabset)이 사용된다.</p>
@@ -475,7 +475,7 @@ Tip
 <p>다섯개의 구성 요소 중 가장 중요한 것은 메인 바디, 해더, 내비게이터이다. Quarto는 헤더와 내비게이터를 통합한 내비게이션바(navigation bar)를 제공한다. 사이드바는 <code>Shiny</code> 페키지를 활용한 동적인 대시보드에서는 매우 중요하지만, 이번 실습에서는 사용하지 않는다. 푸터는 가장 지엽적인 요소이다.</p>
 <p>다음의 대시보드를 살펴보자.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="lightbox" data-glightbox="description: .lightbox-desc-6" data-gallery="quarto-lightbox-gallery-6" title="https://quarto.org/docs/dashboards/"><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid figure-img" alt="https://quarto.org/docs/dashboards/"></a></p>
+<figure class="figure"><p><a href="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="https://quarto.org/docs/dashboards/"><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid figure-img" alt="https://quarto.org/docs/dashboards/"></a></p>
 <figcaption><a href="https://quarto.org/docs/dashboards/" class="uri">https://quarto.org/docs/dashboards/</a></figcaption></figure>
 </div>
 <p>이 대시보드는 크게 내비게이션바와 메인 바디로 구성되어 있다. 네비게이션바에는 다음의 내용이 포함되어 있다.</p>
@@ -1251,7 +1251,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","selector":".lightbox","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
