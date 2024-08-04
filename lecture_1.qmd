@@ -45,7 +45,7 @@ editor: visual
 
     -   GIS, 지도학, 공간통계분석, 인구지리학
 
-    -   공간데이터사이언스, 테크놀로지-기반 지리교육
+    -   공간데이터사이언스, 데이터사이언스-기반 교과교육
 
 -   겸임
 
@@ -56,32 +56,65 @@ editor: visual
     -   서울대학교 [학습과학연구소](https://ls.snu.ac.kr/) AI기반교육연구센터 겸임연구원
 :::
 
+## 소개
+
+-   실습 디자인 및 진행
+
+    -   김우형(서울대학교 지리교육과 석사과정)
+
+    -   [김세창(서울대학교 지리교육과 석사)]{style="color:gray"}
+
+-   실습 보조
+
+    -   전혜민(서울대학교 지리교육과 석사과정)
+
+    -   김주연(서울대학교 지리교육과 박사과정)
+
 ## AI 융합교육을 위한 인문사회 컨텐츠 설계
 
 <br>
 
-![](images/clipboard-907584733.png){fig-align="center"}
+![[https://saarland-informatics-campus.de/en/studium-studies/data-science-and-artificial-intelligence-bachelor/](https://saarland-informatics-campus.de/en/studium-studies/data-science-and-artificial-intelligence-bachelor/){style="font-size:0.75rem"}](images/clipboard-907584733.png){fig-align="center"}
+
+## 교사의 AIㆍ디지털 역량
+
+-   [교수-학습 대시보드]{style="color:coral"}의 설계 및 제작 능력
+
+    -   웹-기반, 인트렉티브
+
+-   도구
+
+    -   쿼토 [Quarto]{style="color:coral"}
+
+        -   웹 다큐먼트 저작 도구
+
+        -   디지털 커뮤니케이션 도구
+
+    -   오픈소스 프로그래밍 언어 [R]{style="color:coral"}
+
+        -   데이터사이언스 도구
 
 ## 프로그램 개요
 
-::: {style="font-size:0.41em"}
+::: {style="font-size:0.40em"}
 +-------+----------------------------------------------------------+------------------------------------------------+----------------------------------------------------+
 | 차시  | 주제                                                     | 강의 내용                                      | 실습 내용                                          |
 +:=====:+==========================================================+================================================+====================================================+
 | 사전  | 사회과 수업에서 활용 가능한 AIㆍ디지털 도구 소개         | -   세 가지 사이언스                           | -   최신 지리공간기술로서의 구글 스튜디오 실습     |
+|       |                                                          |                                                | -   R을 통한 데이터사이언스 실습                   |
 +-------+----------------------------------------------------------+------------------------------------------------+----------------------------------------------------+
 | Day 1 | AIㆍ디지털 역량과 사회 교과                              | -   AIㆍ디지털 사회의 도래와 사회 교과         | -   AIㆍ디지털 커뮤니케이션 도구로서의 Quarto 입문 |
 |       |                                                          | -   AIㆍ디지털 커뮤니케이션 역량과 도구        | -   Quarto를 활용한 대시보드 만들기                |
 +-------+----------------------------------------------------------+------------------------------------------------+----------------------------------------------------+
 | Day 2 | 데이터의 수집과 정련화                                   | -   데이터의 수집 방법                         | -   R을 활용한 오픈 API 기반 데이터 수집           |
-|       |                                                          | -   데이터 불러오기 및 정리하기의 개념과 기법  | -   R을 활용한 데이터 불어오기 및 정리하기         |
+|       |                                                          | -   데이터 불러오기 및 정리하기의 개념과 기법  | -   R을 활용한 데이터 불러오기 및 정리하기         |
 |       |                                                          | -   문제의 현황 파악                           |                                                    |
 +-------+----------------------------------------------------------+------------------------------------------------+----------------------------------------------------+
 | Day 3 | 탐색적 데이터 분석                                       | -   탐색적 데이터 분석의 원리와 절차           | -   R을 활용한 데이터의 변형 및 시각화             |
 |       |                                                          | -   데이터 변형 및 시각화의 개념과 기법        | -   R을 활용한 탐색적 데이터 분석                  |
 |       |                                                          | -   문제의 이해 및 수업 소재 선정              |                                                    |
 +-------+----------------------------------------------------------+------------------------------------------------+----------------------------------------------------+
-| Day 4 | 고급 시각화와 디지털 교수-학습 대시보드의 설계           | -   인트렉티브 시각화의 개념과 기법            | -   R을 활용한 인트렉티브 시각화                   |
+| Day 4 | 고급 시각화와 교ㄹ수-학습 대시보드의 설계                | -   인트렉티브 시각화의 개념과 기법            | -   R을 활용한 인트렉티브 시각화                   |
 |       |                                                          | -   지리공간적 시각화의 개념과 기법            | -   Quarto를 활용한 대시보드의 설계                |
 |       |                                                          | -   탐구 수업을 위한 교수-학습 대시보드의 설계 |                                                    |
 +-------+----------------------------------------------------------+------------------------------------------------+----------------------------------------------------+
@@ -103,9 +136,13 @@ editor: visual
 
 ![](images/다양한%20서비스.png){fig-align="center"}
 
+## AIㆍ디지털 관련 도구들
+
+![[https://dunoit.com/blogs/30-ai-64f7e9d81cb43](https://dunoit.com/blogs/30-ai-64f7e9d81cb43){style="font-size:0.75rem"}](https://dunoit.com/storage/blogs/cover/1_64f7e9d8181558.21279528.png){fig-align="center"}
+
 ## 에듀테크
 
-![<https://www.korea.kr/multi/visualNewsView.do?newsId=148900094#visualNews>](images/에듀테크.png){fig-align="center"}
+![[https://www.korea.kr/multi/visualNewsView.do?newsId=148900094#visualNews](https://www.korea.kr/multi/visualNewsView.do?newsId=148900094#visualNews){.uri style="font-size:0.75rem"}](images/에듀테크.png){fig-align="center"}
 
 ## 교육부: "교사가 이끄는 교실 혁명"
 
@@ -117,23 +154,23 @@ editor: visual
 
 ## AI-TPACK
 
-![<https://www.mdpi.com/2071-1050/16/3/978>](https://www.mdpi.com/sustainability/sustainability-16-00978/article_deploy/html/images/sustainability-16-00978-g001.png){fig-align="center"}
+![[https://www.mdpi.com/2071-1050/16/3/978](https://www.mdpi.com/2071-1050/16/3/978){style="font-size:0.75rem"}](https://www.mdpi.com/sustainability/sustainability-16-00978/article_deploy/html/images/sustainability-16-00978-g001.png){fig-align="center"}
 
 ## TPACK-UotI
 
-![<https://www.nature.com/articles/s41599-023-01533-0>](images/clipboard-3056114841.webp){fig-align="center"}
+![[https://www.nature.com/articles/s41599-023-01533-0](https://www.nature.com/articles/s41599-023-01533-0){.uri style="font-size:0.75rem"}](images/clipboard-3056114841.webp){fig-align="center"}
 
 ## TDL-TPACK
 
-![<https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.966575/full>](images/clipboard-1772445311.png){fig-align="center"}
+![[https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.966575/full](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.966575/full){.uri style="font-size:0.75rem"}](images/clipboard-1772445311.png){fig-align="center"}
 
 ## DPACK
 
-![<https://www.mdpi.com/2227-7102/13/8/769>](images/clipboard-3252610822.png){fig-align="center"}
+![[https://www.mdpi.com/2227-7102/13/8/769](https://www.mdpi.com/2227-7102/13/8/769){.uri style="font-size:0.75rem"}](images/clipboard-3252610822.png){fig-align="center"}
 
 ## 교육학적 혹은 교과교육학적 연구
 
-![](images/clipboard-2237599896.png){fig-align="center"}
+![](images/clipboard-2154182620.png){fig-align="center"}
 
 # [AI·디지털 커뮤니케이션 <br>역량과 도구]{style="color:coral"}
 
@@ -144,10 +181,18 @@ editor: visual
 ## 데이터사이언스의 네 개의 기둥
 
 ::: {layout="[50,50]" layout-valign="center"}
-![<https://mokeya.tistory.com/76>](images/clipboard-2179833248.png)
+![[https://mokeya.tistory.com/76](https://mokeya.tistory.com/76){.uri style="font-size:0.75rem"}](images/clipboard-2179833248.png)
 
-![<https://www.geeksforgeeks.org/4-key-pillars-of-data-science/>](images/clipboard-343377054.png){fig-align="center"}
+![[https://www.geeksforgeeks.org/4-key-pillars-of-data-science/](https://www.geeksforgeeks.org/4-key-pillars-of-data-science/){.uri style="font-size:0.75rem"}](images/clipboard-343377054.png){fig-align="center"}
 :::
+
+## 데이터사이언스 랜드스케이프
+
+![[https://commons.wikimedia.org/wiki/File:Data-Science-Landscape.jpg](https://commons.wikimedia.org/wiki/File:Data-Science-Landscape.jpg){style="font-size:0.75rem"}](images/clipboard-2036306087.png){fig-align="center"}
+
+## 데이터사이언스 프로세스
+
+![[https://juliescholler.gitlab.io/files/M2/M2-CM1-workflow1.html#1](https://juliescholler.gitlab.io/files/M2/M2-CM1-workflow1.html#1){style="font-size:0.75rem"}](images/clipboard-260780612.png)
 
 ## 교사의 AIㆍ디지털 커뮤니케이션 역량
 
@@ -160,9 +205,9 @@ editor: visual
 
     -   데이터 탐색을 통해 학습자 스스로 이해, 지식, 통찰을 얻도록 도와주는 도구
 
--   [**웹-기반 대시보드형 디지털 교수-학습 자료**]{style="color:coral"}
+-   [**웹-기반 교수-학습 대시보드**]{style="color:coral"}
 
-    -   HTML 형식: 일종의 웹애플리케이션
+    -   HTML 형식의 웹 다큐먼트: 일종의 웹애플리케이션
 
     -   데이터 대시보드(dashboard)
 
@@ -173,7 +218,7 @@ editor: visual
 
 ## 대시보드: 사례
 
-![](images/clipboard-3590036547.png){fig-align="center"}
+![[https://ivelasq.github.io/mortgage-dashboard/](https://ivelasq.github.io/mortgage-dashboard/){style="font-size:0.75rem"}](images/clipboard-3590036547.png){fig-align="center"}
 
 ## 대시보드의 개념과 기본 구조 {.smaller}
 
@@ -181,7 +226,7 @@ editor: visual
 
 -   5대 구성 요소: 메인 바디, 헤더, 내비게이터, 사이드바, 푸터
 
-![<https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset>](images/clipboard-3127542898.png){fig-align="center"}
+![[https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset](https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset){.uri style="font-size:0.75rem"}](images/clipboard-3127542898.png){fig-align="center"}
 
 ## 대시보드의 레이아웃 요소
 
@@ -217,55 +262,65 @@ editor: visual
 
     -   내부: R 코드를 통한 직접 제작
 
-# [R과 Quarto를 활용한 <br> 디지털 교수-학습 자료 제작]{style="color:coral"}
+# [Quarto와 R을 활용한 <br> 디지털 교수-학습 자료 제작]{style="color:coral"}
 
 ## 사례
 
 [https://sangillee.snu.ac.kr/dashboard_examples/](https://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html)
 
+## R과 데이터사이언스 프로세스
+
+![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png)
+
 ## R과 데이터사이언스 과정
 
-![<https://r4ds.hadley.nz/intro>](images/clipboard-4075247197.png)
-
-## R과 데이터사이언스 과정
-
-![<https://r4ds.hadley.nz/intro>](images/clipboard-1401588796.png)
+![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-1401588796.png)
 
 ## R 바이블과 리더 {.smaller}
 
 ::: {layout="[50,50]" layout-valign="center"}
-![<https://r4ds.hadley.nz/>](https://m.media-amazon.com/images/I/91ZTHIjueHL._SL1500_.jpg){fig-align="center" width="408"}
+![[https://r4ds.hadley.nz/](https://r4ds.hadley.nz/){.uri style="font-size:0.75rem"}](https://m.media-amazon.com/images/I/91ZTHIjueHL._SL1500_.jpg){fig-align="center" width="408"}
 
-![Hadley Wickham](images/clipboard-3861626928.jpeg){fig-align="center" width="418"}
+![해들리 위컴 Hadley Wickham](images/clipboard-3861626928.jpeg){style="font-size:1.5rem" fig-align="center" width="418"}
 :::
 
 ## R의 아버지들, 1993
 
 ::: {layout="[25,50,25]" layout-valign="center"}
-![George Ross Ihaka](images/clipboard-4103752460.png)
+![George Ross Ihaka](images/clipboard-4103752460.png){style="font-size:1.5rem"}
 
-![University of Auckland, New Zealand](images/clipboard-3647657155.png)
+![University of Auckland, New Zealand](images/clipboard-3647657155.png){style="font-size:1.5rem"}
 
-![Robert C. Gentleman](images/clipboard-3701321516.png)
+![Robert C. Gentleman](images/clipboard-3701321516.png){style="font-size:1.5rem"}
 :::
 
 ## R의 공식 생일, 2000
 
-![](images/clipboard-692617930.png){width="1501"}
+![[https://www.r-bloggers.com/2023/02/happy-23rd-birthday-r/](https://www.r-bloggers.com/2023/02/happy-23rd-birthday-r/){style="font-size:0.75rem"}](images/clipboard-692617930.png){width="1501"}
 
 ## R 혁신: ggplot2, 2007
 
-![<https://ggplot2.tidyverse.org/>](images/clipboard-3146270133.png)
+![[https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3146270133.png)
 
 ## RStudio, 2011
 
 <br>
 
-![<https://posit.co/download/rstudio-desktop/>](images/clipboard-93412336.png)
+![[https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/){.uri style="font-size:0.75rem"}](images/clipboard-93412336.png)
 
 ## R 혁신: Shiny, 2012
 
-![<https://shiny.posit.co/>](images/clipboard-3736716242.png){fig-align="center"}
+![[https://shiny.posit.co/](https://shiny.posit.co/){.uri style="font-size:0.75rem"}](images/clipboard-3736716242.png){fig-align="center"}
+
+## R 혁신: 파이프 연산자, 2014
+
+<br>
+
+::: {layout="[50,50]" layout-valign="center"}
+![[https://medium.com/\@romainx/pandas-pipes-905ebc436715](https://medium.com/@romainx/pandas-pipes-905ebc436715){style="font-size:0.75rem"}](images/clipboard-2460491691.jpeg)
+
+![[https://statistik-dresden.de/r-4-1-0-base-r-pipe/](https://statistik-dresden.de/r-4-1-0-base-r-pipe/){style="font-size:0.75rem"}](images/clipboard-1211845114.webp){style="font-size:0.75rem"}
+:::
 
 ## R 혁신: Tidyverse, 2016 {visibility="hidden"}
 
@@ -277,17 +332,17 @@ editor: visual
 
 ## R 혁신: Tidyverse, 2016
 
-![<https://www.tidyverse.org/>](images/clipboard-3469151822.png)
+![[https://www.tidyverse.org/](https://www.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3469151822.png)
 
 ## Posit, 2022
 
 <br>
 
-![<https://posit.co/>](images/clipboard-4259342209.png)
+![[https://posit.co/](https://posit.co/){.uri style="font-size:0.75rem"}](images/clipboard-4259342209.png)
 
 ## Quarto, 2022
 
-![<https://quarto.org/>](images/clipboard-1590379712.png){fig-align="center"}
+![[https://quarto.org/](https://quarto.org/){.uri style="font-size:0.75rem"}](images/clipboard-1590379712.png){fig-align="center"}
 
 ## R vs. Python
 
@@ -299,7 +354,7 @@ editor: visual
 
 ## R vs. Python: 장단점
 
-![<https://r-craft.org/the-3-reasons-you-should-learn-r-for-data-science/>](images/clipboard-2470054351.png)
+![[https://r-craft.org/the-3-reasons-you-should-learn-r-for-data-science/](https://r-craft.org/the-3-reasons-you-should-learn-r-for-data-science/){.uri style="font-size:0.75rem"}](images/clipboard-2470054351.png)
 
 ## 재현가능연구를 위한 R
 
@@ -314,7 +369,7 @@ editor: visual
 ## R 커뮤니티
 
 ::: {layout="[45,55]" layout-valign="center"}
-![<https://rladies.org/>](images/clipboard-271459863.png)
+![[https://rladies.org/](https://rladies.org/){.uri style="font-size:0.75rem"}](images/clipboard-271459863.png)
 
 ![](images/clipboard-1363032995.png)
 :::
@@ -322,29 +377,29 @@ editor: visual
 ## R and Python in Harmony
 
 ::: {layout="[45,55]" layout-valign="center"}
-![<https://rstudio.github.io/reticulate/>](images/clipboard-2653295805.png)
+![[https://rstudio.github.io/reticulate/](https://rstudio.github.io/reticulate/){.uri style="font-size:0.75rem"}](images/clipboard-2653295805.png)
 
 ![](images/clipboard-702669114.png)
 :::
 
 ## Positron, 2024
 
-![<https://github.com/posit-dev/positron>](images/clipboard-1782210803.jpeg){fig-align="center"}
+![[https://github.com/posit-dev/positron](https://github.com/posit-dev/positron){.uri style="font-size:0.75rem"}](images/clipboard-1782210803.jpeg){fig-align="center"}
 
 ## 
 
-![<https://allisonhorst.com/everything-else>](images/clipboard-2126183903.png)
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-2126183903.png)
 
 ## 쿼토 Quarto
 
-![<https://rstudio.github.io/cheatsheets/html/quarto.html>](images/clipboard-710045230.png){fig-align="center"}
+![[https://rstudio.github.io/cheatsheets/html/quarto.html](https://rstudio.github.io/cheatsheets/html/quarto.html){.uri style="font-size:0.75rem"}](images/clipboard-710045230.png){fig-align="center"}
 
 ## Quarto: 정의 {.smaller}
 
 -   "과학적, 기술적 출판을 위한 오픈소스 시스템(an open-source scientific and technical publishing system)"
 
     -   [오픈소스 저작 시스템]{style="color:coral"}
-    -   [디지털 커뮤니케이터]{style="color:coral"}
+    -   [디지털 커뮤니케이션의 도구]{style="color:coral"}
 
 -   다양한 형식의 저작물(노트, 연구 논문, 프레젠테이션, [대시보드]{style="color:coral"}, 웹사이트, 블로그, 서적 등)을 다양한 디지털 포맷([HTML]{style="color:coral"}, PDF, MS Word, ePub 등)으로 출판할 수 있게 해주는 도구
 
@@ -352,9 +407,9 @@ editor: visual
 
     -   개인 스케일: 다양한 개인 저작물의 작성 도구
 
-    -   그룹 스케일: 프로젝트의 원할한 진행을 위한 협업 프레임워크
+    -   그룹 스케일: 프로젝트의 원할한 진행을 위한 협업 체계
 
-    -   사회 스케일: 과학 커뮤니티의 재현성(reproducibility) 고양을 위한 규약
+    -   사회 스케일: 과학 커뮤니티의 재현성(reproducibility) 고양을 위한 프레임워크
 
 ## Quarto: Syntax
 
@@ -368,13 +423,13 @@ editor: visual
 
     -   프로그래밍 언어 + 워드프로세서
 
-## Quarto: Rendering
+## Quarto: 렌더링 [Rendering]{style="font-size:2.5rem;color:gray"}
 
 -   `knitr` 패키지: `.qmd`를 `.md`로 전환
 
 -   `pandoc`: `.md`를 다양한 디지털 포맷으로 전환
 
-![<https://r4ds.hadley.nz/quarto>](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)
+![[https://r4ds.hadley.nz/quarto](https://r4ds.hadley.nz/quarto){.uri style="font-size:0.75rem"}](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)
 
 ## Quarto 다큐먼트: 기본 구조
 
@@ -394,7 +449,7 @@ editor: visual
 
 ## 
 
-![<https://r4ds.hadley.nz/quarto>](https://r4ds.hadley.nz/quarto/diamond-sizes-report.png){fig-align="center"}
+![[https://r4ds.hadley.nz/quarto](https://r4ds.hadley.nz/quarto){.uri style="font-size:0.75rem"}](https://r4ds.hadley.nz/quarto/diamond-sizes-report.png){fig-align="center"}
 
 ## 야믈 헤더 [YAML header]{style="font-size:2.5rem;color:gray"} {.smaller}
 
@@ -442,7 +497,7 @@ editor: visual
 
 ## 논문 저술 도구: Zotero
 
-![<https://quarto.org/docs/visual-editor/technical.html>](https://quarto.org/docs/visual-editor/images/visual-editing-citation-search.png){fig-align="center"}
+![[https://quarto.org/docs/visual-editor/technical.html](https://quarto.org/docs/visual-editor/technical.html){.uri style="font-size:0.75rem"}](https://quarto.org/docs/visual-editor/images/visual-editing-citation-search.png){fig-align="center"}
 
 ## 웹 배포: 웹포스팅 서비스
 
