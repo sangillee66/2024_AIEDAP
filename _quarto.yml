@@ -14,7 +14,14 @@ website:
         text: 교수-학습 대시보드
       - href: reference.qmd
         text: 참고문헌
-
+    right: 
+      - icon: house-door
+        href: https://sangillee.snu.ac.kr/
+      - icon: envelope-arrow-up
+        href: mailto:si_lee@snu.ac.kr
+      - icon: github
+        href: https://github.com/sangillee66
+        
 
 format:
   html:

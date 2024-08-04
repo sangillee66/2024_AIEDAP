@@ -1,7 +1,7 @@
 ---
 title: |
   | [Day 5]{style="color:coral;font-size:1em"} 
-  | [고급 인트렉티브 기능과 <br> 데시보드의 제작 및 공유]{style="font-size:1.2em"}
+  | [고급 인트렉티브 기능과 <br> 대시보드의 제작 및 공유]{style="font-size:1.2em"}
 author: 이상일(서울대학교 지리교육과 교수)
 date: 2024-08-09
 format: 
@@ -38,24 +38,24 @@ editor_options:
 
 ## 
 
-![<https://allisonhorst.com/everything-else>](images/clipboard-224670857.png)
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-224670857.png)
 
 ## Tidyverse의 프로그래밍 철학
 
 ::: r-fit-text
--   Human-centeredness
+-   [**Human-centeredness**]{style="color:coral"}
 
     -   For an end-user programmer
 
--   Consistency
+-   [**Consistency**]{style="color:coral"}
 
     -   The smallest possible set of key ideas, used as comprehensively as possible
 
--   Composability
+-   [**Composability**]{style="color:coral"}
 
     -   Many simple pieces, composed for a larger task using operators such as \|\> and +
 
--   Inclusiveness
+-   [**Inclusiveness**]{style="color:coral"}
 
     -   Towards a diverse, open, and friendly community
 
@@ -64,21 +64,21 @@ editor_options:
 
 ## Tidyverse의 관행
 
-![<https://allisonhorst.com/everything-else>](images/clipboard-4104447783.png)
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-4104447783.png)
 
 ## Tidyverse의 관행
 
-![<https://allisonhorst.com/everything-else>](images/clipboard-484047229.png)
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-484047229.png)
 
 ## 데이터사이언스과정의 마지막 혹은 정점
 
-![<https://r4ds.hadley.nz/intro>](images/clipboard-4075247197.png){fig-align="center"}
+![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
 # [고급 인트렉티브 기능]{style="color:coral"}
 
-## Shiny 패키지
+## `Shiny` 패키지
 
-![<https://shiny.posit.co/>](images/clipboard-3736716242.png){fig-align="center"}
+![[https://shiny.posit.co/](https://shiny.posit.co/){.uri style="font-size:0.75rem"}](images/clipboard-3736716242.png){fig-align="center"}
 
 ## 사례 1: 업로드 허용형 샤이니앱
 
@@ -136,7 +136,7 @@ editor_options:
 
 -   오픈 API
 
-![<https://gemini.google.com/>](GenAI.gif){fig-align="center"}
+![[https://gemini.google.com/](https://gemini.google.com/){.uri style="font-size:0.75rem"}](GenAI.gif){fig-align="center"}
 
 ## `GenAI`의 적용 사례 {visibility="hidden"}
 
@@ -149,8 +149,6 @@ editor_options:
 </iframe>
 
 ## `GenAI`의 적용 사례
-
-<br>
 
 ::: r-fit-text
 -   Google Jemini(<https://gemini.google.com/>)
@@ -166,20 +164,20 @@ Quarto Pub(<https://quartopub.com/>)
 
 ![](https://quarto.org/docs/publishing/images/quarto-pub-default-site.png){fig-align="center"}
 
-## Shiny
+## `Shiny`
 
 shinyapps.io(<https://www.shinyapps.io/>)
 
 ![](images/clipboard-2928271543.png){fig-align="center"}
 
-## Quarto와 Shiny의 결합
+## Quarto와 `Shiny`의 결합
 
 ::: r-fit-text
--   Quarto 대시보드 속에 Shiny 앱을 임베딩하여 제작
+-   Quarto 대시보드 속에 `Shiny` 앱을 임베딩하여 제작
 
     -   <https://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html>
 
--   Shiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작
+-   `Shiny` 요소를 가진 Quarto 대시보드 전체를 `Shiny` 앱으로 제작
 
     -   <https://sangillee.shinyapps.io/Dashboard_Example/>
 :::

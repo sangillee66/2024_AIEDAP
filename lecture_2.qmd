@@ -36,7 +36,7 @@ editor: visual
 
 ## 데이터사이언스 과정의 첫 번째와 두 번째 단계
 
-![<https://r4ds.hadley.nz/intro>](images/clipboard-4075247197.png){fig-align="center"}
+![[https://r4ds.hadley.nz](https://r4ds.hadley.nz/intro){.uri}[/](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}[intro](https://r4ds.hadley.nz/intro){.uri}](images/clipboard-4075247197.png){fig-align="center"}
 
 ## 내용
 
@@ -112,7 +112,7 @@ editor: visual
 
 ## 
 
-![<https://odinuv.cz/articles/html/>](images/clipboard-613748476.png){fig-align="center"}
+![[https://odinuv.cz/articles/html/](https://odinuv.cz/articles/html/){.uri style="font-size:0.75rem"}](images/clipboard-613748476.png){fig-align="center"}
 
 ## HTML 엘리먼트의 선택
 
@@ -126,7 +126,7 @@ editor: visual
 -   HTML 엘리먼트의 선택: CSS(casading style sheet) 선택자(selector)
 
 | 선택 대상              | CSS 선택자     | 결과                                                                                      |
-|------------------------|----------------|-------------------------------------------------------------------------------------------|
+|----------------|----------------|----------------------------------------|
 | 태그(tag)              | tag1           | "tag1"이라는 이름의 모든 tag                                                              |
 | 클래스(class)          | .class1        | "class1"이라는 class 속성을 갖는 모든 요소                                                |
 | 아이디(id)             | #id1           | "id1"이라는 id 속성을 갖는 모든 요소                                                      |
@@ -142,9 +142,9 @@ editor: visual
 
     -   브라우저 확장 프로그램의 활용: [SelectGadget](https://chromewebstore.google.com/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?pli=1)
 
-## R의 `rvest` 패키지
+## `rvest` 패키지
 
-![<https://rvest.tidyverse.org/>](images/clipboard-1209836452.png){fig-align="center"}
+![[https://rvest.tidyverse.org/](https://rvest.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-1209836452.png){fig-align="center"}
 
 ## 단계
 
@@ -348,9 +348,9 @@ tibble(
 
         -   웹 서비스 URL(최대 10개): 'http://localhost'를 입력
 
-## R의 httr2 패키지
+## `httr2` 패키지
 
-![<https://httr2.r-lib.org/>](images/clipboard-2579380411.png){fig-align="center"}
+![[https://httr2.r-lib.org/](https://httr2.r-lib.org/){.uri style="font-size:0.75rem"}](images/clipboard-2579380411.png){fig-align="center"}
 
 ## '지방소멸' 뉴스 검색 데이터 수집 {.smaller}
 
@@ -440,13 +440,13 @@ naver_res |> slice_head(n = 10)
 
     -   예: GenAI(<https://genai.gd.edu.kg/>)
 
-![](GenAI.gif)
+![[https://genai.gd.edu.kg/](https://genai.gd.edu.kg/){style="font-size:0.75rem"}](GenAI.gif)
 
 # [데이터 불러오기]{style="color:coral"}
 
 ## `readr` 패키지
 
-![<https://readr.tidyverse.org/>](images/clipboard-1251213286.png){fig-align="center"}
+![[https://readr.tidyverse.org/](https://readr.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-1251213286.png){fig-align="center"}
 
 ## `readr` 패키지 {.smaller}
 
@@ -463,16 +463,14 @@ naver_res |> slice_head(n = 10)
 ## 관련 패키지 {.smaller}
 
 ::: {layout="[30,30, 30]" layout-valign="center"}
-![](images/clipboard-2419843589.png)
+![[https://readxl.tidyverse.org/](https://readxl.tidyverse.org/){style="font-size:0.75rem"}](images/clipboard-2419843589.png)
 
-![](images/clipboard-2386206028.png)
+![[https://ycphs.github.io/openxlsx/](https://ycphs.github.io/openxlsx/){style="font-size:0.75rem"}](images/clipboard-2386206028.png)
 
-![](images/clipboard-812069546.png)
+![[https://googlesheets4.tidyverse.org/](https://googlesheets4.tidyverse.org/){style="font-size:0.75rem"}](images/clipboard-812069546.png)
 :::
 
 -   [`readxl`](https://readxl.tidyverse.org/) 패키지: `read_xls(), read_xlsx(), read_excel()`
--   [`openxlsx`](https://ycphs.github.io/openxlsx/) 패키지
--   [`googlesheets4`](https://googlesheets4.tidyverse.org/) 패키지
 
 ## 웹데이터 불러오기: `readr` 패키지
 
@@ -553,7 +551,7 @@ read_sheet("https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2d
 
 ## tibble 패키지
 
-![<https://tibble.tidyverse.org/>](images/clipboard-3459494907.png){fig-align="center"}
+![[https://tibble.tidyverse.org/](https://tibble.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3459494907.png){fig-align="center"}
 
 ## tibble 객체 vs. data.frame 객체
 
@@ -565,15 +563,15 @@ read_sheet("https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2d
 
 ## `tidyr` package
 
-![<https://tidyr.tidyverse.org/>](images/clipboard-1046439731.png){fig-align="center"}
+![[https://tidyr.tidyverse.org/](https://tidyr.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-1046439731.png){fig-align="center"}
 
 ## 타이디(tidy) 데이터의 개념
 
-![](images/clipboard-4067066416.png)
+![[https://allisonhorst.com/other-r-fun](https://allisonhorst.com/other-r-fun){style="font-size:0.75rem"}](images/clipboard-4067066416.png)
 
 ## 타이디(tidy) 데이터의 개념
 
-![](images/clipboard-3412852372.png)
+![[https://allisonhorst.com/other-r-fun](https://allisonhorst.com/other-r-fun){style="font-size:0.75rem"}](images/clipboard-3412852372.png)
 
 ## 타이디(tidy) 데이터의 개념
 
@@ -607,11 +605,11 @@ table3
 
 ## 타이디(tidy) 데이터의 장점
 
-![](images/clipboard-3106963859.png)
+![[https://allisonhorst.com/other-r-fun](https://allisonhorst.com/other-r-fun){style="font-size:0.75rem"}](images/clipboard-3106963859.png){style="font-size:0.75rem"}
 
-## 타이디(tidy) 데이터로 만드는 핵심 기법
+## 타이디(tidy) 데이터로 전환하는 핵심 기법
 
-![](images/clipboard-1179593338.png){fig-align="center"}
+![[https://allisonhorst.com/other-r-fun](https://allisonhorst.com/other-r-fun){style="font-size:0.75rem"}](images/clipboard-1179593338.png){style="font-size:0.75rem" fig-align="center"}
 
 ## 넓은 형식 [wide form]{style="font-size:2.5rem;color:gray"} vs. 긴 형식 [long form]{style="font-size:2.5rem;color:gray"}
 
@@ -673,7 +671,7 @@ table2 |>
 
 ## 데이터 결합하기: `dplyr` 패키지
 
-![<https://dplyr.tidyverse.org/>](images/clipboard-3059639685.png){fig-align="center"}
+![[https://dplyr.tidyverse.org/](https://dplyr.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3059639685.png){fig-align="center"}
 
 ## 조인의 개념 {.smaller}
 
@@ -681,9 +679,7 @@ table2 |>
 
     -   공통키: 두 개의 데이터 프레임에 공통적으로 포함되어 있는 식별자(identifier)
 
-<!-- -->
-
--   대응행(match row)과 비대응행
+-   대응행(match row)과 비대응행(non-match row)
 
     -   대응행: 동일한 공통키 값을 가진 두 데이터 프레임의 행
 
@@ -713,4 +709,4 @@ table2 |>
 
 ## 조인의 유형
 
-![<https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti>](https://statisticsglobe.com/wp-content/uploads/2019/04/dplyr-data-join-functions-overview_inner_join-left_join-right_join-full_join-semi_join-anti_join.png)
+![[https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti](https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti){.uri style="font-size:0.75rem"}](https://statisticsglobe.com/wp-content/uploads/2019/04/dplyr-data-join-functions-overview_inner_join-left_join-right_join-full_join-semi_join-anti_join.png)

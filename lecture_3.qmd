@@ -38,7 +38,7 @@ editor_options:
 
 ## 데이터사이언스 과정의 심장
 
-![<https://r4ds.hadley.nz/intro>](images/clipboard-4075247197.png){fig-align="center"}
+![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
 ## 탐색적 데이터 분석 {.smaller}
 
@@ -106,7 +106,7 @@ gapminder |>
 
 ## `dplyr` 패키지
 
-![<https://dplyr.tidyverse.org/>](images/clipboard-3059639685.png){fig-align="center"}
+![[https://dplyr.tidyverse.org/](https://dplyr.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3059639685.png){fig-align="center"}
 
 ## `dplyr` 기초
 
@@ -150,7 +150,7 @@ gapminder |>
 
 ## 행 함수 1: `filter()`
 
-![](images/clipboard-2723506167.png)
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-2723506167.png)
 
 ## 행 함수 1: `filter()`
 
@@ -204,7 +204,7 @@ gapminder |>
 
 ## 
 
-![](images/clipboard-417835741.png){fig-align="center"}
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-417835741.png){fig-align="center"}
 
 ## 열 함수 3: `rename()`
 
@@ -212,7 +212,7 @@ gapminder |>
 
 ## 
 
-![](images/clipboard-3953189394.png){fig-align="center"}
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-3953189394.png){fig-align="center"}
 
 ## 열 함수 3: `rename()`
 
@@ -224,7 +224,7 @@ gapminder |>
 
 ## 
 
-![](images/clipboard-2066290782.png){fig-align="center"}
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-2066290782.png){fig-align="center"}
 
 ## 그룹 함수: 네 개의 주요 함수
 
@@ -270,13 +270,13 @@ gapminder |>
 
 ## 
 
-![](images/clipboard-2406373084.png){fig-align="center"}
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-2406373084.png){fig-align="center"}
 
 # [데이터 시각화하기]{style="color:coral"}
 
 ## `ggplot2` 패키지
 
-![<https://ggplot2.tidyverse.org/>](images/clipboard-3146270133.png){fig-align="center"}
+![[https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3146270133.png){fig-align="center"}
 
 ## Grammar of graphics
 
@@ -284,7 +284,7 @@ gapminder |>
 
 ## `ggplot2`의 8대 구성 요소
 
-![<https://initiation.doana-r.com/06-ggplot2#1>](https://sangillee.snu.ac.kr/data_science/images/clipboard-3014854163.png){fig-align="center"}
+![[https://initiation.doana-r.com/06-ggplot2#1](https://initiation.doana-r.com/06-ggplot2#1){.uri style="font-size:0.75rem"}](https://sangillee.snu.ac.kr/data_science/images/clipboard-3014854163.png){fig-align="center"}
 
 ## 심미성과 기하
 
@@ -422,7 +422,7 @@ gapminder |>
 
 ## 통계적 변환 Statistical transformation
 
-![<https://r4ds.hadley.nz/layers>](images/clipboard-3826441672.png){fig-align="center"}
+![[https://r4ds.hadley.nz/layers](https://r4ds.hadley.nz/layers){.uri style="font-size:0.75rem"}](images/clipboard-3826441672.png){fig-align="center"}
 
 ## 좌표 Coordinates
 
@@ -446,7 +446,7 @@ gapminder |>
 
 ## 테마 Theme
 
-![<https://r4ds.hadley.nz/communication>](images/clipboard-57653269.png){fig-align="center"}
+![[https://r4ds.hadley.nz/communication](https://r4ds.hadley.nz/communication){.uri style="font-size:0.75rem"}](images/clipboard-57653269.png){fig-align="center"}
 
 ## 테마 Theme
 
@@ -478,4 +478,4 @@ gapminder |>
 
 ## `patchwork`
 
-![<https://allisonhorst.com/r-packages-functions>](images/clipboard-2622112002.png){fig-align="center"}
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){.uri style="font-size:0.75rem"}](images/clipboard-2622112002.png){fig-align="center"}

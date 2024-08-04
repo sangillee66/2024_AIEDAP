@@ -38,7 +38,7 @@ editor_options:
 
 ## 커뮤니케이션을 위한 시각화
 
-![<https://r4ds.hadley.nz/intro>](images/clipboard-4075247197.png){fig-align="center"}
+![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
 ## 내용
 
@@ -67,11 +67,11 @@ editor_options:
 
 ## 자바스크립트 라이브러리: 종류
 
-![<https://data-flair.training/blogs/javascript-libraries/>](images/clipboard-1395452157.png){fig-align="center"}
+![[https://data-flair.training/blogs/javascript-libraries/](https://data-flair.training/blogs/javascript-libraries/){.uri style="font-size:0.75rem"}](images/clipboard-1395452157.png){fig-align="center"}
 
 ## 자바스크립트 라이브러리: 데이터 시각화
 
-![<https://www.geeksforgeeks.org/javascript-libraries-for-data-visualization/>](images/clipboard-1649896174.webp){fig-align="center"}
+![[https://www.geeksforgeeks.org/javascript-libraries-for-data-visualization/](https://www.geeksforgeeks.org/javascript-libraries-for-data-visualization/){.uri style="font-size:0.75rem"}](images/clipboard-1649896174.webp){fig-align="center"}
 
 # [동적ㆍ반응형 시각화]{style="color:coral"}
 
@@ -134,15 +134,15 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 
 ## 테이블 [Tables]{style="font-size:2.5rem;color:gray"}
 
-![<https://r-graph-gallery.com/table.html>](images/clipboard-3923512479.png){fig-align="center"}
+![[https://r-graph-gallery.com/table.html](https://r-graph-gallery.com/table.html){.uri style="font-size:0.75rem"}](images/clipboard-3923512479.png){fig-align="center"}
 
 ## 테이블 [Tables]{style="font-size:2.5rem;color:gray"} {.smaller}
 
--   [`DT`](https://rstudio.github.io/DT/): R 래퍼 패키지
+-   `DT`: R 래퍼 패키지
 
     -   DataTables(<https://datatables.net/>): 자바스크립트 라이브러리
 
-![](images/clipboard-4023553912.png){fig-align="center"}
+![[https://datatables.net/](https://datatables.net/){style="font-size:0.75rem"}](images/clipboard-4023553912.png){fig-align="center"}
 
 ## 테이블 [Tables]{style="font-size:2.5rem;color:gray"} {.smaller}
 
@@ -218,7 +218,7 @@ datatable(gapminder, filter = "top",
 
     -   `ggplotly()` function
 
-![](images/clipboard-933558486.png){fig-align="center"}
+![[https://plotly.com/](https://plotly.com/){style="font-size:0.75rem"}](images/clipboard-933558486.png){fig-align="center"}
 
 ## 그래프 [Graphs]{style="font-size:2.5rem;color:gray"}: `plotly`
 
@@ -388,7 +388,7 @@ P + transition_time(year) +
 
 ## `sf` 패키지
 
-![](images/clipboard-601191076.png){fig-align="center" width="842"}
+![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-601191076.png){fig-align="center" width="842"}
 
 ## `sf` 패키지
 
@@ -416,7 +416,7 @@ qtm(sigungu_shp)
 ```
 :::
 
-## ggplot2를 이용한 지도 제작: 세계지도
+## `ggplot2`를 이용한 지도 제작: 세계지도
 
 ::: panel-tabset
 ## Code 1
@@ -483,7 +483,7 @@ world_map
 ```
 :::
 
-## ggplot2를 이용한 지도 제작: 우리나라 지도
+## `ggplot2`를 이용한 지도 제작: 우리나라 지도
 
 ::: panel-tabset
 ## Code 1
@@ -656,7 +656,7 @@ girafe(ggobj = gg) |>
 
 ## `leaflet`: 자바스크립트 라이브러리
 
-![<https://leafletjs.com/>](images/clipboard-3712927039.png){fig-align="center"}
+![[https://leafletjs.com/](https://leafletjs.com/){.uri style="font-size:0.75rem"}](images/clipboard-3712927039.png){fig-align="center"}
 
 ## `leaflet`: 단순 일반도
 
