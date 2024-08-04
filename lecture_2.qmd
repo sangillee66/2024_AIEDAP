@@ -126,7 +126,7 @@ editor: visual
 -   HTML 엘리먼트의 선택: CSS(casading style sheet) 선택자(selector)
 
 | 선택 대상              | CSS 선택자     | 결과                                                                                      |
-|------------------------|----------------|-------------------------------------------------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | 태그(tag)              | tag1           | "tag1"이라는 이름의 모든 tag                                                              |
 | 클래스(class)          | .class1        | "class1"이라는 class 속성을 갖는 모든 요소                                                |
 | 아이디(id)             | #id1           | "id1"이라는 id 속성을 갖는 모든 요소                                                      |
@@ -675,34 +675,43 @@ table2 |>
 
 ![<https://dplyr.tidyverse.org/>](images/clipboard-3059639685.png){fig-align="center"}
 
-## 공통키 common keys
+## 조인의 개념  {.smaller}
 
-![](images/clipboard-1575493085.png)
+-   두 개의 데이터 프레임을 공통키(common key)를 활용하여 하나의 데이터 프레임으로 결합(join)하는 과정
 
-## 조인의 유형
+    -   공통키: 두 개의 데이터 프레임에 공통적으로 포함되어 있는 식별자(identifier)
 
--   inner_join(): 두 변수 모두에 존재하는 열을 취함
+```{=html}
+<!-- -->
+```
+-   대응행(match row)과 비대응행
 
--   full_join(): 최소한 한 변수에 존재하는 열을 모두 취함
+    -   대응행: 동일한 공통키 값을 가진 두 데이터 프레임의 행
 
--   [left_join()]{style="color:coral"}: 첫 번째 변수는 그대로 둔 상태에서 두 번째 변수를 결합함으로써 두 번째 변수의 열을 가져옴
+    -   비대응행: 한 데이터 프레임에만 존재하는 공통키 값을 가진 행
 
--   right_join(): 두 번째 변수는 그대로 둔 상태에서 첫 번째 변수를 결합함으로써 첫 번째 변수의 열을 가져옴
+-   조인의 결과
 
-![](http://localhost:6197/images/clipboard-1394869847.png){fig-align="center"}
+    -   열(변수)이 늘어나므로 데이터는 넓어짐
 
-## 조인의 유형
+    -   행은 조인의 방식에 따라 변화가 없을 수도 있고, 짧아질수도 있고, 길어질 수도 있음
 
-::: {layout="[45, -5, 45]" layout-valign="center"}
-![](images/clipboard-3276497169.png)
+## 조인의 유형 
 
-![](images/clipboard-1577298199.png)
+::: r-fit-text
+-   inner_join(): 대응행만으로 결합
+
+-   full_join(): 대응행과 비대응행 모두를 결합
+
+-   [left_join()]{style="color:coral"}: 첫 번째 변수는 그대로 둔 상태에서 두 번째 변수의 대응행만 결합
+
+-   right_join(): 두 번째 변수는 그대로 둔 상태에서 첫 번째 변수의 대응행만 결합
+
+-   semi_join(): 두 번째 변수에 대응행이 존재하는 첫 번째 변수의 행만 취함
+
+-   anti_join(): 두 번째 변수에 대응행이 존재하지 않는 첫 번째 변수의 행만 취함
 :::
 
 ## 조인의 유형
 
-::: {layout="[45, -5, 45]" layout-valign="center"}
-![](images/clipboard-2197162614.png){fig-align="center"}
-
-![](images/clipboard-2555805146.png){fig-align="center"}
-:::
+![<https://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti>](https://statisticsglobe.com/wp-content/uploads/2019/04/dplyr-data-join-functions-overview_inner_join-left_join-right_join-full_join-semi_join-anti_join.png)

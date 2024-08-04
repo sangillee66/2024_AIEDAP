@@ -143,8 +143,8 @@
     "objectID": "lecture_1.html#소개",
     "href": "lecture_1.html#소개",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
-    "section": "소개",
-    "text": "소개\n\n\n서울대학교 사범대학 지리교육과 교수\n\nhttps://sangillee.snu.ac.kr/\nhttps://sangillee.snu.ac.kr/2024_AIEDAP/\nGIS, 지도학, 공간통계분석, 인구지리학\n공간데이터사이언스, 테크놀로지-기반 지리교육\n\n겸임\n\n서울대학교 사범대학 AI융합교육학과 겸임교수\n서울대학교 데이터사이언스대학원 융합전공 응용데이터사이언스 겸임교수\n서울대학교 학습과학연구소 AI기반교육연구센터 겸임연구원"
+    "section": "",
+    "text": "서울대학교 사범대학 지리교육과 교수\n\nhttps://sangillee.snu.ac.kr/\nhttps://sangillee.snu.ac.kr/2024_AIEDAP/\nGIS, 지도학, 공간통계분석, 인구지리학\n공간데이터사이언스, 테크놀로지-기반 지리교육\n\n겸임\n\n서울대학교 사범대학 AI융합교육학과 겸임교수\n서울대학교 데이터사이언스대학원 융합전공 응용데이터사이언스 겸임교수\n서울대학교 학습과학연구소 AI기반교육연구센터 겸임연구원"
   },
   {
     "objectID": "lecture_1.html#ai-융합교육을-위한-인문사회-컨텐츠-설계",
@@ -179,7 +179,7 @@
     "href": "lecture_1.html#에듀테크",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "에듀테크",
-    "text": "에듀테크\n\nhttps://www.korea.kr/multi/visualNewsView.do?newsId=148900094#visualNews"
+    "text": "에듀테크\n\n\n\nhttps://www.korea.kr/multi/visualNewsView.do?newsId=148900094#visualNews"
   },
   {
     "objectID": "lecture_1.html#교육부-교사가-이끄는-교실-혁명",
@@ -200,28 +200,28 @@
     "href": "lecture_1.html#ai-tpack",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "AI-TPACK",
-    "text": "AI-TPACK\n\nhttps://www.mdpi.com/2071-1050/16/3/978"
+    "text": "AI-TPACK\n\n\n\nhttps://www.mdpi.com/2071-1050/16/3/978"
   },
   {
     "objectID": "lecture_1.html#tpack-uoti",
     "href": "lecture_1.html#tpack-uoti",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "TPACK-UotI",
-    "text": "TPACK-UotI\n\nhttps://www.nature.com/articles/s41599-023-01533-0"
+    "text": "TPACK-UotI\n\n\n\nhttps://www.nature.com/articles/s41599-023-01533-0"
   },
   {
     "objectID": "lecture_1.html#tdl-tpack",
     "href": "lecture_1.html#tdl-tpack",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "TDL-TPACK",
-    "text": "TDL-TPACK\n\nhttps://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.966575/full"
+    "text": "TDL-TPACK\n\n\n\nhttps://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.966575/full"
   },
   {
     "objectID": "lecture_1.html#dpack",
     "href": "lecture_1.html#dpack",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "DPACK",
-    "text": "DPACK\n\nhttps://www.mdpi.com/2227-7102/13/8/769"
+    "text": "DPACK\n\n\n\nhttps://www.mdpi.com/2227-7102/13/8/769"
   },
   {
     "objectID": "lecture_1.html#교육학적-혹은-교과교육학적-연구",
@@ -242,7 +242,7 @@
     "href": "lecture_1.html#데이터사이언스의-네-개의-기둥",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "데이터사이언스의 네 개의 기둥",
-    "text": "데이터사이언스의 네 개의 기둥\n\n\n\n\n\n\nhttps://mokeya.tistory.com/76\n\n\n\n\n\n\n\nhttps://www.geeksforgeeks.org/4-key-pillars-of-data-science/"
+    "text": "데이터사이언스의 네 개의 기둥\n\n\n\n\n\n\n\n\n\nhttps://mokeya.tistory.com/76\n\n\n\n\n\n\n\nhttps://www.geeksforgeeks.org/4-key-pillars-of-data-science/"
   },
   {
     "objectID": "lecture_1.html#교사의-aiㆍ디지털-커뮤니케이션-역량",
@@ -263,7 +263,7 @@
     "href": "lecture_1.html#대시보드의-개념과-기본-구조",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "대시보드의 개념과 기본 구조",
-    "text": "대시보드의 개념과 기본 구조\n\n단일한 주제에 대한 상호연관된 다양한 정보를 그래픽의 형태로 일관성 있게 제시한 것\n5대 구성 요소: 메인 바디, 헤더, 내비게이터, 사이드바, 푸터\n\n\nhttps://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"
+    "text": "대시보드의 개념과 기본 구조\n\n단일한 주제에 대한 상호연관된 다양한 정보를 그래픽의 형태로 일관성 있게 제시한 것\n5대 구성 요소: 메인 바디, 헤더, 내비게이터, 사이드바, 푸터\n\n\n\n\nhttps://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"
   },
   {
     "objectID": "lecture_1.html#대시보드의-레이아웃-요소",
@@ -291,28 +291,28 @@
     "href": "lecture_1.html#r과-데이터사이언스-과정",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R과 데이터사이언스 과정",
-    "text": "R과 데이터사이언스 과정\n\nhttps://r4ds.hadley.nz/intro"
+    "text": "R과 데이터사이언스 과정\n\n\n\nhttps://r4ds.hadley.nz/intro"
   },
   {
     "objectID": "lecture_1.html#r과-데이터사이언스-과정-1",
     "href": "lecture_1.html#r과-데이터사이언스-과정-1",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R과 데이터사이언스 과정",
-    "text": "R과 데이터사이언스 과정\n\nhttps://r4ds.hadley.nz/intro"
+    "text": "R과 데이터사이언스 과정\n\n\n\nhttps://r4ds.hadley.nz/intro"
   },
   {
     "objectID": "lecture_1.html#r-바이블과-리더",
     "href": "lecture_1.html#r-바이블과-리더",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R 바이블과 리더",
-    "text": "R 바이블과 리더\n\n\n\n\n\n\nhttps://r4ds.hadley.nz/\n\n\n\n\n\n\n\nHadley Wickham"
+    "text": "R 바이블과 리더\n\n\n\n\n\n\n\n\n\nhttps://r4ds.hadley.nz/\n\n\n\n\n\n\n\nHadley Wickham"
   },
   {
     "objectID": "lecture_1.html#r의-아버지들-1993",
     "href": "lecture_1.html#r의-아버지들-1993",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R의 아버지들, 1993",
-    "text": "R의 아버지들, 1993\n\n\n\n\n\n\nGeorge Ross Ihaka\n\n\n\n\n\n\n\nUniversity of Auckland, New Zealand\n\n\n\n\n\n\n\nRobert C. Gentleman"
+    "text": "R의 아버지들, 1993\n\n\n\n\n\n\n\n\n\nGeorge Ross Ihaka\n\n\n\n\n\n\n\nUniversity of Auckland, New Zealand\n\n\n\n\n\n\n\nRobert C. Gentleman"
   },
   {
     "objectID": "lecture_1.html#r의-공식-생일-2000",
@@ -326,42 +326,42 @@
     "href": "lecture_1.html#r-혁신-ggplot2-2007",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R 혁신: ggplot2, 2007",
-    "text": "R 혁신: ggplot2, 2007\n\nhttps://ggplot2.tidyverse.org/"
+    "text": "R 혁신: ggplot2, 2007\n\n\n\nhttps://ggplot2.tidyverse.org/"
   },
   {
     "objectID": "lecture_1.html#rstudio-2011",
     "href": "lecture_1.html#rstudio-2011",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "RStudio, 2011",
-    "text": "RStudio, 2011\n\n\nhttps://posit.co/download/rstudio-desktop/"
+    "text": "RStudio, 2011\n\n\n\n\nhttps://posit.co/download/rstudio-desktop/"
   },
   {
     "objectID": "lecture_1.html#r-혁신-shiny-2012",
     "href": "lecture_1.html#r-혁신-shiny-2012",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R 혁신: Shiny, 2012",
-    "text": "R 혁신: Shiny, 2012\n\nhttps://shiny.posit.co/"
+    "text": "R 혁신: Shiny, 2012\n\n\n\nhttps://shiny.posit.co/"
   },
   {
     "objectID": "lecture_1.html#r-혁신-tidyverse-2016-1",
     "href": "lecture_1.html#r-혁신-tidyverse-2016-1",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R 혁신: Tidyverse, 2016",
-    "text": "R 혁신: Tidyverse, 2016\n\nhttps://www.tidyverse.org/"
+    "text": "R 혁신: Tidyverse, 2016\n\n\n\nhttps://www.tidyverse.org/"
   },
   {
     "objectID": "lecture_1.html#posit-2022",
     "href": "lecture_1.html#posit-2022",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "Posit, 2022",
-    "text": "Posit, 2022\n\n\nhttps://posit.co/"
+    "text": "Posit, 2022\n\n\n\n\nhttps://posit.co/"
   },
   {
     "objectID": "lecture_1.html#quarto-2022",
     "href": "lecture_1.html#quarto-2022",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "Quarto, 2022",
-    "text": "Quarto, 2022\n\nhttps://quarto.org/"
+    "text": "Quarto, 2022\n\n\n\nhttps://quarto.org/"
   },
   {
     "objectID": "lecture_1.html#r-vs.-python",
@@ -382,7 +382,7 @@
     "href": "lecture_1.html#r-vs.-python-장단점",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R vs. Python: 장단점",
-    "text": "R vs. Python: 장단점\n\nhttps://r-craft.org/the-3-reasons-you-should-learn-r-for-data-science/"
+    "text": "R vs. Python: 장단점\n\n\n\nhttps://r-craft.org/the-3-reasons-you-should-learn-r-for-data-science/"
   },
   {
     "objectID": "lecture_1.html#재현가능연구를-위한-r",
@@ -396,21 +396,21 @@
     "href": "lecture_1.html#r-커뮤니티",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R 커뮤니티",
-    "text": "R 커뮤니티\n\n\n\n\n\n\nhttps://rladies.org/"
+    "text": "R 커뮤니티\n\n\n\n\n\n\n\n\n\nhttps://rladies.org/"
   },
   {
     "objectID": "lecture_1.html#r-and-python-in-harmony",
     "href": "lecture_1.html#r-and-python-in-harmony",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R and Python in Harmony",
-    "text": "R and Python in Harmony\n\n\n\n\n\n\nhttps://rstudio.github.io/reticulate/"
+    "text": "R and Python in Harmony\n\n\n\n\n\n\n\n\n\nhttps://rstudio.github.io/reticulate/"
   },
   {
     "objectID": "lecture_1.html#positron-2024",
     "href": "lecture_1.html#positron-2024",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "Positron, 2024",
-    "text": "Positron, 2024\n\nhttps://github.com/posit-dev/positron"
+    "text": "Positron, 2024\n\n\n\nhttps://github.com/posit-dev/positron"
   },
   {
     "objectID": "lecture_1.html#section",
@@ -424,7 +424,7 @@
     "href": "lecture_1.html#쿼토-quarto",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "쿼토 Quarto",
-    "text": "쿼토 Quarto\n\nhttps://rstudio.github.io/cheatsheets/html/quarto.html"
+    "text": "쿼토 Quarto\n\n\n\nhttps://rstudio.github.io/cheatsheets/html/quarto.html"
   },
   {
     "objectID": "lecture_1.html#quarto-정의",
@@ -445,7 +445,7 @@
     "href": "lecture_1.html#quarto-rendering",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "Quarto: Rendering",
-    "text": "Quarto: Rendering\n\nknitr 패키지: .qmd를 .md로 전환\npandoc: .md를 다양한 디지털 포맷으로 전환\n\n\nhttps://r4ds.hadley.nz/quarto"
+    "text": "Quarto: Rendering\n\nknitr 패키지: .qmd를 .md로 전환\npandoc: .md를 다양한 디지털 포맷으로 전환\n\n\n\n\nhttps://r4ds.hadley.nz/quarto"
   },
   {
     "objectID": "lecture_1.html#quarto-다큐먼트-기본-구조",
@@ -494,14 +494,14 @@
     "href": "lecture_1.html#논문-저술-도구-zotero",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "논문 저술 도구: Zotero",
-    "text": "논문 저술 도구: Zotero\n\nhttps://quarto.org/docs/visual-editor/technical.html"
+    "text": "논문 저술 도구: Zotero\n\n\n\nhttps://quarto.org/docs/visual-editor/technical.html"
   },
   {
     "objectID": "lecture_1.html#웹-배포-웹포스팅-서비스",
     "href": "lecture_1.html#웹-배포-웹포스팅-서비스",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "웹 배포: 웹포스팅 서비스",
-    "text": "웹 배포: 웹포스팅 서비스\n\nQuarto Pub(https://quartopub.com/)\nGitHub Pages(https://pages.github.com/)\nNetlify(https://www.netlify.com/)\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "웹 배포: 웹포스팅 서비스\n\nQuarto Pub(https://quartopub.com/)\nGitHub Pages(https://pages.github.com/)\nNetlify(https://www.netlify.com/)"
   },
   {
     "objectID": "docs/lecture_1.html",
@@ -1019,7 +1019,7 @@
     "href": "lecture_2.html#지방소멸-뉴스-검색-데이터-수집",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "‘지방소멸’ 뉴스 검색 데이터 수집",
-    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 이재명, 전북서도 '확대명'…최고위원은…  https://www… http… \"이날 이 …  Sat, 0…\n 2 이재명, 전북서도 84.8% 독주...최고위…  http://news… http… \"이재명 후… Sat, 0…\n 3 김두관 “현실적으로 윤 대통령 탄핵 쉽…  https://www… http… \"이재명 후… Sat, 0…\n 4 김영록 전남지사, 국비 예산 확보 위한 … http://www.… http… \"&lt;b&gt;지방소… Sat, 0…\n 5 강화군, 인구증대 발벗고 나섰다…군민 …  https://www… http… \"군 관계자… Sat, 0…\n 6 [한번더체크] &quot;청년층 70만→36만 …  http://www.… http… \"&quot;저…  Sat, 0…\n 7 [위클립] 7월 5주                       https://www… http… \"민주우체…  Sat, 0…\n 8 청양군, 인프라 부족 면지역에 일상생활… https://www… http… \"주민 心부… Sat, 0…\n 9 단양군보건의료원, 충북 북부지역 의료 … https://www… http… \"군은 &lt;b&gt;…  Sat, 0…\n10 &quot;더는 원정진료 없다&quot;…'연봉…  https://www… http… \"그러면서 … Sat, 0…"
+    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 강화군 ‘인구증대’ 군민 의견 청취 간…   https://www… http… \"군 관계자… Sun, 0…\n 2 전남도, '농수산 수출 특화품목 직불금'… https://www… http… \"전남도는 … Sun, 0…\n 3 신동해안 시대 여는 전진기지 포항…균…   http://www.… http… \"이사업은 … Sun, 0…\n 4 청도군, 민선8기 공약 추진 상황 보고회… http://www.… http… \"한편, 청…  Sun, 0…\n 5 &quot;신동해안 시대 전진기지&quot; 포… https://www… http… \"이 사업은… Sun, 0…\n 6 &quot;여름방학 건강하게&quot; 익산시,… https://www… http… \"익산시는 … Sun, 0…\n 7 포항시, 신동해안 시대의 전진기지 거점… https://www… http… \"기업혁신…  Sun, 0…\n 8 단양군보건의료원, 이용자 1만 명 내원 … https://www… http… \"군은 &lt;b&gt;…  Sun, 0…\n 9 전남도, 수출 유망품목 발굴 위해 직불…  https://www… http… \"도는 내수… Sun, 0…\n10 전남도, 농수산 수출 특화품목 직불금 …  http://www.… http… \"전남도는 … Sun, 0…"
   },
   {
     "objectID": "lecture_2.html#kosis",
@@ -1215,14 +1215,14 @@
     "href": "lecture_2.html#조인의-유형",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "조인의 유형",
-    "text": "조인의 유형\n\ninner_join(): 두 변수 모두에 존재하는 열을 취함\nfull_join(): 최소한 한 변수에 존재하는 열을 모두 취함\nleft_join(): 첫 번째 변수는 그대로 둔 상태에서 두 번째 변수를 결합함으로써 두 번째 변수의 열을 가져옴\nright_join(): 두 번째 변수는 그대로 둔 상태에서 첫 번째 변수를 결합함으로써 첫 번째 변수의 열을 가져옴"
+    "text": "조인의 유형\n\n\ninner_join(): 대응행만으로 결합\nfull_join(): 대응행과 비대응행 모두를 결합\nleft_join(): 첫 번째 변수는 그대로 둔 상태에서 두 번째 변수의 대응행만 결합\nright_join(): 두 번째 변수는 그대로 둔 상태에서 첫 번째 변수의 대응행만 결합\nsemi_join(): 두 번째 변수에 대응행이 존재하는 첫 번째 변수의 행만 취함\nanti_join(): 두 번째 변수에 대응행이 존재하지 않는 첫 번째 변수의 행만 취함"
   },
   {
     "objectID": "lecture_2.html#조인의-유형-1",
     "href": "lecture_2.html#조인의-유형-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "조인의 유형",
-    "text": "조인의 유형"
+    "text": "조인의 유형\n\n\nhttps://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
   },
   {
     "objectID": "lecture_2.html#조인의-유형-2",
@@ -1908,7 +1908,7 @@
     "href": "lecture_1.html",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "",
-    "text": "서울대학교 사범대학 지리교육과 교수\n\nhttps://sangillee.snu.ac.kr/\nGIS, 지도학, 공간통계분석, 인구지리학\n공간데이터사이언스, 테크놀로지-기반 지리교육\n\n겸임\n\n서울대학교 사범대학 AI융합교육학과 겸임교수\n서울대학교 데이터사이언스대학원 융합전공 응용데이터사이언스 겸임교수\n서울대학교 학습과학연구소 AI기반교육연구센터 겸임연구원"
+    "text": "서울대학교 사범대학 지리교육과 교수\n\nhttps://sangillee.snu.ac.kr/\nhttps://sangillee.snu.ac.kr/2024_AIEDAP/\nGIS, 지도학, 공간통계분석, 인구지리학\n공간데이터사이언스, 테크놀로지-기반 지리교육\n\n겸임\n\n서울대학교 사범대학 AI융합교육학과 겸임교수\n서울대학교 데이터사이언스대학원 융합전공 응용데이터사이언스 겸임교수\n서울대학교 학습과학연구소 AI기반교육연구센터 겸임연구원"
   },
   {
     "objectID": "lecture_1.html#r-혁신-tidyverse-2016",
@@ -1958,5 +1958,12 @@
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "",
     "text": "https://sangillee.snu.ac.kr/dashboard_examples/\n\n\n\n\n\nhttps://sangillee.shinyapps.io/Dashboard_Example/"
+  },
+  {
+    "objectID": "lecture_2.html#조인의-개념",
+    "href": "lecture_2.html#조인의-개념",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "조인의 개념",
+    "text": "조인의 개념\n\n\n두 개의 데이터 프레임을 공통키(common key)를 활용하여 하나의 데이터 프레임으로 결합(join)하는 과정\n\n공통키: 두 개의 데이터 프레임에 공통적으로 포함되어 있는 식별자(identifier)\n\n\n\n\n\n대응행(match row)과 비대응행\n\n대응행: 동일한 공통키 값을 가진 두 데이터 프레임의 행\n비대응행: 한 데이터 프레임에만 존재하는 공통키 값을 가진 행\n\n\n\n조인의 결과\n\n열(변수)이 늘어나므로 데이터는 넓어짐\n행은 조인의 방식에 따라 변화가 없을 수도 있고, 짧아질수도 있고, 길어질 수도 있음"
   }
 ]
