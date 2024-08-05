@@ -942,7 +942,7 @@
     "href": "lecture_2.html#html-엘리먼트의-선택-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "HTML 엘리먼트의 선택",
-    "text": "HTML 엘리먼트의 선택\n\n\n정확한 선택자의 확인\n\n웹페이지에서 오른쪽 마우스 버튼을 눌러 “검사” 선택한 뒤, 탐색\n브라우저 확장 프로그램의 활용: SelectGadget"
+    "text": "HTML 엘리먼트의 선택\n\n\n정확한 CSS 선택자의 확인\n\n웹페이지에서 오른쪽 마우스 버튼을 눌러 “검사” 선택한 뒤, 탐색\n브라우저 확장 프로그램의 활용: SelectGadget"
   },
   {
     "objectID": "lecture_2.html#r의-rvest-패키지",
