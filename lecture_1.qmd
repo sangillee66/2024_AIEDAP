@@ -392,6 +392,10 @@ editor: visual
 
 ![[https://rstudio.github.io/cheatsheets/html/quarto.html](https://rstudio.github.io/cheatsheets/html/quarto.html){.uri style="font-size:0.75rem"}](images/clipboard-710045230.png){fig-align="center"}
 
+## 쿼토 Quarto
+
+![[https://bioinformatics.ccr.cancer.gov/docs/btep-coding-club/CC2024/Quarto/GettingStarted_with_Quarto_orig.html](https://bioinformatics.ccr.cancer.gov/docs/btep-coding-club/CC2024/Quarto/GettingStarted_with_Quarto_orig.html){style="font-size:0.75rem"}](images/clipboard-2040990943.png){fig-align="center"}
+
 ## Quarto: 정의 {.smaller}
 
 -   "과학적, 기술적 출판을 위한 오픈소스 시스템(an open-source scientific and technical publishing system)"

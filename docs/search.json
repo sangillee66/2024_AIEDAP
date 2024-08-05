@@ -2133,5 +2133,12 @@
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "\nhttr2 패키지",
     "text": "httr2 패키지\n\nhttps://httr2.r-lib.org/"
+  },
+  {
+    "objectID": "lecture_1.html#쿼토-quarto-1",
+    "href": "lecture_1.html#쿼토-quarto-1",
+    "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
+    "section": "쿼토 Quarto",
+    "text": "쿼토 Quarto\n\nhttps://bioinformatics.ccr.cancer.gov/docs/btep-coding-club/CC2024/Quarto/GettingStarted_with_Quarto_orig.html"
   }
 ]
