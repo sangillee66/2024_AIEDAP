@@ -1019,7 +1019,7 @@
     "href": "lecture_2.html#지방소멸-뉴스-검색-데이터-수집",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "‘지방소멸’ 뉴스 검색 데이터 수집",
-    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 김명수 광산구의회 의장 광주자치구의장… http://www.… http… \"김 협의회… Sun, 0…\n 2 신동해안 시대 여는 전진기지 포항, 균…  http://www.… http… \"이 사업은… Sun, 0…\n 3 수요자 중심의 출생 정책                http://www.… http… \"&lt;b&gt;지방소… Sun, 0…\n 4 신동해안 시대 여는 전진기지 포항…균…   https://www… http… \"이사업은 … Sun, 0…\n 5 공주시 '청년마을 공유주거 조성사업' …  http://www.… http… \"시는 &lt;b&gt;…  Sun, 0…\n 6 부여군, 제2중앙경찰학교 설립 유치를 …  http://www.… http… \"부여군은 … Sun, 0…\n 7 대전 대덕구 등 대전.충남 4개 기초단체… http://www.… http… \"［동양일…  Sun, 0…\n 8 단양군보건의료원, 지역 의료 거점 역할… http://www.… http… \"군은 &lt;b&gt;…  Sun, 0…\n 9 전남도, 농수산 수출 특화품목 직불금 …  http://www.… http… \"도는 내수… Sun, 0…\n10 개원 한달 단양보건의료원 `역할 톡톡'   http://www.… http… \"군은 &lt;b&gt;…  Sun, 0…"
+    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 남원시, 귀농･귀촌･귀향 유입 총력…지…   http://news… http… \"한 해 평…  Mon, 0…\n 2 &quot;사천·진주 통합하면 면적 1천㎢…   https://www… http… \"미래위는 … Mon, 0…\n 3 농업 구조적 한계상황 극복 위해 규모화… https://www… http… \"최근 농촌… Mon, 0…\n 4 창녕군, 교육발전특구 시범지역 2차 공…  https://www… http… \"이번에 지… Mon, 0…\n 5 &quot;매년 1000여 명 유입&quot;...남…  https://www… http… \"남원시가 … Mon, 0…\n 6 권영진, 지자체가 자주재원 확충하고 지… http://www.… http… \"이 때문에… Mon, 0…\n 7 권영진 의원 &quot;&lt;b&gt;지방&lt;/b&gt;교부세율… https://www… http… \"권 의원은… Mon, 0…\n 8 남원시, 귀농·귀촌·귀향 유입 총력...…   https://www… http… \"&lt;b&gt;지방소… Mon, 0…\n 9 구미시, 국제우호도시 박닌시 방문 '우…  https://www… http… \"이어 박닌… Mon, 0…\n10 단양 군립 보건의료원, 7월 한 달간 1만… http://news… http… \"특히 응급… Mon, 0…"
   },
   {
     "objectID": "lecture_2.html#kosis",
@@ -2020,7 +2020,7 @@
     "href": "lecture_1.html#r-혁신-파이프-연산자-2014",
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "R 혁신: 파이프 연산자, 2014",
-    "text": "R 혁신: 파이프 연산자, 2014\n\n\n\n\n\n\n\nhttps://medium.com/@romainx/pandas-pipes-905ebc436715\n\n\n\n\n\n\n\nhttps://statistik-dresden.de/r-4-1-0-base-r-pipe/"
+    "text": "R 혁신: 파이프 연산자, 2014\n\n\n\n\n\n\nhttps://magrittr.tidyverse.org/\n\n\n\n\n\n\n\nhttps://statistik-dresden.de/r-4-1-0-base-r-pipe/"
   },
   {
     "objectID": "lecture_1.html#quarto-렌더링-rendering",
@@ -2140,5 +2140,75 @@
     "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
     "section": "쿼토 Quarto",
     "text": "쿼토 Quarto\n\nhttps://bioinformatics.ccr.cancer.gov/docs/btep-coding-club/CC2024/Quarto/GettingStarted_with_Quarto_orig.html"
+  },
+  {
+    "objectID": "lecture_3.html#탐색적-데이터-분석-개념",
+    "href": "lecture_3.html#탐색적-데이터-분석-개념",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "탐색적 데이터 분석: 개념",
+    "text": "탐색적 데이터 분석: 개념\n\n탐색적 데이터 분석은 데이터와의 끝임없는 상호작용을 통해 의미있는 결과물을 얻어내는 과정을 의미한다. 데이터사이언스가 데이터로부터 이해, 지식, 통찰력을 획득하는 과정이라고 했을 때, 탐색적 데이터 분석은 데이터사이언스의 심장이라 해도 과언이 아니다. 상호작용은 데이터와의 질의응답의 연쇄과정을 의미한다. 의미있는 질문에 답을 얻기 위해서는 거의 반드시 데이터를 변형하거나 시각화해야만 한다.\n데이터 변형과 데이터 시각화는 개별적으로 탐색적 데이터 분석에 기여한다. 데이터 변형은 데이터를 다른 각도로 바라볼 수 있게 해주고 다양한 요약 통계값을 산출해 준다. 데이터 시각화는 데이터에 차원을 부가함으로써 시각화 되지 않았다면 발견할 수 없었던 것을 발견할 수 있게 해준다."
+  },
+  {
+    "objectID": "lecture_3.html#탐색적-데이터-분석-개념-1",
+    "href": "lecture_3.html#탐색적-데이터-분석-개념-1",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "탐색적 데이터 분석: 개념",
+    "text": "탐색적 데이터 분석: 개념\n\n데이터 변형에서 데이터 시각화로 이어지는 시퀀스가 탐색적 데이터 분석의 핵심적인 방법론이다. 데이터 변형의 궁극적인 목적은 바로 데이터 시각화를 위한 준비이다. 특정한 형태의 시각화를 위해서는 특정한 형태의 데이터가 필수적이고, 그것이 이해, 지식, 통찰력의 획득으로 나아가게 해주는 주된 경로이다.\n데이터 시각화의 두 가지 목적은 탐색과 커뮤니케이션이다. 우리가 데이터 시각화를 하는 첫번째 목적은 데이터에 대한 질문에 답을 찾기 위해서이다. 우리가 데이터를 시각화하는 두 번째 목적은 우리가 발견한 것을 다른 사람들과 ‘잘’ 커뮤니케이션하기 위해서이다."
+  },
+  {
+    "objectID": "lecture_3.html#탐색적-데이터-분석-절차",
+    "href": "lecture_3.html#탐색적-데이터-분석-절차",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "탐색적 데이터 분석: 절차",
+    "text": "탐색적 데이터 분석: 절차\n\n질문에 답할 수 있는 그래픽(플롯, 지도 등)을 구상한다.\n구상한 그래픽에 부합하도록 데이터를 변형한다.\n변형한 데이터를 구상한 그래픽으로 시각화한다.\n그래픽으로부터 질문의 답을 구하고, 더 나아가 지식, 이해, 통찰을 이끌어 낸다."
+  },
+  {
+    "objectID": "lecture_3.html#탐색적-데이터-분석-예시",
+    "href": "lecture_3.html#탐색적-데이터-분석-예시",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "탐색적 데이터 분석: 예시",
+    "text": "탐색적 데이터 분석: 예시\n\n대륙별 최대국(인구가 가장 많은 나라)이 소속 대륙 전체에서 차지하는 비중이 어느 정도이고 대륙별로 어느 정도의 차이가 있는지, 그리고 대륙별 최대국의 비중이 시간이 지남에 따라 어떠한 변화 양상을 보여주고 있고, 그러한 양상에 대륙별 차이가 있는지의 여부\n\n\n\nData\nGraph\nCode\n\n\n\n\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# ℹ 1,694 more rows\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngapminder |&gt; \n  group_by(year, continent) |&gt; \n  mutate(\n    sum_cont = sum(pop),\n    country_prop = pop * 100 / sum_cont\n  ) |&gt; \n  slice_max(country_prop) |&gt; \n  ggplot() +\n  geom_line(aes(x = year, y = country_prop, color = continent), linewidth = 1) +\n  labs(x = \"Year\", y = \"% of Population\", color = \"Continents\")"
+  },
+  {
+    "objectID": "lecture_1.html#r-혁신-파이프-연산자-2014-1",
+    "href": "lecture_1.html#r-혁신-파이프-연산자-2014-1",
+    "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
+    "section": "R 혁신: 파이프 연산자, 2014",
+    "text": "R 혁신: 파이프 연산자, 2014\n\n\n\n\n\n\n\n\n\nhttps://kpress.dev/blog/2022-06-19-replacing-the-magrittr-pipe-with-native-r-pipe/"
+  },
+  {
+    "objectID": "lecture_1.html#magrittr",
+    "href": "lecture_1.html#magrittr",
+    "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
+    "section": "magrittr",
+    "text": "magrittr"
+  },
+  {
+    "objectID": "lecture_1.html#native-pipe-operator",
+    "href": "lecture_1.html#native-pipe-operator",
+    "title": "Day 1\nAIㆍ디지털 역량과 사회 교과",
+    "section": "Native pipe operator",
+    "text": "Native pipe operator\n\n\n\n\n\n\n\n\n\nhttps://kpress.dev/blog/2022-06-19-replacing-the-magrittr-pipe-with-native-r-pipe/"
+  },
+  {
+    "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수",
+    "href": "lecture_3.html#파이프-연산자와-dplyr-함수",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "파이프 연산자와 dplyr 함수",
+    "text": "파이프 연산자와 dplyr 함수\n\nhttps://info5940.infosci.cornell.edu/slides/pipes-and-functions-in-r/#9"
+  },
+  {
+    "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수-1",
+    "href": "lecture_3.html#파이프-연산자와-dplyr-함수-1",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "파이프 연산자와 dplyr 함수",
+    "text": "파이프 연산자와 dplyr 함수"
+  },
+  {
+    "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수-2",
+    "href": "lecture_3.html#파이프-연산자와-dplyr-함수-2",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "파이프 연산자와 dplyr 함수",
+    "text": "파이프 연산자와 dplyr 함수\n\nhttps://www.rforecology.com/post/how-to-use-pipes/"
   }
 ]

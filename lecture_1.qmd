@@ -312,12 +312,18 @@ editor: visual
 
 ## R 혁신: 파이프 연산자, 2014
 
-<br>
+::: {layout-ncol="2" layout-valign="center"}
+![[https://magrittr.tidyverse.org/](https://magrittr.tidyverse.org/){style="font-size:0.75rem"}](images/clipboard-30645075.png)
 
-::: {layout="[50,50]" layout-valign="center"}
-![[https://medium.com/\@romainx/pandas-pipes-905ebc436715](https://medium.com/@romainx/pandas-pipes-905ebc436715){style="font-size:0.75rem"}](images/clipboard-2460491691.jpeg)
+![[https://statistik-dresden.de/r-4-1-0-base-r-pipe/](https://statistik-dresden.de/r-4-1-0-base-r-pipe/){style="font-size:0.75rem"}](images/clipboard-4078158871.png)
+:::
 
-![[https://statistik-dresden.de/r-4-1-0-base-r-pipe/](https://statistik-dresden.de/r-4-1-0-base-r-pipe/){style="font-size:0.75rem"}](images/clipboard-1211845114.webp){style="font-size:0.75rem"}
+## R 혁신: 파이프 연산자, 2014
+
+::: {layout-ncol="2" layout-valign="center"}
+![](images/clipboard-2382832838.png)
+
+![[https://kpress.dev/blog/2022-06-19-replacing-the-magrittr-pipe-with-native-r-pipe/](https://kpress.dev/blog/2022-06-19-replacing-the-magrittr-pipe-with-native-r-pipe/){style="font-size:0.75rem"}](images/clipboard-39249103.png)
 :::
 
 ## R 혁신: Tidyverse, 2016 {visibility="hidden"}
@@ -479,23 +485,23 @@ editor: visual
 
 ## 코드 청크 [Code chunck]{style="font-size:2.5rem;color:gray"} {.smaller}
 
-+------------------+----------+-----------+---------+---------+----------+----------+
-| Option           | Run code | Show code | Output  | Plots   | Messages | Warnings |
-+==================+:========:+:=========:+:=======:+:=======:+:========:+:========:+
-| `eval: false`    | X        |           | X       | X       | X        | X        |
-+------------------+----------+-----------+---------+---------+----------+----------+
-| `include: false` |          | X         | X       | X       | X        | X        |
-+------------------+----------+-----------+---------+---------+----------+----------+
-| `echo: false`    |          | X         |         |         |          |          |
-+------------------+----------+-----------+---------+---------+----------+----------+
-| `results: hide`  |          |           | X       |         |          |          |
-+------------------+----------+-----------+---------+---------+----------+----------+
-| `fig-show: hide` |          |           |         | X       |          |          |
-+------------------+----------+-----------+---------+---------+----------+----------+
-| `message: false` |          |           |         |         | X        |          |
-+------------------+----------+-----------+---------+---------+----------+----------+
-| `warning: false` |          |           |         |         |          | X        |
-+------------------+----------+-----------+---------+---------+----------+----------+
++------------------+----------+-----------+--------+--------+----------+----------+
+| Option           | Run code | Show code | Output | Plots  | Messages | Warnings |
++==================+:========:+:=========:+:======:+:======:+:========:+:========:+
+| `eval: false`    | X        |           | X      | X      | X        | X        |
++------------------+----------+-----------+--------+--------+----------+----------+
+| `include: false` |          | X         | X      | X      | X        | X        |
++------------------+----------+-----------+--------+--------+----------+----------+
+| `echo: false`    |          | X         |        |        |          |          |
++------------------+----------+-----------+--------+--------+----------+----------+
+| `results: hide`  |          |           | X      |        |          |          |
++------------------+----------+-----------+--------+--------+----------+----------+
+| `fig-show: hide` |          |           |        | X      |          |          |
++------------------+----------+-----------+--------+--------+----------+----------+
+| `message: false` |          |           |        |        | X        |          |
++------------------+----------+-----------+--------+--------+----------+----------+
+| `warning: false` |          |           |        |        |          | X        |
++------------------+----------+-----------+--------+--------+----------+----------+
 
 ## 비주얼 에디터 [Visual Editor]{style="font-size:2.5rem;color:gray"}
 

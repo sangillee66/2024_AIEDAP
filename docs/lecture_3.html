@@ -7,7 +7,9 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.549">
 <meta name="author" content="이상일(서울대학교 지리교육과 교수)">
@@ -407,15 +409,21 @@
   <p class="date">2024-08-07</p>
 </section><section id="데이터사이언스-과정의-심장" class="slide level2"><h2>데이터사이언스 과정의 심장</h2>
 
-<img data-src="images/clipboard-4075247197.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://r4ds.hadley.nz/intro" class="uri" style="font-size:0.75rem">https://r4ds.hadley.nz/intro</a></p></section><section id="탐색적-데이터-분석" class="slide level2 smaller"><h2>탐색적 데이터 분석</h2>
+<img data-src="images/clipboard-4075247197.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://r4ds.hadley.nz/intro" class="uri" style="font-size:0.75rem">https://r4ds.hadley.nz/intro</a></p></section><section id="탐색적-데이터-분석-개념" class="slide level2 smaller"><h2>탐색적 데이터 분석: 개념</h2>
 <ul>
 <li><p>탐색적 데이터 분석은 데이터와의 끝임없는 상호작용을 통해 의미있는 결과물을 얻어내는 과정을 의미한다. 데이터사이언스가 데이터로부터 이해, 지식, 통찰력을 획득하는 과정이라고 했을 때, 탐색적 데이터 분석은 <span style="color:coral">데이터사이언스의 심장</span>이라 해도 과언이 아니다. 상호작용은 데이터와의 질의응답의 연쇄과정을 의미한다. 의미있는 질문에 답을 얻기 위해서는 거의 반드시 데이터를 변형하거나 시각화해야만 한다.</p></li>
 <li><p>데이터 변형과 데이터 시각화는 개별적으로 탐색적 데이터 분석에 기여한다. 데이터 변형은 데이터를 다른 각도로 바라볼 수 있게 해주고 다양한 요약 통계값을 산출해 준다. 데이터 시각화는 데이터에 차원을 부가함으로써 시각화 되지 않았다면 발견할 수 없었던 것을 발견할 수 있게 해준다.</p></li>
-</ul></section><section id="탐색적-데이터-분석-1" class="slide level2 smaller"><h2>탐색적 데이터 분석</h2>
+</ul></section><section id="탐색적-데이터-분석-개념-1" class="slide level2 smaller"><h2>탐색적 데이터 분석: 개념</h2>
 <ul>
 <li><p><span style="color:coral">데이터 변형에서 데이터 시각화로 이어지는 시퀀스</span>가 탐색적 데이터 분석의 핵심적인 방법론이다. 데이터 변형의 궁극적인 목적은 바로 데이터 시각화를 위한 준비이다. 특정한 형태의 시각화를 위해서는 특정한 형태의 데이터가 필수적이고, 그것이 이해, 지식, 통찰력의 획득으로 나아가게 해주는 주된 경로이다.</p></li>
 <li><p>데이터 <span style="color:coral">시각화</span>의 두 가지 목적은 <span style="color:coral">탐색</span>과 <span style="color:coral">커뮤니케이션</span>이다. 우리가 데이터 시각화를 하는 첫번째 목적은 데이터에 대한 질문에 답을 찾기 위해서이다. 우리가 데이터를 시각화하는 두 번째 목적은 우리가 발견한 것을 다른 사람들과 ‘잘’ 커뮤니케이션하기 위해서이다.</p></li>
-</ul></section><section id="탐색적-데이터-분석-2" class="slide level2 smaller"><h2>탐색적 데이터 분석</h2>
+</ul></section><section id="탐색적-데이터-분석-절차" class="slide level2 smaller"><h2>탐색적 데이터 분석: 절차</h2>
+<ul>
+<li><p>질문에 답할 수 있는 그래픽(플롯, 지도 등)을 구상한다.</p></li>
+<li><p>구상한 그래픽에 부합하도록 데이터를 변형한다.</p></li>
+<li><p>변형한 데이터를 구상한 그래픽으로 시각화한다.</p></li>
+<li><p>그래픽으로부터 질문의 답을 구하고, 더 나아가 지식, 이해, 통찰을 이끌어 낸다.</p></li>
+</ul></section><section id="탐색적-데이터-분석-예시" class="slide level2 smaller"><h2>탐색적 데이터 분석: 예시</h2>
 <blockquote>
 <p>대륙별 최대국(인구가 가장 많은 나라)이 소속 대륙 전체에서 차지하는 비중이 어느 정도이고 대륙별로 어느 정도의 차이가 있는지, 그리고 대륙별 최대국의 비중이 시간이 지남에 따라 어떠한 변화 양상을 보여주고 있고, 그러한 양상에 대륙별 차이가 있는지의 여부</p>
 </blockquote>
@@ -593,7 +601,12 @@
 
 <img data-src="images/clipboard-2112397168.png" class="r-stretch"></section><section id="section-4" class="slide level2"><h2></h2>
 
-<img data-src="images/clipboard-2406373084.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section></section><section><section id="데이터-시각화하기" class="title-slide slide level1 center"><h1><span style="color:coral">데이터 시각화하기</span></h1>
+<img data-src="images/clipboard-2406373084.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="파이프-연산자와-dplyr-함수" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
+
+<img data-src="images/clipboard-230122071.gif" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://info5940.infosci.cornell.edu/slides/pipes-and-functions-in-r/#9" style="font-size:0.75rem">https://info5940.infosci.cornell.edu/slides/pipes-and-functions-in-r/#9</a></p></section><section id="파이프-연산자와-dplyr-함수-1" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="https://preview.redd.it/yvbbwz1pce591.gif?width=1080&amp;format=mp4&amp;s=669a85c0a0564c997fb7bb30d6be22f7452ac24a"></video></section><section id="파이프-연산자와-dplyr-함수-2" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
+
+<img data-src="images/clipboard-174079750.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://www.rforecology.com/post/how-to-use-pipes/" style="font-size:0.75rem">https://www.rforecology.com/post/how-to-use-pipes/</a></p></section></section><section><section id="데이터-시각화하기" class="title-slide slide level1 center"><h1><span style="color:coral">데이터 시각화하기</span></h1>
 
 </section><section id="ggplot2-패키지" class="slide level2"><h2>
 <code>ggplot2</code> 패키지</h2>
@@ -1181,7 +1194,7 @@
         }
       }
     });
-    </script>
+    </script><script>videojs(video_shortcode_videojs_video1);</script>
 
 
 </body></html>
