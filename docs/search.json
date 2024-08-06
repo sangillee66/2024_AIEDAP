@@ -885,8 +885,8 @@
     "objectID": "lecture_2.html#데이터사이언스-과정의-첫-번째와-두-번째-단계",
     "href": "lecture_2.html#데이터사이언스-과정의-첫-번째와-두-번째-단계",
     "title": "\nDay 2데이터 수집 및 정련화\n",
-    "section": "데이터사이언스 과정의 첫 번째와 두 번째 단계",
-    "text": "데이터사이언스 과정의 첫 번째와 두 번째 단계\n\nhttps://r4ds.hadley.nz/intro"
+    "section": "",
+    "text": "https://r4ds.hadley.nz/intro"
   },
   {
     "objectID": "lecture_2.html#내용",
@@ -1019,7 +1019,7 @@
     "href": "lecture_2.html#지방소멸-뉴스-검색-데이터-수집",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "‘지방소멸’ 뉴스 검색 데이터 수집",
-    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 [사람&amp;스토리]장길선 구례군의장 &q… http://www.… http… \"있어 &lt;b&gt;…  Tue, 0…\n 2 [부동산소식] 2024 세법개정...결혼, 출… https://new… http… \"이에 대해… Tue, 0…\n 3 대구 남구 '청년 창업 지원 사업' 참가…  https://www… http… \"대구 남구… Tue, 0…\n 4 강진군, 강진 웰니스 리조트 조성사업 …  https://www… http… \"강진원 군… Tue, 0…\n 5 김문근 단양군수, 세종청사 방문 현안 …  https://www… http… \"이날 김 …  Tue, 0…\n 6 [기고]식품사막화에 대한 준비가 필요해… http://www.… http… \"운영하기 … Tue, 0…\n 7 강진 웰니스 리조트 조성사업 ...사업추… http://www.… http… \"강진원 군… Tue, 0…\n 8 김문근 단양군수, 현안사업 정부 예산 …  https://www… http… \"이날 김 …  Tue, 0…\n 9 대구 남구, ‘청년 창업 지원 사업’참…    https://www… http… \"대구 남구… Tue, 0…\n10 임실군, 2025 임실방문의 해 BI 및 슬로… http://www.… http… \"심 민 군…  Tue, 0…"
+    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nyour_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(your_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 강진군, ‘웰니스 리조트’ 조성사업 ‘…    https://www… http… \"강진원 군… Tue, 0…\n 2 강진군, 웰니스 리조트 조성 '급물살'    https://www… http… \"강진원 군… Tue, 0…\n 3 전남도, 농수산 수출 특화품목 직불금 …  https://www… http… \"전라남도…  Tue, 0…\n 4 ‘핵폐기물 연구시설’ 짓겠다는 태백, 왜? https://www… http… \"지역경제…  Tue, 0…\n 5 [포토] 김영록 전남도지사, 도정 주요 …  https://www… http… \"아울러 &q… Tue, 0…\n 6 [사람&amp;스토리]장길선 구례군의장 &q… http://www.… http… \"있어 &lt;b&gt;…  Tue, 0…\n 7 [부동산소식] 2024 세법개정...결혼, 출… https://new… http… \"이에 대해… Tue, 0…\n 8 대구 남구 '청년 창업 지원 사업' 참가…  https://www… http… \"대구 남구… Tue, 0…\n 9 강진군, 강진 웰니스 리조트 조성사업 …  https://www… http… \"강진원 군… Tue, 0…\n10 김문근 단양군수, 세종청사 방문 현안 …  https://www… http… \"이날 김 …  Tue, 0…"
   },
   {
     "objectID": "lecture_2.html#kosis",
@@ -1040,7 +1040,7 @@
     "href": "lecture_2.html#readr-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "\nreadr 패키지",
-    "text": "readr 패키지\n\nhttps://readr.tidyverse.org/"
+    "text": "readr 패키지\n\n\nhttps://readr.tidyverse.org/"
   },
   {
     "objectID": "lecture_2.html#readr-패키지-1",
@@ -1054,28 +1054,28 @@
     "href": "lecture_2.html#관련-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "관련 패키지",
-    "text": "관련 패키지\n\n\n\n\n\nhttps://readxl.tidyverse.org/\n\n\n\n\n\nhttps://ycphs.github.io/openxlsx/\n\n\n\n\n\nhttps://googlesheets4.tidyverse.org/\n\n\n\n\n\n\nreadxl 패키지: read_xls(), read_xlsx(), read_excel()"
+    "text": "관련 패키지\n\n\n\n\n\n\n\n\nhttps://readxl.tidyverse.org/\n\n\n\n\n\nhttps://ycphs.github.io/openxlsx/\n\n\n\n\n\nhttps://googlesheets4.tidyverse.org/\n\n\n\n\n\n\nreadxl 패키지: read_xls(), read_xlsx(), read_excel()"
   },
   {
     "objectID": "lecture_2.html#웹데이터-불러오기-readr-패키지",
     "href": "lecture_2.html#웹데이터-불러오기-readr-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "웹데이터 불러오기: readr 패키지",
-    "text": "웹데이터 불러오기: readr 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(readr)\nread_csv(\"https://pos.it/r4ds-students-csv\")\n\n\n\n\n\n# A tibble: 6 × 5\n  `Student ID` `Full Name`      favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
+    "text": "웹데이터 불러오기: readr 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(readr)\nread_csv(\"https://pos.it/r4ds-students-csv\")\n\n\n\n\nlibrary(tidyverse)\nlibrary(readr)\nread_csv(\"https://pos.it/r4ds-students-csv\")\n\n# A tibble: 6 × 5\n  `Student ID` `Full Name`      favourite.food     mealPlan            AGE  \n         &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;\n1            1 Sunil Huffmann   Strawberry yoghurt Lunch only          4    \n2            2 Barclay Lynn     French fries       Lunch only          5    \n3            3 Jayendra Lyne    N/A                Breakfast and lunch 7    \n4            4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; \n5            5 Chidiegwu Dunkel Pizza              Breakfast and lunch five \n6            6 Güvenç Attila    Ice cream          Lunch only          6"
   },
   {
     "objectID": "lecture_2.html#웹데이터-불러오기-openxlsx-패키지",
     "href": "lecture_2.html#웹데이터-불러오기-openxlsx-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "웹데이터 불러오기: openxlsx 패키지",
-    "text": "웹데이터 불러오기: openxlsx 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(openxlsx)\nread.xlsx(\"https://github.com/awalker89/openxlsx/raw/master/inst/readTest.xlsx\")\n\n\n\n\n\n    Var1 Var2   Var3 Var4  Var5         Var6 Var7\n1   TRUE    1   1.00    a 42042 3209324 This   NA\n2   TRUE   NA     NA    b 42041         &lt;NA&gt;   NA\n3   TRUE    2   1.34    c 42040         &lt;NA&gt;   NA\n4  FALSE    2     NA &lt;NA&gt;    NA         &lt;NA&gt;   NA\n5  FALSE    3   1.56    e    NA         &lt;NA&gt;   NA\n6  FALSE    1   1.70    f 42037         &lt;NA&gt;   NA\n7     NA   NA     NA &lt;NA&gt; 42036         &lt;NA&gt;   NA\n8  FALSE    2  23.00    h 42035         &lt;NA&gt;   NA\n9  FALSE    3  67.30    i 42034         &lt;NA&gt;   NA\n10    NA    1 123.00 &lt;NA&gt; 42033         &lt;NA&gt;   NA"
+    "text": "웹데이터 불러오기: openxlsx 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(openxlsx)\nread.xlsx(\"https://github.com/awalker89/openxlsx/raw/master/inst/readTest.xlsx\")\n\n\n\n\nlibrary(openxlsx)\nread.xlsx(\"https://github.com/awalker89/openxlsx/raw/master/inst/readTest.xlsx\")\n\n    Var1 Var2   Var3 Var4  Var5         Var6 Var7\n1   TRUE    1   1.00    a 42042 3209324 This   NA\n2   TRUE   NA     NA    b 42041         &lt;NA&gt;   NA\n3   TRUE    2   1.34    c 42040         &lt;NA&gt;   NA\n4  FALSE    2     NA &lt;NA&gt;    NA         &lt;NA&gt;   NA\n5  FALSE    3   1.56    e    NA         &lt;NA&gt;   NA\n6  FALSE    1   1.70    f 42037         &lt;NA&gt;   NA\n7     NA   NA     NA &lt;NA&gt; 42036         &lt;NA&gt;   NA\n8  FALSE    2  23.00    h 42035         &lt;NA&gt;   NA\n9  FALSE    3  67.30    i 42034         &lt;NA&gt;   NA\n10    NA    1 123.00 &lt;NA&gt; 42033         &lt;NA&gt;   NA"
   },
   {
     "objectID": "lecture_2.html#웹데이터-불러오기-googlesheet4-패키지",
     "href": "lecture_2.html#웹데이터-불러오기-googlesheet4-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "웹데이터 불러오기: googlesheet4 패키지",
-    "text": "웹데이터 불러오기: googlesheet4 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(googlesheets4)\ngs4_deauth()\nread_sheet(\"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077\")\n\n\n\n\n\n# A tibble: 624 × 6\n   country continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Algeria Africa     1952    43.1  9279525     2449.\n 2 Algeria Africa     1957    45.7 10270856     3014.\n 3 Algeria Africa     1962    48.3 11000948     2551.\n 4 Algeria Africa     1967    51.4 12760499     3247.\n 5 Algeria Africa     1972    54.5 14760787     4183.\n 6 Algeria Africa     1977    58.0 17152804     4910.\n 7 Algeria Africa     1982    61.4 20033753     5745.\n 8 Algeria Africa     1987    65.8 23254956     5681.\n 9 Algeria Africa     1992    67.7 26298373     5023.\n10 Algeria Africa     1997    69.2 29072015     4797.\n# ℹ 614 more rows"
+    "text": "웹데이터 불러오기: googlesheet4 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(googlesheets4)\ngs4_deauth()\nread_sheet(\"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077\")\n\n\n\n\nlibrary(googlesheets4)\ngs4_deauth()\nread_sheet(\"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077\")\n\n# A tibble: 624 × 6\n   country continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Algeria Africa     1952    43.1  9279525     2449.\n 2 Algeria Africa     1957    45.7 10270856     3014.\n 3 Algeria Africa     1962    48.3 11000948     2551.\n 4 Algeria Africa     1967    51.4 12760499     3247.\n 5 Algeria Africa     1972    54.5 14760787     4183.\n 6 Algeria Africa     1977    58.0 17152804     4910.\n 7 Algeria Africa     1982    61.4 20033753     5745.\n 8 Algeria Africa     1987    65.8 23254956     5681.\n 9 Algeria Africa     1992    67.7 26298373     5023.\n10 Algeria Africa     1997    69.2 29072015     4797.\n# ℹ 614 more rows"
   },
   {
     "objectID": "lecture_2.html#테이블-데이터-데이터-프레임",
@@ -1089,7 +1089,7 @@
     "href": "lecture_2.html#tibble-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "tibble 패키지",
-    "text": "tibble 패키지\n\nhttps://tibble.tidyverse.org/"
+    "text": "tibble 패키지\n\n\nhttps://tibble.tidyverse.org/"
   },
   {
     "objectID": "lecture_2.html#tibble-객체-vs.-data.frame-객체",
@@ -1103,21 +1103,21 @@
     "href": "lecture_2.html#tidyr-package",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "\ntidyr package",
-    "text": "tidyr package\n\nhttps://tidyr.tidyverse.org/"
+    "text": "tidyr package\n\n\nhttps://tidyr.tidyverse.org/"
   },
   {
     "objectID": "lecture_2.html#타이디tidy-데이터의-개념",
     "href": "lecture_2.html#타이디tidy-데이터의-개념",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "타이디(tidy) 데이터의 개념",
-    "text": "타이디(tidy) 데이터의 개념\n\nhttps://allisonhorst.com/other-r-fun"
+    "text": "타이디(tidy) 데이터의 개념\n\n\nhttps://allisonhorst.com/other-r-fun"
   },
   {
     "objectID": "lecture_2.html#타이디tidy-데이터의-개념-1",
     "href": "lecture_2.html#타이디tidy-데이터의-개념-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "타이디(tidy) 데이터의 개념",
-    "text": "타이디(tidy) 데이터의 개념\n\nhttps://allisonhorst.com/other-r-fun"
+    "text": "타이디(tidy) 데이터의 개념\n\n\nhttps://allisonhorst.com/other-r-fun"
   },
   {
     "objectID": "lecture_2.html#타이디tidy-데이터의-개념-2",
@@ -1152,7 +1152,7 @@
     "href": "lecture_2.html#타이디tidy-데이터의-장점",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "타이디(tidy) 데이터의 장점",
-    "text": "타이디(tidy) 데이터의 장점\n\nhttps://allisonhorst.com/other-r-fun"
+    "text": "타이디(tidy) 데이터의 장점\n\n\nhttps://allisonhorst.com/other-r-fun"
   },
   {
     "objectID": "lecture_2.html#타이디tidy-데이터로-만드는-핵심-기법",
@@ -1201,7 +1201,7 @@
     "href": "lecture_2.html#데이터-결합하기-dplyr-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터 결합하기: dplyr 패키지",
-    "text": "데이터 결합하기: dplyr 패키지\n\nhttps://dplyr.tidyverse.org/"
+    "text": "데이터 결합하기: dplyr 패키지\n\n\nhttps://dplyr.tidyverse.org/"
   },
   {
     "objectID": "lecture_2.html#공통키-common-keys",
@@ -1222,7 +1222,7 @@
     "href": "lecture_2.html#조인의-유형-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "조인의 유형",
-    "text": "조인의 유형\n\n\nhttps://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "조인의 유형\n\n\nhttps://statisticsglobe.com/r-dplyr-join-inner-left-right-full-semi-anti"
   },
   {
     "objectID": "lecture_2.html#조인의-유형-2",
@@ -2125,14 +2125,14 @@
     "href": "lecture_2.html#rvest-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "\nrvest 패키지",
-    "text": "rvest 패키지\n\nhttps://rvest.tidyverse.org/"
+    "text": "rvest 패키지\n\n\nhttps://rvest.tidyverse.org/"
   },
   {
     "objectID": "lecture_2.html#httr2-패키지",
     "href": "lecture_2.html#httr2-패키지",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "\nhttr2 패키지",
-    "text": "httr2 패키지\n\nhttps://httr2.r-lib.org/"
+    "text": "httr2 패키지\n\n\nhttps://httr2.r-lib.org/"
   },
   {
     "objectID": "lecture_1.html#쿼토-quarto-1",
@@ -2265,7 +2265,7 @@
     "href": "lecture_2.html#api를-통한-생성형-ai와의-커뮤니케이션",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "API를 통한 생성형 AI와의 커뮤니케이션",
-    "text": "API를 통한 생성형 AI와의 커뮤니케이션\n\n\nOpenAI, Google Generative AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능\n\n래퍼 패키지: GenAI(https://genai.gd.edu.kg/)\n\n\n\n\nhttps://genai.gd.edu.kg/"
+    "text": "API를 통한 생성형 AI와의 커뮤니케이션\n\n\nOpenAI, Google Generative AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능\n\n래퍼 패키지: GenAI(https://genai.gd.edu.kg/)\n\n\n\n\n\nhttps://genai.gd.edu.kg/"
   },
   {
     "objectID": "lecture_2.html#readr-패키지-주요-함수",
@@ -2293,7 +2293,7 @@
     "href": "lecture_2.html#데이터-유형",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터 유형",
-    "text": "데이터 유형\n\nhttps://discdown.org/rprogramming/vectors.html"
+    "text": "데이터 유형\n\n\nhttps://discdown.org/rprogramming/vectors.html"
   },
   {
     "objectID": "lecture_2.html#벡터와-데이터-프레임",
@@ -2314,14 +2314,14 @@
     "href": "lecture_2.html#데이터-늘이기-lengthening-data-2",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터 늘이기 Lengthening data\n",
-    "text": "데이터 늘이기 Lengthening data\n\n\nhttps://ab604.github.io/docs/coding-together-2019/data-wrangle-2.html"
+    "text": "데이터 늘이기 Lengthening data\n\n\n\nhttps://ab604.github.io/docs/coding-together-2019/data-wrangle-2.html"
   },
   {
     "objectID": "lecture_2.html#데이터-넓히기-widening-data-2",
     "href": "lecture_2.html#데이터-넓히기-widening-data-2",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터 넓히기 Widening data\n",
-    "text": "데이터 넓히기 Widening data\n\n\nhttps://ab604.github.io/docs/coding-together-2019/data-wrangle-2.html"
+    "text": "데이터 넓히기 Widening data\n\n\n\nhttps://ab604.github.io/docs/coding-together-2019/data-wrangle-2.html"
   },
   {
     "objectID": "lecture_2.html#텍스트-마이닝과-자연어처리",
@@ -2349,7 +2349,7 @@
     "href": "lecture_2.html#사례-2-웹-상의-테이블",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "사례 2: 웹 상의 테이블",
-    "text": "사례 2: 웹 상의 테이블\n\n위키피디어: 전세계 국가 관련 항목\n\n\n\n\nCode\nResult\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population\"\nmy_table &lt;- url |&gt; \n  read_html() |&gt; \n  html_element(\"table\") |&gt; \n  html_table()\n\n\n\n\n\n# A tibble: 241 × 7\n   ``      Location    Population `% ofworld` Date  Source (official or …¹ Notes\n   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;\n 1 –       World       8,122,534… 100%        5 Au… UN projection[3]       \"\"   \n 2 1/2 [b] China       1,409,670… 17.4%       31 D… Official estimate[5]   \"[c]\"\n 3 1/2 [b] India       1,404,910… 17.3%       1 Ju… Official projection[6] \"[d]\"\n 4 3       United Sta… 335,893,2… 4.1%        1 Ja… Official estimate[7]   \"[e]\"\n 5 4       Indonesia   281,603,8… 3.5%        1 Ju… National annual proje… \"\"   \n 6 5       Pakistan    241,499,4… 3.0%        1 Ma… 2023 census result[9]  \"[f]\"\n 7 6       Nigeria     223,800,0… 2.8%        1 Ju… Official projection[1… \"\"   \n 8 7       Brazil      203,080,7… 2.5%        1 Au… 2022 census result[11] \"\"   \n 9 8       Bangladesh  169,828,9… 2.1%        14 J… 2022 census result[12] \"\"   \n10 9       Russia      146,150,7… 1.8%        1 Ja… Official estimate[13]  \"[g]\"\n# ℹ 231 more rows\n# ℹ abbreviated name: ¹​`Source (official or fromthe United Nations)`\n\n\n\n\n\nmy_table_new &lt;- my_table |&gt; \n  select(-1, -7) |&gt; \n  rename(\n    location = \"Location\",\n    population = \"Population\",\n    pop_pct = \"% ofworld\",\n    date = \"Date\",\n    source = \"Source (official or fromthe United Nations)\"\n  ) |&gt; \n  mutate(\n    population = parse_number(population, \",\"),\n    population = as.numeric(population),\n    pop_pct = str_remove_all(pop_pct, \"%\"),\n    pop_pct = as.numeric(pop_pct),\n    date = dmy(date)\n  )\n\n\n\n\n\n# A tibble: 241 × 5\n   location      population pop_pct date       source                       \n   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt;                        \n 1 World         8122534000   100   2024-08-05 UN projection[3]             \n 2 China         1409670000    17.4 2023-12-31 Official estimate[5]         \n 3 India         1404910000    17.3 2024-07-01 Official projection[6]       \n 4 United States  335893238     4.1 2024-01-01 Official estimate[7]         \n 5 Indonesia      281603800     3.5 2024-07-01 National annual projection[8]\n 6 Pakistan       241499431     3   2023-03-01 2023 census result[9]        \n 7 Nigeria        223800000     2.8 2023-07-01 Official projection[10]      \n 8 Brazil         203080756     2.5 2022-08-01 2022 census result[11]       \n 9 Bangladesh     169828911     2.1 2022-06-14 2022 census result[12]       \n10 Russia         146150789     1.8 2024-01-01 Official estimate[13]        \n# ℹ 231 more rows"
+    "text": "사례 2: 웹 상의 테이블\n\n위키피디어: 전세계 국가 관련 항목\n\n\n\n\nCode\nResult\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population\"\nmy_table &lt;- url |&gt; \n  read_html() |&gt; \n  html_element(\"table\") |&gt; \n  html_table()\n\n\n\n\nmy_table\n\n# A tibble: 241 × 7\n   ``      Location    Population `% ofworld` Date  Source (official or …¹ Notes\n   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;\n 1 –       World       8,122,534… 100%        5 Au… UN projection[3]       \"\"   \n 2 1/2 [b] China       1,409,670… 17.4%       31 D… Official estimate[5]   \"[c]\"\n 3 1/2 [b] India       1,404,910… 17.3%       1 Ju… Official projection[6] \"[d]\"\n 4 3       United Sta… 335,893,2… 4.1%        1 Ja… Official estimate[7]   \"[e]\"\n 5 4       Indonesia   281,603,8… 3.5%        1 Ju… National annual proje… \"\"   \n 6 5       Pakistan    241,499,4… 3.0%        1 Ma… 2023 census result[9]  \"[f]\"\n 7 6       Nigeria     223,800,0… 2.8%        1 Ju… Official projection[1… \"\"   \n 8 7       Brazil      203,080,7… 2.5%        1 Au… 2022 census result[11] \"\"   \n 9 8       Bangladesh  169,828,9… 2.1%        14 J… 2022 census result[12] \"\"   \n10 9       Russia      146,150,7… 1.8%        1 Ja… Official estimate[13]  \"[g]\"\n# ℹ 231 more rows\n# ℹ abbreviated name: ¹​`Source (official or fromthe United Nations)`\n\n\n\n\n\nmy_table_new &lt;- my_table |&gt; \n  select(-1, -7) |&gt; \n  rename(\n    location = \"Location\",\n    population = \"Population\",\n    pop_pct = \"% ofworld\",\n    date = \"Date\",\n    source = \"Source (official or fromthe United Nations)\"\n  ) |&gt; \n  mutate(\n    population = parse_number(population, \",\"),\n    population = as.numeric(population),\n    pop_pct = str_remove_all(pop_pct, \"%\"),\n    pop_pct = as.numeric(pop_pct),\n    date = dmy(date)\n  )\n\n\n\n\nmy_table_new\n\n# A tibble: 241 × 5\n   location      population pop_pct date       source                       \n   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt;                        \n 1 World         8122534000   100   2024-08-05 UN projection[3]             \n 2 China         1409670000    17.4 2023-12-31 Official estimate[5]         \n 3 India         1404910000    17.3 2024-07-01 Official projection[6]       \n 4 United States  335893238     4.1 2024-01-01 Official estimate[7]         \n 5 Indonesia      281603800     3.5 2024-07-01 National annual projection[8]\n 6 Pakistan       241499431     3   2023-03-01 2023 census result[9]        \n 7 Nigeria        223800000     2.8 2023-07-01 Official projection[10]      \n 8 Brazil         203080756     2.5 2022-08-01 2022 census result[11]       \n 9 Bangladesh     169828911     2.1 2022-06-14 2022 census result[12]       \n10 Russia         146150789     1.8 2024-01-01 Official estimate[13]        \n# ℹ 231 more rows"
   },
   {
     "objectID": "lecture_2.html#사례-1-스타워즈",
@@ -2363,14 +2363,14 @@
     "href": "lecture_2.html#사례-1-스타워즈-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "사례 1: 스타워즈",
-    "text": "사례 1: 스타워즈\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://rvest.tidyverse.org/articles/starwars.html\"\nread_html(url) |&gt; \n  html_elements(\"section\") |&gt; \n  html_element(\"h2\") |&gt; \n  html_text2()\n\n\n\n\n\n[1] \"The Phantom Menace\"      \"Attack of the Clones\"   \n[3] \"Revenge of the Sith\"     \"A New Hope\"             \n[5] \"The Empire Strikes Back\" \"Return of the Jedi\"     \n[7] \"The Force Awakens\""
+    "text": "사례 1: 스타워즈\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://rvest.tidyverse.org/articles/starwars.html\"\nread_html(url) |&gt; \n  html_elements(\"section\") |&gt; \n  html_element(\"h2\") |&gt; \n  html_text2()\n\n\n\n\nlibrary(rvest)\nlibrary(tidyverse)\nurl &lt;- \"https://rvest.tidyverse.org/articles/starwars.html\"\nread_html(url) |&gt; \n  html_elements(\"section\") |&gt; \n  html_element(\"h2\") |&gt; \n  html_text2()\n\n[1] \"The Phantom Menace\"      \"Attack of the Clones\"   \n[3] \"Revenge of the Sith\"     \"A New Hope\"             \n[5] \"The Empire Strikes Back\" \"Return of the Jedi\"     \n[7] \"The Force Awakens\""
   },
   {
     "objectID": "lecture_2.html#사례-1-스타워즈-2",
     "href": "lecture_2.html#사례-1-스타워즈-2",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "사례 1: 스타워즈",
-    "text": "사례 1: 스타워즈\n\n\nCode\nResult\n\n\n\n\nsection &lt;- read_html(url) |&gt; \n  html_elements(\"section\")\ntibble(\n  title = section |&gt; \n    html_element(\"h2\") |&gt; \n    html_text2(),\n  released = section |&gt; \n    html_element(\"p\") |&gt; \n    html_text2() |&gt; \n    str_remove(\"Released: \") |&gt; \n    parse_date(),\n  director = section |&gt; \n    html_element(\".director\") |&gt; \n    html_text2(),\n  intro = section |&gt; \n    html_element(\".crawl\") |&gt; \n    html_text2()\n)\n\n\n\n\n\n# A tibble: 7 × 4\n  title                   released   director         intro                     \n  &lt;chr&gt;                   &lt;date&gt;     &lt;chr&gt;            &lt;chr&gt;                     \n1 The Phantom Menace      1999-05-19 George Lucas     \"Turmoil has engulfed the…\n2 Attack of the Clones    2002-05-16 George Lucas     \"There is unrest in the G…\n3 Revenge of the Sith     2005-05-19 George Lucas     \"War! The Republic is cru…\n4 A New Hope              1977-05-25 George Lucas     \"It is a period of civil …\n5 The Empire Strikes Back 1980-05-17 Irvin Kershner   \"It is a dark time for th…\n6 Return of the Jedi      1983-05-25 Richard Marquand \"Luke Skywalker has retur…\n7 The Force Awakens       2015-12-11 J. J. Abrams     \"Luke Skywalker has vanis…"
+    "text": "사례 1: 스타워즈\n\n\nCode\nResult\n\n\n\n\nsection &lt;- read_html(url) |&gt; \n  html_elements(\"section\")\ntibble(\n  title = section |&gt; \n    html_element(\"h2\") |&gt; \n    html_text2(),\n  released = section |&gt; \n    html_element(\"p\") |&gt; \n    html_text2() |&gt; \n    str_remove(\"Released: \") |&gt; \n    parse_date(),\n  director = section |&gt; \n    html_element(\".director\") |&gt; \n    html_text2(),\n  intro = section |&gt; \n    html_element(\".crawl\") |&gt; \n    html_text2()\n)\n\n\n\n\nsection &lt;- read_html(url) |&gt; \n  html_elements(\"section\")\ntibble(\n  title = section |&gt; \n    html_element(\"h2\") |&gt; \n    html_text2(),\n  released = section |&gt; \n    html_element(\"p\") |&gt; \n    html_text2() |&gt; \n    str_remove(\"Released: \") |&gt; \n    parse_date(),\n  director = section |&gt; \n    html_element(\".director\") |&gt; \n    html_text2(),\n  intro = section |&gt; \n    html_element(\".crawl\") |&gt; \n    html_text2()\n)\n\n# A tibble: 7 × 4\n  title                   released   director         intro                     \n  &lt;chr&gt;                   &lt;date&gt;     &lt;chr&gt;            &lt;chr&gt;                     \n1 The Phantom Menace      1999-05-19 George Lucas     \"Turmoil has engulfed the…\n2 Attack of the Clones    2002-05-16 George Lucas     \"There is unrest in the G…\n3 Revenge of the Sith     2005-05-19 George Lucas     \"War! The Republic is cru…\n4 A New Hope              1977-05-25 George Lucas     \"It is a period of civil …\n5 The Empire Strikes Back 1980-05-17 Irvin Kershner   \"It is a dark time for th…\n6 Return of the Jedi      1983-05-25 Richard Marquand \"Luke Skywalker has retur…\n7 The Force Awakens       2015-12-11 J. J. Abrams     \"Luke Skywalker has vanis…"
   },
   {
     "objectID": "lecture_2.html#code-2",
@@ -2405,7 +2405,7 @@
     "href": "lecture_2.html#데이터의-구조를-바꾸는-핵심-기법",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터의 구조를 바꾸는 핵심 기법",
-    "text": "데이터의 구조를 바꾸는 핵심 기법\n\nhttps://allisonhorst.com/other-r-fun"
+    "text": "데이터의 구조를 바꾸는 핵심 기법\n\n\nhttps://allisonhorst.com/other-r-fun"
   },
   {
     "objectID": "reference.html#텍스트-마이닝과-자연어처리",
