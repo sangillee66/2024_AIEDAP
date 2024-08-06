@@ -1292,14 +1292,14 @@
     "href": "lecture_3.html#행-함수-1-filter",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "행 함수 1: filter()\n",
-    "text": "행 함수 1: filter()"
+    "text": "행 함수 1: filter()\n\n\nhttps://allisonhorst.com/r-packages-functions"
   },
   {
     "objectID": "lecture_3.html#행-함수-1-filter-1",
     "href": "lecture_3.html#행-함수-1-filter-1",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "행 함수 1: filter()\n",
-    "text": "행 함수 1: filter()\n\n\nhttps://allisonhorst.com/r-packages-functions"
+    "text": "행 함수 1: filter()"
   },
   {
     "objectID": "lecture_3.html#행-함수-1-filter-2",
@@ -1376,14 +1376,14 @@
     "href": "lecture_3.html#열-함수-2-mutate",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "열 함수 2: mutate()\n",
-    "text": "열 함수 2: mutate()"
+    "text": "열 함수 2: mutate()\n\n\nhttps://allisonhorst.com/r-packages-functions"
   },
   {
     "objectID": "lecture_3.html#열-함수-3-rename",
     "href": "lecture_3.html#열-함수-3-rename",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "열 함수 3: rename()\n",
-    "text": "열 함수 3: rename()"
+    "text": "열 함수 3: rename()\n\n\nhttps://allisonhorst.com/r-packages-functions"
   },
   {
     "objectID": "lecture_3.html#열-함수-3-rename-1",
@@ -1397,7 +1397,7 @@
     "href": "lecture_3.html#열-함수-4-relocate",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "열 함수 4: relocate()\n",
-    "text": "열 함수 4: relocate()"
+    "text": "열 함수 4: relocate()\n\n\nhttps://allisonhorst.com/r-packages-functions"
   },
   {
     "objectID": "lecture_3.html#그룹-함수-네-개의-주요-함수",
@@ -1460,7 +1460,7 @@
     "href": "lecture_3.html#그룹-함수-4-across",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "그룹 함수 4: across()\n",
-    "text": "그룹 함수 4: across()"
+    "text": "그룹 함수 4: across()\n\n\nhttps://allisonhorst.com/r-packages-functions"
   },
   {
     "objectID": "lecture_3.html#ggplot2-패키지",
@@ -1502,14 +1502,14 @@
     "href": "lecture_3.html#심미성과-기하-2",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "심미성과 기하",
-    "text": "심미성과 기하\n\n\n\nx-axis, y-axis\ncolor, fill\nshape\nsize\nalpha\nposition\n\n\n\ngeom_point()\ngeom_line()\ngeom_bar(), geom_col()\ngeom_histogram(), geom_density()\ngeom_smooth()\ngeom_boxplot(), geom_violin()\ngeom_text(), geom_label()"
+    "text": "심미성과 기하\n\n\n\nx-axis, y-axis\ncolor, fill\nshape\nsize\nalpha\nposition\n\n\n\ngeom_point()\ngeom_line()\ngeom_bar(), geom_col()\ngeom_histogram(), geom_density()\ngeom_smooth()\ngeom_boxplot(), geom_violin()\ngeom_text(), geom_label()\ngeom_sf()"
   },
   {
     "objectID": "lecture_3.html#스케일-scale",
     "href": "lecture_3.html#스케일-scale",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "스케일 scale",
-    "text": "스케일 scale\n\n심미성의 구체적 구현\n\nx-axis, y-axis\n\n\nscale_x_continuous(), scale_x_discrete()\n\n\n\n\ncolor와 fill\n\n\nscale_color_brewer(), scale_fill_brewer()\n\n\nscale_color_manual(), scale_fill_manual()\n\n\n\n\nothers\n\nscale_shape(), scale_size()\nscale_linetype(), scale_linewidth()"
+    "text": "스케일 scale\n\n심미성의 구체적 구현\n\nx-axis, y-axis\n\n\nscale_x_continuous(), scale_x_discrete()\n\n\nscale_y_continuous(), scale_y_discrete()\n\n\n\n\ncolor와 fill\n\n\nscale_color_brewer(), scale_fill_brewer()\n\n\nscale_color_manual(), scale_fill_manual()\n\n\n\n\nothers\n\nscale_shape(), scale_size()\nscale_linetype(), scale_linewidth()"
   },
   {
     "objectID": "lecture_3.html#패싯-facet",
@@ -2153,14 +2153,14 @@
     "href": "lecture_3.html#탐색적-데이터-분석-개념-1",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "탐색적 데이터 분석: 개념",
-    "text": "탐색적 데이터 분석: 개념\n\n데이터 변형에서 데이터 시각화로 이어지는 시퀀스가 탐색적 데이터 분석의 핵심적인 방법론이다. 데이터 변형의 궁극적인 목적은 바로 데이터 시각화를 위한 준비이다. 특정한 형태의 시각화를 위해서는 특정한 형태의 데이터가 필수적이고, 그것이 이해, 지식, 통찰력의 획득으로 나아가게 해주는 주된 경로이다.\n데이터 시각화의 두 가지 목적은 탐색과 커뮤니케이션이다. 우리가 데이터 시각화를 하는 첫번째 목적은 데이터에 대한 질문에 답을 찾기 위해서이다. 우리가 데이터를 시각화하는 두 번째 목적은 우리가 발견한 것을 다른 사람들과 ‘잘’ 커뮤니케이션하기 위해서이다."
+    "text": "탐색적 데이터 분석: 개념\n\n데이터 변형에서 데이터 시각화로 이어지는 시퀀스가 탐색적 데이터 분석의 핵심적인 방법론이다. 데이터 변형의 궁극적인 목적은 바로 데이터 시각화를 위한 준비이다. 특정한 형태의 시각화를 위해서는 특정한 형태로 변형된 데이터가 필수적이고, 그러한 과정이 이해, 지식, 통찰력의 획득으로 나아가게 해주는 주된 경로이다.\n데이터 시각화의 두 가지 목적은 탐색과 커뮤니케이션이다. 우리가 데이터 시각화를 하는 첫번째 목적은 데이터에 대한 질문에 답을 찾기 위해서이다. 우리가 데이터를 시각화하는 두 번째 목적은 우리가 발견한 것을 다른 사람들과 ‘잘’ 커뮤니케이션하기 위해서이다."
   },
   {
     "objectID": "lecture_3.html#탐색적-데이터-분석-절차",
     "href": "lecture_3.html#탐색적-데이터-분석-절차",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "탐색적 데이터 분석: 절차",
-    "text": "탐색적 데이터 분석: 절차\n\n질문에 답할 수 있는 그래픽(플롯, 지도 등)을 구상한다.\n구상한 그래픽에 부합하도록 데이터를 변형한다.\n변형한 데이터를 구상한 그래픽으로 시각화한다.\n그래픽으로부터 질문의 답을 구하고, 더 나아가 지식, 이해, 통찰을 이끌어 낸다."
+    "text": "탐색적 데이터 분석: 절차\n\n의미있는 질문을 생성한다.\n질문에 답할 수 있는 그래픽(플롯, 지도 등)을 구상한다.\n구상한 그래픽에 부합하도록 데이터를 변형한다.\n변형한 데이터를 구상한 그래픽으로 시각화한다.\n그래픽으로부터 질문의 답을 구하고, 더 나아가 지식, 이해, 통찰을 이끌어 낸다."
   },
   {
     "objectID": "lecture_3.html#탐색적-데이터-분석-예시",
@@ -2195,21 +2195,21 @@
     "href": "lecture_3.html#파이프-연산자와-dplyr-함수",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "파이프 연산자와 dplyr 함수",
-    "text": "파이프 연산자와 dplyr 함수\n\nhttps://info5940.infosci.cornell.edu/slides/pipes-and-functions-in-r/#9"
+    "text": "파이프 연산자와 dplyr 함수\n\nhttps://www.rforecology.com/post/how-to-use-pipes/"
   },
   {
     "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수-1",
     "href": "lecture_3.html#파이프-연산자와-dplyr-함수-1",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "파이프 연산자와 dplyr 함수",
-    "text": "파이프 연산자와 dplyr 함수\n\nhttps://www.rforecology.com/post/how-to-use-pipes/"
+    "text": "파이프 연산자와 dplyr 함수\n\nhttps://r4ds.hadley.nz/data-transform"
   },
   {
     "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수-2",
     "href": "lecture_3.html#파이프-연산자와-dplyr-함수-2",
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "파이프 연산자와 dplyr 함수",
-    "text": "파이프 연산자와 dplyr 함수\n\nhttps://www.rforecology.com/post/how-to-use-pipes/"
+    "text": "파이프 연산자와 dplyr 함수\n\n\nOld 1\nOld 2\n파이프 연산자\n결과\n\n\n\n\nlibrary(tidyverse)\nlibrary(nycflights13)\nflights1 &lt;- filter(flights, dest == \"IAH\")\nflights2 &lt;- mutate(flights1, speed = distance / air_time * 60)\nflights3 &lt;- select(flights2, year:day, dep_time, carrier, flight, speed)\narrange(flights3, desc(speed))\n\n\n\n\narrange(\n  select(\n    mutate(\n      filter(\n        flights, \n        dest == \"IAH\"\n      ),\n      speed = distance / air_time * 60\n    ),\n    year:day, dep_time, carrier, flight, speed\n  ),\n  desc(speed)\n)\n\n\n\n\nflights |&gt; \n  filter(dest == \"IAH\") |&gt; \n  mutate(speed = distance / air_time * 60) |&gt; \n  select(year:day, dep_time, carrier, flight, speed) |&gt; \n  arrange(desc(speed))\n\n\n\n\n\n# A tibble: 7,198 × 7\n    year month   day dep_time carrier flight speed\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt; &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt;\n 1  2013     7     9      707 UA         226  522.\n 2  2013     8    27     1850 UA        1128  521.\n 3  2013     8    28      902 UA        1711  519.\n 4  2013     8    28     2122 UA        1022  519.\n 5  2013     6    11     1628 UA        1178  515.\n 6  2013     8    27     1017 UA         333  515.\n 7  2013     8    27     1205 UA        1421  515.\n 8  2013     8    27     1758 UA         302  515.\n 9  2013     9    27      521 UA         252  515.\n10  2013     8    28      625 UA         559  515.\n# ℹ 7,188 more rows"
   },
   {
     "objectID": "lecture_3.html",
@@ -2413,5 +2413,82 @@
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "텍스트 마이닝과 자연어처리",
     "text": "텍스트 마이닝과 자연어처리\n\n한국 R 사용자회ㆍ안도현, 2022, R 텍스트마이닝, 오픈전자책.\n\n한국 R 사용자회의 무료 웹북 중의 하나입니다. Tidyverse와 파이프 연산자에 기반하고 있습니다. 좋은 책입니다.\n\n김영우, 2021, 쉽게 배우는 R 텍스트 마이닝, 서울: 이지스퍼블리싱.\n\n이렇게 훌륭한 R 기반 텍스트 마이닝 책이 있다는 것이 너무 감사할 뿐입니다. 웹복이 아닌 것이 아쉬울 뿐입니다."
+  },
+  {
+    "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수-3",
+    "href": "lecture_3.html#파이프-연산자와-dplyr-함수-3",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "파이프 연산자와 dplyr 함수",
+    "text": "파이프 연산자와 dplyr 함수\n\nhttps://info5940.infosci.cornell.edu/slides/pipes-and-functions-in-r/#9"
+  },
+  {
+    "objectID": "lecture_3.html#파이프-연산자와-dplyr-함수-4",
+    "href": "lecture_3.html#파이프-연산자와-dplyr-함수-4",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "파이프 연산자와 dplyr 함수",
+    "text": "파이프 연산자와 dplyr 함수\n\nhttps://www.rforecology.com/post/how-to-use-pipes/"
+  },
+  {
+    "objectID": "lecture_3.html#data",
+    "href": "lecture_3.html#data",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "Data",
+    "text": "Data\n\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# ℹ 1,694 more rows"
+  },
+  {
+    "objectID": "lecture_3.html#graph",
+    "href": "lecture_3.html#graph",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "Graph",
+    "text": "Graph"
+  },
+  {
+    "objectID": "lecture_3.html#code",
+    "href": "lecture_3.html#code",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "Code",
+    "text": "Code\n\ngapminder |&gt; \n  group_by(year, continent) |&gt; \n  mutate(\n    sum_cont = sum(pop),\n    country_prop = pop * 100 / sum_cont\n  ) |&gt; \n  slice_max(country_prop) |&gt; \n  ggplot() +\n  geom_line(aes(x = year, y = country_prop, color = continent), linewidth = 1) +\n  labs(x = \"Year\", y = \"% of Population\", color = \"Continents\")"
+  },
+  {
+    "objectID": "lecture_3.html#section-5",
+    "href": "lecture_3.html#section-5",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "",
+    "text": "https://allisonhorst.com/r-packages-functions"
+  },
+  {
+    "objectID": "lecture_3.html#section",
+    "href": "lecture_3.html#section",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "",
+    "text": "https://kilhwan.github.io/rprogramming/ch-dataTransformation.html"
+  },
+  {
+    "objectID": "lecture_3.html#열-함수-2-mutate-1",
+    "href": "lecture_3.html#열-함수-2-mutate-1",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "열 함수 2: mutate()\n",
+    "text": "열 함수 2: mutate()"
+  },
+  {
+    "objectID": "lecture_3.html#열-함수-3-rename-2",
+    "href": "lecture_3.html#열-함수-3-rename-2",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "열 함수 3: rename()\n",
+    "text": "열 함수 3: rename()"
+  },
+  {
+    "objectID": "lecture_3.html#열-함수-4-relocate-1",
+    "href": "lecture_3.html#열-함수-4-relocate-1",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "열 함수 4: relocate()\n",
+    "text": "열 함수 4: relocate()"
+  },
+  {
+    "objectID": "lecture_3.html#그룹-함수-4-across-1",
+    "href": "lecture_3.html#그룹-함수-4-across-1",
+    "title": "\nDay 3탐색적 데이터 분석\n",
+    "section": "그룹 함수 4: across()\n",
+    "text": "그룹 함수 4: across()"
   }
 ]
