@@ -410,7 +410,7 @@
 <img data-src="images/clipboard-4075247197.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://r4ds.hadley.nz/intro" class="uri" style="font-size:0.75rem">https://r4ds.hadley.nz/intro</a></p></section><section id="탐색적-데이터-분석-개념" class="slide level2 smaller"><h2>탐색적 데이터 분석: 개념</h2>
 <ul>
 <li><p>탐색적 데이터 분석은 데이터와의 끝임없는 상호작용을 통해 의미있는 결과물을 얻어내는 과정을 의미한다. 데이터사이언스가 데이터로부터 이해, 지식, 통찰력을 획득하는 과정이라고 했을 때, 탐색적 데이터 분석은 <span style="color:coral"><strong>데이터사이언스의 심장</strong></span>이라 해도 과언이 아니다. 상호작용은 데이터와의 질의응답의 연쇄과정을 의미한다. 의미있는 질문에 답을 얻기 위해서는 거의 반드시 데이터를 변형하거나 시각화해야만 한다.</p></li>
-<li><p>데이터 변형과 데이터 시각화는 개별적으로 탐색적 데이터 분석에 기여한다. 데이터 변형은 데이터를 다른 각도로 바라볼 수 있게 해주고 다양한 요약 통계값을 산출해 준다. 데이터 시각화는 데이터에 차원을 부가함으로써 시각화 되지 않았다면 발견할 수 없었던 것을 발견할 수 있게 해준다.</p></li>
+<li><p>데이터 변형과 데이터 시각화는 개별적으로 탐색적 데이터 분석에 기여한다. <span style="color:coral"><strong>데이터 변형</strong></span>은 데이터를 다른 각도로 바라볼 수 있게 해주고 다양한 요약 통계값을 산출해 준다. <span style="color:coral"><strong>데이터 시각화</strong></span>는 데이터에 차원을 부가함으로써 시각화 되지 않았다면 발견할 수 없었던 것을 발견할 수 있게 해준다.</p></li>
 </ul></section><section id="탐색적-데이터-분석-개념-1" class="slide level2 smaller"><h2>탐색적 데이터 분석: 개념</h2>
 <ul>
 <li><p><span style="color:coral"><strong>데이터 변형에서 데이터 시각화로 이어지는 시퀀스</strong></span>가 탐색적 데이터 분석의 핵심적인 방법론이다. 데이터 변형의 궁극적인 목적은 바로 데이터 시각화를 위한 준비이다. 특정한 형태의 시각화를 위해서는 특정한 형태로 변형된 데이터가 필수적이고, 그러한 과정이 이해, 지식, 통찰력의 획득으로 나아가게 해주는 주된 경로이다.</p></li>
@@ -519,26 +519,271 @@
 
 <img data-src="images/clipboard-565233092.png" class="r-stretch"></section><section id="행-함수-1-filter-2" class="slide level2"><h2>행 함수 1: <code>filter()</code>
 </h2>
-
-<img data-src="images/clipboard-409657186.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="행-함수-2-arrange" class="slide level2"><h2>행 함수 2: <code>arrange()</code>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-2-1">Data</a></li>
+<li><a href="#tabset-2-2"><code>filter()</code> 1</a></li>
+<li><a href="#tabset-2-3"><code>filter()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">filter</span>(table1, year <span class="sc">==</span> <span class="dv">2000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  2000   2666   20595360
+2 Brazil       2000  80488  174504898
+3 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2000</span> <span class="sc">&amp;</span> population <span class="sc">&gt;</span> <span class="dv">50000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  country  year  cases population
+  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Brazil   2000  80488  174504898
+2 China    2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="행-함수-2-arrange" class="slide level2"><h2>행 함수 2: <code>arrange()</code>
 </h2>
 
 <img data-src="images/clipboard-3074305878.png" class="r-stretch"></section><section id="행-함수-2-arrange-1" class="slide level2"><h2>행 함수 2: <code>arrange()</code>
 </h2>
-
-<img data-src="images/clipboard-1840428146.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="행-함수-3-distinct" class="slide level2"><h2>행 함수 3: <code>distinct()</code>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">Data</a></li>
+<li><a href="#tabset-3-2"><code>arrange()</code> 1</a></li>
+<li><a href="#tabset-3-3"><code>arrange()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">arrange</span>(table1, cases)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(cases))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 China        2000 213766 1280428583
+2 China        1999 212258 1272915272
+3 Brazil       2000  80488  174504898
+4 Brazil       1999  37737  172006362
+5 Afghanistan  2000   2666   20595360
+6 Afghanistan  1999    745   19987071</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="행-함수-3-distinct" class="slide level2"><h2>행 함수 3: <code>distinct()</code>
 </h2>
 
 <img data-src="images/clipboard-3425030843.png" class="r-stretch"></section><section id="행-함수-3-distinct-1" class="slide level2"><h2>행 함수 3: <code>distinct()</code>
 </h2>
-
-<img data-src="images/clipboard-370656711.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="행-함수-4-slice" class="slide level2"><h2>행 함수 4: <code>slice()</code>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-4-1">Data</a></li>
+<li><a href="#tabset-4-2"><code>distinct()</code> 1</a></li>
+<li><a href="#tabset-4-3"><code>distinct()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">distinct</span>(table1, country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  country    
+  &lt;chr&gt;      
+1 Afghanistan
+2 Brazil     
+3 China      </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a></a>  <span class="fu">distinct</span>(country, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Brazil       1999  37737  172006362
+3 China        1999 212258 1272915272</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="행-함수-4-slice" class="slide level2"><h2>행 함수 4: <code>slice()</code>
 </h2>
 
 <img data-src="images/clipboard-1830339037.png" class="r-stretch"></section><section id="행-함수-4-slice-1" class="slide level2"><h2>행 함수 4: <code>slice()</code>
 </h2>
-
-<img data-src="images/clipboard-1031657585.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="열-함수-네-개의-주요-함수" class="slide level2"><h2>열 함수: 네 개의 주요 함수</h2>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1">Data</a></li>
+<li><a href="#tabset-5-2"><code>slice()</code></a></li>
+<li><a href="#tabset-5-3"><code>slice_head()</code></a></li>
+<li><a href="#tabset-5-4"><code>slice_tail()</code></a></li>
+<li><a href="#tabset-5-5"><code>slice_max()</code></a></li>
+<li><a href="#tabset-5-6"><code>slice_min()</code></a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">slice</span>(table1, <span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  country      year cases population
+  &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  2000  2666   20595360
+2 Brazil       1999 37737  172006362</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb21-2"><a></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  country      year cases population
+  &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999   745   19987071
+2 Afghanistan  2000  2666   20595360</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-4">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb23-2"><a></a>  <span class="fu">slice_tail</span>(<span class="at">prop =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  country  year  cases population
+  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 China    1999 212258 1272915272
+2 China    2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-5">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb25-2"><a></a>  <span class="fu">slice_max</span>(cases, <span class="at">n =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  country  year  cases population
+  &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 China    2000 213766 1280428583
+2 China    1999 212258 1272915272</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-5-6">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb27-2"><a></a>  <span class="fu">slice_min</span>(cases, <span class="at">prop =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  country      year cases population
+  &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999   745   19987071
+2 Afghanistan  2000  2666   20595360</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="열-함수-네-개의-주요-함수" class="slide level2"><h2>열 함수: 네 개의 주요 함수</h2>
 <ul>
 <li><p><code>select()</code>: 변수(들) 중 일부를 추출</p></li>
 <li><p><code>mutate()</code>: 변수(들)를 변형해 새로운 변수를 생성</p></li>
@@ -549,14 +794,133 @@
 
 <img data-src="images/clipboard-3651470406.png" class="r-stretch"></section><section id="열-함수-1-select-1" class="slide level2"><h2>열 함수 1: <code>select()</code>
 </h2>
-
-<img data-src="images/clipboard-2864021695.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="열-함수-2-mutate" class="slide level2"><h2>열 함수 2: <code>mutate()</code>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-6-1">Data</a></li>
+<li><a href="#tabset-6-2"><code>select()</code> 1</a></li>
+<li><a href="#tabset-6-3"><code>select()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-6-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">select</span>(table1, country, year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  country      year
+  &lt;chr&gt;       &lt;dbl&gt;
+1 Afghanistan  1999
+2 Afghanistan  2000
+3 Brazil       1999
+4 Brazil       2000
+5 China        1999
+6 China        2000</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-6-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>table1 <span class="sc">|&gt;</span> </span>
+<span id="cb32-2"><a></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(cases, population))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  country      year
+  &lt;chr&gt;       &lt;dbl&gt;
+1 Afghanistan  1999
+2 Afghanistan  2000
+3 Brazil       1999
+4 Brazil       2000
+5 China        1999
+6 China        2000</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="열-함수-2-mutate" class="slide level2"><h2>열 함수 2: <code>mutate()</code>
 </h2>
 
 <img data-src="images/clipboard-417835741.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="열-함수-2-mutate-1" class="slide level2"><h2>열 함수 2: <code>mutate()</code>
 </h2>
 
-<img data-src="images/clipboard-1943055285.png" class="r-stretch"></section><section id="열-함수-3-rename" class="slide level2"><h2>열 함수 3: <code>rename()</code>
+<img data-src="images/clipboard-1943055285.png" class="r-stretch"></section><section id="열-함수-2-mutate-2" class="slide level2"><h2>열 함수 2: <code>mutate()</code>
+</h2>
+<div class="panel-tabset">
+<ul id="tabset-7" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-7-1">Data</a></li>
+<li><a href="#tabset-7-2"><code>mutate()</code> 1</a></li>
+<li><a href="#tabset-7-3"><code>mutate()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-7-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  country      year  cases population
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071
+2 Afghanistan  2000   2666   20595360
+3 Brazil       1999  37737  172006362
+4 Brazil       2000  80488  174504898
+5 China        1999 212258 1272915272
+6 China        2000 213766 1280428583</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-7-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">mutate</span>(table1, <span class="at">rate =</span> cases <span class="sc">/</span> population)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 5
+  country      year  cases population      rate
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;
+1 Afghanistan  1999    745   19987071 0.0000373
+2 Afghanistan  2000   2666   20595360 0.000129 
+3 Brazil       1999  37737  172006362 0.000219 
+4 Brazil       2000  80488  174504898 0.000461 
+5 China        1999 212258 1272915272 0.000167 
+6 China        2000 213766 1280428583 0.000167 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-7-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>table1_new <span class="ot">&lt;-</span> table1 <span class="sc">|&gt;</span> </span>
+<span id="cb37-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb37-3"><a></a>    <span class="at">rate =</span> cases <span class="sc">/</span> population,</span>
+<span id="cb37-4"><a></a>    <span class="at">continent =</span> <span class="fu">if_else</span>(country <span class="sc">==</span> <span class="st">"Brazil"</span>, <span class="st">"Americas"</span>, <span class="st">"Asia"</span>)</span>
+<span id="cb37-5"><a></a>  )</span>
+<span id="cb37-6"><a></a>table1_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="열-함수-3-rename" class="slide level2"><h2>열 함수 3: <code>rename()</code>
 </h2>
 
 <img data-src="images/clipboard-3953189394.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="열-함수-3-rename-1" class="slide level2"><h2>열 함수 3: <code>rename()</code>
@@ -564,14 +928,135 @@
 
 <img data-src="images/clipboard-654990545.png" class="r-stretch"></section><section id="열-함수-3-rename-2" class="slide level2"><h2>열 함수 3: <code>rename()</code>
 </h2>
-
-<img data-src="images/clipboard-3019777280.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="열-함수-4-relocate" class="slide level2"><h2>열 함수 4: <code>relocate()</code>
+<div class="panel-tabset">
+<ul id="tabset-8" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-8-1">Data</a></li>
+<li><a href="#tabset-8-2"><code>rename()</code> 1</a></li>
+<li><a href="#tabset-8-3"><code>rename()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-8-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-8-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a><span class="fu">rename</span>(table1_new, <span class="at">cont =</span> continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate cont    
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   
+1 Afghanistan  1999    745   19987071 0.0000373 Asia    
+2 Afghanistan  2000   2666   20595360 0.000129  Asia    
+3 Brazil       1999  37737  172006362 0.000219  Americas
+4 Brazil       2000  80488  174504898 0.000461  Americas
+5 China        1999 212258 1272915272 0.000167  Asia    
+6 China        2000 213766 1280428583 0.000167  Asia    </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-8-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb42-2"><a></a>  <span class="fu">rename</span>(</span>
+<span id="cb42-3"><a></a>    <span class="at">cont =</span> continent,</span>
+<span id="cb42-4"><a></a>    <span class="at">pop =</span> population</span>
+<span id="cb42-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases        pop      rate cont    
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   
+1 Afghanistan  1999    745   19987071 0.0000373 Asia    
+2 Afghanistan  2000   2666   20595360 0.000129  Asia    
+3 Brazil       1999  37737  172006362 0.000219  Americas
+4 Brazil       2000  80488  174504898 0.000461  Americas
+5 China        1999 212258 1272915272 0.000167  Asia    
+6 China        2000 213766 1280428583 0.000167  Asia    </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="열-함수-4-relocate" class="slide level2"><h2>열 함수 4: <code>relocate()</code>
 </h2>
 
 <img data-src="images/clipboard-2066290782.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="열-함수-4-relocate-1" class="slide level2"><h2>열 함수 4: <code>relocate()</code>
 </h2>
 
-<img data-src="images/clipboard-1813959402.png" class="r-stretch"></section><section id="그룹-함수-네-개의-주요-함수" class="slide level2"><h2>그룹 함수: 네 개의 주요 함수</h2>
+<img data-src="images/clipboard-1813959402.png" class="r-stretch"></section><section id="열-함수-4-relocate-2" class="slide level2"><h2>열 함수 4: <code>relocate()</code>
+</h2>
+<div class="panel-tabset">
+<ul id="tabset-9" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-9-1">Data</a></li>
+<li><a href="#tabset-9-2"><code>relocate()</code> 1</a></li>
+<li><a href="#tabset-9-3"><code>relocate()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-9-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-9-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">relocate</span>(table1_new, year, continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+   year continent country      cases population      rate
+  &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;
+1  1999 Asia      Afghanistan    745   19987071 0.0000373
+2  2000 Asia      Afghanistan   2666   20595360 0.000129 
+3  1999 Americas  Brazil       37737  172006362 0.000219 
+4  2000 Americas  Brazil       80488  174504898 0.000461 
+5  1999 Asia      China       212258 1272915272 0.000167 
+6  2000 Asia      China       213766 1280428583 0.000167 </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-9-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb47-2"><a></a>  <span class="fu">relocate</span>(</span>
+<span id="cb47-3"><a></a>    rate,</span>
+<span id="cb47-4"><a></a>    <span class="at">.before =</span> year</span>
+<span id="cb47-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country          rate  year  cases population continent
+  &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan 0.0000373  1999    745   19987071 Asia     
+2 Afghanistan 0.000129   2000   2666   20595360 Asia     
+3 Brazil      0.000219   1999  37737  172006362 Americas 
+4 Brazil      0.000461   2000  80488  174504898 Americas 
+5 China       0.000167   1999 212258 1272915272 Asia     
+6 China       0.000167   2000 213766 1280428583 Asia     </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="그룹-함수-네-개의-주요-함수" class="slide level2"><h2>그룹 함수: 네 개의 주요 함수</h2>
 <ul>
 <li><p><code>group_by()</code>: 변수(들)에 의거해 전체 행(들)을 그룹으로 분할</p></li>
 <li><p><code>summarize()</code>: 그룹별로 변수(들)의 통계량을 산출하여 새로운 변수(들)로 저장</p></li>
@@ -582,78 +1067,363 @@
 
 <img data-src="images/clipboard-1542658472.png" class="r-stretch"></section><section id="그룹-함수-1-group_by-1" class="slide level2"><h2>그룹 함수 1: <code>group_by()</code>
 </h2>
-
-<img data-src="images/clipboard-1927744566.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="그룹-함수-2-summarize" class="slide level2"><h2>그룹 함수 2: <code>summarize()</code>
+<div class="panel-tabset">
+<ul id="tabset-10" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-10-1">Data</a></li>
+<li><a href="#tabset-10-2"><code>group_by()</code> 1</a></li>
+<li><a href="#tabset-10-3"><code>group_by()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-10-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-10-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">group_by</span>(table1_new, continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+# Groups:   continent [2]
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-10-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb52-2"><a></a>  <span class="fu">group_by</span>(continent, year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+# Groups:   continent, year [4]
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="그룹-함수-2-summarize" class="slide level2"><h2>그룹 함수 2: <code>summarize()</code>
 </h2>
 
-<img data-src="images/clipboard-1592063625.png" class="r-stretch"></section><section id="그룹-함수-1-2-group_by-summarize" class="slide level2"><h2>그룹 함수 1 + 2: <code>group_by()</code> + <code>summarize()</code>
+<img data-src="images/clipboard-1592063625.png" class="r-stretch"></section><section id="그룹-함수-2-summarize-1" class="slide level2"><h2>그룹 함수 2: <code>summarize()</code>
+</h2>
+<div class="panel-tabset">
+<ul id="tabset-11" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-11-1">Data</a></li>
+<li><a href="#tabset-11-2"><code>summarize()</code> 1</a></li>
+<li><a href="#tabset-11-3"><code>summarize()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-11-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-11-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">summarize</span>(table1_new, </span>
+<span id="cb55-2"><a></a>  <span class="at">sum_cases =</span> <span class="fu">sum</span>(cases)</span>
+<span id="cb55-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  sum_cases
+      &lt;dbl&gt;
+1    547660</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-11-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb57-2"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb57-3"><a></a>    <span class="at">sum_cases =</span> <span class="fu">sum</span>(cases), </span>
+<span id="cb57-4"><a></a>    <span class="at">mean_rate =</span> <span class="fu">mean</span>(rate)</span>
+<span id="cb57-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  sum_cases mean_rate
+      &lt;dbl&gt;     &lt;dbl&gt;
+1    547660  0.000197</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="그룹-함수-1-2-group_by-summarize" class="slide level2"><h2>그룹 함수 1 + 2: <code>group_by()</code> + <code>summarize()</code>
 </h2>
 
 <img data-src="images/clipboard-1318711495.png" class="r-stretch"></section><section id="그룹-함수-1-2-group_by-summarize-1" class="slide level2"><h2>그룹 함수 1 + 2: <code>group_by()</code> + <code>summarize()</code>
 </h2>
-
-<img data-src="images/clipboard-293917068.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="그룹-함수-3-count" class="slide level2"><h2>그룹 함수 3: <code>count()</code>
+<div class="panel-tabset">
+<ul id="tabset-12" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-12-1">Data</a></li>
+<li><a href="#tabset-12-2">Combination 1</a></li>
+<li><a href="#tabset-12-3">Combination 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-12-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-12-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>table1_new_group <span class="ot">&lt;-</span> <span class="fu">group_by</span>(table1_new, continent, year)</span>
+<span id="cb60-2"><a></a><span class="fu">summarize</span>(table1_new_group, </span>
+<span id="cb60-3"><a></a>  <span class="at">sum_cases =</span> <span class="fu">sum</span>(cases),</span>
+<span id="cb60-4"><a></a>  <span class="at">mean_rate =</span> <span class="fu">mean</span>(rate)</span>
+<span id="cb60-5"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+# Groups:   continent [2]
+  continent  year sum_cases mean_rate
+  &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 Americas   1999     37737  0.000219
+2 Americas   2000     80488  0.000461
+3 Asia       1999    213003  0.000102
+4 Asia       2000    216432  0.000148</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-12-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb62-2"><a></a>  <span class="fu">group_by</span>(continent, year) <span class="sc">|&gt;</span> </span>
+<span id="cb62-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb62-4"><a></a>    <span class="at">sum_cases =</span> <span class="fu">sum</span>(cases), </span>
+<span id="cb62-5"><a></a>    <span class="at">sum_pop =</span> <span class="fu">sum</span>(population)</span>
+<span id="cb62-6"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb62-7"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb62-8"><a></a>    <span class="at">rate =</span> sum_cases <span class="sc">/</span> sum_pop</span>
+<span id="cb62-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+# Groups:   continent [2]
+  continent  year sum_cases    sum_pop     rate
+  &lt;chr&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+1 Americas   1999     37737  172006362 0.000219
+2 Americas   2000     80488  174504898 0.000461
+3 Asia       1999    213003 1292902343 0.000165
+4 Asia       2000    216432 1301023943 0.000166</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="그룹-함수-3-count" class="slide level2"><h2>그룹 함수 3: <code>count()</code>
 </h2>
 
 <img data-src="images/clipboard-2066641215.png" class="r-stretch"></section><section id="그룹-함수-3-count-1" class="slide level2"><h2>그룹 함수 3: <code>count()</code>
 </h2>
-
-<img data-src="images/clipboard-171754169.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="그룹-함수-4-across" class="slide level2"><h2>그룹 함수 4: <code>across()</code>
+<div class="panel-tabset">
+<ul id="tabset-13" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-13-1">Data</a></li>
+<li><a href="#tabset-13-2"><code>count()</code> 1</a></li>
+<li><a href="#tabset-13-3"><code>count()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-13-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-13-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="fu">count</span>(table1_new, year, continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+   year continent     n
+  &lt;dbl&gt; &lt;chr&gt;     &lt;int&gt;
+1  1999 Americas      1
+2  1999 Asia          2
+3  2000 Americas      1
+4  2000 Asia          2</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-13-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb67-2"><a></a>  <span class="fu">count</span>(year, continent, <span class="at">wt =</span> cases)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+   year continent      n
+  &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
+1  1999 Americas   37737
+2  1999 Asia      213003
+3  2000 Americas   80488
+4  2000 Asia      216432</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="그룹-함수-4-across" class="slide level2"><h2>그룹 함수 4: <code>across()</code>
 </h2>
 
 <img data-src="images/clipboard-2406373084.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="그룹-함수-4-across-1" class="slide level2"><h2>그룹 함수 4: <code>across()</code>
 </h2>
-
-<img data-src="images/clipboard-2112397168.png" class="r-stretch"></section><section id="파이프-연산자와-dplyr-함수" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
+<div class="panel-tabset">
+<ul id="tabset-14" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-14-1">Data</a></li>
+<li><a href="#tabset-14-2"><code>across()</code> 1</a></li>
+<li><a href="#tabset-14-3"><code>across()</code> 2</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-14-1">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country      year  cases population      rate continent
+  &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;    
+1 Afghanistan  1999    745   19987071 0.0000373 Asia     
+2 Afghanistan  2000   2666   20595360 0.000129  Asia     
+3 Brazil       1999  37737  172006362 0.000219  Americas 
+4 Brazil       2000  80488  174504898 0.000461  Americas 
+5 China        1999 212258 1272915272 0.000167  Asia     
+6 China        2000 213766 1280428583 0.000167  Asia     </code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-14-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">summarize</span>(table1_new, </span>
+<span id="cb70-2"><a></a>  <span class="fu">across</span>(<span class="fu">c</span>(cases, population), mean)</span>
+<span id="cb70-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+   cases population
+   &lt;dbl&gt;      &lt;dbl&gt;
+1 91277. 490072924.</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-14-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a>table1_new <span class="sc">|&gt;</span> </span>
+<span id="cb72-2"><a></a>  <span class="fu">group_by</span>(year) <span class="sc">|&gt;</span> </span>
+<span id="cb72-3"><a></a>  <span class="fu">summarize</span>(</span>
+<span id="cb72-4"><a></a>    <span class="fu">across</span>(</span>
+<span id="cb72-5"><a></a>      <span class="fu">c</span>(cases, population, rate),</span>
+<span id="cb72-6"><a></a>      mean,</span>
+<span id="cb72-7"><a></a>      <span class="at">.names =</span> <span class="st">"mean_{.col}"</span></span>
+<span id="cb72-8"><a></a>    )</span>
+<span id="cb72-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+   year mean_cases mean_population mean_rate
+  &lt;dbl&gt;      &lt;dbl&gt;           &lt;dbl&gt;     &lt;dbl&gt;
+1  1999     83580       488302902.  0.000141
+2  2000     98973.      491842947   0.000253</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="파이프-연산자와-dplyr-함수" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
 
 <img data-src="images/clipboard-174079750.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://www.rforecology.com/post/how-to-use-pipes/" style="font-size:0.75rem">https://www.rforecology.com/post/how-to-use-pipes/</a></p></section><section id="파이프-연산자와-dplyr-함수-1" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
 
 <img data-src="https://r4ds.hadley.nz/screenshots/rstudio-pipe-options.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://r4ds.hadley.nz/data-transform" style="font-size:0.75rem">https://r4ds.hadley.nz/data-transform</a></p></section><section id="파이프-연산자와-dplyr-함수-2" class="slide level2"><h2>파이프 연산자와 <code>dplyr</code> 함수</h2>
 <div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">Old 1</a></li>
-<li><a href="#tabset-2-2">Old 2</a></li>
-<li><a href="#tabset-2-3">파이프 연산자</a></li>
-<li><a href="#tabset-2-4">결과</a></li>
+<ul id="tabset-15" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-15-1">Old 1</a></li>
+<li><a href="#tabset-15-2">Old 2</a></li>
+<li><a href="#tabset-15-3">파이프 연산자</a></li>
+<li><a href="#tabset-15-4">결과</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-2-1">
+<div id="tabset-15-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb3-3"><a></a>flights1 <span class="ot">&lt;-</span> <span class="fu">filter</span>(flights, dest <span class="sc">==</span> <span class="st">"IAH"</span>)</span>
-<span id="cb3-4"><a></a>flights2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(flights1, <span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span>)</span>
-<span id="cb3-5"><a></a>flights3 <span class="ot">&lt;-</span> <span class="fu">select</span>(flights2, year<span class="sc">:</span>day, dep_time, carrier, flight, speed)</span>
-<span id="cb3-6"><a></a><span class="fu">arrange</span>(flights3, <span class="fu">desc</span>(speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb74-2"><a></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb74-3"><a></a>flights1 <span class="ot">&lt;-</span> <span class="fu">filter</span>(flights, dest <span class="sc">==</span> <span class="st">"IAH"</span>)</span>
+<span id="cb74-4"><a></a>flights2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(flights1, <span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span>)</span>
+<span id="cb74-5"><a></a>flights3 <span class="ot">&lt;-</span> <span class="fu">select</span>(flights2, year<span class="sc">:</span>day, dep_time, carrier, flight, speed)</span>
+<span id="cb74-6"><a></a><span class="fu">arrange</span>(flights3, <span class="fu">desc</span>(speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-2-2">
+<div id="tabset-15-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">arrange</span>(</span>
-<span id="cb4-2"><a></a>  <span class="fu">select</span>(</span>
-<span id="cb4-3"><a></a>    <span class="fu">mutate</span>(</span>
-<span id="cb4-4"><a></a>      <span class="fu">filter</span>(</span>
-<span id="cb4-5"><a></a>        flights, </span>
-<span id="cb4-6"><a></a>        dest <span class="sc">==</span> <span class="st">"IAH"</span></span>
-<span id="cb4-7"><a></a>      ),</span>
-<span id="cb4-8"><a></a>      <span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span></span>
-<span id="cb4-9"><a></a>    ),</span>
-<span id="cb4-10"><a></a>    year<span class="sc">:</span>day, dep_time, carrier, flight, speed</span>
-<span id="cb4-11"><a></a>  ),</span>
-<span id="cb4-12"><a></a>  <span class="fu">desc</span>(speed)</span>
-<span id="cb4-13"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a><span class="fu">arrange</span>(</span>
+<span id="cb75-2"><a></a>  <span class="fu">select</span>(</span>
+<span id="cb75-3"><a></a>    <span class="fu">mutate</span>(</span>
+<span id="cb75-4"><a></a>      <span class="fu">filter</span>(</span>
+<span id="cb75-5"><a></a>        flights, </span>
+<span id="cb75-6"><a></a>        dest <span class="sc">==</span> <span class="st">"IAH"</span></span>
+<span id="cb75-7"><a></a>      ),</span>
+<span id="cb75-8"><a></a>      <span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span></span>
+<span id="cb75-9"><a></a>    ),</span>
+<span id="cb75-10"><a></a>    year<span class="sc">:</span>day, dep_time, carrier, flight, speed</span>
+<span id="cb75-11"><a></a>  ),</span>
+<span id="cb75-12"><a></a>  <span class="fu">desc</span>(speed)</span>
+<span id="cb75-13"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-2-3">
+<div id="tabset-15-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>flights <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"IAH"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb5-3"><a></a>  <span class="fu">mutate</span>(<span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb5-4"><a></a>  <span class="fu">select</span>(year<span class="sc">:</span>day, dep_time, carrier, flight, speed) <span class="sc">|&gt;</span> </span>
-<span id="cb5-5"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a>flights <span class="sc">|&gt;</span> </span>
+<span id="cb76-2"><a></a>  <span class="fu">filter</span>(dest <span class="sc">==</span> <span class="st">"IAH"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb76-3"><a></a>  <span class="fu">mutate</span>(<span class="at">speed =</span> distance <span class="sc">/</span> air_time <span class="sc">*</span> <span class="dv">60</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb76-4"><a></a>  <span class="fu">select</span>(year<span class="sc">:</span>day, dep_time, carrier, flight, speed) <span class="sc">|&gt;</span> </span>
+<span id="cb76-5"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(speed))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-2-4">
+<div id="tabset-15-4">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7,198 × 7
@@ -682,7 +1452,13 @@
 </section><section id="ggplot2-패키지" class="slide level2"><h2>
 <code>ggplot2</code> 패키지</h2>
 
-<img data-src="images/clipboard-3146270133.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://ggplot2.tidyverse.org/" class="uri" style="font-size:0.75rem">https://ggplot2.tidyverse.org/</a></p></section><section id="grammar-of-graphics" class="slide level2"><h2>Grammar of graphics</h2>
+<img data-src="images/clipboard-3146270133.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://ggplot2.tidyverse.org/" class="uri" style="font-size:0.75rem">https://ggplot2.tidyverse.org/</a></p></section><section id="ggplot2-패키지-1" class="slide level2"><h2>
+<code>ggplot2</code> 패키지</h2>
+
+<img data-src="images/clipboard-1476685333.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/allison-horst" style="font-size:0.75rem">https://allisonhorst.com/allison-horst</a></p></section><section id="ggplot2-패키지-2" class="slide level2"><h2>
+<code>ggplot2</code> 패키지</h2>
+
+<img data-src="images/clipboard-4023683763.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/allison-horst" style="font_size:0.75rem">https://allisonhorst.com/allison-horst</a></p></section><section id="grammar-of-graphics" class="slide level2"><h2>Grammar of graphics</h2>
 
 <img data-src="images/clipboard-3968277018.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="ggplot2의-8대-구성-요소" class="slide level2"><h2>
 <code>ggplot2</code>의 8대 구성 요소</h2>
@@ -705,25 +1481,25 @@
 </li>
 </ul></section><section id="심미성과-기하-1" class="slide level2"><h2>심미성과 기하</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">Code</a></li>
-<li><a href="#tabset-3-2">Result</a></li>
+<ul id="tabset-16" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-16-1">Code</a></li>
+<li><a href="#tabset-16-2">Result</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-3-1">
+<div id="tabset-16-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>gapminder <span class="sc">|&gt;</span> </span>
-<span id="cb7-2"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2007</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb7-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb7-4"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb7-5"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a>gapminder <span class="sc">|&gt;</span> </span>
+<span id="cb78-2"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2007</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb78-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> gdpPercap, <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
+<span id="cb78-4"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> continent)) <span class="sc">+</span></span>
+<span id="cb78-5"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-3-2">
+<div id="tabset-16-2">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lecture_3_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<figure><p><img data-src="lecture_3_files/figure-revealjs/unnamed-chunk-51-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -799,26 +1575,26 @@
 </li>
 </ul></section><section id="패싯-facet-1" class="slide level2"><h2>패싯 facet</h2>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">Normal</a></li>
-<li><a href="#tabset-4-2">Faceting</a></li>
+<ul id="tabset-17" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-17-1">Normal</a></li>
+<li><a href="#tabset-17-2">Faceting</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-4-1">
+<div id="tabset-17-1">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lecture_3_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<figure><p><img data-src="lecture_3_files/figure-revealjs/unnamed-chunk-52-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-<div id="tabset-4-2">
+<div id="tabset-17-2">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lecture_3_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<figure><p><img data-src="lecture_3_files/figure-revealjs/unnamed-chunk-53-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -874,10 +1650,17 @@
 <li><p><a href="https://plotly.com/ggplot2/"><code>ggplotly</code></a></p></li>
 <li><p><a href="https://ggobi.github.io/ggally/"><code>GGally</code></a></p></li>
 <li><p><a href="https://rpkgs.datanovia.com/ggcorrplot/"><code>ggcorrplot</code></a></p></li>
-</ul></section><section id="patchwork" class="slide level2"><h2><code>patchwork</code></h2>
+</ul></section><section id="patchwork-패키지" class="slide level2"><h2>
+<code>patchwork</code> 패키지</h2>
+
+<img data-src="images/clipboard-2622112002.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" class="uri" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="gganimate-패키지" class="slide level2"><h2>
+<code>gganimate</code> 패키지</h2>
+
+<img data-src="images/clipboard-105467609.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></p></section><section id="ggrepel-패키지" class="slide level2"><h2>
+<code>ggrepel</code> 패키지</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/clipboard-2622112002.png" class="quarto-figure quarto-figure-center"></p>
-<figcaption><a href="https://allisonhorst.com/r-packages-functions" class="uri" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></figcaption></figure>
+<figure><p><img data-src="images/clipboard-666632977.png" class="quarto-figure quarto-figure-center"></p>
+<figcaption><a href="https://allisonhorst.com/r-packages-functions" style="font-size:0.75rem">https://allisonhorst.com/r-packages-functions</a></figcaption></figure>
 </div>
 
 <div class="quarto-auto-generated-content">
