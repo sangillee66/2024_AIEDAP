@@ -88,14 +88,14 @@
     "href": "reference.html#데이터사이언스와-r",
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "데이터사이언스와 R",
-    "text": "데이터사이언스와 R\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund, 2023, R for Data Science: Import, Tidy, Transform, Visualize, and Model Data, 2nd edition, Boston: O’Reilly.\n\n바이블과 같은 책입니다. 필독을 권합니다. 저의 경우 두 번 정도 읽으니 감이 왔습니다.\n\nIrizarry, Rafael A. 2024. Introduction to Data Science: Data Wrangling and Visualization with R. 2nd edition, Boca Raton: CRC Press.\n\n훌륭한 책입니다. 해들리 위컴의 책을 읽고 난 다음에 읽어 보세요.\n\nBonnell, Jerry, and Mitsunori Ogihara. 2023. Exploring Data Science with R and the Tidyverse. 1st edition. Chapman; Hall/CRC.\n\n아직 살펴보지 못했습니다.\n\n한국알사용자회, 데이터 과학을 지탱하는 기본기, 웹북\n\n한국 알사용자회의 무료 웹북 중의 하나입니다. 데이터 과학과 관련된 다양한 내용으로 구성이 되어 있습니다. 프로그래밍 섹션이 R과 관련된 내용입니다.\n\n김길환, 2023, R 프로그래밍(개정판), 웹북\n\n상명대학교 김길환 교수님께서 쓰신 R 기초 웹북입니다. 방대한 주제를 다루고 있습니다. 훌륭한 책이지만 형식이 좀 올드한 느낌이 있긴 합니다. 그래도 한글로 된 R 웹북이 매우 드물다는 의미에서 충분한 가치가 있는 책입니다.\n\n백영민, 2023, R 기반 데이터 과학: 타이디버스(tidyverse) 접근, 서울: 한나래아카데미.\n\nBase R에 기반한 R 개론서는 이제 의미가 없습니다. 완전히 Tidyverse에 입각해 쓰여진 한글 R 개론서가 많지 않고 있다 하더라도 부실한 경우가 많은데, 연세대학교 백영민 교수님의 이 책은 그래도 좋은 편에 속합니다. 단, 파이퍼 오퍼레이터의 기호를 최근 표준이 되고 있는 |&gt;이 아니라 %&gt;%을 사용한 것이 조금 불만입니다."
+    "text": "데이터사이언스와 R\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund, 2023, R for Data Science: Import, Tidy, Transform, Visualize, and Model Data, 2nd edition, Boston: O’Reilly.\n\n바이블과 같은 책입니다. 필독을 권합니다. 저의 경우 두 번 정도 읽으니 감이 왔습니다.\n\nIrizarry, Rafael A. 2024. Introduction to Data Science: Data Wrangling and Visualization with R. 2nd edition, Boca Raton: CRC Press.\n\n훌륭한 책입니다. 해들리 위컴의 책을 읽고 난 다음에 읽어 보세요.\n\nBonnell, Jerry, and Mitsunori Ogihara. 2023. Exploring Data Science with R and the Tidyverse. 1st edition. Chapman; Hall/CRC.\n\n아직 살펴보지 못했습니다.\n\n한국 R 사용자회, 데이터 과학을 지탱하는 기본기, 웹북\n\n한국 R 사용자회의 무료 웹북 중의 하나입니다. 데이터 과학과 관련된 다양한 내용으로 구성이 되어 있습니다. 프로그래밍 섹션이 R과 관련된 내용입니다.\n\n김길환, 2023, R 프로그래밍(개정판), 웹북\n\n상명대학교 김길환 교수님께서 쓰신 R 기초 웹북입니다. 방대한 주제를 다루고 있습니다. 훌륭한 책이지만 형식이 좀 올드한 느낌이 있긴 합니다. 그래도 한글로 된 R 웹북이 매우 드물다는 의미에서 충분한 가치가 있는 책입니다.\n\n백영민, 2023, R 기반 데이터 과학: 타이디버스(tidyverse) 접근, 서울: 한나래아카데미.\n\nBase R에 기반한 R 개론서는 이제 의미가 없습니다. 완전히 Tidyverse에 입각해 쓰여진 한글 R 개론서가 많지 않고 있다 하더라도 부실한 경우가 많은데, 연세대학교 백영민 교수님의 이 책은 그래도 좋은 편에 속합니다. 단, 파이퍼 오퍼레이터의 기호를 최근 표준이 되고 있는 |&gt;이 아니라 %&gt;%을 사용한 것이 조금 불만입니다."
   },
   {
     "objectID": "reference.html#쿼토-quarto",
     "href": "reference.html#쿼토-quarto",
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "쿼토 Quarto",
-    "text": "쿼토 Quarto\n\nQuarto 웹사이트\n\n쿼토에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다. 좀 복잡하게 구성되어 있는 느낌이 들긴 하지만 방대한 내용이 잘 다루어져 있습니다.\n\n한국알사용자회ㆍ이광춘, 2024, 챗GPT쿼토: 인공지능 시대 과학기술 저작 도구, 웹북\n\n한국알사용자회가 만든 무료 웹북 중의 하나입니다. Quarto에 대한 상세한 내용이 있을 것으로 기대하면 좀 실망하게 되는 책입니다."
+    "text": "쿼토 Quarto\n\nQuarto 웹사이트\n\n쿼토에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다. 좀 복잡하게 구성되어 있는 느낌이 들긴 하지만 방대한 내용이 잘 다루어져 있습니다.\n\n한국 R 사용자회ㆍ이광춘, 2024, 챗GPT쿼토: 인공지능 시대 과학기술 저작 도구, 웹북\n\n한국 R 사용자회가 만든 무료 웹북 중의 하나입니다. Quarto에 대한 상세한 내용이 있을 것으로 기대하면 좀 실망하게 되는 책입니다."
   },
   {
     "objectID": "reference.html#샤이니-shiny",
@@ -2406,5 +2406,12 @@
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터의 구조를 바꾸는 핵심 기법",
     "text": "데이터의 구조를 바꾸는 핵심 기법\n\nhttps://allisonhorst.com/other-r-fun"
+  },
+  {
+    "objectID": "reference.html#텍스트-마이닝과-자연어처리",
+    "href": "reference.html#텍스트-마이닝과-자연어처리",
+    "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
+    "section": "텍스트 마이닝과 자연어처리",
+    "text": "텍스트 마이닝과 자연어처리\n\n한국 R 사용자회ㆍ안도현, 2022, R 텍스트마이닝, 오픈전자책.\n\n한국 R 사용자회의 무료 웹북 중의 하나입니다. Tidyverse와 파이프 연산자에 기반하고 있습니다. 좋은 책입니다.\n\n김영우, 2021, 쉽게 배우는 R 텍스트 마이닝, 서울: 이지스퍼블리싱.\n\n이렇게 훌륭한 R 기반 텍스트 마이닝 책이 있다는 것이 너무 감사할 뿐입니다. 웹복이 아닌 것이 아쉬울 뿐입니다."
   }
 ]
