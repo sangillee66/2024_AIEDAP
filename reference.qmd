@@ -20,9 +20,9 @@ date-modified: last-modified
 
     -   아직 살펴보지 못했습니다.
 
--   한국알사용자회, [데이터 과학을 지탱하는 기본기](https://r2bit.com/book_analytics/), 웹북
+-   한국 R 사용자회, [데이터 과학을 지탱하는 기본기](https://r2bit.com/book_analytics/), 웹북
 
-    -   한국 알사용자회의 무료 웹북 중의 하나입니다. 데이터 과학과 관련된 다양한 내용으로 구성이 되어 있습니다. 프로그래밍 섹션이 R과 관련된 내용입니다.
+    -   한국 R 사용자회의 무료 웹북 중의 하나입니다. 데이터 과학과 관련된 다양한 내용으로 구성이 되어 있습니다. 프로그래밍 섹션이 R과 관련된 내용입니다.
 
 -   김길환, 2023, [R 프로그래밍(개정판)](https://kilhwan.github.io/rprogramming/), 웹북
 
@@ -48,9 +48,9 @@ date-modified: last-modified
 
     -   쿼토에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다. 좀 복잡하게 구성되어 있는 느낌이 들긴 하지만 방대한 내용이 잘 다루어져 있습니다.
 
--   한국알사용자회ㆍ이광춘, 2024, [챗GPT쿼토: 인공지능 시대 과학기술 저작 도구](https://r2bit.com/gpt-quarto/), 웹북
+-   한국 R 사용자회ㆍ이광춘, 2024, [챗GPT쿼토: 인공지능 시대 과학기술 저작 도구](https://r2bit.com/gpt-quarto/), 웹북
 
-    -   한국알사용자회가 만든 무료 웹북 중의 하나입니다. Quarto에 대한 상세한 내용이 있을 것으로 기대하면 좀 실망하게 되는 책입니다.
+    -   한국 R 사용자회가 만든 무료 웹북 중의 하나입니다. Quarto에 대한 상세한 내용이 있을 것으로 기대하면 좀 실망하게 되는 책입니다.
 
 ## 샤이니 Shiny
 
@@ -69,3 +69,13 @@ date-modified: last-modified
 -   Fay, Colin, Vincent Guyader, Sebastien Rochette, and Cervan Girard. 2022, [*Engineering Production-Grade Shiny Apps*](https://engineering-shiny.org/), Boca Raton: CRC Press.
 
     -   아직 살펴보지 못했습니다.
+
+## 텍스트 마이닝과 자연어처리
+
+-   한국 R 사용자회ㆍ안도현, 2022, [R 텍스트마이닝](https://r2bit.com/book_tm/), 오픈전자책.
+
+    -   한국 R 사용자회의 무료 웹북 중의 하나입니다. Tidyverse와 파이프 연산자에 기반하고 있습니다. 좋은 책입니다.
+
+-   김영우, 2021, [쉽게 배우는 R 텍스트 마이닝](https://www.yes24.com/Product/Goods/43868089), 서울: 이지스퍼블리싱.
+
+    -   이렇게 훌륭한 R 기반 텍스트 마이닝 책이 있다는 것이 너무 감사할 뿐입니다. 웹복이 아닌 것이 아쉬울 뿐입니다.

@@ -72,7 +72,7 @@ editor: visual
 
     -   사용자의 편이성이 강화된 마크업 언어
 
-    -   예: [**Quarto**]{style="color:coral"}
+    -   **Quarto:** 비주얼 에디터
 
 ## HTML의 기초 1
 
@@ -80,8 +80,6 @@ editor: visual
 -   웹페이지는 다양한 태그(tag)로 구성
 
     -   각 태그는 시작 태그와 종료 태그로 구성되며, 둘 사이에 해당 콘텐츠가 위치
-
-    -   태그로 규정되는 개별 단위: [**엘리먼트(element)**]{style="color:coral"}
 
 -   태그의 종류는 다양하며, 크게 세 가지로 구분
 
@@ -117,16 +115,16 @@ editor: visual
 ## HTML 엘리먼트의 선택
 
 ::: r-fit-text
--   HTML 엘리먼트
+-   [**HTML 엘리먼트**]{style="color:coral"}
 
     -   태그와 속성으로 구성된 HTML의 한 단위 혹은 특정 부분
 
     -   웹스크레이핑의 타깃의 주소
 
--   HTML 엘리먼트의 선택: **CSS**(casading style sheet) **선택자**(selector)
+-   HTML 엘리먼트의 선택: [**CSS**]{style="color:coral"} [**선택자**]{style="color:coral"}(casading style sheet selector)
 
 | 선택 대상              | CSS 선택자     | 결과                                                                                      |
-|--------------|--------------|--------------------------------------------|
+|------------------|------------------|-------------------------------------|
 | 태그(tag)              | tag1           | "tag1"이라는 이름의 모든 tag                                                              |
 | 클래스(class)          | .class1        | "class1"이라는 class 속성을 갖는 모든 요소                                                |
 | 아이디(id)             | #id1           | "id1"이라는 id 속성을 갖는 모든 요소                                                      |
@@ -164,7 +162,7 @@ editor: visual
 
     -   데이블 데이터, 텍스트 등을 추출
 
-## 사례
+## 사례 1: 스타워즈
 
 [vignette("starwars")](https://rvest.tidyverse.org/articles/starwars.html)
 
@@ -184,7 +182,7 @@ editor: visual
 </section>
 ```
 
-## 사례
+## 사례 1: 스타워즈
 
 ::: panel-tabset
 ## Code
@@ -214,7 +212,7 @@ read_html(url) |>
 ```
 :::
 
-## 사례
+## 사례 1: 스타워즈
 
 ::: panel-tabset
 ## Code
@@ -263,6 +261,59 @@ tibble(
     html_element(".crawl") |> 
     html_text2()
 )
+```
+:::
+
+## 사례 2: 웹 상의 테이블
+
+-   위키피디어: [전세계 국가 관련 항목](https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population)
+
+::: panel-tabset
+## Code
+
+```{r}
+#| echo: true
+library(tidyverse)
+library(rvest)
+url <- "https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population"
+my_table <- url |> 
+  read_html() |> 
+  html_element("table") |> 
+  html_table()
+```
+
+## Result
+
+```{r}
+my_table
+```
+
+## Code
+
+```{r}
+#| echo: true
+my_table_new <- my_table |> 
+  select(-1, -7) |> 
+  rename(
+    location = "Location",
+    population = "Population",
+    pop_pct = "% ofworld",
+    date = "Date",
+    source = "Source (official or fromthe United Nations)"
+  ) |> 
+  mutate(
+    population = parse_number(population, ","),
+    population = as.numeric(population),
+    pop_pct = str_remove_all(pop_pct, "%"),
+    pop_pct = as.numeric(pop_pct),
+    date = dmy(date)
+  )
+```
+
+## Result
+
+```{r}
+my_table_new
 ```
 :::
 
@@ -276,7 +327,7 @@ tibble(
 
     -   한 애플리케이션이 다른 애플리케이션의 기능들을 불러 사용할 수 있게 해주는 통로
 
-    -   오픈 API: API 키
+    -   오픈 API: API 키(key)
 
 -   데이터 API
 
@@ -284,7 +335,7 @@ tibble(
 
 ## API 활용의 다양성 {.smaller}
 
--   테이블 데이터의 수집
+-   정형 수치 데이터의 수집
 
     -   [KOSIS의 API](https://kosis.kr/openapi/)를 활용한 센서스 데이터 수집
 
@@ -322,7 +373,7 @@ tibble(
 
     -   Google Places API
 
--   R 래퍼 패키지: [googleway](https://github.com/SymbolixAU/googleway)
+-   R 래퍼(rapper) 패키지: [googleway](https://github.com/SymbolixAU/googleway)
 
 ## NAVER 뉴스 데이터 {.smaller}
 
@@ -416,6 +467,20 @@ naver_res |> slice_head(n = 10)
 ```
 :::
 
+## 텍스트 마이닝과 자연어처리 {.smaller}
+
+-   텍스트 마이닝
+
+    -   비정형 텍스트 데이터로부터 패턴 또는 관계를 추출하여 의미 있는 정보를 찾아내는 기법
+
+    -   기본 과정: 텍스트 전처리, 토큰화하기, 단어 빈도 분석하기
+
+    -   고급 분석: 비교 분석, 감정 분석, 의미망 분석, 토픽 모델링 등
+
+-   자연어처리(NLP; natural language processing)
+
+    -   [`KoNLP`](https://cran.r-project.org/src/contrib/Archive/KoNLP/)(Korean Natural Language Processing)
+
 ## KOSIS {.smaller}
 
 -   [KOrean Statistical Information Service, 국가통계포털](https://kosis.kr/)
@@ -424,7 +489,7 @@ naver_res |> slice_head(n = 10)
 
     -   상세한 [개발 가이드](https://kosis.kr/openapi/devGuide/devGuide_0101List.do)
 
--   래퍼(wrapper) 패키지
+-   래퍼 패키지
 
     -   `kosis` 패키지(<https://cran.r-project.org/web/packages/kosis/>)
 
@@ -438,7 +503,7 @@ naver_res |> slice_head(n = 10)
 
 ## API를 통한 생성형 AI와의 커뮤니케이션
 
--   OpenAI, Google Gemini AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능
+-   OpenAI, Google Generative AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능
 
     -   래퍼 패키지: GenAI(<https://genai.gd.edu.kg/>)
 
@@ -643,7 +708,7 @@ table3
 
 ![[https://allisonhorst.com/other-r-fun](https://allisonhorst.com/other-r-fun){style="font-size:0.75rem"}](images/clipboard-3106963859.png){style="font-size:0.75rem"}
 
-## 타이디(tidy) 데이터로 전환하는 핵심 기법
+## 데이터의 구조를 바꾸는 핵심 기법
 
 ![[https://allisonhorst.com/other-r-fun](https://allisonhorst.com/other-r-fun){style="font-size:0.75rem"}](images/clipboard-1179593338.png){style="font-size:0.75rem" fig-align="center"}
 

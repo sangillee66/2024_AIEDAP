@@ -907,14 +907,14 @@
     "href": "lecture_2.html#html의-정의",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "HTML의 정의",
-    "text": "HTML의 정의\n\n\nHyperText Markup Language, 하이퍼텍스터 마크업 언어\n\n\n웹 브라우저를 통해 표출되는 사항(무엇이 어떻게)을 프로그래밍하는 마크업(markup) 언어 혹은 웹 다큐먼트를 작성하는 마크업 언어\n\n마크업 언어: 다큐먼트의 구조와 포맷을 관장하는 텍스트-엔코딩 시스템\n\n\n\n\n\n마크다운(markdown) 언어\n\n사용자의 편이성이 강화된 마크업 언어\n예: Quarto"
+    "text": "HTML의 정의\n\n\nHyperText Markup Language, 하이퍼텍스터 마크업 언어\n\n\n웹 브라우저를 통해 표출되는 사항(무엇이 어떻게)을 프로그래밍하는 마크업(markup) 언어 혹은 웹 다큐먼트를 작성하는 마크업 언어\n\n마크업 언어: 다큐먼트의 구조와 포맷을 관장하는 텍스트-엔코딩 시스템\n\n\n\n\n\n마크다운(markdown) 언어\n\n사용자의 편이성이 강화된 마크업 언어\nQuarto: 비주얼 에디터"
   },
   {
     "objectID": "lecture_2.html#html의-기초-1",
     "href": "lecture_2.html#html의-기초-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "HTML의 기초 1",
-    "text": "HTML의 기초 1\n\n\n\n웹페이지는 다양한 태그(tag)로 구성\n\n각 태그는 시작 태그와 종료 태그로 구성되며, 둘 사이에 해당 콘텐츠가 위치\n태그로 규정되는 개별 단위: 엘리먼트(element)\n\n\n\n태그의 종류는 다양하며, 크게 세 가지로 구분\n\n최상위인 html 태그\n\n웹페이지의 전반적인 구조를 결정하는 블록(block) 태그\n\n예: h1, section, p, ol 태그 등\n\n\n\n블록 태그 내부의 특정 부분에만 적용되는 인라인(inline) 태그\n\n예: b, i, a 태그 등"
+    "text": "HTML의 기초 1\n\n\n\n웹페이지는 다양한 태그(tag)로 구성\n\n각 태그는 시작 태그와 종료 태그로 구성되며, 둘 사이에 해당 콘텐츠가 위치\n\n\n\n태그의 종류는 다양하며, 크게 세 가지로 구분\n\n최상위인 html 태그\n\n웹페이지의 전반적인 구조를 결정하는 블록(block) 태그\n\n예: h1, section, p, ol 태그 등\n\n\n\n블록 태그 내부의 특정 부분에만 적용되는 인라인(inline) 태그\n\n예: b, i, a 태그 등"
   },
   {
     "objectID": "lecture_2.html#html의-기초-2",
@@ -935,7 +935,7 @@
     "href": "lecture_2.html#html-엘리먼트의-선택",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "HTML 엘리먼트의 선택",
-    "text": "HTML 엘리먼트의 선택\n\n\n\nHTML 엘리먼트\n\n태그와 속성으로 구성된 HTML의 한 단위 혹은 특정 부분\n웹스크레이핑의 타깃의 주소\n\n\nHTML 엘리먼트의 선택: CSS(casading style sheet) 선택자(selector)\n\n\n\n\n\n\n\n\n선택 대상\nCSS 선택자\n결과\n\n\n\n태그(tag)\ntag1\n“tag1”이라는 이름의 모든 tag\n\n\n클래스(class)\n.class1\n“class1”이라는 class 속성을 갖는 모든 요소\n\n\n아이디(id)\n#id1\n“id1”이라는 id 속성을 갖는 모든 요소\n\n\ntag와 class의 결합\ntag1.class1\n“tag1”이라는 tag의 “class1”이라는 class 속성을 갖는 모든 요소\n\n\nclass1과 class2의 결합\n.class1.class2\n“class1”이라는 이름의 class 속성과 “class2”라는 이름의 class 속성을 동시에 갖는 모든 요소"
+    "text": "HTML 엘리먼트의 선택\n\n\n\nHTML 엘리먼트\n\n태그와 속성으로 구성된 HTML의 한 단위 혹은 특정 부분\n웹스크레이핑의 타깃의 주소\n\n\nHTML 엘리먼트의 선택: CSS 선택자(casading style sheet selector)\n\n\n\n\n\n\n\n\n선택 대상\nCSS 선택자\n결과\n\n\n\n태그(tag)\ntag1\n“tag1”이라는 이름의 모든 tag\n\n\n클래스(class)\n.class1\n“class1”이라는 class 속성을 갖는 모든 요소\n\n\n아이디(id)\n#id1\n“id1”이라는 id 속성을 갖는 모든 요소\n\n\ntag와 class의 결합\ntag1.class1\n“tag1”이라는 tag의 “class1”이라는 class 속성을 갖는 모든 요소\n\n\nclass1과 class2의 결합\n.class1.class2\n“class1”이라는 이름의 class 속성과 “class2”라는 이름의 class 속성을 동시에 갖는 모든 요소"
   },
   {
     "objectID": "lecture_2.html#html-엘리먼트의-선택-1",
@@ -969,8 +969,8 @@
     "objectID": "lecture_2.html#사례-1",
     "href": "lecture_2.html#사례-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
-    "section": "사례",
-    "text": "사례\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://rvest.tidyverse.org/articles/starwars.html\"\nread_html(url) |&gt; \n  html_elements(\"section\") |&gt; \n  html_element(\"h2\") |&gt; \n  html_text2()\n\n\n\n\n\n[1] \"The Phantom Menace\"      \"Attack of the Clones\"   \n[3] \"Revenge of the Sith\"     \"A New Hope\"             \n[5] \"The Empire Strikes Back\" \"Return of the Jedi\"     \n[7] \"The Force Awakens\""
+    "section": "사례 1",
+    "text": "사례 1\nvignette(“starwars”)\n\n&lt;section&gt;\n  &lt;h2 data-id=\"1\"&gt;The Phantom Menace&lt;/h2&gt;\n  &lt;p&gt;Released: 1999-05-19&lt;/p&gt;\n  &lt;p&gt;Director: &lt;span class=\"director\"&gt;George Lucas&lt;/span&gt;&lt;/p&gt;\n  \n  &lt;div class=\"crawl\"&gt;\n    &lt;p&gt;...&lt;/p&gt;\n    &lt;p&gt;...&lt;/p&gt;\n    &lt;p&gt;...&lt;/p&gt;\n  &lt;/div&gt;\n&lt;/section&gt;"
   },
   {
     "objectID": "lecture_2.html#사례-2",
@@ -984,21 +984,21 @@
     "href": "lecture_2.html#정의-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "정의",
-    "text": "정의\n\n\nAPI(application programming interface)는 일종의 통신 규약(protocol)\n\n복수의 프로그램들이 서로 상호작용하는 방법을 정의하는 일련의 규칙\n한 애플리케이션이 다른 애플리케이션의 기능들을 불러 사용할 수 있게 해주는 통로\n오픈 API: API 키\n\n\n\n데이터 API\n\n데이터를 보유하고 있는 공적 기관이 데이터의 사용 권한을 사용자들에게 부여함으로써 데이터에 대한 접근성을 높여주는 일련의 방식"
+    "text": "정의\n\n\nAPI(application programming interface)는 일종의 통신 규약(protocol)\n\n복수의 프로그램들이 서로 상호작용하는 방법을 정의하는 일련의 규칙\n한 애플리케이션이 다른 애플리케이션의 기능들을 불러 사용할 수 있게 해주는 통로\n오픈 API: API 키(key)\n\n\n\n데이터 API\n\n데이터를 보유하고 있는 공적 기관이 데이터의 사용 권한을 사용자들에게 부여함으로써 데이터에 대한 접근성을 높여주는 일련의 방식"
   },
   {
     "objectID": "lecture_2.html#api-활용의-다양성",
     "href": "lecture_2.html#api-활용의-다양성",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "API 활용의 다양성",
-    "text": "API 활용의 다양성\n\n\n테이블 데이터의 수집\n\nKOSIS의 API를 활용한 센서스 데이터 수집\n공공데이터포털 API를 활용한 지역별 미세먼지 농도 데이터 수집\nInternational Database(IDB)의 API를 활용한 세계 인구 데이터 수집\n\n\n\n정형 텍스트 데이터 수집\n\n\n공공데이터포털 API를 활용한 학위 논문 수집\n\n\n\n비정형 텍스트 데이터 수집: 텍스트 마이닝(text mining)으로 연결\n\n네이버 검색 API를 활용한 뉴스 데이터 수집\n유튜브 API를 활용한 댓글 데이터 수집"
+    "text": "API 활용의 다양성\n\n\n정형 수치 데이터의 수집\n\nKOSIS의 API를 활용한 센서스 데이터 수집\n공공데이터포털 API를 활용한 지역별 미세먼지 농도 데이터 수집\nInternational Database(IDB)의 API를 활용한 세계 인구 데이터 수집\n\n\n\n정형 텍스트 데이터 수집\n\n\n공공데이터포털 API를 활용한 학위 논문 수집\n\n\n\n비정형 텍스트 데이터 수집: 텍스트 마이닝(text mining)으로 연결\n\n네이버 검색 API를 활용한 뉴스 데이터 수집\n유튜브 API를 활용한 댓글 데이터 수집"
   },
   {
     "objectID": "lecture_2.html#api-활용의-다양성-1",
     "href": "lecture_2.html#api-활용의-다양성-1",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "API 활용의 다양성",
-    "text": "API 활용의 다양성\n\nGoogle Maps Platform (https://mapsplatform.google.com/)\n\n7 종류의 API\n\nGoogle Direction API\nGoogle Distance API\nGoogle Elevation API\nGoogle Timezone API\nGoogle Geocode API\nGoogle Reverse Geocode API\nGoogle Places API\n\n\nR 래퍼 패키지: googleway"
+    "text": "API 활용의 다양성\n\nGoogle Maps Platform (https://mapsplatform.google.com/)\n\n7 종류의 API\n\nGoogle Direction API\nGoogle Distance API\nGoogle Elevation API\nGoogle Timezone API\nGoogle Geocode API\nGoogle Reverse Geocode API\nGoogle Places API\n\n\nR 래퍼(rapper) 패키지: googleway"
   },
   {
     "objectID": "lecture_2.html#naver-뉴스-데이터",
@@ -1019,14 +1019,14 @@
     "href": "lecture_2.html#지방소멸-뉴스-검색-데이터-수집",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "‘지방소멸’ 뉴스 검색 데이터 수집",
-    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 하동 진교에 '복합커뮤니티 공간' 들어…  http://www.… http… \"이러한 도… Mon, 0…\n 2 [경일춘추]지역의 혁신 성장을 위해 어…  http://www.… http… \"시대에는 … Mon, 0…\n 3 함안 칠원 공공지원 민간임대주택 건립 … http://www.… http… \"2014년 7…  Mon, 0…\n 4 이만호 함안군의회 의장 &quot;군민 최…  http://www.… http… \"이만호 의… Mon, 0…\n 5 강원특별자치도·춘천시 기업혁신파크 P…  https://www… http… \"지역 활성… Mon, 0…\n 6 12월부터 농지에 숙박 가능한 '농촌체류… http://www.… http… \"또 농지법… Mon, 0…\n 7 &quot;비수도권 법인·소득·상속세 차…    http://www.… http… \"경남상의…  Mon, 0…\n 8 어기구 &quot;천억 들여서 쌀값 해결할 … https://www… http… \"이 지역의… Mon, 0…\n 9 남원시, 귀농·귀촌·귀향 인구 유입 '…    https://www… http… \"최경식 남… Mon, 0…\n10 [22대 국회 경남 의원에게 듣는다] (7) … http://www.… http… \"도로 건설… Mon, 0…"
+    "text": "‘지방소멸’ 뉴스 검색 데이터 수집\n\n\n코드\n결과\n\n\n\n\nlibrary(httr2)\nsearch &lt;- \"지방소멸\"\nbase_url &lt;- \"https://openapi.naver.com/v1/search/news.json\"\nresult_naver &lt;- request(base_url) |&gt; \n  req_headers(\n    \"X-Naver-Client-ID\" = your_ClientID,\n    \"X-Naver-Client-Secret\" = your_Client_Secret\n  ) |&gt; \n  req_url_query(\n    query = search,\n    display = 100,\n    start = 1,\n    sort = \"date\"\n  ) |&gt; \n  req_perform() |&gt; \n  resp_body_json() \nnaver_tb &lt;- tibble(naver = result_naver$items)\nnaver_res &lt;- naver_tb |&gt; \n  unnest_wider(naver)\nnaver_res |&gt; slice_head(n = 10)\n\n\n\n\n\n# A tibble: 10 × 5\n   title                                  originallink link  description pubDate\n   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  \n 1 [사람&amp;스토리]장길선 구례군의장 &q… http://www.… http… \"있어 &lt;b&gt;…  Tue, 0…\n 2 [부동산소식] 2024 세법개정...결혼, 출… https://new… http… \"이에 대해… Tue, 0…\n 3 대구 남구 '청년 창업 지원 사업' 참가…  https://www… http… \"대구 남구… Tue, 0…\n 4 강진군, 강진 웰니스 리조트 조성사업 …  https://www… http… \"강진원 군… Tue, 0…\n 5 김문근 단양군수, 세종청사 방문 현안 …  https://www… http… \"이날 김 …  Tue, 0…\n 6 [기고]식품사막화에 대한 준비가 필요해… http://www.… http… \"운영하기 … Tue, 0…\n 7 강진 웰니스 리조트 조성사업 ...사업추… http://www.… http… \"강진원 군… Tue, 0…\n 8 김문근 단양군수, 현안사업 정부 예산 …  https://www… http… \"이날 김 …  Tue, 0…\n 9 대구 남구, ‘청년 창업 지원 사업’참…    https://www… http… \"대구 남구… Tue, 0…\n10 임실군, 2025 임실방문의 해 BI 및 슬로… http://www.… http… \"심 민 군…  Tue, 0…"
   },
   {
     "objectID": "lecture_2.html#kosis",
     "href": "lecture_2.html#kosis",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "KOSIS",
-    "text": "KOSIS\n\nKOrean Statistical Information Service, 국가통계포털\n\nKOSIS 공유서비스 홈페이지(https://kosis.kr/openapi/)\n\n상세한 개발 가이드\n\n\n\n\n래퍼(wrapper) 패키지\n\nkosis 패키지(https://cran.r-project.org/web/packages/kosis/)\n주석훈(Seokhoon Joo)\n\n\n\n함수\n\ngetStatData()\ngetStatDataFromURL()"
+    "text": "KOSIS\n\nKOrean Statistical Information Service, 국가통계포털\n\nKOSIS 공유서비스 홈페이지(https://kosis.kr/openapi/)\n\n상세한 개발 가이드\n\n\n\n\n래퍼 패키지\n\nkosis 패키지(https://cran.r-project.org/web/packages/kosis/)\n주석훈(Seokhoon Joo)\n\n\n\n함수\n\ngetStatData()\ngetStatDataFromURL()"
   },
   {
     "objectID": "lecture_2.html#생성형-ai",
@@ -2265,7 +2265,7 @@
     "href": "lecture_2.html#api를-통한-생성형-ai와의-커뮤니케이션",
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "API를 통한 생성형 AI와의 커뮤니케이션",
-    "text": "API를 통한 생성형 AI와의 커뮤니케이션\n\n\nOpenAI, Google Gemini AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능\n\n래퍼 패키지: GenAI(https://genai.gd.edu.kg/)\n\n\n\n\nhttps://genai.gd.edu.kg/"
+    "text": "API를 통한 생성형 AI와의 커뮤니케이션\n\n\nOpenAI, Google Generative AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능\n\n래퍼 패키지: GenAI(https://genai.gd.edu.kg/)\n\n\n\n\nhttps://genai.gd.edu.kg/"
   },
   {
     "objectID": "lecture_2.html#readr-패키지-주요-함수",
@@ -2322,5 +2322,89 @@
     "title": "\nDay 2데이터 수집 및 정련화\n",
     "section": "데이터 넓히기 Widening data\n",
     "text": "데이터 넓히기 Widening data\n\n\nhttps://ab604.github.io/docs/coding-together-2019/data-wrangle-2.html"
+  },
+  {
+    "objectID": "lecture_2.html#텍스트-마이닝과-자연어처리",
+    "href": "lecture_2.html#텍스트-마이닝과-자연어처리",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "텍스트 마이닝과 자연어처리",
+    "text": "텍스트 마이닝과 자연어처리\n\n\n텍스트 마이닝\n\n비정형 텍스트 데이터로부터 패턴 또는 관계를 추출하여 의미 있는 정보를 찾아내는 기법\n기본 과정: 텍스트 전처리, 토큰화하기, 단어 빈도 분석하기\n고급 분석: 비교 분석, 감정 분석, 의미망 분석, 토픽 모델링 등\n\n\n\n자연어처리(NLP; natural language processing)\n\n\nKoNLP(Korean Natural Language Processing)"
+  },
+  {
+    "objectID": "lecture_2.html#사례-1-1",
+    "href": "lecture_2.html#사례-1-1",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "사례 1",
+    "text": "사례 1\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://rvest.tidyverse.org/articles/starwars.html\"\nread_html(url) |&gt; \n  html_elements(\"section\") |&gt; \n  html_element(\"h2\") |&gt; \n  html_text2()\n\n\n\n\n\n[1] \"The Phantom Menace\"      \"Attack of the Clones\"   \n[3] \"Revenge of the Sith\"     \"A New Hope\"             \n[5] \"The Empire Strikes Back\" \"Return of the Jedi\"     \n[7] \"The Force Awakens\""
+  },
+  {
+    "objectID": "lecture_2.html#사례-1-2",
+    "href": "lecture_2.html#사례-1-2",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "사례 1",
+    "text": "사례 1\n\n\nCode\nResult\n\n\n\n\nsection &lt;- read_html(url) |&gt; \n  html_elements(\"section\")\ntibble(\n  title = section |&gt; \n    html_element(\"h2\") |&gt; \n    html_text2(),\n  released = section |&gt; \n    html_element(\"p\") |&gt; \n    html_text2() |&gt; \n    str_remove(\"Released: \") |&gt; \n    parse_date(),\n  director = section |&gt; \n    html_element(\".director\") |&gt; \n    html_text2(),\n  intro = section |&gt; \n    html_element(\".crawl\") |&gt; \n    html_text2()\n)\n\n\n\n\n\n# A tibble: 7 × 4\n  title                   released   director         intro                     \n  &lt;chr&gt;                   &lt;date&gt;     &lt;chr&gt;            &lt;chr&gt;                     \n1 The Phantom Menace      1999-05-19 George Lucas     \"Turmoil has engulfed the…\n2 Attack of the Clones    2002-05-16 George Lucas     \"There is unrest in the G…\n3 Revenge of the Sith     2005-05-19 George Lucas     \"War! The Republic is cru…\n4 A New Hope              1977-05-25 George Lucas     \"It is a period of civil …\n5 The Empire Strikes Back 1980-05-17 Irvin Kershner   \"It is a dark time for th…\n6 Return of the Jedi      1983-05-25 Richard Marquand \"Luke Skywalker has retur…\n7 The Force Awakens       2015-12-11 J. J. Abrams     \"Luke Skywalker has vanis…"
+  },
+  {
+    "objectID": "lecture_2.html#사례-2-웹-상의-테이블",
+    "href": "lecture_2.html#사례-2-웹-상의-테이블",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "사례 2: 웹 상의 테이블",
+    "text": "사례 2: 웹 상의 테이블\n\n위키피디어: 전세계 국가 관련 항목\n\n\n\n\nCode\nResult\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population\"\nmy_table &lt;- url |&gt; \n  read_html() |&gt; \n  html_element(\"table\") |&gt; \n  html_table()\n\n\n\n\n\n# A tibble: 241 × 7\n   ``      Location    Population `% ofworld` Date  Source (official or …¹ Notes\n   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;\n 1 –       World       8,122,534… 100%        5 Au… UN projection[3]       \"\"   \n 2 1/2 [b] China       1,409,670… 17.4%       31 D… Official estimate[5]   \"[c]\"\n 3 1/2 [b] India       1,404,910… 17.3%       1 Ju… Official projection[6] \"[d]\"\n 4 3       United Sta… 335,893,2… 4.1%        1 Ja… Official estimate[7]   \"[e]\"\n 5 4       Indonesia   281,603,8… 3.5%        1 Ju… National annual proje… \"\"   \n 6 5       Pakistan    241,499,4… 3.0%        1 Ma… 2023 census result[9]  \"[f]\"\n 7 6       Nigeria     223,800,0… 2.8%        1 Ju… Official projection[1… \"\"   \n 8 7       Brazil      203,080,7… 2.5%        1 Au… 2022 census result[11] \"\"   \n 9 8       Bangladesh  169,828,9… 2.1%        14 J… 2022 census result[12] \"\"   \n10 9       Russia      146,150,7… 1.8%        1 Ja… Official estimate[13]  \"[g]\"\n# ℹ 231 more rows\n# ℹ abbreviated name: ¹​`Source (official or fromthe United Nations)`\n\n\n\n\n\nmy_table_new &lt;- my_table |&gt; \n  select(-1, -7) |&gt; \n  rename(\n    location = \"Location\",\n    population = \"Population\",\n    pop_pct = \"% ofworld\",\n    date = \"Date\",\n    source = \"Source (official or fromthe United Nations)\"\n  ) |&gt; \n  mutate(\n    population = parse_number(population, \",\"),\n    population = as.numeric(population),\n    pop_pct = str_remove_all(pop_pct, \"%\"),\n    pop_pct = as.numeric(pop_pct),\n    date = dmy(date)\n  )\n\n\n\n\n\n# A tibble: 241 × 5\n   location      population pop_pct date       source                       \n   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt;                        \n 1 World         8122534000   100   2024-08-05 UN projection[3]             \n 2 China         1409670000    17.4 2023-12-31 Official estimate[5]         \n 3 India         1404910000    17.3 2024-07-01 Official projection[6]       \n 4 United States  335893238     4.1 2024-01-01 Official estimate[7]         \n 5 Indonesia      281603800     3.5 2024-07-01 National annual projection[8]\n 6 Pakistan       241499431     3   2023-03-01 2023 census result[9]        \n 7 Nigeria        223800000     2.8 2023-07-01 Official projection[10]      \n 8 Brazil         203080756     2.5 2022-08-01 2022 census result[11]       \n 9 Bangladesh     169828911     2.1 2022-06-14 2022 census result[12]       \n10 Russia         146150789     1.8 2024-01-01 Official estimate[13]        \n# ℹ 231 more rows"
+  },
+  {
+    "objectID": "lecture_2.html#사례-1-스타워즈",
+    "href": "lecture_2.html#사례-1-스타워즈",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "사례 1: 스타워즈",
+    "text": "사례 1: 스타워즈\nvignette(“starwars”)\n\n&lt;section&gt;\n  &lt;h2 data-id=\"1\"&gt;The Phantom Menace&lt;/h2&gt;\n  &lt;p&gt;Released: 1999-05-19&lt;/p&gt;\n  &lt;p&gt;Director: &lt;span class=\"director\"&gt;George Lucas&lt;/span&gt;&lt;/p&gt;\n  \n  &lt;div class=\"crawl\"&gt;\n    &lt;p&gt;...&lt;/p&gt;\n    &lt;p&gt;...&lt;/p&gt;\n    &lt;p&gt;...&lt;/p&gt;\n  &lt;/div&gt;\n&lt;/section&gt;"
+  },
+  {
+    "objectID": "lecture_2.html#사례-1-스타워즈-1",
+    "href": "lecture_2.html#사례-1-스타워즈-1",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "사례 1: 스타워즈",
+    "text": "사례 1: 스타워즈\n\n\nCode\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(rvest)\nurl &lt;- \"https://rvest.tidyverse.org/articles/starwars.html\"\nread_html(url) |&gt; \n  html_elements(\"section\") |&gt; \n  html_element(\"h2\") |&gt; \n  html_text2()\n\n\n\n\n\n[1] \"The Phantom Menace\"      \"Attack of the Clones\"   \n[3] \"Revenge of the Sith\"     \"A New Hope\"             \n[5] \"The Empire Strikes Back\" \"Return of the Jedi\"     \n[7] \"The Force Awakens\""
+  },
+  {
+    "objectID": "lecture_2.html#사례-1-스타워즈-2",
+    "href": "lecture_2.html#사례-1-스타워즈-2",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "사례 1: 스타워즈",
+    "text": "사례 1: 스타워즈\n\n\nCode\nResult\n\n\n\n\nsection &lt;- read_html(url) |&gt; \n  html_elements(\"section\")\ntibble(\n  title = section |&gt; \n    html_element(\"h2\") |&gt; \n    html_text2(),\n  released = section |&gt; \n    html_element(\"p\") |&gt; \n    html_text2() |&gt; \n    str_remove(\"Released: \") |&gt; \n    parse_date(),\n  director = section |&gt; \n    html_element(\".director\") |&gt; \n    html_text2(),\n  intro = section |&gt; \n    html_element(\".crawl\") |&gt; \n    html_text2()\n)\n\n\n\n\n\n# A tibble: 7 × 4\n  title                   released   director         intro                     \n  &lt;chr&gt;                   &lt;date&gt;     &lt;chr&gt;            &lt;chr&gt;                     \n1 The Phantom Menace      1999-05-19 George Lucas     \"Turmoil has engulfed the…\n2 Attack of the Clones    2002-05-16 George Lucas     \"There is unrest in the G…\n3 Revenge of the Sith     2005-05-19 George Lucas     \"War! The Republic is cru…\n4 A New Hope              1977-05-25 George Lucas     \"It is a period of civil …\n5 The Empire Strikes Back 1980-05-17 Irvin Kershner   \"It is a dark time for th…\n6 Return of the Jedi      1983-05-25 Richard Marquand \"Luke Skywalker has retur…\n7 The Force Awakens       2015-12-11 J. J. Abrams     \"Luke Skywalker has vanis…"
+  },
+  {
+    "objectID": "lecture_2.html#code-2",
+    "href": "lecture_2.html#code-2",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "Code",
+    "text": "Code\n\nlibrary(tidyverse)\nurl &lt;- \"https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population\"\nmy_table &lt;- url |&gt; \n  read_html() |&gt; \n  html_element(\"table\") |&gt; \n  html_table()"
+  },
+  {
+    "objectID": "lecture_2.html#result-2",
+    "href": "lecture_2.html#result-2",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "Result",
+    "text": "Result\n\n\n# A tibble: 241 × 7\n   ``      Location    Population `% ofworld` Date  Source (official or …¹ Notes\n   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;\n 1 –       World       8,122,534… 100%        5 Au… UN projection[3]       \"\"   \n 2 1/2 [b] China       1,409,670… 17.4%       31 D… Official estimate[5]   \"[c]\"\n 3 1/2 [b] India       1,404,910… 17.3%       1 Ju… Official projection[6] \"[d]\"\n 4 3       United Sta… 335,893,2… 4.1%        1 Ja… Official estimate[7]   \"[e]\"\n 5 4       Indonesia   281,603,8… 3.5%        1 Ju… National annual proje… \"\"   \n 6 5       Pakistan    241,499,4… 3.0%        1 Ma… 2023 census result[9]  \"[f]\"\n 7 6       Nigeria     223,800,0… 2.8%        1 Ju… Official projection[1… \"\"   \n 8 7       Brazil      203,080,7… 2.5%        1 Au… 2022 census result[11] \"\"   \n 9 8       Bangladesh  169,828,9… 2.1%        14 J… 2022 census result[12] \"\"   \n10 9       Russia      146,150,7… 1.8%        1 Ja… Official estimate[13]  \"[g]\"\n# ℹ 231 more rows\n# ℹ abbreviated name: ¹​`Source (official or fromthe United Nations)`"
+  },
+  {
+    "objectID": "lecture_2.html#code-3",
+    "href": "lecture_2.html#code-3",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "Code",
+    "text": "Code\n\nmy_table_new &lt;- my_table |&gt; \n  select(-1, -7) |&gt; \n  rename(\n    location = \"Location\",\n    population = \"Population\",\n    pop_pct = \"% ofworld\",\n    date = \"Date\",\n    source = \"Source (official or fromthe United Nations)\"\n  ) |&gt; \n  mutate(\n    population = parse_number(population, \",\"),\n    population = as.numeric(population),\n    pop_pct = str_remove_all(pop_pct, \"%\"),\n    pop_pct = as.numeric(pop_pct),\n    date = dmy(date)\n  )"
+  },
+  {
+    "objectID": "lecture_2.html#result-3",
+    "href": "lecture_2.html#result-3",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "Result",
+    "text": "Result\n\n\n# A tibble: 241 × 5\n   location      population pop_pct date       source                       \n   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt;                        \n 1 World         8122534000   100   2024-08-05 UN projection[3]             \n 2 China         1409670000    17.4 2023-12-31 Official estimate[5]         \n 3 India         1404910000    17.3 2024-07-01 Official projection[6]       \n 4 United States  335893238     4.1 2024-01-01 Official estimate[7]         \n 5 Indonesia      281603800     3.5 2024-07-01 National annual projection[8]\n 6 Pakistan       241499431     3   2023-03-01 2023 census result[9]        \n 7 Nigeria        223800000     2.8 2023-07-01 Official projection[10]      \n 8 Brazil         203080756     2.5 2022-08-01 2022 census result[11]       \n 9 Bangladesh     169828911     2.1 2022-06-14 2022 census result[12]       \n10 Russia         146150789     1.8 2024-01-01 Official estimate[13]        \n# ℹ 231 more rows"
+  },
+  {
+    "objectID": "lecture_2.html#데이터의-구조를-바꾸는-핵심-기법",
+    "href": "lecture_2.html#데이터의-구조를-바꾸는-핵심-기법",
+    "title": "\nDay 2데이터 수집 및 정련화\n",
+    "section": "데이터의 구조를 바꾸는 핵심 기법",
+    "text": "데이터의 구조를 바꾸는 핵심 기법\n\nhttps://allisonhorst.com/other-r-fun"
   }
 ]

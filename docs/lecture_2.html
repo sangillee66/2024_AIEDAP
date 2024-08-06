@@ -447,7 +447,7 @@
 <p>마크다운(markdown) 언어</p>
 <ul>
 <li><p>사용자의 편이성이 강화된 마크업 언어</p></li>
-<li><p>예: <span style="color:coral"><strong>Quarto</strong></span></p></li>
+<li><p><strong>Quarto:</strong> 비주얼 에디터</p></li>
 </ul>
 </li>
 </ul></section><section id="html의-기초-1" class="slide level2"><h2>HTML의 기초 1</h2>
@@ -456,8 +456,7 @@
 <li>
 <p>웹페이지는 다양한 태그(tag)로 구성</p>
 <ul>
-<li><p>각 태그는 시작 태그와 종료 태그로 구성되며, 둘 사이에 해당 콘텐츠가 위치</p></li>
-<li><p>태그로 규정되는 개별 단위: <span style="color:coral"><strong>엘리먼트(element)</strong></span></p></li>
+<li>각 태그는 시작 태그와 종료 태그로 구성되며, 둘 사이에 해당 콘텐츠가 위치</li>
 </ul>
 </li>
 <li>
@@ -498,19 +497,19 @@
 <div class="r-fit-text">
 <ul>
 <li>
-<p>HTML 엘리먼트</p>
+<p><span style="color:coral"><strong>HTML 엘리먼트</strong></span></p>
 <ul>
 <li><p>태그와 속성으로 구성된 HTML의 한 단위 혹은 특정 부분</p></li>
 <li><p>웹스크레이핑의 타깃의 주소</p></li>
 </ul>
 </li>
-<li><p>HTML 엘리먼트의 선택: <strong>CSS</strong>(casading style sheet) <strong>선택자</strong>(selector)</p></li>
+<li><p>HTML 엘리먼트의 선택: <span style="color:coral"><strong>CSS</strong></span> <span style="color:coral"><strong>선택자</strong></span>(casading style sheet selector)</p></li>
 </ul>
 <table>
 <colgroup>
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 61%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 50%">
 </colgroup>
 <thead><tr class="header">
 <th>선택 대상</th>
@@ -584,7 +583,7 @@
 <li>데이블 데이터, 텍스트 등을 추출</li>
 </ul>
 </li>
-</ul></section><section id="사례" class="slide level2"><h2>사례</h2>
+</ul></section><section id="사례-1-스타워즈" class="slide level2"><h2>사례 1: 스타워즈</h2>
 <p><a href="https://rvest.tidyverse.org/articles/starwars.html">vignette(“starwars”)</a></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="sc">&lt;</span>section<span class="sc">&gt;</span></span>
@@ -599,7 +598,7 @@
 <span id="cb1-10"><a></a>  <span class="er">&lt;/</span>div<span class="sc">&gt;</span></span>
 <span id="cb1-11"><a></a><span class="er">&lt;/</span>section<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="사례-1" class="slide level2"><h2>사례</h2>
+</section><section id="사례-1-스타워즈-1" class="slide level2"><h2>사례 1: 스타워즈</h2>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-1-1">Code</a></li>
@@ -629,7 +628,7 @@
 </div>
 </div>
 </div>
-</section><section id="사례-2" class="slide level2"><h2>사례</h2>
+</section><section id="사례-1-스타워즈-2" class="slide level2"><h2>사례 1: 스타워즈</h2>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby">
 <li><a data-tabby-default="" href="#tabset-2-1">Code</a></li>
@@ -676,6 +675,93 @@
 </div>
 </div>
 </div>
+</section><section id="사례-2-웹-상의-테이블" class="slide level2"><h2>사례 2: 웹 상의 테이블</h2>
+<ul>
+<li>위키피디어: <a href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population">전세계 국가 관련 항목</a>
+</li>
+</ul>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-3-1">Code</a></li>
+<li><a href="#tabset-3-2">Result</a></li>
+<li><a href="#tabset-3-3">Code</a></li>
+<li><a href="#tabset-3-4">Result</a></li>
+</ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-2"><a></a><span class="fu">library</span>(rvest)</span>
+<span id="cb6-3"><a></a>url <span class="ot">&lt;-</span> <span class="st">"https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population"</span></span>
+<span id="cb6-4"><a></a>my_table <span class="ot">&lt;-</span> url <span class="sc">|&gt;</span> </span>
+<span id="cb6-5"><a></a>  <span class="fu">read_html</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb6-6"><a></a>  <span class="fu">html_element</span>(<span class="st">"table"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb6-7"><a></a>  <span class="fu">html_table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 241 × 7
+   ``      Location    Population `% ofworld` Date  Source (official or …¹ Notes
+   &lt;chr&gt;   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;                  &lt;chr&gt;
+ 1 –       World       8,122,534… 100%        5 Au… UN projection[3]       ""   
+ 2 1/2 [b] China       1,409,670… 17.4%       31 D… Official estimate[5]   "[c]"
+ 3 1/2 [b] India       1,404,910… 17.3%       1 Ju… Official projection[6] "[d]"
+ 4 3       United Sta… 335,893,2… 4.1%        1 Ja… Official estimate[7]   "[e]"
+ 5 4       Indonesia   281,603,8… 3.5%        1 Ju… National annual proje… ""   
+ 6 5       Pakistan    241,499,4… 3.0%        1 Ma… 2023 census result[9]  "[f]"
+ 7 6       Nigeria     223,800,0… 2.8%        1 Ju… Official projection[1… ""   
+ 8 7       Brazil      203,080,7… 2.5%        1 Au… 2022 census result[11] ""   
+ 9 8       Bangladesh  169,828,9… 2.1%        14 J… 2022 census result[12] ""   
+10 9       Russia      146,150,7… 1.8%        1 Ja… Official estimate[13]  "[g]"
+# ℹ 231 more rows
+# ℹ abbreviated name: ¹​`Source (official or fromthe United Nations)`</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>my_table_new <span class="ot">&lt;-</span> my_table <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">7</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a></a>  <span class="fu">rename</span>(</span>
+<span id="cb8-4"><a></a>    <span class="at">location =</span> <span class="st">"Location"</span>,</span>
+<span id="cb8-5"><a></a>    <span class="at">population =</span> <span class="st">"Population"</span>,</span>
+<span id="cb8-6"><a></a>    <span class="at">pop_pct =</span> <span class="st">"% ofworld"</span>,</span>
+<span id="cb8-7"><a></a>    <span class="at">date =</span> <span class="st">"Date"</span>,</span>
+<span id="cb8-8"><a></a>    <span class="at">source =</span> <span class="st">"Source (official or fromthe United Nations)"</span></span>
+<span id="cb8-9"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb8-10"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-11"><a></a>    <span class="at">population =</span> <span class="fu">parse_number</span>(population, <span class="st">","</span>),</span>
+<span id="cb8-12"><a></a>    <span class="at">population =</span> <span class="fu">as.numeric</span>(population),</span>
+<span id="cb8-13"><a></a>    <span class="at">pop_pct =</span> <span class="fu">str_remove_all</span>(pop_pct, <span class="st">"%"</span>),</span>
+<span id="cb8-14"><a></a>    <span class="at">pop_pct =</span> <span class="fu">as.numeric</span>(pop_pct),</span>
+<span id="cb8-15"><a></a>    <span class="at">date =</span> <span class="fu">dmy</span>(date)</span>
+<span id="cb8-16"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-4">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 241 × 5
+   location      population pop_pct date       source                       
+   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;date&gt;     &lt;chr&gt;                        
+ 1 World         8122534000   100   2024-08-05 UN projection[3]             
+ 2 China         1409670000    17.4 2023-12-31 Official estimate[5]         
+ 3 India         1404910000    17.3 2024-07-01 Official projection[6]       
+ 4 United States  335893238     4.1 2024-01-01 Official estimate[7]         
+ 5 Indonesia      281603800     3.5 2024-07-01 National annual projection[8]
+ 6 Pakistan       241499431     3   2023-03-01 2023 census result[9]        
+ 7 Nigeria        223800000     2.8 2023-07-01 Official projection[10]      
+ 8 Brazil         203080756     2.5 2022-08-01 2022 census result[11]       
+ 9 Bangladesh     169828911     2.1 2022-06-14 2022 census result[12]       
+10 Russia         146150789     1.8 2024-01-01 Official estimate[13]        
+# ℹ 231 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section><section><section id="데이터-수집하기-api의-활용" class="title-slide slide level1 center"><h1><span style="color:coral">데이터 수집하기: API의 활용</span></h1>
 
 </section><section id="정의-1" class="slide level2 smaller"><h2>정의</h2>
@@ -685,7 +771,7 @@
 <ul>
 <li><p>복수의 프로그램들이 서로 상호작용하는 방법을 정의하는 일련의 규칙</p></li>
 <li><p>한 애플리케이션이 다른 애플리케이션의 기능들을 불러 사용할 수 있게 해주는 통로</p></li>
-<li><p>오픈 API: API 키</p></li>
+<li><p>오픈 API: API 키(key)</p></li>
 </ul>
 </li>
 <li>
@@ -697,7 +783,7 @@
 </ul></section><section id="api-활용의-다양성" class="slide level2 smaller"><h2>API 활용의 다양성</h2>
 <ul>
 <li>
-<p>테이블 데이터의 수집</p>
+<p>정형 수치 데이터의 수집</p>
 <ul>
 <li><p><a href="https://kosis.kr/openapi/">KOSIS의 API</a>를 활용한 센서스 데이터 수집</p></li>
 <li><p><a href="https://www.data.go.kr/ugs/selectPublicDataUseGuideView.do">공공데이터포털 API</a>를 활용한 지역별 미세먼지 농도 데이터 수집</p></li>
@@ -733,7 +819,7 @@
 <li><p>Google Places API</p></li>
 </ul>
 </li>
-<li><p>R 래퍼 패키지: <a href="https://github.com/SymbolixAU/googleway">googleway</a></p></li>
+<li><p>R 래퍼(rapper) 패키지: <a href="https://github.com/SymbolixAU/googleway">googleway</a></p></li>
 </ul></section><section id="naver-뉴스-데이터" class="slide level2 smaller"><h2>NAVER 뉴스 데이터</h2>
 <ul>
 <li><p>NAVER Developer(<a href="https://developers.naver.com/" class="uri">https://developers.naver.com/</a>)</p></li>
@@ -769,57 +855,74 @@
 
 <img data-src="images/clipboard-2579380411.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://httr2.r-lib.org/" class="uri" style="font-size:0.75rem">https://httr2.r-lib.org/</a></p></section><section id="지방소멸-뉴스-검색-데이터-수집" class="slide level2 smaller"><h2>‘지방소멸’ 뉴스 검색 데이터 수집</h2>
 <div class="panel-tabset">
-<ul id="tabset-3" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-3-1">코드</a></li>
-<li><a href="#tabset-3-2">결과</a></li>
+<ul id="tabset-4" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-4-1">코드</a></li>
+<li><a href="#tabset-4-2">결과</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-3-1">
+<div id="tabset-4-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(httr2)</span>
-<span id="cb6-2"><a></a>search <span class="ot">&lt;-</span> <span class="st">"지방소멸"</span></span>
-<span id="cb6-3"><a></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://openapi.naver.com/v1/search/news.json"</span></span>
-<span id="cb6-4"><a></a>result_naver <span class="ot">&lt;-</span> <span class="fu">request</span>(base_url) <span class="sc">|&gt;</span> </span>
-<span id="cb6-5"><a></a>  <span class="fu">req_headers</span>(</span>
-<span id="cb6-6"><a></a>    <span class="st">"X-Naver-Client-ID"</span> <span class="ot">=</span> your_ClientID,</span>
-<span id="cb6-7"><a></a>    <span class="st">"X-Naver-Client-Secret"</span> <span class="ot">=</span> your_Client_Secret</span>
-<span id="cb6-8"><a></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-9"><a></a>  <span class="fu">req_url_query</span>(</span>
-<span id="cb6-10"><a></a>    <span class="at">query =</span> search,</span>
-<span id="cb6-11"><a></a>    <span class="at">display =</span> <span class="dv">100</span>,</span>
-<span id="cb6-12"><a></a>    <span class="at">start =</span> <span class="dv">1</span>,</span>
-<span id="cb6-13"><a></a>    <span class="at">sort =</span> <span class="st">"date"</span></span>
-<span id="cb6-14"><a></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb6-15"><a></a>  <span class="fu">req_perform</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb6-16"><a></a>  <span class="fu">resp_body_json</span>() </span>
-<span id="cb6-17"><a></a>naver_tb <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">naver =</span> result_naver<span class="sc">$</span>items)</span>
-<span id="cb6-18"><a></a>naver_res <span class="ot">&lt;-</span> naver_tb <span class="sc">|&gt;</span> </span>
-<span id="cb6-19"><a></a>  <span class="fu">unnest_wider</span>(naver)</span>
-<span id="cb6-20"><a></a>naver_res <span class="sc">|&gt;</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(httr2)</span>
+<span id="cb10-2"><a></a>search <span class="ot">&lt;-</span> <span class="st">"지방소멸"</span></span>
+<span id="cb10-3"><a></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://openapi.naver.com/v1/search/news.json"</span></span>
+<span id="cb10-4"><a></a>result_naver <span class="ot">&lt;-</span> <span class="fu">request</span>(base_url) <span class="sc">|&gt;</span> </span>
+<span id="cb10-5"><a></a>  <span class="fu">req_headers</span>(</span>
+<span id="cb10-6"><a></a>    <span class="st">"X-Naver-Client-ID"</span> <span class="ot">=</span> your_ClientID,</span>
+<span id="cb10-7"><a></a>    <span class="st">"X-Naver-Client-Secret"</span> <span class="ot">=</span> your_Client_Secret</span>
+<span id="cb10-8"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb10-9"><a></a>  <span class="fu">req_url_query</span>(</span>
+<span id="cb10-10"><a></a>    <span class="at">query =</span> search,</span>
+<span id="cb10-11"><a></a>    <span class="at">display =</span> <span class="dv">100</span>,</span>
+<span id="cb10-12"><a></a>    <span class="at">start =</span> <span class="dv">1</span>,</span>
+<span id="cb10-13"><a></a>    <span class="at">sort =</span> <span class="st">"date"</span></span>
+<span id="cb10-14"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb10-15"><a></a>  <span class="fu">req_perform</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb10-16"><a></a>  <span class="fu">resp_body_json</span>() </span>
+<span id="cb10-17"><a></a>naver_tb <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">naver =</span> result_naver<span class="sc">$</span>items)</span>
+<span id="cb10-18"><a></a>naver_res <span class="ot">&lt;-</span> naver_tb <span class="sc">|&gt;</span> </span>
+<span id="cb10-19"><a></a>  <span class="fu">unnest_wider</span>(naver)</span>
+<span id="cb10-20"><a></a>naver_res <span class="sc">|&gt;</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-3-2">
+<div id="tabset-4-2">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 10 × 5
    title                                  originallink link  description pubDate
    &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;  
- 1 하동 진교에 '복합커뮤니티 공간' 들어…  http://www.… http… "이러한 도… Mon, 0…
- 2 [경일춘추]지역의 혁신 성장을 위해 어…  http://www.… http… "시대에는 … Mon, 0…
- 3 함안 칠원 공공지원 민간임대주택 건립 … http://www.… http… "2014년 7…  Mon, 0…
- 4 이만호 함안군의회 의장 &amp;quot;군민 최…  http://www.… http… "이만호 의… Mon, 0…
- 5 강원특별자치도·춘천시 기업혁신파크 P…  https://www… http… "지역 활성… Mon, 0…
- 6 12월부터 농지에 숙박 가능한 '농촌체류… http://www.… http… "또 농지법… Mon, 0…
- 7 &amp;quot;비수도권 법인·소득·상속세 차…    http://www.… http… "경남상의…  Mon, 0…
- 8 어기구 &amp;quot;천억 들여서 쌀값 해결할 … https://www… http… "이 지역의… Mon, 0…
- 9 남원시, 귀농·귀촌·귀향 인구 유입 '…    https://www… http… "최경식 남… Mon, 0…
-10 [22대 국회 경남 의원에게 듣는다] (7) … http://www.… http… "도로 건설… Mon, 0…</code></pre>
+ 1 [사람&amp;amp;스토리]장길선 구례군의장 &amp;q… http://www.… http… "있어 &lt;b&gt;…  Tue, 0…
+ 2 [부동산소식] 2024 세법개정...결혼, 출… https://new… http… "이에 대해… Tue, 0…
+ 3 대구 남구 '청년 창업 지원 사업' 참가…  https://www… http… "대구 남구… Tue, 0…
+ 4 강진군, 강진 웰니스 리조트 조성사업 …  https://www… http… "강진원 군… Tue, 0…
+ 5 김문근 단양군수, 세종청사 방문 현안 …  https://www… http… "이날 김 …  Tue, 0…
+ 6 [기고]식품사막화에 대한 준비가 필요해… http://www.… http… "운영하기 … Tue, 0…
+ 7 강진 웰니스 리조트 조성사업 ...사업추… http://www.… http… "강진원 군… Tue, 0…
+ 8 김문근 단양군수, 현안사업 정부 예산 …  https://www… http… "이날 김 …  Tue, 0…
+ 9 대구 남구, ‘청년 창업 지원 사업’참…    https://www… http… "대구 남구… Tue, 0…
+10 임실군, 2025 임실방문의 해 BI 및 슬로… http://www.… http… "심 민 군…  Tue, 0…</code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section id="kosis" class="slide level2 smaller"><h2>KOSIS</h2>
+</section><section id="텍스트-마이닝과-자연어처리" class="slide level2 smaller"><h2>텍스트 마이닝과 자연어처리</h2>
+<ul>
+<li>
+<p>텍스트 마이닝</p>
+<ul>
+<li><p>비정형 텍스트 데이터로부터 패턴 또는 관계를 추출하여 의미 있는 정보를 찾아내는 기법</p></li>
+<li><p>기본 과정: 텍스트 전처리, 토큰화하기, 단어 빈도 분석하기</p></li>
+<li><p>고급 분석: 비교 분석, 감정 분석, 의미망 분석, 토픽 모델링 등</p></li>
+</ul>
+</li>
+<li>
+<p>자연어처리(NLP; natural language processing)</p>
+<ul>
+<li>
+<a href="https://cran.r-project.org/src/contrib/Archive/KoNLP/"><code>KoNLP</code></a>(Korean Natural Language Processing)</li>
+</ul>
+</li>
+</ul></section><section id="kosis" class="slide level2 smaller"><h2>KOSIS</h2>
 <ul>
 <li><p><a href="https://kosis.kr/">KOrean Statistical Information Service, 국가통계포털</a></p></li>
 <li>
@@ -830,7 +933,7 @@
 </ul>
 </li>
 <li>
-<p>래퍼(wrapper) 패키지</p>
+<p>래퍼 패키지</p>
 <ul>
 <li><p><code>kosis</code> 패키지(<a href="https://cran.r-project.org/web/packages/kosis/" class="uri">https://cran.r-project.org/web/packages/kosis/</a>)</p></li>
 <li><p>주석훈(Seokhoon Joo)</p></li>
@@ -846,7 +949,7 @@
 </ul></section><section id="api를-통한-생성형-ai와의-커뮤니케이션" class="slide level2"><h2>API를 통한 생성형 AI와의 커뮤니케이션</h2>
 <ul>
 <li>
-<p>OpenAI, Google Gemini AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능</p>
+<p>OpenAI, Google Generative AI, Moonshot AI 등 다양한 생성형 AI와 API를 통한 상호작용 가능</p>
 <ul>
 <li>래퍼 패키지: GenAI(<a href="https://genai.gd.edu.kg/" class="uri">https://genai.gd.edu.kg/</a>)</li>
 </ul>
@@ -937,19 +1040,19 @@
 </li>
 </ul></section><section id="웹데이터-불러오기-readr-패키지" class="slide level2"><h2>웹데이터 불러오기: <code>readr</code> 패키지</h2>
 <div class="panel-tabset">
-<ul id="tabset-4" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-4-1">Code</a></li>
-<li><a href="#tabset-4-2">Result</a></li>
+<ul id="tabset-5" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-5-1">Code</a></li>
+<li><a href="#tabset-5-2">Result</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-4-1">
+<div id="tabset-5-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb8-2"><a></a><span class="fu">library</span>(readr)</span>
-<span id="cb8-3"><a></a><span class="fu">read_csv</span>(<span class="st">"https://pos.it/r4ds-students-csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-2"><a></a><span class="fu">library</span>(readr)</span>
+<span id="cb12-3"><a></a><span class="fu">read_csv</span>(<span class="st">"https://pos.it/r4ds-students-csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-4-2">
+<div id="tabset-5-2">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
@@ -968,18 +1071,18 @@
 </div>
 </section><section id="웹데이터-불러오기-openxlsx-패키지" class="slide level2"><h2>웹데이터 불러오기: <code>openxlsx</code> 패키지</h2>
 <div class="panel-tabset">
-<ul id="tabset-5" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-5-1">Code</a></li>
-<li><a href="#tabset-5-2">Result</a></li>
+<ul id="tabset-6" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-6-1">Code</a></li>
+<li><a href="#tabset-6-2">Result</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-5-1">
+<div id="tabset-6-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">library</span>(openxlsx)</span>
-<span id="cb10-2"><a></a><span class="fu">read.xlsx</span>(<span class="st">"https://github.com/awalker89/openxlsx/raw/master/inst/readTest.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb14-2"><a></a><span class="fu">read.xlsx</span>(<span class="st">"https://github.com/awalker89/openxlsx/raw/master/inst/readTest.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-5-2">
+<div id="tabset-6-2">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>    Var1 Var2   Var3 Var4  Var5         Var6 Var7
@@ -1000,19 +1103,19 @@
 </div>
 </section><section id="웹데이터-불러오기-googlesheet4-패키지" class="slide level2"><h2>웹데이터 불러오기: <code>googlesheet4</code> 패키지</h2>
 <div class="panel-tabset">
-<ul id="tabset-6" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-6-1">Code</a></li>
-<li><a href="#tabset-6-2">Result</a></li>
+<ul id="tabset-7" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-7-1">Code</a></li>
+<li><a href="#tabset-7-2">Result</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-6-1">
+<div id="tabset-7-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">library</span>(googlesheets4)</span>
-<span id="cb12-2"><a></a><span class="fu">gs4_deauth</span>()</span>
-<span id="cb12-3"><a></a><span class="fu">read_sheet</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">library</span>(googlesheets4)</span>
+<span id="cb16-2"><a></a><span class="fu">gs4_deauth</span>()</span>
+<span id="cb16-3"><a></a><span class="fu">read_sheet</span>(<span class="st">"https://docs.google.com/spreadsheets/d/1U6Cf_qEOhiR9AZqTqS3mbMF3zt2db48ZP5v3rkrAEJY/edit#gid=780868077"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="tabset-6-2">
+<div id="tabset-7-2">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 624 × 6
@@ -1102,12 +1205,12 @@
 
 <img data-src="images/clipboard-2205001184.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://discdown.org/rprogramming/vectors.html" style="font-size:0.75rem">https://discdown.org/rprogramming/vectors.html</a></p></section><section id="벡터와-데이터-프레임" class="slide level2"><h2>벡터와 데이터 프레임</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">58</span>, <span class="dv">26</span>, <span class="dv">24</span>)</span>
-<span id="cb14-2"><a></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">58</span>L, <span class="dv">26</span>L, <span class="dv">24</span>L)</span>
-<span id="cb14-3"><a></a>c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb14-4"><a></a>d <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"이상일"</span>, <span class="st">"김세창"</span>, <span class="st">"김우형"</span>)</span>
-<span id="cb14-5"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(a, b, c, d)</span>
-<span id="cb14-6"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(a, b, c, d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">58</span>, <span class="dv">26</span>, <span class="dv">24</span>)</span>
+<span id="cb18-2"><a></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">58</span>L, <span class="dv">26</span>L, <span class="dv">24</span>L)</span>
+<span id="cb18-3"><a></a>c <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb18-4"><a></a>d <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"이상일"</span>, <span class="st">"김세창"</span>, <span class="st">"김우형"</span>)</span>
+<span id="cb18-5"><a></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(a, b, c, d)</span>
+<span id="cb18-6"><a></a>df2 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(a, b, c, d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="tibble-패키지" class="slide level2"><h2>tibble 패키지</h2>
 
@@ -1117,14 +1220,14 @@
 <li><p>tibble 객체: <code>tidyverse</code>의 공식적 데이터 프레임 객체</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>df1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>df1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   a  b     c      d
 1 58 58  TRUE 이상일
 2 26 26  TRUE 김세창
 3 24 24 FALSE 김우형</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>df2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>df2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
       a     b c     d     
@@ -1148,8 +1251,8 @@
 <li><p>개별 값(value)은 하나의 셀(cell)을 차지한다. 즉, 개별 셀에는 하나의 값이 위치한다.</p></li>
 </ul></section><section id="예시-table1" class="slide level2"><h2>예시: table1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb19-2"><a></a>table1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb23-2"><a></a>table1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
   country      year  cases population
@@ -1164,7 +1267,7 @@
 </div>
 </section><section id="예시-table2" class="slide level2"><h2>예시: table2</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>table2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>table2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 4
    country      year type            count
@@ -1185,7 +1288,7 @@
 </div>
 </section><section id="예시-table3" class="slide level2"><h2>예시: table3</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>table3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>table3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
   country      year rate             
@@ -1200,7 +1303,7 @@
 </div>
 </section><section id="타이디tidy-데이터의-장점" class="slide level2"><h2>타이디(tidy) 데이터의 장점</h2>
 
-<img data-src="images/clipboard-3106963859.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/other-r-fun" style="font-size:0.75rem">https://allisonhorst.com/other-r-fun</a></p></section><section id="타이디tidy-데이터로-전환하는-핵심-기법" class="slide level2"><h2>타이디(tidy) 데이터로 전환하는 핵심 기법</h2>
+<img data-src="images/clipboard-3106963859.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/other-r-fun" style="font-size:0.75rem">https://allisonhorst.com/other-r-fun</a></p></section><section id="데이터의-구조를-바꾸는-핵심-기법" class="slide level2"><h2>데이터의 구조를 바꾸는 핵심 기법</h2>
 
 <img data-src="images/clipboard-1179593338.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://allisonhorst.com/other-r-fun" style="font-size:0.75rem">https://allisonhorst.com/other-r-fun</a></p></section><section id="넓은-형식-wide-form-vs.-긴-형식-long-form" class="slide level2"><h2>넓은 형식 <span style="font-size:2.5rem;color:gray">wide form</span> vs.&nbsp;긴 형식 <span style="font-size:2.5rem;color:gray">long form</span>
 </h2>
@@ -1208,14 +1311,14 @@
 <img data-src="images/clipboard-2491549849.png" class="quarto-figure quarto-figure-center r-stretch"></section><section id="데이터-늘이기-lengthening-data" class="slide level2"><h2>데이터 늘이기 <span style="font-size:2.5rem;color:gray">Lengthening data</span>
 </h2>
 <div class="panel-tabset">
-<ul id="tabset-7" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-7-1">table4a</a></li>
-<li><a href="#tabset-7-2">Result</a></li>
+<ul id="tabset-8" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-8-1">table4a</a></li>
+<li><a href="#tabset-8-2">Result</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-7-1">
+<div id="tabset-8-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>table4a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>table4a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
   country     `1999` `2000`
@@ -1226,14 +1329,14 @@
 </div>
 </div>
 </div>
-<div id="tabset-7-2">
+<div id="tabset-8-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>table4a <span class="sc">|&gt;</span> </span>
-<span id="cb27-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb27-3"><a></a>    <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">`</span><span class="at">1999</span><span class="st">`</span>, <span class="st">`</span><span class="at">2000</span><span class="st">`</span>),</span>
-<span id="cb27-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>, </span>
-<span id="cb27-5"><a></a>    <span class="at">values_to =</span> <span class="st">"cases"</span></span>
-<span id="cb27-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>table4a <span class="sc">|&gt;</span> </span>
+<span id="cb31-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb31-3"><a></a>    <span class="at">cols =</span> <span class="fu">c</span>(<span class="st">`</span><span class="at">1999</span><span class="st">`</span>, <span class="st">`</span><span class="at">2000</span><span class="st">`</span>),</span>
+<span id="cb31-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>, </span>
+<span id="cb31-5"><a></a>    <span class="at">values_to =</span> <span class="st">"cases"</span></span>
+<span id="cb31-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 3
   country     year   cases
@@ -1255,14 +1358,14 @@
 <img data-src="images/clipboard-2601245679.png" class="r-stretch"></section><section id="데이터-넓히기-widening-data" class="slide level2"><h2>데이터 넓히기 <span style="font-size:2.5rem;color:gray">Widening data</span>
 </h2>
 <div class="panel-tabset">
-<ul id="tabset-8" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-8-1">table2</a></li>
-<li><a href="#tabset-8-2">Result</a></li>
+<ul id="tabset-9" class="panel-tabset-tabby">
+<li><a data-tabby-default="" href="#tabset-9-1">table2</a></li>
+<li><a href="#tabset-9-2">Result</a></li>
 </ul>
 <div class="tab-content">
-<div id="tabset-8-1">
+<div id="tabset-9-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>table2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>table2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 4
    country      year type            count
@@ -1282,14 +1385,14 @@
 </div>
 </div>
 </div>
-<div id="tabset-8-2">
+<div id="tabset-9-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>table2 <span class="sc">|&gt;</span> </span>
-<span id="cb31-2"><a></a>  <span class="fu">pivot_wider</span>(</span>
-<span id="cb31-3"><a></a>    <span class="at">id_cols =</span> <span class="fu">c</span>(country, year),</span>
-<span id="cb31-4"><a></a>    <span class="at">names_from =</span> type, </span>
-<span id="cb31-5"><a></a>    <span class="at">values_from =</span> count</span>
-<span id="cb31-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>table2 <span class="sc">|&gt;</span> </span>
+<span id="cb35-2"><a></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb35-3"><a></a>    <span class="at">id_cols =</span> <span class="fu">c</span>(country, year),</span>
+<span id="cb35-4"><a></a>    <span class="at">names_from =</span> type, </span>
+<span id="cb35-5"><a></a>    <span class="at">values_from =</span> count</span>
+<span id="cb35-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
   country      year  cases population
