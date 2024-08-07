@@ -36,7 +36,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-## 데이터사이언스 과정의 심장
+## 데이터사이언스 프로세스의 심장
 
 ![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
@@ -93,7 +93,7 @@ gapminder |>
   slice_max(country_prop) |> 
   ggplot() +
   geom_line(aes(x = year, y = country_prop, color = continent), linewidth = 1) +
-  labs(x = "Year", y = "% of Population", color = "Continents")
+  labs(x = "Year", y = "% of Population", color = "Continents") 
 ```
 
 ## Code
@@ -122,11 +122,13 @@ gapminder |>
 
 ## `dplyr` 기초
 
--   첫 번째 아규먼트는 항상 [데이터 프레임]{style="color:coral"}이다.
+-   함수의 이름은 기본적으로 [**동사**]{style="color:coral"}이다.
 
--   그 다음 아규먼트(들)는 데이터 변형에 결부되는 [변수]{style="color:coral"}(들)를 지정한다 .
+-   첫 번째 아규먼트는 항상 [**데이터 프레임**]{style="color:coral"}이다.
 
--   산출물은 항상 [데이터 프레임]{style="color:coral"}이다.
+-   그 다음 아규먼트(들)는 데이터 변형에 결부되는 [**변수**]{style="color:coral"}(들)를 지정한다 .
+
+-   산출물은 항상 [**데이터 프레임**]{style="color:coral"}이다.
 
 ## `dplyr` 함수의 유형
 
@@ -136,7 +138,7 @@ gapminder |>
 
 -   그룹(groups) 함수: 그룹에 적용되는 함수
 
--   테이블(tables) 함수: 테이블 전체에 적용되는 함수
+-   테이블(tables) 함수: 데이터프레임 전체에 적용되는 함수
 
 ## 
 
@@ -186,7 +188,9 @@ filter(table1, year == 2000)
 ```{r}
 #| echo: true
 table1 |> 
-  filter(year == 2000 & population > 50000000)
+  filter(
+    year == 2000 & population > 50000000
+  )
 ```
 :::
 
@@ -246,7 +250,9 @@ distinct(table1, country)
 ```{r}
 #| echo: true
 table1 |> 
-  distinct(country, .keep_all = TRUE)
+  distinct(
+    country, .keep_all = TRUE
+  )
 ```
 :::
 
@@ -302,6 +308,14 @@ table1 |>
 table1 |> 
   slice_min(cases, prop = 1/3)
 ```
+
+## `slice_sample()`
+
+```{r}
+#| echo: true
+table1 |> 
+  slice_sample(n = 2, replace = TRUE)
+```
 :::
 
 ## 열 함수: 네 개의 주요 함수
@@ -340,7 +354,7 @@ select(table1, country, year)
 ```{r}
 #| echo: true
 table1 |> 
-  select(!c(cases, population))
+  select(-cases, -population)
 ```
 :::
 
@@ -563,7 +577,8 @@ table1_new |>
   ) |> 
   mutate(
     rate = sum_cases / sum_pop
-  )
+  ) |> 
+  ungroup()
 ```
 :::
 
@@ -593,6 +608,18 @@ count(table1_new, year, continent)
 #| echo: true
 table1_new |> 
   count(year, continent, wt = cases)
+```
+
+## `count()` 3
+
+```{r}
+#| echo: true
+table1_new |> 
+  group_by(year, continent) |> 
+  summarize(
+    cases_n = n(),
+    cases_sum = sum(cases)
+  )
 ```
 :::
 
@@ -685,8 +712,12 @@ arrange(
 #| eval: false
 flights |> 
   filter(dest == "IAH") |> 
-  mutate(speed = distance / air_time * 60) |> 
-  select(year:day, dep_time, carrier, flight, speed) |> 
+  mutate(
+    speed = distance / air_time * 60
+  ) |> 
+  select(
+    year:day, dep_time, carrier, flight, speed
+  ) |> 
   arrange(desc(speed))
 ```
 
@@ -711,13 +742,13 @@ flights |>
 
 ![[https://ggplot2.tidyverse.org/](https://ggplot2.tidyverse.org/){.uri style="font-size:0.75rem"}](images/clipboard-3146270133.png){fig-align="center"}
 
-## `ggplot2` 패키지
+## `ggplot2` 패키지: [탐색의 도구]{style="font-size:2.5rem; color:gray"}
 
 ![[https://allisonhorst.com/allison-horst](https://allisonhorst.com/allison-horst){style="font-size:0.75rem"}](images/clipboard-1476685333.png)
 
-## `ggplot2` 패키지
+## `ggplot2` 패키지: [커뮤니케이션의 도구]{style="font-size:2.5rem; color:gray"}
 
-![[https://allisonhorst.com/allison-horst](https://allisonhorst.com/allison-horst){style="font_size:0.75rem"}](images/clipboard-4023683763.png)
+![[https://allisonhorst.com/allison-horst](https://allisonhorst.com/allison-horst){style="font-size:0.75rem"}](images/clipboard-4023683763.png)
 
 ## Grammar of graphics
 
@@ -727,19 +758,27 @@ flights |>
 
 ![[https://initiation.doana-r.com/06-ggplot2#1](https://initiation.doana-r.com/06-ggplot2#1){.uri style="font-size:0.75rem"}](https://sangillee.snu.ac.kr/data_science/images/clipboard-3014854163.png){fig-align="center"}
 
-## 심미성과 기하
+## 심미성과 기하 {.smaller}
 
 -   심미성(aesthetics) 혹은 심미성 매핑(aesthetic mapping)
 
     -   그래프의 외견을 규정
 
-    -   시각 변수 혹은 속성: color, size, shape 등
+    -   심미성의 요소(시각 변수 혹은 속성): 시각적 다양성의 원천
+
+        -   x-축, y-축, color, size, linewidth, shape, alpha 등
+
+    -   심미성 매핑: 특정 [**변수**]{style="color:coral"}에 특정 [**심미성**]{style="color:coral"}의 요소를 부여하는 과정
+
+    -   `aes()`
 
 -   기하(geometries) 혹은 기하 객체(geometric objects)
 
     -   그래프의 전체 구조 혹은 형식을 규정
 
     -   그래프의 유형: bar chart, line chart 등
+
+    -   `geom_`
 
 ## 심미성과 기하
 
@@ -783,9 +822,11 @@ gapminder |>
 
 -   size
 
+-   linewidth, linetype
+
 -   alpha
 
--   position
+-   ...
 :::
 
 ::: column
@@ -804,6 +845,8 @@ gapminder |>
 -   `geom_text(), geom_label()`
 
 -   `geom_sf()`
+
+-   ...
 :::
 :::
 
@@ -837,10 +880,22 @@ gapminder |>
 
     -   `facet_grid()`
 
-## 패싯 facet
+## 패싯 facet {.smaller}
 
 ::: panel-tabset
-## Normal
+## Normal: 코드
+
+```{r}
+#| echo: true
+#| eval: false
+gapminder |> 
+  filter(year == 2007) |> 
+  ggplot(aes(x = log(gdpPercap), y = log(lifeExp))) +
+  geom_point(aes(size = pop)) +
+  geom_smooth()
+```
+
+## Normal: 그래프
 
 ```{r}
 #| echo: false
@@ -851,7 +906,20 @@ gapminder |>
   geom_smooth()
 ```
 
-## Faceting
+## Faceting: 코드
+
+```{r}
+#| echo: true
+#| eval: false
+gapminder |> 
+  filter(year == 2007) |> 
+  ggplot(aes(x = log(gdpPercap), y = log(lifeExp))) +
+  geom_point(aes(size = pop)) +
+  geom_smooth() +
+  facet_wrap(~continent)
+```
+
+## Faceting: 그래프
 
 ```{r}
 #| echo: false
