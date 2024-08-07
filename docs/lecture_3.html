@@ -795,8 +795,8 @@
 <pre><code># A tibble: 2 × 4
   country      year cases population
   &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;
-1 Brazil       2000 80488  174504898
-2 Afghanistan  2000  2666   20595360</code></pre>
+1 Afghanistan  2000  2666   20595360
+2 Afghanistan  1999   745   19987071</code></pre>
 </div>
 </div>
 </div>
@@ -1381,9 +1381,7 @@
 </div>
 <div id="tabset-14-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">summarize</span>(table1_new, </span>
-<span id="cb74-2"><a></a>  <span class="fu">across</span>(<span class="fu">c</span>(cases, population), mean)</span>
-<span id="cb74-3"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">summarize</span>(table1_new, <span class="fu">across</span>(<span class="fu">c</span>(cases, population), mean))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
    cases population

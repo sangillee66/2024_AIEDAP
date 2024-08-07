@@ -40,11 +40,11 @@ editor_options:
 
 ![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
-## 내용
+## 내용 {.smaller}
 
 -   동적ㆍ반응형 시각화
 
-    -   상호작용성과 역동성이 부가된 시각화
+    -   역동성과 상호작용성이 부가된 시각화
     -   방식
         -   임베딩(embedding)
         -   동적ㆍ반응형 테이블과 그래프 제작
@@ -52,6 +52,8 @@ editor_options:
 -   지리공간적 시각화
 
     -   "지도는 텍스트, 테이블, 챠트와 같은 것들 보다 훨씬 더 효과적으로 정보를 전달할 수 있다."
+    -   공간사이언스의 지식 필요
+    -   정적, 동적ㆍ반응형
 
 ## 자바스크립트 라이브러리: 정의
 
@@ -59,9 +61,9 @@ editor_options:
 
 -   자바스크립트 프로그래밍 언어를 사용하여 웹 개발을 더 쉽고 효율적으로 할 수 있도록 도와주는 재사용 가능한 코드 모음
 
--   동적ㆍ반응형 웹 페이지 제작을 위한 다양한 기능과 도구를 제공
+-   동적ㆍ반응형 웹 페이지 제작을 위한 다양한 기능과 도구 제공
 
--   HTML의 script 태그를 통해 웹사이트에 막바로 임베드할 수 있음
+-   HTML의 script 태그를 통해 웹사이트에 막바로 임베드 가능
 
 -   R의 [**래퍼 패키지**]{style="color:coral"}를 통해 손쉽게 사용 가능
 
@@ -147,15 +149,15 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 
 ![[https://towardsdatascience.com/exploring-the-gt-grammar-of-tables-package-in-r-7fff9d0b40cd](https://towardsdatascience.com/exploring-the-gt-grammar-of-tables-package-in-r-7fff9d0b40cd){style="font-size:0.75rem"}](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*lmJ_N_Hy3xGaB4W66L40FQ.jpeg)
 
-## 테이블 [Tables: DT 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
+## 테이블 [Tables: `DT` 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
 
 -   `DT`: R 래퍼 패키지
 
-    -   DataTables(<https://datatables.net/>): 자바스크립트 라이브러리
+    -   [DataTables](https://datatables.net/): 자바스크립트 라이브러리, 인트렉티브 테이블 객체 생성
 
 ![[https://datatables.net/](https://datatables.net/){style="font-size:0.75rem"}](images/clipboard-4023553912.png){fig-align="center"}
 
-## 테이블 [Tables: DT 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
+## 테이블 [Tables: `DT` 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
 
 -   `DT`의 기능
 
@@ -229,9 +231,9 @@ gapminder |>
 
 ## 그래프 [Graphs]{style="font-size:2.5rem;color:gray"}: `plotly`
 
--   Plotly (<https://plotly.com/graphing-libraries/>)
+-   [Plotly](https://plotly.com/graphing-libraries/): 자바스크립트 라이브러리, 동적ㆍ반응형 그래프 생성
 
-    -   R wrapper package: `plotly` package (<https://plotly.com/r/>)
+-   R 래퍼 패키지: `plotly` package (<https://plotly.com/r/>)
 
     -   `ggplotly()` function
 
@@ -293,8 +295,9 @@ gapminder |>
     text = ~paste(
       "Country:", country, 
       "</br>Continent:", continent, 
-      "</br>lifeExp:", lifeExp)
-    ) |> 
+      "</br>lifeExp:", lifeExp
+    )
+  ) |> 
   add_markers(
     color = ~continent, 
     size = ~pop, 
@@ -312,8 +315,9 @@ gapminder |>
     text = ~paste(
       "Country:", country, 
       "</br>Continent:", continent, 
-      "</br>lifeExp:", lifeExp)
-    ) |> 
+      "</br>lifeExp:", lifeExp
+    )
+  ) |> 
   add_markers(
     color = ~continent, 
     size = ~pop, 
@@ -391,9 +395,31 @@ P + transition_time(year) +
 
 # [지리공간적 시각화]{style="color:coral"}
 
-## 개념적 기초 {.smaller}
+## 지리공간적 데이터의 종류
 
--   지리공간적 데이터: 형상 데이터 + 속성 데이터
+-   벡터 데이터
+
+    -   포인트, 라인, 폴리곤
+
+    -   형상 데이터 + 속성 데이터
+
+-   래스터 데이터
+
+    -   그리드 셀(grid cell)
+
+    -   일체형
+
+## 지리공간적 데이터의 종류
+
+![](images/clipboard-1282763211.png){fig-align="center"}
+
+## 지리공간적 데이터의 종류
+
+![](images/clipboard-467998200.png){fig-align="center"}
+
+## 벡터 데이터 {.smaller}
+
+-   벡터 데이터: 형상 데이터 + 속성 데이터
 
     -   [**형상 데이터**]{style="color:coral"} (기하, 도형, 공간 데이터)
 
@@ -415,7 +441,7 @@ P + transition_time(year) +
 
     -   오른편: 속성 데이터
 
-## 개념적 기초
+## 벡터 데이터
 
 -   [**셰이프 파일(shape file)**]{style="color:coral"}: 가장 널리 사용되는 형상 데이터
 
@@ -478,6 +504,20 @@ sigungu_shp <- st_read("sigungu.shp", options = "ENCODING=CP949")
 qtm(sigungu_shp)
 ```
 :::
+
+## 지리공간적 시각화: 코로플레스맵 {.smaller}
+
+![](images/clipboard-485066680.png){fig-align="center"}
+
+## 지리공간적 시각화: 두 가지 관점
+
+-   "지도는 그래프의 일종이다" 접근
+
+    -   `ggplot2` 패키지
+
+-   "지도는 지도이다" 접근
+
+    -   `tmap` 패키지
 
 ## `ggplot2`를 이용한 지도 제작: 세계지도
 

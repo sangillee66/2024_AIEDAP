@@ -640,9 +640,7 @@ table1_new
 
 ```{r}
 #| echo: true
-summarize(table1_new, 
-  across(c(cases, population), mean)
-  )
+summarize(table1_new, across(c(cases, population), mean))
 ```
 
 ## `across()` 2
