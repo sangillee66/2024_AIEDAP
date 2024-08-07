@@ -465,7 +465,7 @@ P + transition_time(year) +
 
 -   읽고 쓰기: `st_read()`, `st_write()`
 
--   투영법 관련: `st_crs()`, `st_transform()`
+-   투영 관련: `st_crs()`, `st_transform()`
 
 -   기하 측정: `st_area()`, `st_length()`, `st_perimeter()`, `st_distance()`
 
@@ -533,14 +533,14 @@ qtm(sigungu_shp)
 -   EPSG 숫자코드
 
     -   <https://epsg.io/>
-    -   모든 CRS에 1024\~32767의 고유 숫자를 부여
+    -   모든 CRS에 1024\~32767 사이의 고유 숫자를 부여
     -   UTM-K
         -   EPSG: 5179
 
 ## CRS: PROJ 정형문자열
 
 ::: {style="font-size:1.5rem"}
--   세계지도를 위한 주요 투영법의 별명(alias) 및 PROJ 파라미터
+-   세계지도를 위한 주요 투영법의 PROJ 별명(alias)
 
 | 투영법                                        | PROJ 파라미터 |
 |-----------------------------------------------|---------------|
@@ -562,16 +562,16 @@ qtm(sigungu_shp)
 ::: {style="font-size:1.5rem"}
 -   널리 사용되는 CSR의 EPSG
 
-| 적용 스케일 | EPSG 숫자코드 | 설명                                                  |
+| 적용 스케일 | EPSG 숫자코드 | 설명                                                   |
 |------------------------|------------------------|------------------------|
-| 지구적      | EPSG:4326     | WGS84, 측지좌표계, GPS에 사용                         |
-|             | EPSG:3857     | 웹메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용 |
-|             | EPSG:7789     | ITRF2014                                              |
-| 우리나라    | EPSG:5179     | UTM-K                                                 |
-|             | EPSG:5185     | 서부원점                                              |
-|             | EPSG:5186     | 중부원점                                              |
-|             | EPSG:5187     | 동부원점                                              |
-|             | EPSG:5188     | 동해원점                                              |
+| 지구적      | EPSG:4326     | WGS84, 측지좌표계, GPS에 사용                          |
+|             | EPSG:3857     | 웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용 |
+|             | EPSG:7789     | ITRF2014                                               |
+| 우리나라    | EPSG:5179     | UTM-K                                                  |
+|             | EPSG:5185     | 서부원점                                               |
+|             | EPSG:5186     | 중부원점                                               |
+|             | EPSG:5187     | 동부원점                                               |
+|             | EPSG:5188     | 동해원점                                               |
 
 : {tbl-colwidths="\[20,25,55\]"}
 :::
@@ -656,13 +656,13 @@ ggplot() +
 ## 지리공간적 시각화: 두 가지 관점
 
 ::: {layout="[70,30]"}
--   "지도도 그래프다" 접근
+-   "지도도 그래프다" 관점
 
     -   일반성
     -   [ggplot2](https://ggplot2.tidyverse.org/)패키지
         -   `geom_sf()`, `coord_sf()`
 
--   "지도는 지도이다" 접근
+-   "지도는 지도이다" 관점
 
     -   특수성
     -   [`tmap`](https://r-tmap.github.io/tmap/articles/tmap_vv.html) 패키지

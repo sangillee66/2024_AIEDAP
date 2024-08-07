@@ -2678,7 +2678,7 @@
     "href": "lecture_4.html#sf-패키지-주요-함수",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nsf 패키지: 주요 함수",
-    "text": "sf 패키지: 주요 함수\n\n읽고 쓰기: st_read(), st_write()\n투영법 관련: st_crs(), st_transform()\n기하 측정: st_area(), st_length(), st_perimeter(), st_distance()\n기하 변형: st_centroid(), st_buffer(), st_boundary(), st_simplify()\n기하 생성: st_point(), st_voronoi() , st_convex_hull(), st_make_grid()\n기하 검토: st_is_valid(), st_make_valid()\n중첩 오퍼레이션: st_intersection(), st_union(), st_crop()\n기타: st_coordinates(), st_cast(), st_as_sf(), st_graticule(), st_join()"
+    "text": "sf 패키지: 주요 함수\n\n읽고 쓰기: st_read(), st_write()\n투영 관련: st_crs(), st_transform()\n기하 측정: st_area(), st_length(), st_perimeter(), st_distance()\n기하 변형: st_centroid(), st_buffer(), st_boundary(), st_simplify()\n기하 생성: st_point(), st_voronoi() , st_convex_hull(), st_make_grid()\n기하 검토: st_is_valid(), st_make_valid()\n중첩 오퍼레이션: st_intersection(), st_union(), st_crop()\n기타: st_coordinates(), st_cast(), st_as_sf(), st_graticule(), st_join()"
   },
   {
     "objectID": "lecture_4.html#sf-패키지-st_read",
@@ -2811,7 +2811,7 @@
     "href": "lecture_4.html#지리공간적-시각화-두-가지-관점",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "지리공간적 시각화: 두 가지 관점",
-    "text": "지리공간적 시각화: 두 가지 관점\n\n\n\n\n\n“지도도 그래프다” 접근\n\n일반성\n\nggplot2패키지\n\n\ngeom_sf(), coord_sf()\n\n\n\n\n\n\n“지도는 지도이다” 접근\n\n특수성\n\ntmap 패키지\n\n3.99.9001"
+    "text": "지리공간적 시각화: 두 가지 관점\n\n\n\n\n\n“지도도 그래프다” 관점\n\n일반성\n\nggplot2패키지\n\n\ngeom_sf(), coord_sf()\n\n\n\n\n\n\n“지도는 지도이다” 관점\n\n특수성\n\ntmap 패키지\n\n3.99.9001"
   },
   {
     "objectID": "lecture_4.html#벡터-데이터",
@@ -2839,21 +2839,21 @@
     "href": "lecture_4.html#crs-방식",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "CRS: 방식",
-    "text": "CRS: 방식\n\n\nPROJ 정형문자열\n\nhttps://proj.org/en/9.4/\n준거타원체, 투영법, 투영 파라미터를 + 기호로 연결해 작성한 문자열\nUTM-K\n\n+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m\n\n\n\n\n\nEPSG 숫자코드\n\nhttps://epsg.io/\n모든 CRS에 1024~32767의 고유 숫자를 부여\nUTM-K\n\nEPSG: 5179"
+    "text": "CRS: 방식\n\n\nPROJ 정형문자열\n\nhttps://proj.org/en/9.4/\n준거타원체, 투영법, 투영 파라미터를 + 기호로 연결해 작성한 문자열\nUTM-K\n\n+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m\n\n\n\n\n\nEPSG 숫자코드\n\nhttps://epsg.io/\n모든 CRS에 1024~32767 사이의 고유 숫자를 부여\nUTM-K\n\nEPSG: 5179"
   },
   {
     "objectID": "lecture_4.html#crs-proj-정형문자열",
     "href": "lecture_4.html#crs-proj-정형문자열",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "CRS: PROJ 정형문자열",
-    "text": "CRS: PROJ 정형문자열\n\n\n세계지도를 위한 주요 투영법의 별명(alias) 및 PROJ 파라미터\n\n\n\n투영법\nPROJ 파라미터\n\n\n\n정적원통 도법 Equal Area Cylindrical\n+proj=cea\n\n\n컴펙트 밀러 도법 Compact Miller\n+proj=comill\n\n\n에케르트 IV 도법 Eckert IV\n+proj=eck4\n\n\n정거원통 도법 Equidistant Cylindrical\n+proj=eqc\n\n\n구드 도법 Goode Homolosine\n+proj=goode\n\n\n단열형 구드 도법 Interrupted Goode Homolosine\n+proj=igh\n\n\n메르카토르 도법 Mercator\n+proj=merc\n\n\n몰바이데 도법 Mollweide\n+proj=moll\n\n\n로빈슨 도법 Robinson\n+proj=robin\n\n\n시뉴소이드 도법 Sinusoidal\n+proj=sinu\n\n\n빈켈트리펠 도법 Winkel Tripel\n+proj=wintri"
+    "text": "CRS: PROJ 정형문자열\n\n\n세계지도를 위한 주요 투영법의 PROJ 별명(alias)\n\n\n\n투영법\nPROJ 파라미터\n\n\n\n정적원통 도법 Equal Area Cylindrical\n+proj=cea\n\n\n컴펙트 밀러 도법 Compact Miller\n+proj=comill\n\n\n에케르트 IV 도법 Eckert IV\n+proj=eck4\n\n\n정거원통 도법 Equidistant Cylindrical\n+proj=eqc\n\n\n구드 도법 Goode Homolosine\n+proj=goode\n\n\n단열형 구드 도법 Interrupted Goode Homolosine\n+proj=igh\n\n\n메르카토르 도법 Mercator\n+proj=merc\n\n\n몰바이데 도법 Mollweide\n+proj=moll\n\n\n로빈슨 도법 Robinson\n+proj=robin\n\n\n시뉴소이드 도법 Sinusoidal\n+proj=sinu\n\n\n빈켈트리펠 도법 Winkel Tripel\n+proj=wintri"
   },
   {
     "objectID": "lecture_4.html#crs-epsg-숫자코드",
     "href": "lecture_4.html#crs-epsg-숫자코드",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "CRS: EPSG 숫자코드",
-    "text": "CRS: EPSG 숫자코드\n\n\n널리 사용되는 CSR의 EPSG\n\n\n\n\n\n\n\n\n적용 스케일\nEPSG 숫자코드\n설명\n\n\n\n지구적\nEPSG:4326\nWGS84, 측지좌표계, GPS에 사용\n\n\n\nEPSG:3857\n웹메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용\n\n\n\nEPSG:7789\nITRF2014\n\n\n우리나라\nEPSG:5179\nUTM-K\n\n\n\nEPSG:5185\n서부원점\n\n\n\nEPSG:5186\n중부원점\n\n\n\nEPSG:5187\n동부원점\n\n\n\nEPSG:5188\n동해원점"
+    "text": "CRS: EPSG 숫자코드\n\n\n널리 사용되는 CSR의 EPSG\n\n\n\n\n\n\n\n\n적용 스케일\nEPSG 숫자코드\n설명\n\n\n\n지구적\nEPSG:4326\nWGS84, 측지좌표계, GPS에 사용\n\n\n\nEPSG:3857\n웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용\n\n\n\nEPSG:7789\nITRF2014\n\n\n우리나라\nEPSG:5179\nUTM-K\n\n\n\nEPSG:5185\n서부원점\n\n\n\nEPSG:5186\n중부원점\n\n\n\nEPSG:5187\n동부원점\n\n\n\nEPSG:5188\n동해원점"
   },
   {
     "objectID": "lecture_4.html#crs-세계지도에-적용",
@@ -2924,5 +2924,12 @@
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nggplot2 vs tmap: 우리나라 지도",
     "text": "ggplot2 vs tmap: 우리나라 지도\n\n\n데이터 정리\nggplot2: Code\nggplot2: Result\ntmap: Code\ntmap: Result\n\n\n\n\nlibrary(tidyverse)\nlibrary(sf)\nsido_shp &lt;- st_read(\"sido.shp\", options = \"ENCODING=CP949\")\nsigungu_shp &lt;- st_read(\"sigungu.shp\", options = \"ENCODING=CP949\")\ndata_sigungu &lt;- read_rds(\"data_sigungu.rds\")\nsigungu_data &lt;- sigungu_shp |&gt; \n  left_join(\n    data_sigungu, join_by(SGG1_CD == C1)\n  )\n\n\n\n\nlibrary(ggspatial)\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index_class = case_when(\n      index &lt; 0.2 ~ \"1\",\n      index &gt;= 0.2 & index &lt; 0.5 ~ \"2\",\n      index &gt;= 0.5 & index &lt; 1.0 ~ \"3\",\n      index &gt;= 1.0 & index &lt; 1.5 ~ \"4\",\n      index &gt;= 1.5 ~ \"5\"\n    ),\n    index_class = fct(index_class, levels = as.character(1:5))\n  )\nclass_color &lt;- c(\"1\" = \"#d7191c\", \"2\" = \"#fdae61\",\n                 \"3\" = \"#ffffbf\", \"4\" = \"#a6d96a\", \n                 \"5\" = \"#1a9641\")\nggplot_map &lt;- ggplot() +\n  geom_sf(\n    data = sigungu_data, \n    aes(fill = index_class, text = SGG1_FNM), \n    show.legend = TRUE\n  ) +\n  geom_sf(\n    data = sido_shp, \n    fill = NA, \n    lwd = 0.5\n  ) +\n  scale_fill_manual(\n    name = \"Classes\", \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    values = class_color, drop = FALSE\n  ) +\n  annotation_scale(\n    location = \"br\", \n    bar_cols = c(\"gray40\", \"white\"), \n    width_hint = 0.4\n  )\nggplot_map\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nclass_color &lt;- c(\"#d7191c\", \"#fdae61\", \"#ffffbf\", \"#a6d96a\", \"#1a9641\")\ntmap_map &lt;- tm_shape(sigungu_data) + \n  tm_polygons(\n    col = \"index\", style = \"fixed\", palette = class_color, \n    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    title = \"Classes\", id = \"SGG1_FNM\"\n  ) +\n  tm_shape(sido_shp) + tm_borders(lwd = 1.5) +\n  tm_legend(\n    legend.position = c(0.7, 0.1)\n  ) +\n  tm_scale_bar(breaks = seq(0, 200, 50), position = c(0.6, 0.01)) \ntmap_map"
+  },
+  {
+    "objectID": "lecture_4.html",
+    "href": "lecture_4.html",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "",
+    "text": "https://r4ds.hadley.nz/intro"
   }
 ]
