@@ -2853,7 +2853,7 @@
     "href": "lecture_4.html#crs-epsg-숫자코드",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "CRS: EPSG 숫자코드",
-    "text": "CRS: EPSG 숫자코드\n\n\n널리 사용되는 CSR의 EPSG\n\n\n\n\n\n\n\n\n적용 스케일\nEPSG 숫자코드\n설명\n\n\n\n지구적\nEPSG:4326\nWGS84, 측지좌표계, GPS에 사용\n\n\n\nEPSG:3857\n웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용\n\n\n\nEPSG:7789\nITRF2014\n\n\n우리나라\nEPSG:5179\nUTM-K\n\n\n\nEPSG:5185\n서부원점\n\n\n\nEPSG:5186\n중부원점\n\n\n\nEPSG:5187\n동부원점\n\n\n\nEPSG:5188\n동해원점"
+    "text": "CRS: EPSG 숫자코드\n\n\n널리 사용되는 CRS의 EPSG\n\n\n\n\n\n\n\n\n적용 스케일\nEPSG 숫자코드\n설명\n\n\n\n지구적\nEPSG:4326\nWGS84, 측지좌표계, GPS에 사용\n\n\n\nEPSG:3857\n웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용\n\n\n\nEPSG:7789\nITRF2014\n\n\n우리나라\nEPSG:5179\nUTM-K\n\n\n\nEPSG:5185\n서부원점\n\n\n\nEPSG:5186\n중부원점\n\n\n\nEPSG:5187\n동부원점\n\n\n\nEPSG:5188\n동해원점"
   },
   {
     "objectID": "lecture_4.html#crs-세계지도에-적용",

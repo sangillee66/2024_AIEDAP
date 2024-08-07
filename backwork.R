@@ -36,8 +36,7 @@ sigungu_data <- sigungu_shp |>
   )
 
 class_color <- c("#d7191c", "#fdae61", "#ffffbf", "#a6d96a", "#1a9641")
-
-tm_shape(sigungu_data) + 
+tmap_map <- tm_shape(sigungu_data) + 
   tm_polygons(
     col = "index", style = "fixed", palette = class_color, 
     breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), 
@@ -50,4 +49,4 @@ tm_shape(sigungu_data) +
     legend.position = c(0.7, 0.1)
   ) +
   tm_scale_bar(breaks = seq(0, 200, 50), position = c(0.6, 0.01)) 
-
+tmap_map
