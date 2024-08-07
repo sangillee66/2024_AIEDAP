@@ -1,5 +1,5 @@
 ---
-title: "Day 2: 데이터의 수집과 변형"
+title: "Day 2: 데이터의 수집과 정리"
 author: 이상일(서울대학교 지리교육과)<br>김세창(서울대학교 지리교육과 석사)<br>김우형(서울대학교 지리교육과 석사과정)
 date-modified: last-modified
 number-sections: true

@@ -60,6 +60,10 @@ date-modified: last-modified
 
     -   한국 R 사용자회가 만든 무료 웹북 중의 하나입니다. Quarto에 대한 상세한 내용이 있을 것으로 기대하면 좀 실망하게 되는 책입니다.
 
+-   김진환, 2024, [의학 연구를 위한 R: 의료 데이터 관리와 Shiny, Quarto를 활용한 시각화 리포트 제작](https://www.yes24.com/Product/Goods/128185450), 비제이퍼블릭.
+
+    -   지난 6월에 출간된 따끈따근한 책이고, Quarto 내용을 포함하고 있는 듯합니다. 오늘 주문해서 책 내용이 어떤지는 모르겠습니다. 책이 도착하면 짧은 코멘트를 첨가하겠습니다.
+
 ## 시각화
 
 -   Wickham, Hadley. 2016. [*ggplot2: Elegant Graphics for Data Analysis*](https://ggplot2-book.org/). 2nd edition, Switzerland: Springer. (박진수 옮김, 2017. [R로 분석한 데이터를 멋진 그래픽으로 ggplot2](https://www.yes24.com/Product/Goods/57248968). 부천: 프리렉.)
