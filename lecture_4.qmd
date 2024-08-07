@@ -655,21 +655,29 @@ ggplot() +
 
 ## 지리공간적 시각화: 두 가지 관점
 
--   "지도는 그래프의 일종이다" 접근
+::: {layout="[70,30]"}
+-   "지도도 그래프다" 접근
 
-    -   `ggplot2` 패키지
+    -   일반성
+    -   [ggplot2](https://ggplot2.tidyverse.org/)패키지
+        -   `geom_sf()`, `coord_sf()`
 
 -   "지도는 지도이다" 접근
 
-    -   `tmap` 패키지
+    -   특수성
+    -   [`tmap`](https://r-tmap.github.io/tmap/articles/tmap_vv.html) 패키지
+        -   3.99.9001
 
-## `ggplot2`를 이용한 지도 제작: 세계지도
+![](images/clipboard-920678896.png)
+:::
+
+## `ggplot2` vs `tmap`: 세계지도 {.smaller}
 
 ::: panel-tabset
-## Code 1
+## 데이터 정리
 
 ```{r}
-#| eval: false
+#| results: hide
 #| echo: true
 library(tidyverse)
 library(spData)
@@ -683,7 +691,7 @@ world_data <- world |>
   left_join(my_wpp, join_by(iso_a2 == ISO2))
 ```
 
-## Code 2
+## `ggplot2`: Code
 
 ```{r}
 #| eval: false
@@ -701,21 +709,11 @@ world_map <- ggplot() +
 world_map
 ```
 
-## Result
+## `ggplot2`: Result
 
 ```{r}
 #| results: false
 #| echo: false
-library(tidyverse)
-library(spData)
-library(sf)
-data(world)
-world <- st_as_sf(world)
-wpp_2022 <- read_rds("wpp_2022.rds")
-my_wpp <- wpp_2022 |> 
-  filter(year == 2024)
-world_data <- world |>
-  left_join(my_wpp, join_by(iso_a2 == ISO2))
 world_map <- ggplot() +
   geom_sf(data = world_data, aes(fill = TFR, text = name_long)) +
   coord_sf(crs = "+proj=robin") +
@@ -728,15 +726,45 @@ world_map <- ggplot() +
   )
 world_map
 ```
-:::
 
-## `ggplot2`를 이용한 지도 제작: 우리나라 지도
-
-::: panel-tabset
-## Code 1
+## `tmap`: Code
 
 ```{r}
 #| eval: false
+#| echo: true
+tm_world_map <- tm_shape(world_data, projection = "+proj=robin") +
+  tm_graticules(labels.show = FALSE) + 
+  tm_polygons(
+    col = "TFR", style = "cont", 
+    palette = "viridis", id = "name_long"
+  ) +
+  tm_layout(frame = FALSE)
+tm_world_map
+```
+
+## `tmap`: Result
+
+```{r}
+#| results: false
+#| echo: false
+tm_world_map <- tm_shape(world_data, projection = "+proj=robin") +
+  tm_graticules(labels.show = FALSE) + 
+  tm_polygons(
+    col = "TFR", style = "cont", 
+    palette = "viridis", id = "name_long"
+  ) +
+  tm_layout(frame = FALSE)
+tm_world_map
+```
+:::
+
+## `ggplot2` vs `tmap`: 우리나라 지도 {.smaller}
+
+::: panel-tabset
+## 데이터 정리
+
+```{r}
+#| results: hide
 #| echo: true
 library(tidyverse)
 library(sf)
@@ -749,12 +777,12 @@ sigungu_data <- sigungu_shp |>
   )
 ```
 
-## Code 2
+## `ggplot2`: Code
 
 ```{r}
 #| eval: false
 #| echo: true
-sido_shp <- st_read("sido.shp", options = "ENCODING=CP949")
+library(ggspatial)
 sigungu_data <- sigungu_data |> 
   mutate(
     index_class = case_when(
@@ -785,24 +813,21 @@ ggplot_map <- ggplot() +
     labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
                "1.0 ~ 1.5", ">= 1.5"), 
     values = class_color, drop = FALSE
-  ) 
+  ) +
+  annotation_scale(
+    location = "br", 
+    bar_cols = c("gray40", "white"), 
+    width_hint = 0.4
+  )
 ggplot_map
 ```
 
-## Result
+## `ggplot2`: Result
 
 ```{r}
 #| results: false
 #| echo: false
-library(tidyverse)
-library(sf)
-sido_shp <- st_read("sido.shp", options = "ENCODING=CP949")
-sigungu_shp <- st_read("sigungu.shp", options = "ENCODING=CP949")
-data_sigungu <- read_rds("data_sigungu.rds")
-sigungu_data <- sigungu_shp |> 
-  left_join(
-    data_sigungu, join_by(SGG1_CD == C1)
-  )
+library(ggspatial)
 sigungu_data <- sigungu_data |> 
   mutate(
     index_class = case_when(
@@ -818,13 +843,72 @@ class_color <- c("1" = "#d7191c", "2" = "#fdae61",
                  "3" = "#ffffbf", "4" = "#a6d96a", 
                  "5" = "#1a9641")
 ggplot_map <- ggplot() +
-  geom_sf(data = sigungu_data, aes(fill = index_class, text = SGG1_FNM), show.legend = TRUE) +
-  geom_sf(data = sido_shp, fill = NA, lwd = 0.5) +
-  scale_fill_manual(name = "Classes", 
-                    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
-                               "1.0 ~ 1.5", ">= 1.5"), 
-                    values = class_color, drop = FALSE) 
+  geom_sf(
+    data = sigungu_data, 
+    aes(fill = index_class, text = SGG1_FNM), 
+    show.legend = TRUE
+  ) +
+  geom_sf(
+    data = sido_shp, 
+    fill = NA, 
+    lwd = 0.5
+  ) +
+  scale_fill_manual(
+    name = "Classes", 
+    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
+               "1.0 ~ 1.5", ">= 1.5"), 
+    values = class_color, drop = FALSE
+  ) +
+  annotation_scale(
+    location = "br", 
+    bar_cols = c("gray40", "white"), 
+    width_hint = 0.4
+  )
 ggplot_map
+```
+
+## `tmap`: Code
+
+```{r}
+#| eval: false
+#| echo: true
+class_color <- c("#d7191c", "#fdae61", "#ffffbf", "#a6d96a", "#1a9641")
+tmap_map <- tm_shape(sigungu_data) + 
+  tm_polygons(
+    col = "index", style = "fixed", palette = class_color, 
+    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), 
+    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
+               "1.0 ~ 1.5", ">= 1.5"), 
+    title = "Classes", id = "SGG1_FNM"
+  ) +
+  tm_shape(sido_shp) + tm_borders(lwd = 1.5) +
+  tm_legend(
+    legend.position = c(0.7, 0.1)
+  ) +
+  tm_scale_bar(breaks = seq(0, 200, 50), position = c(0.6, 0.01)) 
+tmap_map
+```
+
+## `tmap`: Result
+
+```{r}
+#| results: false
+#| echo: false
+class_color <- c("#d7191c", "#fdae61", "#ffffbf", "#a6d96a", "#1a9641")
+tmap_map <- tm_shape(sigungu_data) + 
+  tm_polygons(
+    col = "index", style = "fixed", palette = class_color, 
+    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), 
+    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
+               "1.0 ~ 1.5", ">= 1.5"), 
+    title = "Classes", id = "SGG1_FNM"
+  ) +
+  tm_shape(sido_shp) + tm_borders(lwd = 1.5) +
+  tm_legend(
+    legend.position = c(0.7, 0.1)
+  ) +
+  tm_scale_bar(breaks = seq(0, 200, 50), position = c(0.6, 0.01)) 
+tmap_map
 ```
 :::
 
