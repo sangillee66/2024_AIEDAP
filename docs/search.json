@@ -1593,7 +1593,7 @@
     "href": "lecture_4.html#자바스크립트-라이브러리-정의",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "자바스크립트 라이브러리: 정의",
-    "text": "자바스크립트 라이브러리: 정의\n\nJavaScript Library\n자바스크립트 프로그래밍 언어를 사용하여 웹 개발을 더 쉽고 효율적으로 할 수 있도록 도와주는 재사용 가능한 코드 모음\n동적 웹 페이지를 제작을 위한 다양한 기능과 도구를 제공\nHTML의 script 태그를 통해 웹사이트에 막바로 임베드할 수 있음\nR의 래퍼(wrapper) 패키지를 통해 손쉽게 사용 가능"
+    "text": "자바스크립트 라이브러리: 정의\n\nJavaScript Library\n자바스크립트 프로그래밍 언어를 사용하여 웹 개발을 더 쉽고 효율적으로 할 수 있도록 도와주는 재사용 가능한 코드 모음\n동적ㆍ반응형 웹 페이지 제작을 위한 다양한 기능과 도구를 제공\nHTML의 script 태그를 통해 웹사이트에 막바로 임베드할 수 있음\nR의 래퍼 패키지를 통해 손쉽게 사용 가능"
   },
   {
     "objectID": "lecture_4.html#자바스크립트-라이브러리-종류",
@@ -1649,21 +1649,21 @@
     "href": "lecture_4.html#테이블-tables-2",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "테이블 Tables\n",
-    "text": "테이블 Tables\n\n\n\nDT: R 래퍼 패키지\n\nDataTables(https://datatables.net/): 자바스크립트 라이브러리\n\n\n\n\nhttps://datatables.net/"
+    "text": "테이블 Tables\n\n\n\nCode\nResult\n\n\n\n\ngapminder |&gt; \n  datatable(\n    filter = \"top\",\n    extensions = \"Buttons\",\n    options = list(\n      pageLength = 5,\n      autoWidth = TRUE,\n      dom = \"Bftip\",\n      buttons = c(\"copy\", \"excel\", \"pdf\", \"print\")\n    )\n  )"
   },
   {
     "objectID": "lecture_4.html#테이블-tables-3",
     "href": "lecture_4.html#테이블-tables-3",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "테이블 Tables\n",
-    "text": "테이블 Tables\n\n\n\nDT의 기능\n\nPagination: 페이지를 이동할 수 있는 기능\nInstant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누를 상태에서 다른 컬럼을 선택)\nFiltering: 값을 정렬할 수 있는 기능\nEditable: 셀 값을 수정할 수 있는 기능\nButtons: 셀 숨기기, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
+    "text": "테이블 Tables\n\n\nhttps://towardsdatascience.com/exploring-the-gt-grammar-of-tables-package-in-r-7fff9d0b40cd"
   },
   {
     "objectID": "lecture_4.html#테이블-tables-4",
     "href": "lecture_4.html#테이블-tables-4",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "테이블 Tables\n",
-    "text": "테이블 Tables\n\n\n\nCode\nResult\n\n\n\n\ndatatable(gapminder, filter = \"top\",\n          extensions = \"Buttons\",\n          options = list(\n            pageLength = 5,\n            autoWidth = TRUE,\n            dom = \"Bftip\",\n            buttons = c(\"copy\", \"excel\", \"pdf\", \"print\")\n          ))"
+    "text": "테이블 Tables\n\n\n\nDT: R 래퍼 패키지\n\nDataTables(https://datatables.net/): 자바스크립트 라이브러리\n\n\n\n\nhttps://datatables.net/"
   },
   {
     "objectID": "lecture_4.html#그래프-graphs",
@@ -1684,14 +1684,14 @@
     "href": "lecture_4.html#그래프-graphs-plotly-1",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "그래프 Graphs: plotly\n",
-    "text": "그래프 Graphs: plotly\n\n\n\nCode\nResult\n\n\n\n\nlibrary(plotly)\ngapminder |&gt; \n  filter(year == 2007) |&gt; \n  plot_ly(x = ~gdpPercap, y = ~lifeExp, color = ~continent,\n          text = ~paste(\"Country: \", country, \n                        \"&lt;br&gt;GDP per capita: \", gdpPercap, \n                        \"$&lt;br&gt;Life Expectancy at Birth:\", lifeExp))"
+    "text": "그래프 Graphs: plotly\n\n\n\nCode\nResult\n\n\n\n\nlibrary(plotly)\ngapminder |&gt; \n  filter(year == 2007) |&gt; \n  plot_ly(\n    x = ~gdpPercap, \n    y = ~lifeExp, \n    color = ~continent,\n    text = ~paste(\n      \"Country: \", country, \n      \"&lt;br&gt;GDP per capita: \", gdpPercap, \n      \"$&lt;br&gt;Life Expectancy at Birth:\", lifeExp\n    )\n  )"
   },
   {
     "objectID": "lecture_4.html#그래프-graphs-plotly-2",
     "href": "lecture_4.html#그래프-graphs-plotly-2",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "그래프 Graphs: plotly\n",
-    "text": "그래프 Graphs: plotly\n\n\n\nCode\nResult\n\n\n\n\ngapminder |&gt; \n  plot_ly(x = ~log10(gdpPercap), y = ~lifeExp,\n          text = ~paste(\"Country:\", country, \"&lt;/br&gt;Continent:\", continent, \n\"&lt;/br&gt;lifeExp:\", lifeExp)) |&gt; \n  add_markers(color = ~continent, size = ~pop, frame = ~year, \n              marker = list(sizeref = 0.2, sizemode = \"area\"))"
+    "text": "그래프 Graphs: plotly\n\n\n\nCode\nResult\n\n\n\n\ngapminder |&gt; \n  plot_ly(\n    x = ~log10(gdpPercap), y = ~lifeExp,\n    text = ~paste(\n      \"Country:\", country, \n      \"&lt;/br&gt;Continent:\", continent, \n      \"&lt;/br&gt;lifeExp:\", lifeExp)\n    ) |&gt; \n  add_markers(\n    color = ~continent, \n    size = ~pop, \n    frame = ~year, \n    marker = list(sizeref = 0.2, sizemode = \"area\")\n  )"
   },
   {
     "objectID": "lecture_4.html#그래프-graphs-ggplotly",
@@ -1712,7 +1712,7 @@
     "href": "lecture_4.html#개념적-기초",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "개념적 기초",
-    "text": "개념적 기초\n\n\n형상(기하, 도형, 공간) 데이터 + 속성 데이터\n\n\n형상 데이터\n\n행정구역 경계와 같은 지리공간적 객체 자체에 대한 데이터\n버텍스(vertex)의 좌표값을 가진 데이터\n포인트(점), 라인(선), 폴리곤(역)의 형상으로 표출\n\n\n\n속성 데이터\n\n지리공간적 객체가 보유한 속성\n기존 일반 데이터와 동일\n\n\n\n\n\n조인: left_join() 함수\n\n왼편: 형상 데이터\n오른편: 속성 데이터"
+    "text": "개념적 기초\n\n\n지리공간적 데이터: 형상 데이터 + 속성 데이터\n\n\n형상 데이터 (기하, 도형, 공간 데이터)\n\n행정구역 경계와 같은 지리공간적 객체 자체에 대한 데이터\n버텍스(vertex)의 좌표값을 가진 데이터\n포인트(점), 라인(선), 폴리곤(역)의 형상으로 표출\n\n\n\n속성 데이터\n\n지리공간적 객체가 보유한 속성\n기존 일반 데이터와 동일\n\n\n\n\n\n조인: left_join() 함수\n\n왼편: 형상 데이터\n오른편: 속성 데이터"
   },
   {
     "objectID": "lecture_4.html#개념적-기초-1",
@@ -1747,7 +1747,7 @@
     "href": "lecture_4.html#ggplot2를-이용한-지도-제작-우리나라-지도",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nggplot2를 이용한 지도 제작: 우리나라 지도",
-    "text": "ggplot2를 이용한 지도 제작: 우리나라 지도\n\n\nCode 1\nCode 2\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(sf)\nsido_shp &lt;- st_read(\"sido.shp\", options = \"ENCODING=CP949\")\nsigungu_shp &lt;- st_read(\"sigungu.shp\", options = \"ENCODING=CP949\")\ndata_sigungu &lt;- read_rds(\"data_sigungu.rds\")\nsigungu_data &lt;- sigungu_shp |&gt; \n  left_join(\n    data_sigungu, join_by(SGG1_CD == C1)\n  )\n\n\n\n\nsido_shp &lt;- st_read(\"sido.shp\", options = \"ENCODING=CP949\")\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index_class = case_when(\n      index &lt; 0.2 ~ \"1\",\n      index &gt;= 0.2 & index &lt; 0.5 ~ \"2\",\n      index &gt;= 0.5 & index &lt; 1.0 ~ \"3\",\n      index &gt;= 1.0 & index &lt; 1.5 ~ \"4\",\n      index &gt;= 1.5 ~ \"5\"\n    ),\n    index_class = fct(index_class, levels = as.character(1:5))\n  )\nclass_color &lt;- c(\"1\" = \"#d7191c\", \"2\" = \"#fdae61\",\n                 \"3\" = \"#ffffbf\", \"4\" = \"#a6d96a\", \n                 \"5\" = \"#1a9641\")\nggplot_map &lt;- ggplot() +\n  geom_sf(data = sigungu_data, aes(fill = index_class, text = SGG1_FNM), show.legend = TRUE) +\n  geom_sf(data = sido_shp, fill = NA, lwd = 0.5) +\n  scale_fill_manual(name = \"Classes\", \n                    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n                               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n                    values = class_color, drop = FALSE) \nggplot_map"
+    "text": "ggplot2를 이용한 지도 제작: 우리나라 지도\n\n\nCode 1\nCode 2\nResult\n\n\n\n\nlibrary(tidyverse)\nlibrary(sf)\nsido_shp &lt;- st_read(\"sido.shp\", options = \"ENCODING=CP949\")\nsigungu_shp &lt;- st_read(\"sigungu.shp\", options = \"ENCODING=CP949\")\ndata_sigungu &lt;- read_rds(\"data_sigungu.rds\")\nsigungu_data &lt;- sigungu_shp |&gt; \n  left_join(\n    data_sigungu, join_by(SGG1_CD == C1)\n  )\n\n\n\n\nsido_shp &lt;- st_read(\"sido.shp\", options = \"ENCODING=CP949\")\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index_class = case_when(\n      index &lt; 0.2 ~ \"1\",\n      index &gt;= 0.2 & index &lt; 0.5 ~ \"2\",\n      index &gt;= 0.5 & index &lt; 1.0 ~ \"3\",\n      index &gt;= 1.0 & index &lt; 1.5 ~ \"4\",\n      index &gt;= 1.5 ~ \"5\"\n    ),\n    index_class = fct(index_class, levels = as.character(1:5))\n  )\nclass_color &lt;- c(\"1\" = \"#d7191c\", \"2\" = \"#fdae61\",\n                 \"3\" = \"#ffffbf\", \"4\" = \"#a6d96a\", \n                 \"5\" = \"#1a9641\")\nggplot_map &lt;- ggplot() +\n  geom_sf(\n    data = sigungu_data, \n    aes(fill = index_class, text = SGG1_FNM), \n    show.legend = TRUE\n  ) +\n  geom_sf(\n    data = sido_shp, \n    fill = NA, \n    lwd = 0.5\n  ) +\n  scale_fill_manual(\n    name = \"Classes\", \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    values = class_color, drop = FALSE\n  ) \nggplot_map"
   },
   {
     "objectID": "lecture_4.html#인터랙티브-지도-세계지도",
@@ -1761,7 +1761,7 @@
     "href": "lecture_4.html#인터렉티브-지도-우리나라-지도",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "인터렉티브 지도: 우리나라 지도",
-    "text": "인터렉티브 지도: 우리나라 지도\n\n\nCode\nResult\n\n\n\n\nlibrary(ggiraph)\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = format(index, digits = 4, nsmall = 4),\n    my_tooltip = str_c(\"Name: \", SGG1_FNM, \"\\n Index: \", index)\n  )\ngg &lt;- ggplot() +\n  geom_sf_interactive(\n    data = sigungu_data, \n    aes(\n      fill = index_class, \n      tooltip = my_tooltip, \n      data_id = SGG1_FNM\n      ), \n    show.legend = TRUE) +\n  geom_sf(data = sido_shp, fill = NA, lwd = 0.5) +\n  scale_fill_manual(\n    name = \"Classes\", \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    values = class_color, drop = FALSE) \ngirafe(ggobj = gg) |&gt; \n  girafe_options(\n    opts_hover(css = \"fill: gray\")\n  )"
+    "text": "인터렉티브 지도: 우리나라 지도\n\n\nCode\nResult\n\n\n\n\nlibrary(ggiraph)\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = format(index, digits = 4, nsmall = 4),\n    my_tooltip = str_c(\"Name: \", SGG1_FNM, \"\\n Index: \", index)\n  )\ngg &lt;- ggplot() +\n  geom_sf_interactive(\n    data = sigungu_data, \n    aes(\n      fill = index_class, \n      tooltip = my_tooltip, \n      data_id = SGG1_FNM\n    ), \n    show.legend = TRUE\n  ) +\n  geom_sf(\n    data = sido_shp, \n    fill = NA, \n    lwd = 0.5\n  ) +\n  scale_fill_manual(\n    name = \"Classes\", \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    values = class_color, drop = FALSE\n  ) \ngirafe(ggobj = gg) |&gt; \n  girafe_options(\n    opts_hover(css = \"fill: gray\")\n  )"
   },
   {
     "objectID": "lecture_4.html#leaflet-자바스크립트-라이브러리",
@@ -2616,5 +2616,75 @@
     "title": "\nDay 3탐색적 데이터 분석\n",
     "section": "\nggplot2 패키지: 커뮤니케이션의 도구\n",
     "text": "ggplot2 패키지: 커뮤니케이션의 도구\n\n\nhttps://allisonhorst.com/allison-horst"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-5",
+    "href": "lecture_4.html#테이블-tables-5",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables\n",
+    "text": "테이블 Tables\n\n\n\nDT의 기능\n\nPagination: 페이지를 이동할 수 있는 기능\nInstant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누를 상태에서 다른 컬럼을 선택)\nFiltering: 값을 정렬할 수 있는 기능\nEditable: 셀 값을 수정할 수 있는 기능\nButtons: 셀 숨기기, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-6",
+    "href": "lecture_4.html#테이블-tables-6",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables\n",
+    "text": "테이블 Tables\n\n\n\nCode\nResult\n\n\n\n\ndatatable(gapminder, filter = \"top\",\n          extensions = \"Buttons\",\n          options = list(\n            pageLength = 5,\n            autoWidth = TRUE,\n            dom = \"Bftip\",\n            buttons = c(\"copy\", \"excel\", \"pdf\", \"print\")\n          ))"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-gt-패키지",
+    "href": "lecture_4.html#테이블-tables-gt-패키지",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables: gt 패키지\n",
+    "text": "테이블 Tables: gt 패키지\n\n\nhttps://gt.rstudio.com/"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-gt-패키지-1",
+    "href": "lecture_4.html#테이블-tables-gt-패키지-1",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables: gt 패키지\n",
+    "text": "테이블 Tables: gt 패키지\n\n\nhttps://gt.rstudio.com/"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-dt-패키지",
+    "href": "lecture_4.html#테이블-tables-dt-패키지",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables: DT 패키지\n",
+    "text": "테이블 Tables: DT 패키지\n\n\n\nDT: R 래퍼 패키지\n\nDataTables(https://datatables.net/): 자바스크립트 라이브러리\n\n\n\n\nhttps://datatables.net/"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-dt-패키지-1",
+    "href": "lecture_4.html#테이블-tables-dt-패키지-1",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables: DT 패키지\n",
+    "text": "테이블 Tables: DT 패키지\n\n\n\nDT의 기능\n\nPagination: 페이지를 이동할 수 있는 기능\nInstant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누른 상태에서 다른 컬럼을 선택)\nFiltering: 값을 정렬할 수 있는 기능\nEditable: 셀 값을 수정할 수 있는 기능\nButtons: 셀 숨기기, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
+  },
+  {
+    "objectID": "lecture_4.html#테이블-tables-gt-패키지-2",
+    "href": "lecture_4.html#테이블-tables-gt-패키지-2",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "테이블 Tables: gt 패키지\n",
+    "text": "테이블 Tables: gt 패키지\n\n\nhttps://towardsdatascience.com/exploring-the-gt-grammar-of-tables-package-in-r-7fff9d0b40cd"
+  },
+  {
+    "objectID": "lecture_4.html#sf-패키지-2",
+    "href": "lecture_4.html#sf-패키지-2",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "\nsf 패키지",
+    "text": "sf 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(sf)\nlibrary(tmap)\nsigungu_shp &lt;- st_read(\"sigungu.shp\", options = \"ENCODING=CP949\")\nqtm(sigungu_shp)"
+  },
+  {
+    "objectID": "lecture_4.html#sf-패키지-주요-함수",
+    "href": "lecture_4.html#sf-패키지-주요-함수",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "\nsf 패키지: 주요 함수",
+    "text": "sf 패키지: 주요 함수\n\n읽고 쓰기: st_read(), st_write()\n투영법 관련: st_crs(), st_transform()\n기하 측정: st_area(), st_length(), st_perimeter(), st_distance()\n기하 변형: st_centroid(), st_buffer(), st_boundary(), st_simplify()\n기하 생성: st_point(), st_voronoi() , st_convex_hull(), st_make_grid()\n기하 검토: st_is_valid(), st_make_valid()\n중첩 오퍼레이션: st_intersection(), st_union(), st_crop()\n기타: st_coordinates(), st_cast(), st_as_sf(), st_graticule(), st_join()"
+  },
+  {
+    "objectID": "lecture_4.html#sf-패키지-st_read",
+    "href": "lecture_4.html#sf-패키지-st_read",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "\nsf 패키지: st_read()\n",
+    "text": "sf 패키지: st_read()\n\n\n\nCode\nResult\n\n\n\n\nlibrary(sf)\nlibrary(tmap)\nsigungu_shp &lt;- st_read(\"sigungu.shp\", options = \"ENCODING=CP949\")\nqtm(sigungu_shp)"
   }
 ]

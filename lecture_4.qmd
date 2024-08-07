@@ -55,15 +55,15 @@ editor_options:
 
 ## 자바스크립트 라이브러리: 정의
 
--   [JavaScript Library]{style="color:coral"}
+-   [**JavaScript Library**]{style="color:coral"}
 
 -   자바스크립트 프로그래밍 언어를 사용하여 웹 개발을 더 쉽고 효율적으로 할 수 있도록 도와주는 재사용 가능한 코드 모음
 
--   동적 웹 페이지를 제작을 위한 다양한 기능과 도구를 제공
+-   동적ㆍ반응형 웹 페이지 제작을 위한 다양한 기능과 도구를 제공
 
 -   HTML의 script 태그를 통해 웹사이트에 막바로 임베드할 수 있음
 
--   R의 [래퍼(wrapper) 패키지]{style="color:coral"}를 통해 손쉽게 사용 가능
+-   R의 [**래퍼 패키지**]{style="color:coral"}를 통해 손쉽게 사용 가능
 
 ## 자바스크립트 라이브러리: 종류
 
@@ -98,9 +98,8 @@ loading="lazy" style="width: 100%; height: 600px; border:
 
 ```{=html}
 <iframe src="https://kosis.kr/edu/share.do?shareID=S0500_16" loading="lazy" style="width: 100%; height: 600px; border:
-0px none;" allow="web-share; clipboard-write">
+0px none;" allow="web-share; clipboard-write"></iframe>
 ```
-</iframe>
 :::
 
 ## 임베딩 [Embedding]{style="font-size:2.5rem;color:gray"}: 사례 2
@@ -136,7 +135,19 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 
 ![[https://r-graph-gallery.com/table.html](https://r-graph-gallery.com/table.html){.uri style="font-size:0.75rem"}](images/clipboard-3923512479.png){fig-align="center"}
 
-## 테이블 [Tables]{style="font-size:2.5rem;color:gray"} {.smaller}
+## 테이블 [Tables: `gt` 패키지]{style="font-size:2.5rem;color:gray"}
+
+![[https://gt.rstudio.com/](https://gt.rstudio.com/){style="font-size:0.75rem"}](https://gt.rstudio.com/reference/figures/gt_workflow_diagram.svg){fig-align="center"}
+
+## 테이블 [Tables: `gt` 패키지]{style="font-size:2.5rem;color:gray"}
+
+![[https://gt.rstudio.com/](https://gt.rstudio.com/){style="font-size:0.75rem"}](https://gt.rstudio.com/reference/figures/gt_parts_of_a_table.svg){fig-align="center"}
+
+## 테이블 [Tables: `gt` 패키지]{style="font-size:2.5rem;color:gray"}
+
+![[https://towardsdatascience.com/exploring-the-gt-grammar-of-tables-package-in-r-7fff9d0b40cd](https://towardsdatascience.com/exploring-the-gt-grammar-of-tables-package-in-r-7fff9d0b40cd){style="font-size:0.75rem"}](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*lmJ_N_Hy3xGaB4W66L40FQ.jpeg)
+
+## 테이블 [Tables: DT 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
 
 -   `DT`: R 래퍼 패키지
 
@@ -144,7 +155,7 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 
 ![[https://datatables.net/](https://datatables.net/){style="font-size:0.75rem"}](images/clipboard-4023553912.png){fig-align="center"}
 
-## 테이블 [Tables]{style="font-size:2.5rem;color:gray"} {.smaller}
+## 테이블 [Tables: DT 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
 
 -   `DT`의 기능
 
@@ -152,7 +163,7 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 
     -   Instant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)
 
-    -   Multi-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누를 상태에서 다른 컬럼을 선택)
+    -   Multi-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누른 상태에서 다른 컬럼을 선택)
 
     -   Filtering: 값을 정렬할 수 있는 기능
 
@@ -168,14 +179,17 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 ```{r}
 #| eval: false
 #| echo: true
-datatable(gapminder, filter = "top",
-          extensions = "Buttons",
-          options = list(
-            pageLength = 5,
-            autoWidth = TRUE,
-            dom = "Bftip",
-            buttons = c("copy", "excel", "pdf", "print")
-          ))
+gapminder |> 
+  datatable(
+    filter = "top",
+    extensions = "Buttons",
+    options = list(
+      pageLength = 5,
+      autoWidth = TRUE,
+      dom = "Bftip",
+      buttons = c("copy", "excel", "pdf", "print")
+    )
+  )
 ```
 
 ## Result
@@ -183,14 +197,17 @@ datatable(gapminder, filter = "top",
 ```{r}
 library(DT)
 library(gapminder)
-datatable(gapminder, filter = "top",
-          extensions = "Buttons",
-          options = list(
-            pageLength = 5,
-            autoWidth = TRUE,
-            dom = "Bftip",
-            buttons = c("copy", "excel", "pdf", "print")
-          ))
+gapminder |> 
+  datatable(
+    filter = "top",
+    extensions = "Buttons",
+    options = list(
+      pageLength = 5,
+      autoWidth = TRUE,
+      dom = "Bftip",
+      buttons = c("copy", "excel", "pdf", "print")
+    )
+  )
 ```
 :::
 
@@ -231,10 +248,16 @@ datatable(gapminder, filter = "top",
 library(plotly)
 gapminder |> 
   filter(year == 2007) |> 
-  plot_ly(x = ~gdpPercap, y = ~lifeExp, color = ~continent,
-          text = ~paste("Country: ", country, 
-                        "<br>GDP per capita: ", gdpPercap, 
-                        "$<br>Life Expectancy at Birth:", lifeExp))
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    color = ~continent,
+    text = ~paste(
+      "Country: ", country, 
+      "<br>GDP per capita: ", gdpPercap, 
+      "$<br>Life Expectancy at Birth:", lifeExp
+    )
+  )
 ```
 
 ## Result
@@ -243,10 +266,16 @@ gapminder |>
 library(plotly)
 gapminder |> 
   filter(year == 2007) |> 
-  plot_ly(x = ~gdpPercap, y = ~lifeExp, color = ~continent,
-          text = ~paste("Country: ", country, 
-                        "<br>GDP per capita: ", gdpPercap, 
-                        "$<br>Life Expectancy at Birth:", lifeExp))
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    color = ~continent,
+    text = ~paste(
+      "Country: ", country, 
+      "<br>GDP per capita: ", gdpPercap, 
+      "$<br>Life Expectancy at Birth:", lifeExp
+    )
+  )
 ```
 :::
 
@@ -259,22 +288,38 @@ gapminder |>
 #| eval: false
 #| echo: true
 gapminder |> 
-  plot_ly(x = ~log10(gdpPercap), y = ~lifeExp,
-          text = ~paste("Country:", country, "</br>Continent:", continent, 
-"</br>lifeExp:", lifeExp)) |> 
-  add_markers(color = ~continent, size = ~pop, frame = ~year, 
-              marker = list(sizeref = 0.2, sizemode = "area"))
+  plot_ly(
+    x = ~log10(gdpPercap), y = ~lifeExp,
+    text = ~paste(
+      "Country:", country, 
+      "</br>Continent:", continent, 
+      "</br>lifeExp:", lifeExp)
+    ) |> 
+  add_markers(
+    color = ~continent, 
+    size = ~pop, 
+    frame = ~year, 
+    marker = list(sizeref = 0.2, sizemode = "area")
+  )
 ```
 
 ## Result
 
 ```{r}
 gapminder |> 
-  plot_ly(x = ~log10(gdpPercap), y = ~lifeExp,
-          text = ~paste("Country:", country, "</br>Continent:", continent, 
-"</br>lifeExp:", lifeExp)) |> 
-  add_markers(color = ~continent, size = ~pop, frame = ~year, 
-              marker = list(sizeref = 0.2, sizemode = "area"))
+  plot_ly(
+    x = ~log10(gdpPercap), y = ~lifeExp,
+    text = ~paste(
+      "Country:", country, 
+      "</br>Continent:", continent, 
+      "</br>lifeExp:", lifeExp)
+    ) |> 
+  add_markers(
+    color = ~continent, 
+    size = ~pop, 
+    frame = ~year, 
+    marker = list(sizeref = 0.2, sizemode = "area")
+  )
 ```
 :::
 
@@ -348,9 +393,9 @@ P + transition_time(year) +
 
 ## 개념적 기초 {.smaller}
 
--   형상(기하, 도형, 공간) 데이터 + 속성 데이터
+-   지리공간적 데이터: 형상 데이터 + 속성 데이터
 
-    -   [형상 데이터]{style="color:coral"}
+    -   [**형상 데이터**]{style="color:coral"} (기하, 도형, 공간 데이터)
 
         -   행정구역 경계와 같은 지리공간적 객체 자체에 대한 데이터
 
@@ -358,7 +403,7 @@ P + transition_time(year) +
 
         -   포인트(점), 라인(선), 폴리곤(역)의 형상으로 표출
 
-    -   [속성 데이터]{style="color:coral"}
+    -   [**속성 데이터**]{style="color:coral"}
 
         -   지리공간적 객체가 보유한 속성
 
@@ -372,7 +417,7 @@ P + transition_time(year) +
 
 ## 개념적 기초
 
--   [셰이프 파일(shape file)]{style="color:coral"}: 가장 널리 사용되는 형상 데이터
+-   [**셰이프 파일(shape file)**]{style="color:coral"}: 가장 널리 사용되는 형상 데이터
 
     -   `sigungu.shp`: 버텍스의 좌표값이 포함된 핵심 파일
 
@@ -390,7 +435,25 @@ P + transition_time(year) +
 
 ![[https://allisonhorst.com/r-packages-functions](https://allisonhorst.com/r-packages-functions){style="font-size:0.75rem"}](images/clipboard-601191076.png){fig-align="center" width="842"}
 
-## `sf` 패키지
+## `sf` 패키지: 주요 함수 {.smaller}
+
+-   읽고 쓰기: `st_read()`, `st_write()`
+
+-   투영법 관련: `st_crs()`, `st_transform()`
+
+-   기하 측정: `st_area()`, `st_length()`, `st_perimeter()`, `st_distance()`
+
+-   기하 변형: `st_centroid()`, `st_buffer()`, `st_boundary()`, `st_simplify()`
+
+-   기하 생성: `st_point()`, `st_voronoi()` , `st_convex_hull()`, `st_make_grid()`
+
+-   기하 검토: `st_is_valid()`, `st_make_valid()`
+
+-   중첩 오퍼레이션: `st_intersection()`, `st_union()`, `st_crop()`
+
+-   기타: `st_coordinates()`, `st_cast()`, `st_as_sf()`, `st_graticule()`, `st_join()`
+
+## `sf` 패키지: `st_read()`
 
 ::: panel-tabset
 ## Code
@@ -523,12 +586,22 @@ class_color <- c("1" = "#d7191c", "2" = "#fdae61",
                  "3" = "#ffffbf", "4" = "#a6d96a", 
                  "5" = "#1a9641")
 ggplot_map <- ggplot() +
-  geom_sf(data = sigungu_data, aes(fill = index_class, text = SGG1_FNM), show.legend = TRUE) +
-  geom_sf(data = sido_shp, fill = NA, lwd = 0.5) +
-  scale_fill_manual(name = "Classes", 
-                    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
-                               "1.0 ~ 1.5", ">= 1.5"), 
-                    values = class_color, drop = FALSE) 
+  geom_sf(
+    data = sigungu_data, 
+    aes(fill = index_class, text = SGG1_FNM), 
+    show.legend = TRUE
+  ) +
+  geom_sf(
+    data = sido_shp, 
+    fill = NA, 
+    lwd = 0.5
+  ) +
+  scale_fill_manual(
+    name = "Classes", 
+    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
+               "1.0 ~ 1.5", ">= 1.5"), 
+    values = class_color, drop = FALSE
+  ) 
 ggplot_map
 ```
 
@@ -610,13 +683,20 @@ gg <- ggplot() +
       fill = index_class, 
       tooltip = my_tooltip, 
       data_id = SGG1_FNM
-      ), 
-    show.legend = TRUE) +
-  geom_sf(data = sido_shp, fill = NA, lwd = 0.5) +
+    ), 
+    show.legend = TRUE
+  ) +
+  geom_sf(
+    data = sido_shp, 
+    fill = NA, 
+    lwd = 0.5
+  ) +
   scale_fill_manual(
     name = "Classes", 
-    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", "1.0 ~ 1.5", ">= 1.5"), 
-    values = class_color, drop = FALSE) 
+    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
+               "1.0 ~ 1.5", ">= 1.5"), 
+    values = class_color, drop = FALSE
+  ) 
 girafe(ggobj = gg) |> 
   girafe_options(
     opts_hover(css = "fill: gray")
@@ -640,13 +720,20 @@ gg <- ggplot() +
       fill = index_class, 
       tooltip = my_tooltip, 
       data_id = SGG1_FNM
-      ), 
-    show.legend = TRUE) +
-  geom_sf(data = sido_shp, fill = NA, lwd = 0.5) +
+    ), 
+    show.legend = TRUE
+  ) +
+  geom_sf(
+    data = sido_shp, 
+    fill = NA, 
+    lwd = 0.5
+  ) +
   scale_fill_manual(
     name = "Classes", 
-    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", "1.0 ~ 1.5", ">= 1.5"), 
-    values = class_color, drop = FALSE) 
+    labels = c("< 0.2", "0.2 ~ 0.5", "0.5 ~ 1.0", 
+               "1.0 ~ 1.5", ">= 1.5"), 
+    values = class_color, drop = FALSE
+  ) 
 girafe(ggobj = gg) |> 
   girafe_options(
     opts_hover(css = "fill: gray")
