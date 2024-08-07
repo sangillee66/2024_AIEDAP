@@ -61,9 +61,9 @@ editor_options:
 
 -   자바스크립트 프로그래밍 언어를 사용하여 웹 개발을 더 쉽고 효율적으로 할 수 있도록 도와주는 재사용 가능한 코드 모음
 
--   동적ㆍ반응형 웹 페이지 제작을 위한 다양한 기능과 도구 제공
+    -   동적ㆍ반응형 웹 페이지 제작을 위한 다양한 기능 제공
 
--   HTML의 script 태그를 통해 웹사이트에 막바로 임베드 가능
+    -   HTML의 script 태그를 통해 웹사이트에 임베딩 가능
 
 -   R의 [**래퍼 패키지**]{style="color:coral"}를 통해 손쉽게 사용 가능
 
@@ -151,9 +151,9 @@ loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-
 
 ## 테이블 [Tables: `DT` 패키지]{style="font-size:2.5rem;color:gray"} {.smaller}
 
--   `DT`: R 래퍼 패키지
+-   [DataTables](https://datatables.net/): 자바스크립트 라이브러리, 인트렉티브 테이블 객체 생성
 
-    -   [DataTables](https://datatables.net/): 자바스크립트 라이브러리, 인트렉티브 테이블 객체 생성
+    -   `DT`: R 래퍼 패키지
 
 ![[https://datatables.net/](https://datatables.net/){style="font-size:0.75rem"}](images/clipboard-4023553912.png){fig-align="center"}
 
@@ -188,7 +188,7 @@ gapminder |>
     options = list(
       pageLength = 5,
       autoWidth = TRUE,
-      dom = "Bftip",
+      dom = "Bfrtip",
       buttons = c("copy", "excel", "pdf", "print")
     )
   )
@@ -502,6 +502,150 @@ library(sf)
 library(tmap)
 sigungu_shp <- st_read("sigungu.shp", options = "ENCODING=CP949")
 qtm(sigungu_shp)
+```
+:::
+
+## CRS: 정의 {.smaller}
+
+-   좌표참조계 Coordinate Reference System
+
+-   모든 지리공간데이터는 특정한 좌표참조계에 의거해 제작되며 이러한 좌표참조계는 매우 다양함
+
+    -   준거타원체
+
+    -   투영법
+
+    -   투영 파라미터: 투영축, 투영격, 중앙경선, 가상원점 등
+
+-   지리공간데이터의 SRID(Spatial Reference System Identifiers, 공간참조계식별자)
+
+-   `sf` 패키지: `st_crs()` 함수
+
+## CRS: 방식 {.smaller}
+
+-   PROJ 정형문자열
+
+    -   <https://proj.org/en/9.4/>
+    -   준거타원체, 투영법, 투영 파라미터를 + 기호로 연결해 작성한 문자열
+    -   UTM-K
+        -   +proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m
+
+-   EPSG 숫자코드
+
+    -   <https://epsg.io/>
+    -   모든 CRS에 1024\~32767의 고유 숫자를 부여
+    -   UTM-K
+        -   EPSG: 5179
+
+## CRS: PROJ 정형문자열
+
+::: {style="font-size:1.5rem"}
+-   세계지도를 위한 주요 투영법의 별명(alias) 및 PROJ 파라미터
+
+| 투영법                                        | PROJ 파라미터 |
+|-----------------------------------------------|---------------|
+| 정적원통 도법 Equal Area Cylindrical          | +proj=cea     |
+| 컴펙트 밀러 도법 Compact Miller               | +proj=comill  |
+| 에케르트 IV 도법 Eckert IV                    | +proj=eck4    |
+| 정거원통 도법 Equidistant Cylindrical         | +proj=eqc     |
+| 구드 도법 Goode Homolosine                    | +proj=goode   |
+| 단열형 구드 도법 Interrupted Goode Homolosine | +proj=igh     |
+| 메르카토르 도법 Mercator                      | +proj=merc    |
+| 몰바이데 도법 Mollweide                       | +proj=moll    |
+| 로빈슨 도법 Robinson                          | +proj=robin   |
+| 시뉴소이드 도법 Sinusoidal                    | +proj=sinu    |
+| 빈켈트리펠 도법 Winkel Tripel                 | +proj=wintri  |
+:::
+
+## CRS: EPSG 숫자코드 {.smaller}
+
+::: {style="font-size:1.5rem"}
+-   널리 사용되는 CSR의 EPSG
+
+| 적용 스케일 | EPSG 숫자코드 | 설명                                                  |
+|------------------------|------------------------|------------------------|
+| 지구적      | EPSG:4326     | WGS84, 측지좌표계, GPS에 사용                         |
+|             | EPSG:3857     | 웹메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용 |
+|             | EPSG:7789     | ITRF2014                                              |
+| 우리나라    | EPSG:5179     | UTM-K                                                 |
+|             | EPSG:5185     | 서부원점                                              |
+|             | EPSG:5186     | 중부원점                                              |
+|             | EPSG:5187     | 동부원점                                              |
+|             | EPSG:5188     | 동해원점                                              |
+
+: {tbl-colwidths="\[20,25,55\]"}
+:::
+
+## CRS: 세계지도에 적용 {.smaller}
+
+::: panel-tabset
+```{r}
+#| output: false
+library(tidyverse)
+library(spData)
+data(world)
+world <- st_as_sf(world)
+ne_bbox <- st_read("ne_bbox.shp")
+```
+
+## 플라트카레
+
+```{r}
+ggplot() +
+  geom_sf(data = world) +
+  geom_sf(data = ne_bbox, fill = NA) +
+  coord_sf(crs = "+proj=eqc") +
+  scale_x_continuous(breaks = seq(-180, 180, 30)) +
+  scale_y_continuous(breaks = c(-89.9, seq(-60, 60, 30), 89.9)) +
+  theme(
+    panel.background = element_rect("white"),
+    panel.grid = element_line(color = "gray80")
+  )
+```
+
+## 컴펙트 밀러 도법
+
+```{r}
+ggplot() +
+  geom_sf(data = world) +
+  geom_sf(data = ne_bbox, fill = NA) +
+  coord_sf(crs = "+proj=comill") +
+  scale_x_continuous(breaks = seq(-180, 180, 30)) +
+  scale_y_continuous(breaks = c(-89.9, seq(-60, 60, 30), 89.9)) +
+  theme(
+    panel.background = element_rect("white"),
+    panel.grid = element_line(color = "gray80")
+  )
+```
+
+## 로빈슨
+
+```{r}
+ggplot() +
+  geom_sf(data = world) +
+  geom_sf(data = ne_bbox, fill = NA) +
+  coord_sf(crs = "+proj=robin") +
+  scale_x_continuous(breaks = seq(-180, 180, 30)) +
+  scale_y_continuous(breaks = c(-89.9, seq(-60, 60, 30), 89.9)) +
+  theme(
+    panel.background = element_rect("white"),
+    panel.grid = element_line(color = "gray80")
+  )
+```
+
+## 에케르트 IV
+
+```{r}
+ggplot() +
+  geom_sf(data = world) +
+  geom_sf(data = ne_bbox, fill = NA) +
+  coord_sf(crs = "+proj=eck4") +
+  scale_x_continuous(breaks = seq(-180, 180, 30)) +
+  scale_y_continuous(breaks = c(-89.9, seq(-60, 60, 30), 89.9)) +
+  theme(
+    panel.background = element_rect("white"),
+    panel.grid = element_line(color = "gray80")
+  )
 ```
 :::
 

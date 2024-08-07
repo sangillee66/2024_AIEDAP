@@ -25,12 +25,12 @@ date-modified: last-modified
 
 ## 강의 자료
 
-|        Day         | 주제                                                            |                       강의 자료                       |                    실습 자료                     |
-|:------------------:|-----------------------------------------------------------------|:-----------------------------------------------------:|:------------------------------------------------:|
-| Day 1<br> (8월5일) | AIㆍ디지털 역량과 사회 교과                                     | [{{< bi filetype-html size=1.5rem >}}](lecture_1.qmd) | [{{< bi filetype-html size=1.5rem >}}](Day1.qmd) |
-| Day 2<br> (8월6일) | 데이터의 수집 및 정련화                                         | [{{< bi filetype-html size=1.5rem >}}](lecture_2.qmd) | [{{< bi filetype-html size=1.5rem >}}](Day2.qmd) |
-| Day 3<br> (8월7일) | 탐색적 데이터 분석                                              | [{{< bi filetype-html size=1.5rem >}}](lecture_3.qmd) | [{{< bi filetype-html size=1.5rem >}}](Day3.qmd) |
-| Day 4<br> (8월8일) | 고급 시각화와 디지털 교수-학습 대시보드의 설계                  | [{{< bi filetype-html size=1.5rem >}}](lecture_4.qmd) |                                                  |
-| Day 5<br> (8월9일) | 고급 인트렉티브 기능과 디지털 교수-학습 대시보드의 제작 및 공유 | [{{< bi filetype-html size=1.5rem >}}](lecture_5.qmd) |                                                  |
+|        Day         | 주제                                                            |                       강의 자료                       |                                              실습 자료                                               |
+|:--------------:|----------------------|:----------------:|:---------------:|
+| Day 1<br> (8월5일) | AIㆍ디지털 역량과 사회 교과                                     | [{{< bi filetype-html size=1.5rem >}}](lecture_1.qmd) |                           [{{< bi filetype-html size=1.5rem >}}](Day1.qmd)                           |
+| Day 2<br> (8월6일) | 데이터의 수집 및 정련화                                         | [{{< bi filetype-html size=1.5rem >}}](lecture_2.qmd) |                           [{{< bi filetype-html size=1.5rem >}}](Day2.qmd)                           |
+| Day 3<br> (8월7일) | 탐색적 데이터 분석                                              | [{{< bi filetype-html size=1.5rem >}}](lecture_3.qmd) |                           [{{< bi filetype-html size=1.5rem >}}](Day3.qmd)                           |
+| Day 4<br> (8월8일) | 고급 시각화와 디지털 교수-학습 대시보드의 설계                  | [{{< bi filetype-html size=1.5rem >}}](lecture_4.qmd) | [{{< bi filetype-html size=1.5rem >}}](Day4.qmd) [{{< bi file-earmark-zip size=1.5rem >}}](Day4.zip) |
+| Day 5<br> (8월9일) | 고급 인트렉티브 기능과 디지털 교수-학습 대시보드의 제작 및 공유 | [{{< bi filetype-html size=1.5rem >}}](lecture_5.qmd) |                                                                                                      |
 
 : {tbl-colwidths="\[14,70,8,8\]"}
