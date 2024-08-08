@@ -109,7 +109,7 @@
     "href": "reference.html#시각화",
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "시각화",
-    "text": "시각화\n\nWickham, Hadley. 2016. ggplot2: Elegant Graphics for Data Analysis. 2nd edition, Switzerland: Springer. (박진수 옮김, 2017. R로 분석한 데이터를 멋진 그래픽으로 ggplot2. 부천: 프리렉.)\n\n위의 영문 웹북으로 들어가면 이미 3판이 업데이트되어 있음을 확인할 수 있습니다. 번역서는 2판 기준이므로 원서 웹북을 읽기를 권합니다.\n\nKabacoff, Robert, 2024, Modern Data Visualization with R, Boca Raton: CRC Press.\n\n아직 살펴보지 못했습니다."
+    "text": "시각화\n\nWickham, Hadley. 2016. ggplot2: Elegant Graphics for Data Analysis. 2nd edition, Switzerland: Springer. (박진수 옮김, 2017. R로 분석한 데이터를 멋진 그래픽으로 ggplot2. 부천: 프리렉.)\n\n위의 영문 웹북으로 들어가면 이미 3판이 업데이트되어 있음을 확인할 수 있습니다. 번역서는 2판 기준이므로 원서 웹북을 읽기를 권합니다.\n\nSievert, C., 2020, Interactive Web-Based Data Visualization with R, plotly, and shiny, Boca Raton: CRC Press.\n\n훌륭한 책입니다. 샤이니를 일부 다루고 있다는 것도 좋습니다.\n\nKabacoff, Robert, 2024, Modern Data Visualization with R, Boca Raton: CRC Press.\n\n아직 살펴보지 못했습니다.\n\n이기준, 2023, Plotly로 시작하는 인터렉티브 데이터 시각화 in R & 파이썬, 제이펍.\n\n한글로된 Plotly 시각화 도서입니다. 제대로 살펴보아진 못했지만 책이 짜임새 있어 보이고 R의 랩퍼 패키지를 활용한 예제가 제시되어 있다는 점에서 많은 도움이 될 것으로 생각됩니다."
   },
   {
     "objectID": "material.html",
@@ -1586,7 +1586,7 @@
     "href": "lecture_4.html#내용",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "내용",
-    "text": "내용\n\n\n동적ㆍ반응형 시각화\n\n역동성과 상호작용성이 부가된 시각화\n방식\n\n임베딩(embedding)\n동적ㆍ반응형 테이블과 그래프 제작\n\n\n\n\n\n지리공간적 시각화\n\n“지도는 텍스트, 테이블, 챠트와 같은 것들 보다 훨씬 더 효과적으로 정보를 전달할 수 있다.”\n공간사이언스의 지식 필요\n정적, 동적ㆍ반응형"
+    "text": "내용\n\n\n동적ㆍ반응형 시각화\n\n역동성과 상호작용성이 부가된 시각화\n방식\n\n임베딩(embedding)\n동적ㆍ반응형 테이블과 그래프 제작\n\n\n\n\n\n지리공간적 시각화\n\n“지도는 텍스트, 테이블, 챠트 보다 훨씬 더 효과적으로 정보를 전달할 수 있다.”\n공간사이언스(spatial science)의 지식 필요\n정적, 동적ㆍ반응형"
   },
   {
     "objectID": "lecture_4.html#자바스크립트-라이브러리-정의",
@@ -1614,7 +1614,7 @@
     "href": "lecture_4.html#임베딩-embedding",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "임베딩 Embedding\n",
-    "text": "임베딩 Embedding\n\n\n동적ㆍ반응형 시각화가 구현되어 있는 웹사이트를 불러와 내재화\nHTML의 iframe 태그 활용"
+    "text": "임베딩 Embedding\n\n\n동적ㆍ반응형 시각화가 구현되어 있는 웹사이트를 내재화\nHTML의 iframe 태그 활용"
   },
   {
     "objectID": "lecture_4.html#임베딩-embedding-사례-1",
@@ -1670,14 +1670,14 @@
     "href": "lecture_4.html#그래프-graphs",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "그래프 Graphs\n",
-    "text": "그래프 Graphs\n\n\n\n자바스크립트 라이브러리\n\nPlotly (https://plotly.com/graphing-libraries/)\nD3 (https://d3js.org/)\nHighcharts (https://www.highcharts.com/)\nECharts (https://echarts.apache.org/)\ndygraphs (https://dygraphs.com/)\n\n\nR 랩퍼 패키지"
+    "text": "그래프 Graphs\n\n\n\n\n\n\n\n자바스크립트 라이브러리\nR 래퍼 패키지\n\n\n\nPlotly\nplotly\n\n\nD3\nr2d3\n\n\nHighcharts\nhighcharter\n\n\nECharts\necharts4r\n\n\ndygraphs\ndygraphs"
   },
   {
     "objectID": "lecture_4.html#그래프-graphs-plotly",
     "href": "lecture_4.html#그래프-graphs-plotly",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "그래프 Graphs: plotly\n",
-    "text": "그래프 Graphs: plotly\n\n\nPlotly: 자바스크립트 라이브러리, 동적ㆍ반응형 그래프 생성\n\nR 래퍼 패키지: plotly package (https://plotly.com/r/)\n\n\nggplotly() function\n\n\n\n\nhttps://plotly.com/"
+    "text": "그래프 Graphs: plotly\n\n\nPlotly: 자바스크립트 라이브러리, 동적ㆍ반응형 그래프 생성\n\nR 래퍼 패키지: plotly package\n\n\nggplotly() 함수\n\n\n\n\nhttps://plotly.com/"
   },
   {
     "objectID": "lecture_4.html#그래프-graphs-plotly-1",
@@ -1768,7 +1768,7 @@
     "href": "lecture_4.html#leaflet-자바스크립트-라이브러리",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nleaflet: 자바스크립트 라이브러리",
-    "text": "leaflet: 자바스크립트 라이브러리\n\nhttps://leafletjs.com/"
+    "text": "leaflet: 자바스크립트 라이브러리\n\nR 래퍼 패키지: leaflet\n\n\n\nhttps://leafletjs.com/"
   },
   {
     "objectID": "lecture_4.html#leaflet-단순-일반도",
@@ -1782,7 +1782,7 @@
     "href": "lecture_4.html#leaflet-매시업mashup-지도",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nleaflet: 매시업(mashup) 지도",
-    "text": "leaflet: 매시업(mashup) 지도\n\n\n세계지도\n우리나라 지도\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "leaflet: 매시업(mashup) 지도\n\n\n세계지도: Code\n세계지도: Result\n우리나라 지도: Code\n우리나라 지도: Result\n\n\n\n\nbins &lt;- c(0, 1.5, 2.1, 3, 4, 5, Inf)\npal &lt;- colorBin(\"YlOrRd\", domain = world_data$TFR, bins = bins)\nlabels &lt;- sprintf(\"&lt;strong&gt;%s&lt;/strong&gt;&lt;br/&gt;%g\",\n  world_data$name_long, world_data$TFR) |&gt; lapply(htmltools::HTML)\n\nworld_data &lt;- world_data |&gt; \n  filter(\n    !is.na(TFR)\n  )\n\nleaflet(world_data) |&gt; \n  addProviderTiles(providers$Esri.WorldTopoMap) |&gt; \n  addPolygons(\n    fillColor = ~pal(TFR),\n    weight =  2, \n    opacity = 1,\n    color = \"white\",\n    dashArray = \"3\",\n    fillOpacity = 0.6,\n    highlightOptions = highlightOptions(\n      weight = 5,\n      color = \"#666\",\n      dashArray = \"\",\n      fillOpacity = 0.6,\n      bringToFront = TRUE),\n    label = labels,\n    labelOptions = labelOptions(\n      style = list(\"font-weight\" = \"normal\", padding = \"3px 8px\"),\n      textsize = \"15px\",\n      direction = \"auto\")\n  ) |&gt; \n  addLegend(\n    pal = pal, values = ~TFR, opacity = 0.6, title = NULL,\n    position = \"bottomright\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\nclass_color &lt;- c(\"1\" = \"#d7191c\", \"2\" = \"#fdae61\",\n                 \"3\" = \"#ffffbf\", \"4\" = \"#a6d96a\", \n                 \"5\" = \"#1a9641\")\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = as.numeric(index)\n  )\ntmap_mode(mode = \"view\")\nmy_tmap &lt;- tm_shape(sigungu_data) + \n  tm_polygons(\n    col = \"index\",\n    palette = class_color, \n    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), \n    labels = c(\"&lt; 0.2\", \"0.2~0.5\", \"0.5~1.0\", \"1.0~1.5\", \"&gt;= 1.5\"),\n    title = \"Classes\", \n    popup.vars=c(\"지역소멸위험지수: \" = \"index\"), \n    popup.format = list(index = list(digits = 3)), \n    id = \"SGG1_FNM\", \n    alpha = 0.6, \n    border.alpha = 0.5\n  ) +\n  tm_shape(sido_shp) + tm_borders(lwd = 2)\nmy_tmap\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
   },
   {
     "objectID": "lecture_5.html#section",
@@ -2657,7 +2657,7 @@
     "href": "lecture_4.html#테이블-tables-dt-패키지-1",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "테이블 Tables: DT 패키지\n",
-    "text": "테이블 Tables: DT 패키지\n\n\n\nDT의 기능\n\nPagination: 페이지를 이동할 수 있는 기능\nInstant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누른 상태에서 다른 컬럼을 선택)\nFiltering: 값을 정렬할 수 있는 기능\nEditable: 셀 값을 수정할 수 있는 기능\nButtons: 셀 숨기기, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
+    "text": "테이블 Tables: DT 패키지\n\n\nPagination: 페이지 이동 기능\nInstant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nOrdering/sorging: 값 정렬 기능\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누른 상태에서 다른 컬럼을 선택)\nFiltering: 값을 추리는 기능\nEditable: 셀 값의 수정 기능\nButtons: 셀 숨기기, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
   },
   {
     "objectID": "lecture_4.html#테이블-tables-gt-패키지-2",
@@ -2769,7 +2769,7 @@
     "href": "lecture_4.html#지리공간적-데이터의-종류",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "지리공간적 데이터의 종류",
-    "text": "지리공간적 데이터의 종류\n\n\n벡터 데이터\n\n포인트, 라인, 폴리곤\n형상 데이터 + 속성 데이터\n\n\n\n래스터 데이터\n\n그리드 셀(grid cell)\n일체형"
+    "text": "지리공간적 데이터의 종류\n\n\n벡터(vector) 데이터\n\n포인트, 라인, 폴리곤\n형상 데이터 + 속성 데이터\n\n\n\n래스터(raster) 데이터\n\n그리드 셀(grid cell)\n일체형"
   },
   {
     "objectID": "lecture_4.html#지리공간적-데이터의-종류-1",
@@ -2811,14 +2811,14 @@
     "href": "lecture_4.html#지리공간적-시각화-두-가지-관점",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "지리공간적 시각화: 두 가지 관점",
-    "text": "지리공간적 시각화: 두 가지 관점\n\n\n\n\n\n“지도도 그래프다” 관점\n\n일반성\n\nggplot2패키지\n\n\ngeom_sf(), coord_sf()\n\n\n\n\n\n\n“지도는 지도이다” 관점\n\n특수성\n\ntmap 패키지\n\n3.99.9001"
+    "text": "지리공간적 시각화: 두 가지 관점\n\n\n\n\n\n“지도도 그래프다” 관점: 일반성\n\n\nggplot2 패키지\n\n\ngeom_map(), coord_map()\n\n\ngeom_sf(), coord_sf()\n\n\n\n\n\n\n“지도는 지도이다” 관점: 특수성\n\n\ntmap 패키지\n\n3.99.9001"
   },
   {
     "objectID": "lecture_4.html#벡터-데이터",
     "href": "lecture_4.html#벡터-데이터",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "벡터 데이터",
-    "text": "벡터 데이터\n\n\n벡터 데이터: 형상 데이터 + 속성 데이터\n\n\n형상 데이터 (기하, 도형, 공간 데이터)\n\n행정구역 경계와 같은 지리공간적 객체 자체에 대한 데이터\n버텍스(vertex)의 좌표값을 가진 데이터\n포인트(점), 라인(선), 폴리곤(역)의 형상으로 표출\n\n\n\n속성 데이터\n\n지리공간적 객체가 보유한 속성\n기존 일반 데이터와 동일\n\n\n\n\n\n조인: left_join() 함수\n\n왼편: 형상 데이터\n오른편: 속성 데이터"
+    "text": "벡터 데이터\n\n\n벡터 데이터: 형상 데이터 + 속성 데이터\n\n\n형상 데이터 (기하, 도형, 공간 데이터)\n\n행정구역과 같은 지리공간적 객체 자체에 대한 데이터\n포인트(점), 라인(선), 폴리곤(역)로 구분\n버텍스(vertex)의 좌표값\n\n\n\n속성 데이터\n\n지리공간적 객체가 보유한 속성\n기존 일반 데이터와 동일\n\n\n\n\n\n조인: left_join() 함수\n\n왼편: 형상 데이터\n오른편: 속성 데이터"
   },
   {
     "objectID": "lecture_4.html#벡터-데이터-1",
@@ -2931,5 +2931,26 @@
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "",
     "text": "https://r4ds.hadley.nz/intro"
+  },
+  {
+    "objectID": "lecture_4.html#crs",
+    "href": "lecture_4.html#crs",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "CRS",
+    "text": "CRS\n\nhttps://datacarpentry.org/organization-geospatial/03-crs.html"
+  },
+  {
+    "objectID": "lecture_4.html#고차원적-탐색과-커뮤니케이션을-위한-시각화",
+    "href": "lecture_4.html#고차원적-탐색과-커뮤니케이션을-위한-시각화",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "고차원적 탐색과 커뮤니케이션을 위한 시각화",
+    "text": "고차원적 탐색과 커뮤니케이션을 위한 시각화\n\nhttps://r4ds.hadley.nz/intro"
+  },
+  {
+    "objectID": "lecture_4.html#leaflet-매시업mashup-주제도",
+    "href": "lecture_4.html#leaflet-매시업mashup-주제도",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "\nleaflet: 매시업(mashup) 주제도",
+    "text": "leaflet: 매시업(mashup) 주제도\n\n\n세계지도: Code\n세계지도: Result\n우리나라 지도: Code\n우리나라 지도: Result\n\n\n\n\nbins &lt;- c(0, 1.5, 2.1, 3, 4, 5, Inf)\npal &lt;- colorBin(\"YlOrRd\", domain = world_data$TFR, bins = bins)\nlabels &lt;- sprintf(\"&lt;strong&gt;%s&lt;/strong&gt;&lt;br/&gt;%g\",\n  world_data$name_long, world_data$TFR) |&gt; lapply(htmltools::HTML)\n\nworld_data &lt;- world_data |&gt; \n  filter(\n    !is.na(TFR)\n  )\n\nleaflet(world_data) |&gt; \n  addProviderTiles(providers$Esri.WorldTopoMap) |&gt; \n  addPolygons(\n    fillColor = ~pal(TFR),\n    weight =  2, \n    opacity = 1,\n    color = \"white\",\n    dashArray = \"3\",\n    fillOpacity = 0.6,\n    highlightOptions = highlightOptions(\n      weight = 5,\n      color = \"#666\",\n      dashArray = \"\",\n      fillOpacity = 0.6,\n      bringToFront = TRUE),\n    label = labels,\n    labelOptions = labelOptions(\n      style = list(\"font-weight\" = \"normal\", padding = \"3px 8px\"),\n      textsize = \"15px\",\n      direction = \"auto\")\n  ) |&gt; \n  addLegend(\n    pal = pal, values = ~TFR, opacity = 0.6, title = NULL,\n    position = \"bottomright\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\nclass_color &lt;- c(\"1\" = \"#d7191c\", \"2\" = \"#fdae61\",\n                 \"3\" = \"#ffffbf\", \"4\" = \"#a6d96a\", \n                 \"5\" = \"#1a9641\")\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = as.numeric(index)\n  )\ntmap_mode(mode = \"view\")\nmy_tmap &lt;- tm_shape(sigungu_data) + \n  tm_polygons(\n    col = \"index\",\n    palette = class_color, \n    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), \n    labels = c(\"&lt; 0.2\", \"0.2~0.5\", \"0.5~1.0\", \"1.0~1.5\", \"&gt;= 1.5\"),\n    title = \"Classes\", \n    popup.vars=c(\"지역소멸위험지수: \" = \"index\"), \n    popup.format = list(index = list(digits = 3)), \n    id = \"SGG1_FNM\", \n    alpha = 0.6, \n    border.alpha = 0.5\n  ) +\n  tm_shape(sido_shp) + tm_borders(lwd = 2)\nmy_tmap\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
   }
 ]
