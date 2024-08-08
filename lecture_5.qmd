@@ -70,7 +70,7 @@ editor_options:
 
 ![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-484047229.png)
 
-## 데이터사이언스과정의 마지막 혹은 정점
+## 데이터사이언스 프로세스의 정점
 
 ![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
@@ -112,23 +112,23 @@ editor_options:
 
 -   Assistance with statistics and data science
 
-## 생성형 AI 관련 R 패키지 {.smaller}
+## 생성형 AI 관련 R 패키지
 
--   `Air` (<https://github.com/soumyaray/air>)
+-   [`Air`](https://github.com/soumyaray/air)
 
--   `TheOpenAIR` (<https://openair-lib.org/>)
+-   [`TheOpenAIR`](https://openair-lib.org/)
 
--   `RTutor` (<https://github.com/gexijin/RTutor>)
+-   [`RTutor`](https://github.com/gexijin/RTutor)
 
--   `askgpt` (<https://github.com/JBGruber/askgpt>)
+-   [`askgpt`](https://github.com/JBGruber/askgpt)
 
--   `gptstudio` (<https://github.com/MichelNivard/gptstudio>)
+-   [`gptstudio`](https://github.com/MichelNivard/gptstudio)
 
--   `gpttools` (<https://github.com/JamesHWade/gpttools>)
+-   [`gpttools`](https://github.com/JamesHWade/gpttools)
 
--   `gptchatteR` (<https://github.com/isinaltinkaya/gptchatteR>)
+-   [`gptchatteR`](https://github.com/isinaltinkaya/gptchatteR)
 
--   `GenAI` (<https://genai.gd.edu.kg/>)
+-   [`GenAI`](https://genai.gd.edu.kg/)
 
 ## `GenAI`의 접근법
 
@@ -173,11 +173,15 @@ shinyapps.io(<https://www.shinyapps.io/>)
 ## Quarto와 `Shiny`의 결합
 
 ::: r-fit-text
--   Quarto 대시보드 속에 `Shiny` 앱을 임베딩하여 제작
+-   Quarto 중심 방식
+
+    -   Quarto 대시보드 속에 `Shiny` 앱을 임베딩하여 제작
 
     -   <https://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html>
 
--   `Shiny` 요소를 가진 Quarto 대시보드 전체를 `Shiny` 앱으로 제작
+-   Shiny 중심 방식
+
+    -   `Shiny` 요소를 가진 Quarto 대시보드 전체를 `Shiny` 앱으로 제작
 
     -   <https://sangillee.shinyapps.io/Dashboard_Example/>
 :::

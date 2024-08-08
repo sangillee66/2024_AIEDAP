@@ -215,13 +215,15 @@ gapminder |>
 
 ## 그래프 [Graphs]{style="font-size:2.5rem;color:gray"}
 
-| 자바스크립트 라이브러리                          | R 래퍼 패키지                                   |
+| 자바스크립트 라이브러리                                    | R 래퍼 패키지                                                                |
 |------------------------------------|------------------------------------|
-| [Plotly](https://plotly.com/graphing-libraries/) | [plotly](https://plotly.com/r/)                 |
-| [D3](https://d3js.org/)                          | [r2d3](https://rstudio.github.io/r2d3/)         |
-| [Highcharts](https://www.highcharts.com/)        | [highcharter](https://jkunst.com/highcharter/)  |
-| [ECharts](https://echarts.apache.org/)           | [echarts4r](https://echarts4r.john-coene.com/)  |
-| [dygraphs](https://dygraphs.com/)                | [dygraphs](https://rstudio.github.io/dygraphs/) |
+| [Plotly](https://plotly.com/graphing-libraries/)           | [plotly](https://plotly.com/r/)                                              |
+| [D3](https://d3js.org/)                                    | [r2d3](https://rstudio.github.io/r2d3/)                                      |
+| [Highcharts](https://www.highcharts.com/)                  | [highcharter](https://jkunst.com/highcharter/)                               |
+| [ECharts](https://echarts.apache.org/)                     | [echarts4r](https://echarts4r.john-coene.com/)                               |
+| [dygraphs](https://dygraphs.com/)                          | [dygraphs](https://rstudio.github.io/dygraphs/)                              |
+| [Google Charts](https://developers.google.com/chart?hl=ko) | [googleVis](https://mages.github.io/googleVis/articles/googleVis_intro.html) |
+| [Chart.js](https://www.chartjs.org/docs/latest/)           | [chartjs](https://tutuchan.github.io/chartjs/)                               |
 
 : {tbl-colwidths="\[50,50\]"}
 

@@ -1670,7 +1670,7 @@
     "href": "lecture_4.html#그래프-graphs",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "그래프 Graphs\n",
-    "text": "그래프 Graphs\n\n\n\n\n\n\n\n자바스크립트 라이브러리\nR 래퍼 패키지\n\n\n\nPlotly\nplotly\n\n\nD3\nr2d3\n\n\nHighcharts\nhighcharter\n\n\nECharts\necharts4r\n\n\ndygraphs\ndygraphs"
+    "text": "그래프 Graphs\n\n\n\n\n\n\n\n자바스크립트 라이브러리\nR 래퍼 패키지\n\n\n\nPlotly\nplotly\n\n\nD3\nr2d3\n\n\nHighcharts\nhighcharter\n\n\nECharts\necharts4r\n\n\ndygraphs\ndygraphs\n\n\nGoogle Charts\ngoogleVis\n\n\nChart.js\nchartjs"
   },
   {
     "objectID": "lecture_4.html#그래프-graphs-plotly",
@@ -1852,7 +1852,7 @@
     "href": "lecture_5.html#생성형-ai-관련-r-패키지",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "생성형 AI 관련 R 패키지",
-    "text": "생성형 AI 관련 R 패키지\n\nAir (https://github.com/soumyaray/air)\nTheOpenAIR (https://openair-lib.org/)\nRTutor (https://github.com/gexijin/RTutor)\naskgpt (https://github.com/JBGruber/askgpt)\ngptstudio (https://github.com/MichelNivard/gptstudio)\ngpttools (https://github.com/JamesHWade/gpttools)\ngptchatteR (https://github.com/isinaltinkaya/gptchatteR)\nGenAI (https://genai.gd.edu.kg/)"
+    "text": "생성형 AI 관련 R 패키지\n\nAir\nTheOpenAIR\nRTutor\naskgpt\ngptstudio\ngpttools\ngptchatteR\nGenAI"
   },
   {
     "objectID": "lecture_5.html#genai의-접근법",
@@ -1887,7 +1887,7 @@
     "href": "lecture_5.html#quarto와-shiny의-결합",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "Quarto와 Shiny의 결합",
-    "text": "Quarto와 Shiny의 결합\n\n\nQuarto 대시보드 속에 Shiny 앱을 임베딩하여 제작\n\nhttps://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html\n\nShiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작\n\nhttps://sangillee.shinyapps.io/Dashboard_Example/\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "Quarto와 Shiny의 결합\n\n\nQuarto 중심 방식\n\nQuarto 대시보드 속에 Shiny 앱을 임베딩하여 제작\nhttps://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html\n\nShiny 중심 방식\n\nShiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작\nhttps://sangillee.shinyapps.io/Dashboard_Example/\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
   },
   {
     "objectID": "index.html#진행",
@@ -3001,5 +3001,19 @@
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "인터렉티브 지도: ggiraph 패키지",
     "text": "인터렉티브 지도: ggiraph 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(ggiraph)\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = format(index, digits = 4, nsmall = 4),\n    my_tooltip = str_c(\"Name: \", SGG1_FNM, \"\\n Index: \", index)\n  )\ngg &lt;- ggplot() +\n  geom_sf_interactive(\n    data = sigungu_data, \n    aes(\n      fill = index_class, \n      tooltip = my_tooltip, \n      data_id = SGG1_FNM\n    ), \n    show.legend = TRUE\n  ) +\n  geom_sf(\n    data = sido_shp, \n    fill = NA, \n    lwd = 0.5\n  ) +\n  scale_fill_manual(\n    name = \"Classes\", \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    values = class_color, drop = FALSE\n  ) \ngirafe(ggobj = gg) |&gt; \n  girafe_options(\n    opts_hover(css = \"fill: gray\")\n  )"
+  },
+  {
+    "objectID": "lecture_5.html#데이터사이언스-프로세스의-마지막-혹은-정점",
+    "href": "lecture_5.html#데이터사이언스-프로세스의-마지막-혹은-정점",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "데이터사이언스 프로세스의 마지막 혹은 정점",
+    "text": "데이터사이언스 프로세스의 마지막 혹은 정점\n\nhttps://r4ds.hadley.nz/intro"
+  },
+  {
+    "objectID": "lecture_5.html#데이터사이언스-프로세스의-정점",
+    "href": "lecture_5.html#데이터사이언스-프로세스의-정점",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "데이터사이언스 프로세스의 정점",
+    "text": "데이터사이언스 프로세스의 정점\n\nhttps://r4ds.hadley.nz/intro"
   }
 ]
