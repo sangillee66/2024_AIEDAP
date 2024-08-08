@@ -2678,7 +2678,7 @@
     "href": "lecture_4.html#sf-패키지-주요-함수",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nsf 패키지: 주요 함수",
-    "text": "sf 패키지: 주요 함수\n\n읽고 쓰기: st_read(), st_write()\n투영 관련: st_crs(), st_transform()\n기하 측정: st_area(), st_length(), st_perimeter(), st_distance()\n기하 변형: st_centroid(), st_buffer(), st_boundary(), st_simplify()\n기하 생성: st_point(), st_voronoi() , st_convex_hull(), st_make_grid()\n기하 검토: st_is_valid(), st_make_valid()\n중첩 오퍼레이션: st_intersection(), st_union(), st_crop()\n기타: st_coordinates(), st_cast(), st_as_sf(), st_graticule(), st_join()"
+    "text": "sf 패키지: 주요 함수\n\n읽고 쓰기: st_read(), st_write()\n투영 관련: st_crs(), st_transform()\n기하 측정: st_area(), st_length(), st_perimeter(), st_distance()\n기하 변형: st_centroid(), st_buffer(), st_boundary(), st_simplify()\n기하 생성: st_point(), st_voronoi() , st_convex_hull(), st_make_grid()\n기하 검토: st_is_valid(), st_make_valid()\n기하 중첩: st_intersection(), st_union(), st_crop()\n기타: st_coordinates(), st_cast(), st_as_sf(), st_graticule(), st_join()"
   },
   {
     "objectID": "lecture_4.html#sf-패키지-st_read",

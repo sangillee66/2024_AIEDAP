@@ -216,7 +216,7 @@ gapminder |>
 ## 그래프 [Graphs]{style="font-size:2.5rem;color:gray"}
 
 | 자바스크립트 라이브러리                                    | R 래퍼 패키지                                                                |
-|------------------------------------------------------------|------------------------------------------------------------------------------|
+|-------------------------------|----------------------------------------|
 | [Plotly](https://plotly.com/graphing-libraries/)           | [plotly](https://plotly.com/r/)                                              |
 | [D3](https://d3js.org/)                                    | [r2d3](https://rstudio.github.io/r2d3/)                                      |
 | [Highcharts](https://www.highcharts.com/)                  | [highcharter](https://jkunst.com/highcharter/)                               |
@@ -473,7 +473,7 @@ P + transition_time(year) +
 
 -   기하 검토: `st_is_valid()`, `st_make_valid()`
 
--   중첩 오퍼레이션: `st_intersection()`, `st_union()`, `st_crop()`
+-   기하 중첩: `st_intersection()`, `st_union()`, `st_crop()`
 
 -   기타: `st_coordinates()`, `st_cast()`, `st_as_sf()`, `st_graticule()`, `st_join()`
 
@@ -565,7 +565,7 @@ qtm(sigungu_shp)
 -   널리 사용되는 CRS의 EPSG
 
 | 적용 스케일 | EPSG 숫자코드 | 설명                                                   |
-|-------------|---------------|--------------------------------------------------------|
+|---------------|---------------|-------------------------------------------|
 | 전세계      | EPSG:4326     | WGS84, 측지좌표계, GPS에 사용                          |
 |             | EPSG:3857     | 웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용 |
 |             | EPSG:7789     | ITRF2014                                               |
