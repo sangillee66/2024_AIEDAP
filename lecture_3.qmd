@@ -766,7 +766,7 @@ flights |>
 
         -   x-축, y-축, color, size, linewidth, shape, alpha 등
 
-    -   심미성 매핑: 특정 [**변수**]{style="color:coral"}에 특정 [**심미성**]{style="color:coral"}의 요소를 부여하는 과정
+    -   심미성 매핑: 특정한 [**심미성**]{style="color:coral"} 요소를 특정한 [**변수**]{style="color:coral"}에 부여하는 과정
 
     -   `aes()`
 
