@@ -88,7 +88,7 @@ date-modified: last-modified
 
     -   샤이니에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다.
 
--   Wickham, Hadley, 2021, [*Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Power by R*](https://mastering-shiny.org/)*,* Sebastopol, CA: O’REILLY. (이영록 옮김, 2022, [R 사용자를 위한 Shiny 마스터 가이드](https://www.yes24.com/Product/Goods/116598818), 서울: 인사이트.)
+-   Wickham, Hadley, 2021, [*Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Powered by R*](https://mastering-shiny.org/)*,* Sebastopol, CA: O’REILLY. (이영록 옮김, 2022, [R 사용자를 위한 Shiny 마스터 가이드](https://www.yes24.com/Product/Goods/116598818), 서울: 인사이트.)
 
     -   해들리 위컴이 쓴 샤이니 관련 바이블입니다. 원문 웹북을 보기를 권하지만 우선은 번역서도 좋을 것 같습니다.
 

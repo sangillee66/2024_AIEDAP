@@ -102,7 +102,7 @@
     "href": "reference.html#샤이니-shiny",
     "title": "사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍",
     "section": "샤이니 Shiny",
-    "text": "샤이니 Shiny\n\nShiny 웹사이트\n\n샤이니에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다.\n\nWickham, Hadley, 2021, Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Power by R, Sebastopol, CA: O’REILLY. (이영록 옮김, 2022, R 사용자를 위한 Shiny 마스터 가이드, 서울: 인사이트.)\n\n해들리 위컴이 쓴 샤이니 관련 바이블입니다. 원문 웹북을 보기를 권하지만 우선은 번역서도 좋을 것 같습니다.\n\nGranjon, David, 2022, Outstanding User Interfaces with Shiny, Boaca Raton: CRC Press.\n\n아직 살펴보지 못했습니다.\n\nFay, Colin, Vincent Guyader, Sebastien Rochette, and Cervan Girard. 2022, Engineering Production-Grade Shiny Apps, Boca Raton: CRC Press.\n\n아직 살펴보지 못했습니다."
+    "text": "샤이니 Shiny\n\nShiny 웹사이트\n\n샤이니에 대한 가장 좋은 참고문헌은 공식 웹사이트에 있는 내용입니다.\n\nWickham, Hadley, 2021, Mastering Shiny: Build Interactive Apps, Reports, and Dashboards Powered by R, Sebastopol, CA: O’REILLY. (이영록 옮김, 2022, R 사용자를 위한 Shiny 마스터 가이드, 서울: 인사이트.)\n\n해들리 위컴이 쓴 샤이니 관련 바이블입니다. 원문 웹북을 보기를 권하지만 우선은 번역서도 좋을 것 같습니다.\n\nGranjon, David, 2022, Outstanding User Interfaces with Shiny, Boaca Raton: CRC Press.\n\n아직 살펴보지 못했습니다.\n\nFay, Colin, Vincent Guyader, Sebastien Rochette, and Cervan Girard. 2022, Engineering Production-Grade Shiny Apps, Boca Raton: CRC Press.\n\n아직 살펴보지 못했습니다."
   },
   {
     "objectID": "reference.html#시각화",
