@@ -2657,7 +2657,7 @@
     "href": "lecture_4.html#테이블-tables-dt-패키지-1",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "테이블 Tables: DT 패키지\n",
-    "text": "테이블 Tables: DT 패키지\n\n\nPagination: 페이지 이동 기능\nInstant search: 즉각적인 찾기 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nOrdering/sorging: 값 정렬 기능\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누른 상태에서 다른 컬럼을 선택)\nFiltering: 값을 추리는 기능\nEditable: 셀 값의 수정 기능\nButtons: 셀 숨기기, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
+    "text": "테이블 Tables: DT 패키지\n\n\nPagination: 페이지 이동 기능\nInstant search: 즉각적 검색 기능(Search에 타이핑하기 시작하면 즉각적으로 검색 결과 보여줌)\nOrdering/sorging: 컬럼 정렬 기능\nMulti-column ordering: 다중 컬럼 정렬 기능(컬럼 하나를 선택한 후 ctrl을 누른 상태에서 다른 컬럼을 선택)\nFiltering: 값 추림 기능\nEditable: 셀 값 수정 기능\nButtons: 셀 숨기기 기능, CSV, PDF, XLSX 등의 확장자로 내보내기 등을 수행하는 버튼 생성 기능"
   },
   {
     "objectID": "lecture_4.html#테이블-tables-gt-패키지-2",
@@ -2832,7 +2832,7 @@
     "href": "lecture_4.html#crs-정의",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "CRS: 정의",
-    "text": "CRS: 정의\n\n좌표참조계 Coordinate Reference System\n\n모든 지리공간데이터는 특정한 좌표참조계에 의거해 제작되며 이러한 좌표참조계는 매우 다양함\n\n준거타원체\n투영법\n투영 파라미터: 투영축, 투영격, 중앙경선, 가상원점 등\n\n\n지리공간데이터의 SRID(Spatial Reference System Identifiers, 공간참조계식별자)\nsf 패키지: st_crs() 함수"
+    "text": "CRS: 정의\n\n좌표참조계 Coordinate Reference System\n\n모든 지리공간데이터는 특정한 좌표참조계에 의거해 제작되며 이러한 좌표참조계는 매우 다양함\n\n준거타원체\n투영법(map projection)\n투영 파라미터: 투영축, 투영격, 중앙경선, 가상원점 등\n\n\n지리공간데이터의 SRID(Spatial Reference System Identifiers, 공간참조계식별자)\nsf 패키지: st_crs() 함수"
   },
   {
     "objectID": "lecture_4.html#crs-방식",
@@ -2853,7 +2853,7 @@
     "href": "lecture_4.html#crs-epsg-숫자코드",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "CRS: EPSG 숫자코드",
-    "text": "CRS: EPSG 숫자코드\n\n\n널리 사용되는 CRS의 EPSG\n\n\n\n\n\n\n\n\n적용 스케일\nEPSG 숫자코드\n설명\n\n\n\n지구적\nEPSG:4326\nWGS84, 측지좌표계, GPS에 사용\n\n\n\nEPSG:3857\n웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용\n\n\n\nEPSG:7789\nITRF2014\n\n\n우리나라\nEPSG:5179\nUTM-K\n\n\n\nEPSG:5185\n서부원점\n\n\n\nEPSG:5186\n중부원점\n\n\n\nEPSG:5187\n동부원점\n\n\n\nEPSG:5188\n동해원점"
+    "text": "CRS: EPSG 숫자코드\n\n\n널리 사용되는 CRS의 EPSG\n\n\n\n\n\n\n\n\n적용 스케일\nEPSG 숫자코드\n설명\n\n\n\n전세계\nEPSG:4326\nWGS84, 측지좌표계, GPS에 사용\n\n\n\nEPSG:3857\n웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용\n\n\n\nEPSG:7789\nITRF2014\n\n\n미국\nEPSG:2163\n알베르스 정적원추 도법\n\n\n유럽\nEPSG:3035\n람베르트 정적방위 도법\n\n\n우리나라\nEPSG:5179\nUTM-K\n\n\n\nEPSG:5185\n서부원점\n\n\n\nEPSG:5186\n중부원점\n\n\n\nEPSG:5187\n동부원점\n\n\n\nEPSG:5188\n동해원점"
   },
   {
     "objectID": "lecture_4.html#crs-세계지도에-적용",
@@ -2951,6 +2951,55 @@
     "href": "lecture_4.html#leaflet-매시업mashup-주제도",
     "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
     "section": "\nleaflet: 매시업(mashup) 주제도",
-    "text": "leaflet: 매시업(mashup) 주제도\n\n\n세계지도: Code\n세계지도: Result\n우리나라 지도: Code\n우리나라 지도: Result\n\n\n\n\nbins &lt;- c(0, 1.5, 2.1, 3, 4, 5, Inf)\npal &lt;- colorBin(\"YlOrRd\", domain = world_data$TFR, bins = bins)\nlabels &lt;- sprintf(\"&lt;strong&gt;%s&lt;/strong&gt;&lt;br/&gt;%g\",\n  world_data$name_long, world_data$TFR) |&gt; lapply(htmltools::HTML)\n\nworld_data &lt;- world_data |&gt; \n  filter(\n    !is.na(TFR)\n  )\n\nleaflet(world_data) |&gt; \n  addProviderTiles(providers$Esri.WorldTopoMap) |&gt; \n  addPolygons(\n    fillColor = ~pal(TFR),\n    weight =  2, \n    opacity = 1,\n    color = \"white\",\n    dashArray = \"3\",\n    fillOpacity = 0.6,\n    highlightOptions = highlightOptions(\n      weight = 5,\n      color = \"#666\",\n      dashArray = \"\",\n      fillOpacity = 0.6,\n      bringToFront = TRUE),\n    label = labels,\n    labelOptions = labelOptions(\n      style = list(\"font-weight\" = \"normal\", padding = \"3px 8px\"),\n      textsize = \"15px\",\n      direction = \"auto\")\n  ) |&gt; \n  addLegend(\n    pal = pal, values = ~TFR, opacity = 0.6, title = NULL,\n    position = \"bottomright\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\nclass_color &lt;- c(\"1\" = \"#d7191c\", \"2\" = \"#fdae61\",\n                 \"3\" = \"#ffffbf\", \"4\" = \"#a6d96a\", \n                 \"5\" = \"#1a9641\")\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = as.numeric(index)\n  )\ntmap_mode(mode = \"view\")\nmy_tmap &lt;- tm_shape(sigungu_data) + \n  tm_polygons(\n    col = \"index\",\n    palette = class_color, \n    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), \n    labels = c(\"&lt; 0.2\", \"0.2~0.5\", \"0.5~1.0\", \"1.0~1.5\", \"&gt;= 1.5\"),\n    title = \"Classes\", \n    popup.vars=c(\"지역소멸위험지수: \" = \"index\"), \n    popup.format = list(index = list(digits = 3)), \n    id = \"SGG1_FNM\", \n    alpha = 0.6, \n    border.alpha = 0.5\n  ) +\n  tm_shape(sido_shp) + tm_borders(lwd = 2)\nmy_tmap\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "leaflet: 매시업(mashup) 주제도\n\n\n세계지도: Code\n세계지도: Result\n우리나라 지도: Code\n우리나라 지도: Result\n\n\n\n\nlibrary(leaflet)\nbins &lt;- c(0, 1.5, 2.1, 3, 4, 5, Inf)\npal &lt;- colorBin(\"YlOrRd\", domain = world_data$TFR, bins = bins)\nlabels &lt;- sprintf(\"&lt;strong&gt;%s&lt;/strong&gt;&lt;br/&gt;%g\",\n  world_data$name_long, world_data$TFR) |&gt; lapply(htmltools::HTML)\n\nworld_data &lt;- world_data |&gt; \n  filter(\n    !is.na(TFR)\n  )\n\nleaflet(world_data) |&gt; \n  addProviderTiles(providers$Esri.WorldTopoMap) |&gt; \n  addPolygons(\n    fillColor = ~pal(TFR),\n    weight =  2, \n    opacity = 1,\n    color = \"white\",\n    dashArray = \"3\",\n    fillOpacity = 0.6,\n    highlightOptions = highlightOptions(\n      weight = 5,\n      color = \"#666\",\n      dashArray = \"\",\n      fillOpacity = 0.6,\n      bringToFront = TRUE),\n    label = labels,\n    labelOptions = labelOptions(\n      style = list(\"font-weight\" = \"normal\", padding = \"3px 8px\"),\n      textsize = \"15px\",\n      direction = \"auto\")\n  ) |&gt; \n  addLegend(\n    pal = pal, values = ~TFR, opacity = 0.6, title = NULL,\n    position = \"bottomright\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(tmap)\nclass_color &lt;- c(\"#d7191c\", \"#fdae61\", \"#ffffbf\", \"#a6d96a\", \"#1a9641\")\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = as.numeric(index)\n  )\ntmap_mode(mode = \"view\")\nmy_tmap &lt;- tm_shape(sigungu_data) + \n  tm_polygons(\n    col = \"index\",\n    palette = class_color, \n    breaks = c(0, 0.2, 0.5, 1.0, 1.5, Inf), \n    labels = c(\"&lt; 0.2\", \"0.2~0.5\", \"0.5~1.0\", \"1.0~1.5\", \"&gt;= 1.5\"),\n    title = \"Classes\", \n    popup.vars=c(\"지역소멸위험지수: \" = \"index\"), \n    popup.format = list(index = list(digits = 3)), \n    id = \"SGG1_FNM\", \n    alpha = 0.6, \n    border.alpha = 0.5\n  ) +\n  tm_shape(sido_shp) + tm_borders(lwd = 2)\nmy_tmap\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+  },
+  {
+    "objectID": "lecture_4.html#그래프-graphs-plotly-패키지",
+    "href": "lecture_4.html#그래프-graphs-plotly-패키지",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "그래프 Graphs: plotly 패키지",
+    "text": "그래프 Graphs: plotly 패키지\n\nPlotly: 자바스크립트 라이브러리, 동적ㆍ반응형 그래프 생성\n\nR 래퍼 패키지: plotly package\n\n\nggplotly() 함수\n\n\n\n\nhttps://plotly.com/"
+  },
+  {
+    "objectID": "lecture_4.html#그래프-graphs-plotly-패키지-1",
+    "href": "lecture_4.html#그래프-graphs-plotly-패키지-1",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "그래프 Graphs: plotly 패키지",
+    "text": "그래프 Graphs: plotly 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(plotly)\ngapminder |&gt; \n  filter(year == 2007) |&gt; \n  plot_ly(\n    x = ~gdpPercap, \n    y = ~lifeExp, \n    color = ~continent,\n    text = ~paste(\n      \"Country: \", country, \n      \"&lt;br&gt;GDP per capita: \", gdpPercap, \n      \"$&lt;br&gt;Life Expectancy at Birth:\", lifeExp\n    )\n  )"
+  },
+  {
+    "objectID": "lecture_4.html#그래프-graphs-plotly-패키지-2",
+    "href": "lecture_4.html#그래프-graphs-plotly-패키지-2",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "그래프 Graphs: plotly 패키지",
+    "text": "그래프 Graphs: plotly 패키지\n\n\nCode\nResult\n\n\n\n\ngapminder |&gt; \n  plot_ly(\n    x = ~log10(gdpPercap), y = ~lifeExp,\n    text = ~paste(\n      \"Country:\", country, \n      \"&lt;/br&gt;Continent:\", continent, \n      \"&lt;/br&gt;lifeExp:\", lifeExp\n    )\n  ) |&gt; \n  add_markers(\n    color = ~continent, \n    size = ~pop, \n    frame = ~year, \n    marker = list(sizeref = 0.2, sizemode = \"area\")\n  )"
+  },
+  {
+    "objectID": "lecture_4.html#그래프-graphs-ggplotly-함수",
+    "href": "lecture_4.html#그래프-graphs-ggplotly-함수",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "그래프 Graphs: ggplotly() 함수",
+    "text": "그래프 Graphs: ggplotly() 함수\n\n\nCode\nResult\n\n\n\n\nP &lt;- gapminder |&gt; \n  filter(year == 2007) |&gt; \n  ggplot(aes(x = gdpPercap, y = lifeExp, color = continent)) +\n  geom_point() + \n  scale_color_brewer(palette = \"Set2\") +\n  theme_minimal()\nggplotly(P)"
+  },
+  {
+    "objectID": "lecture_4.html#그래프-graphs-gganimate-패키지",
+    "href": "lecture_4.html#그래프-graphs-gganimate-패키지",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "그래프 Graphs: gganimate 패키지",
+    "text": "그래프 Graphs: gganimate 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(gganimate)\nP &lt;- gapminder |&gt; \n  ggplot(aes(x = gdpPercap, y = lifeExp, size = pop, color = continent)) +\n  geom_point(show.legend = FALSE, alpha = 0.7) +\n  scale_x_log10() +\n  scale_size(range = c(2, 12))\nP + transition_time(year) +\n  labs(title = \"Year: {frame_time}\")"
+  },
+  {
+    "objectID": "lecture_4.html#인터랙티브-지도-ggplotly-함수",
+    "href": "lecture_4.html#인터랙티브-지도-ggplotly-함수",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "인터랙티브 지도: ggplotly() 함수",
+    "text": "인터랙티브 지도: ggplotly() 함수\n\n\nCode\nResult\n\n\n\n\nggplotly(world_map)"
+  },
+  {
+    "objectID": "lecture_4.html#인터렉티브-지도-ggiraph-패키지",
+    "href": "lecture_4.html#인터렉티브-지도-ggiraph-패키지",
+    "title": "\nDay 4고급 시각화와  대시보드의 설계\n",
+    "section": "인터렉티브 지도: ggiraph 패키지",
+    "text": "인터렉티브 지도: ggiraph 패키지\n\n\nCode\nResult\n\n\n\n\nlibrary(ggiraph)\nsigungu_data &lt;- sigungu_data |&gt; \n  mutate(\n    index = format(index, digits = 4, nsmall = 4),\n    my_tooltip = str_c(\"Name: \", SGG1_FNM, \"\\n Index: \", index)\n  )\ngg &lt;- ggplot() +\n  geom_sf_interactive(\n    data = sigungu_data, \n    aes(\n      fill = index_class, \n      tooltip = my_tooltip, \n      data_id = SGG1_FNM\n    ), \n    show.legend = TRUE\n  ) +\n  geom_sf(\n    data = sido_shp, \n    fill = NA, \n    lwd = 0.5\n  ) +\n  scale_fill_manual(\n    name = \"Classes\", \n    labels = c(\"&lt; 0.2\", \"0.2 ~ 0.5\", \"0.5 ~ 1.0\", \n               \"1.0 ~ 1.5\", \"&gt;= 1.5\"), \n    values = class_color, drop = FALSE\n  ) \ngirafe(ggobj = gg) |&gt; \n  girafe_options(\n    opts_hover(css = \"fill: gray\")\n  )"
   }
 ]
