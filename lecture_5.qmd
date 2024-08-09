@@ -178,6 +178,7 @@ editor_options:
 
 ::: r-fit-text
 -   [Google Jemini](https://gemini.google.com/)
+-   [Shiny](https://shiny.posit.co/) 앱
 
 <https://sangillee.shinyapps.io/GoogleAI_Shiny/>
 :::
