@@ -3056,7 +3056,7 @@
     "href": "lecture_5.html#몇-가지-가능성",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "몇 가지 가능성",
-    "text": "몇 가지 가능성\n\nAI-관련 기존 웹애플리케이션을 임베딩\n\n네이버 엔트리(entry)\n\nAI 모델링을 수행하는 R 코드청크의 아웃풋을 표출\n\n통계적 모델링과 머신러닝: tidymodels\n\n생성형 AI와 LLM(large language model)\n\n대시보드 제작에 도움\n생성형 AI를 대시보드에 내재화: Shiny와의 결합"
+    "text": "몇 가지 가능성\n\nAI-관련 기존 웹애플리케이션을 임베딩\n\n네이버 엔트리(entry)\n\nAI 모델링을 수행하는 R 코드청크의 아웃풋을 표출\n\n통계적 모델링과 머신러닝: tidymodels\n\n생성형 AI와 LLM(large language model)\n\n다양한 아이디어 가능\n생성형 AI를 대시보드에 내재화: Shiny와의 결합"
   },
   {
     "objectID": "lecture_5.html#생성형-ai와-r",
@@ -3119,6 +3119,6 @@
     "href": "lecture_5.html#성과와-확산",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "성과와 확산",
-    "text": "성과와 확산\n\nAIEDAP (https://aiedap.or.kr/)\n\n서울대학교 학습과학연구소 미래교육혁신센터\n두 고씨\n\n우형이, 세창이, 혜민이, 주연이, 그리고 여러분들\n정규 수업, 계절 수업, 연수 프로그램\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "성과와 확산\n\nAIEDAP (https://aiedap.or.kr/)\n\n서울대학교 학습과학연구소 미래교육혁신센터\n임철일 교수님, 고보경 선생님, 고준보 선생님\n\n김우형, 김세창, 전혜민, 김주연, 그리고 여러분들\n정규 수업, 계절 수업, 연수 프로그램\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
   }
 ]
