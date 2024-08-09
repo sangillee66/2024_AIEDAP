@@ -108,7 +108,7 @@ editor_options:
 
 # [교수-학습 대시보드와 AI]{style="color:coral"}
 
-## 몇 가지 가능성
+## 몇 가지 방법들
 
 -   AI-관련 기존 웹애플리케이션을 임베딩
 
