@@ -36,51 +36,45 @@ editor_options:
   chunk_output_type: console
 ---
 
-## 
+# [고급 인트렉티브 기능]{style="color:coral"}
 
-![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-224670857.png)
-
-## Tidyverse의 프로그래밍 철학
-
-::: r-fit-text
--   [**Human-centeredness**]{style="color:coral"}
-
-    -   For an end-user programmer
-
--   [**Consistency**]{style="color:coral"}
-
-    -   The smallest possible set of key ideas, used as comprehensively as possible
-
--   [**Composability**]{style="color:coral"}
-
-    -   Many simple pieces, composed for a larger task using operators such as \|\> and +
-
--   [**Inclusiveness**]{style="color:coral"}
-
-    -   Towards a diverse, open, and friendly community
-
-(<https://design.tidyverse.org/unifying.html>)
-:::
-
-## Tidyverse의 관행
-
-![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-4104447783.png)
-
-## Tidyverse의 관행
-
-![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-484047229.png)
-
-## 데이터사이언스 프로세스의 정점
+## 데이터사이언스 커뮤니케이션의 정점
 
 ![[https://r4ds.hadley.nz/intro](https://r4ds.hadley.nz/intro){.uri style="font-size:0.75rem"}](images/clipboard-4075247197.png){fig-align="center"}
 
-# [고급 인트렉티브 기능]{style="color:coral"}
+## 고급 인트렉티브 기능
 
-## `Shiny` 패키지
+-   상호작용성의 수준을 고도화
+
+-   사용자와의 지속적인 상호작용이 가능
+
+    -   사용자의 인풋 수용
+
+    -   즉각적인 응답
+
+    -   새로운 인풋 수용 - 새로운 응답의 연쇄 과정
+
+-   대시보드의 탐색성 고양
+
+## [`Shiny`](https://shiny.posit.co/) 패키지
 
 ![[https://shiny.posit.co/](https://shiny.posit.co/){.uri style="font-size:0.75rem"}](images/clipboard-3736716242.png){fig-align="center"}
 
-## 사례 1: 업로드 허용형 샤이니앱
+## 사례 1: 단순한 샤이니앱 {visibility="hidden"}
+
+```{=html}
+<iframe src="https://gallery.shinyapps.io/050-kmeans-example/?_gl=1*6z7b5e*_ga*MTMyNzk5MDM3MC4xNzE0ODIwMjU2*_ga_2C0WZ1JHG0*MTcyMzE2NDc0MC42OC4xLjE3MjMxNjQ4MTkuMC4wLjA." loading="lazy" style="width: 100%; height: 600px; border: 
+0px none;" allow="web-share; clipboard-write"></iframe>
+```
+## 사례 1: 단순한 샤이니앱
+
+<br>
+
+::: r-fit-text
+<https://gallery.shinyapps.io/050-kmeans-example/>
+:::
+
+## 사례 2: 업로드 허용형 샤이니앱
 
 <br>
 
@@ -88,7 +82,7 @@ editor_options:
 <https://sangillee.shinyapps.io/SpatialKernelDensityEstimation/>
 :::
 
-## 사례 2: 지도 반응형 샤이니앱
+## 사례 3: 지도 반응형 샤이니앱
 
 <br>
 
@@ -96,9 +90,41 @@ editor_options:
 <https://sangillee.shinyapps.io/ClickOnMap/>
 :::
 
-# [생성형 AI와 교수-학습 대시보드]{style="color:coral"}
+## Quarto와 `Shiny`의 결합
 
-## R과 생성형 AI
+::: r-fit-text
+-   쿼토-중심(Quarto-centered) 방식
+
+    -   Quarto 대시보드 속에 `Shiny` 앱을 임베딩하여 제작
+
+    -   <https://sangillee.snu.ac.kr/dashboard_examples/>
+
+-   샤이니-중심(Shiny-centered) 방식
+
+    -   `Shiny` 요소를 가진 Quarto 대시보드 전체를 `Shiny` 앱으로 제작
+
+    -   <https://sangillee.shinyapps.io/Dashboard_Example/>
+:::
+
+# [교수-학습 대시보드와 AI]{style="color:coral"}
+
+## 몇 가지 가능성
+
+-   AI-관련 기존 웹애플리케이션을 임베딩
+
+    -   [네이버 엔트리(entry)](https://playentry.org/)
+
+-   AI 모델링을 수행하는 R 코드청크의 아웃풋을 표출
+
+    -   통계적 모델링과 머신러닝: [tidymodels](https://www.tidymodels.org/)
+
+-   생성형 AI와 LLM(large language model)
+
+    -   다양한 아이디어 가능
+
+    -   생성형 AI를 대시보드에 내재화: Shiny와의 결합
+
+## 생성형 AI와 R {visibility="hidden"}
 
 -   Automated code generation
 
@@ -132,7 +158,9 @@ editor_options:
 
 ## `GenAI`의 접근법
 
--   생성형 AI: Google, OpenAI, Moonshot
+-   생성형 AI 활용을 위한 R 래퍼 패키지
+
+-   생성형 AI: OpenAI, Google, Moonshot
 
 -   오픈 API
 
@@ -140,48 +168,88 @@ editor_options:
 
 ## `GenAI`의 적용 사례 {visibility="hidden"}
 
--   Google Jemini(<https://gemini.google.com/>)
+-   [Google Jemini](https://gemini.google.com/)
 
 ```{=html}
 <iframe src="https://sangillee.shinyapps.io/GoogleAI_Shiny/" loading="lazy" style="width: 100%; height: 600px; border: 
-0px none;" allow="web-share; clipboard-write">
+0px none;" allow="web-share; clipboard-write"></iframe>
 ```
-</iframe>
-
 ## `GenAI`의 적용 사례
 
 ::: r-fit-text
--   Google Jemini(<https://gemini.google.com/>)
+-   [Google Jemini](https://gemini.google.com/)
 
 <https://sangillee.shinyapps.io/GoogleAI_Shiny/>
 :::
 
-# [공유: 웹 배포(web deployment)]{style="color:coral"}
+# [공유: 커뮤니케이션의 최고 역량]{style="color:coral"}
 
-## Quarto
+## 웹 배포: Quarto
 
 Quarto Pub(<https://quartopub.com/>)
 
 ![](https://quarto.org/docs/publishing/images/quarto-pub-default-site.png){fig-align="center"}
 
-## `Shiny`
+## 웹 배포: `Shiny`
 
 shinyapps.io(<https://www.shinyapps.io/>)
 
 ![](images/clipboard-2928271543.png){fig-align="center"}
 
-## Quarto와 `Shiny`의 결합
+## 오픈사이언스: 더 큰 공유를 향하여
+
+::: {layout-ncol="2"}
+-   [GitHub](https://github.com/)
+
+    -   <https://github.com/sangillee66>
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/1920px-GitHub_Invertocat_Logo.svg.png){fig-align="center"}
+:::
+
+# [마무리]{style="color:coral"}
+
+## 
+
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-224670857.png)
+
+## [`Tidyverse`](https://www.tidyverse.org/)의 프로그래밍 철학
 
 ::: r-fit-text
--   Quarto 중심 방식
+-   [**Human-centeredness**]{style="color:coral"} 인간중심성
 
-    -   Quarto 대시보드 속에 `Shiny` 앱을 임베딩하여 제작
+    -   For first-time and end-user programmers
 
-    -   <https://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html>
+-   [**Consistency**]{style="color:coral"} 일관성(통일성)
 
--   Shiny 중심 방식
+    -   The smallest possible set of key ideas, used as comprehensively as possible
 
-    -   `Shiny` 요소를 가진 Quarto 대시보드 전체를 `Shiny` 앱으로 제작
+-   [**Composability**]{style="color:coral"} 조합성
 
-    -   <https://sangillee.shinyapps.io/Dashboard_Example/>
+    -   Many simple pieces, composed for a larger task using operators such as \|\> and +
+
+-   [**Inclusiveness**]{style="color:coral"} 포용성
+
+    -   Towards a diverse, open, and friendly community
+
+(<https://design.tidyverse.org/unifying.html>)
 :::
+
+## Tidyverse의 관행 {visibility="hidden"}
+
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-4104447783.png)
+
+## Tidyverse의 관행 {visibility="hidden"}
+
+![[https://allisonhorst.com/everything-else](https://allisonhorst.com/everything-else){.uri style="font-size:0.75rem"}](images/clipboard-484047229.png)
+
+## 성과와 확산
+
+-   AIEDAP (<https://aiedap.or.kr/>)
+
+    -   [서울대학교](https://www.snu.ac.kr/) [학습과학연구소](https://ls.snu.ac.kr/) [미래교육혁신센터](https://ls.snu.ac.kr/sub_center/center4.php)
+
+    -   두 고씨
+
+-   우형이, 세창이, 혜민이, 주연이, 그리고 여러분들
+
+-   정규 수업, 계절 수업, 연수 프로그램

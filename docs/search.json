@@ -1796,7 +1796,7 @@
     "href": "lecture_5.html#tidyverse의-프로그래밍-철학",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "Tidyverse의 프로그래밍 철학",
-    "text": "Tidyverse의 프로그래밍 철학\n\n\nHuman-centeredness\n\nFor an end-user programmer\n\nConsistency\n\nThe smallest possible set of key ideas, used as comprehensively as possible\n\nComposability\n\nMany simple pieces, composed for a larger task using operators such as |&gt; and +\n\nInclusiveness\n\nTowards a diverse, open, and friendly community\n\n\n(https://design.tidyverse.org/unifying.html)"
+    "text": "Tidyverse의 프로그래밍 철학\n\n\nHuman-centeredness 인간중심성\n\nFor first-time and end-user programmers\n\nConsistency 일관성(통일성)\n\nThe smallest possible set of key ideas, used as comprehensively as possible\n\nComposability 조합성\n\nMany simple pieces, composed for a larger task using operators such as |&gt; and +\n\nInclusiveness 포용성\n\nTowards a diverse, open, and friendly community\n\n\n(https://design.tidyverse.org/unifying.html)"
   },
   {
     "objectID": "lecture_5.html#tidyverse의-관행",
@@ -1859,14 +1859,14 @@
     "href": "lecture_5.html#genai의-접근법",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "GenAI의 접근법",
-    "text": "GenAI의 접근법\n\n생성형 AI: Google, OpenAI, Moonshot\n오픈 API\n\n\nhttps://gemini.google.com/"
+    "text": "GenAI의 접근법\n\n생성형 AI 활용을 위한 R 래퍼 패키지\n생성형 AI: OpenAI, Google, Moonshot\n오픈 API\n\n\nhttps://gemini.google.com/"
   },
   {
     "objectID": "lecture_5.html#genai의-적용-사례-1",
     "href": "lecture_5.html#genai의-적용-사례-1",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "GenAI의 적용 사례",
-    "text": "GenAI의 적용 사례\n\n\nGoogle Jemini(https://gemini.google.com/)\n\nhttps://sangillee.shinyapps.io/GoogleAI_Shiny/"
+    "text": "GenAI의 적용 사례\n\n\nGoogle Jemini\n\nhttps://sangillee.shinyapps.io/GoogleAI_Shiny/"
   },
   {
     "objectID": "lecture_5.html#quarto",
@@ -1887,7 +1887,7 @@
     "href": "lecture_5.html#quarto와-shiny의-결합",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "Quarto와 Shiny의 결합",
-    "text": "Quarto와 Shiny의 결합\n\n\nQuarto 중심 방식\n\nQuarto 대시보드 속에 Shiny 앱을 임베딩하여 제작\nhttps://sangillee.snu.ac.kr/dashboard_examples/pop_geo.html\n\nShiny 중심 방식\n\nShiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작\nhttps://sangillee.shinyapps.io/Dashboard_Example/\n\n\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+    "text": "Quarto와 Shiny의 결합\n\n\n쿼토-중심(Quarto-centered) 방식\n\nQuarto 대시보드 속에 Shiny 앱을 임베딩하여 제작\nhttps://sangillee.snu.ac.kr/dashboard_examples/\n\n샤이니-중심(Shiny-centered) 방식\n\nShiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작\nhttps://sangillee.shinyapps.io/Dashboard_Example/"
   },
   {
     "objectID": "index.html#진행",
@@ -3015,5 +3015,110 @@
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "데이터사이언스 프로세스의 정점",
     "text": "데이터사이언스 프로세스의 정점\n\nhttps://r4ds.hadley.nz/intro"
+  },
+  {
+    "objectID": "lecture_5.html#데이터사이언스-커뮤니케이션의-정점",
+    "href": "lecture_5.html#데이터사이언스-커뮤니케이션의-정점",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "데이터사이언스 커뮤니케이션의 정점",
+    "text": "데이터사이언스 커뮤니케이션의 정점\n\nhttps://r4ds.hadley.nz/intro"
+  },
+  {
+    "objectID": "lecture_5.html#고급-인트렉티브-기능-1",
+    "href": "lecture_5.html#고급-인트렉티브-기능-1",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "고급 인트렉티브 기능",
+    "text": "고급 인트렉티브 기능\n\n상호작용성의 수준을 고도화\n사용자와의 지속적인 상호작용이 가능\n\n사용자의 인풋 수용\n즉각적인 응답\n새로운 인풋 수용 - 새로운 응답의 연쇄 과정\n\n대시보드의 탐색성 고양"
+  },
+  {
+    "objectID": "lecture_5.html#사례-1-단순한-샤이니앱",
+    "href": "lecture_5.html#사례-1-단순한-샤이니앱",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "사례 1: 단순한 샤이니앱",
+    "text": "사례 1: 단순한 샤이니앱"
+  },
+  {
+    "objectID": "lecture_5.html#사례-2-업로드-허용형-샤이니앱",
+    "href": "lecture_5.html#사례-2-업로드-허용형-샤이니앱",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "사례 2: 업로드 허용형 샤이니앱",
+    "text": "사례 2: 업로드 허용형 샤이니앱\n\n\nhttps://sangillee.shinyapps.io/SpatialKernelDensityEstimation/"
+  },
+  {
+    "objectID": "lecture_5.html#사례-3-지도-반응형-샤이니앱",
+    "href": "lecture_5.html#사례-3-지도-반응형-샤이니앱",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "사례 3: 지도 반응형 샤이니앱",
+    "text": "사례 3: 지도 반응형 샤이니앱\n\n\nhttps://sangillee.shinyapps.io/ClickOnMap/"
+  },
+  {
+    "objectID": "lecture_5.html#몇-가지-가능성",
+    "href": "lecture_5.html#몇-가지-가능성",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "몇 가지 가능성",
+    "text": "몇 가지 가능성\n\nAI-관련 기존 웹애플리케이션을 임베딩\n\n네이버 엔트리(entry)\n\nAI 모델링을 수행하는 R 코드청크의 아웃풋을 표출\n\n통계적 모델링과 머신러닝: tidymodels\n\n생성형 AI와 LLM(large language model)\n\n대시보드 제작에 도움\n생성형 AI를 대시보드에 내재화: Shiny와의 결합"
+  },
+  {
+    "objectID": "lecture_5.html#생성형-ai와-r",
+    "href": "lecture_5.html#생성형-ai와-r",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "생성형 AI와 R",
+    "text": "생성형 AI와 R\n\nAutomated code generation\nLearning programming concepts\nCreative writing and documentation\nDebugging assistance\nImproved Shiny app development\nAssistance with statistics and data science"
+  },
+  {
+    "objectID": "lecture_5.html#genai의-적용-사례",
+    "href": "lecture_5.html#genai의-적용-사례",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "GenAI의 적용 사례",
+    "text": "GenAI의 적용 사례\n\nGoogle Jemini"
+  },
+  {
+    "objectID": "lecture_5.html#사례-1-단순한-샤이니앱-1",
+    "href": "lecture_5.html#사례-1-단순한-샤이니앱-1",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "사례 1: 단순한 샤이니앱",
+    "text": "사례 1: 단순한 샤이니앱\n\n\nhttps://gallery.shinyapps.io/050-kmeans-example/"
+  },
+  {
+    "objectID": "lecture_5.html#웹-배포-quarto",
+    "href": "lecture_5.html#웹-배포-quarto",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "웹 배포: Quarto",
+    "text": "웹 배포: Quarto\nQuarto Pub(https://quartopub.com/)"
+  },
+  {
+    "objectID": "lecture_5.html#웹-배포-shiny",
+    "href": "lecture_5.html#웹-배포-shiny",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "웹 배포: Shiny",
+    "text": "웹 배포: Shiny\nshinyapps.io(https://www.shinyapps.io/)"
+  },
+  {
+    "objectID": "lecture_5.html#더-큰-공유를-향하여-github",
+    "href": "lecture_5.html#더-큰-공유를-향하여-github",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "더 큰 공유를 향하여: GitHub",
+    "text": "더 큰 공유를 향하여: GitHub\n\nhttps://github.com/sangillee66"
+  },
+  {
+    "objectID": "lecture_5.html#청출어람과-확산",
+    "href": "lecture_5.html#청출어람과-확산",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "청출어람과 확산",
+    "text": "청출어람과 확산\n\nAIEDAP(https://aiedap.or.kr/)\n\n서울대학교 학습과학연구소 미래교육혁신센터\n\n우형이, 세창이, 혜민이, 주연이, 그리고 여러분들\n정규 수업\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
+  },
+  {
+    "objectID": "lecture_5.html#오픈사이언스-더-큰-공유를-향하여",
+    "href": "lecture_5.html#오픈사이언스-더-큰-공유를-향하여",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "오픈사이언스: 더 큰 공유를 향하여",
+    "text": "오픈사이언스: 더 큰 공유를 향하여\n\n\n\n\nGitHub\n\nhttps://github.com/sangillee66"
+  },
+  {
+    "objectID": "lecture_5.html#성과와-확산",
+    "href": "lecture_5.html#성과와-확산",
+    "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
+    "section": "성과와 확산",
+    "text": "성과와 확산\n\nAIEDAP (https://aiedap.or.kr/)\n\n서울대학교 학습과학연구소 미래교육혁신센터\n두 고씨\n\n우형이, 세창이, 혜민이, 주연이, 그리고 여러분들\n정규 수업, 계절 수업, 연수 프로그램\n\n\n\n\n\n사회과 예비교사를 위한 AIㆍ디지털 역량강화 워크숍"
   }
 ]
