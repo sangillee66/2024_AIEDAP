@@ -1887,7 +1887,7 @@
     "href": "lecture_5.html#quarto와-shiny의-결합",
     "title": "Day 5\n고급 인트렉티브 기능과  대시보드의 제작 및 공유",
     "section": "Quarto와 Shiny의 결합",
-    "text": "Quarto와 Shiny의 결합\n\n\n쿼토-중심(Quarto-centered) 방식\n\nQuarto 대시보드 속에 Shiny 앱을 임베딩하여 제작\nhttps://sangillee.snu.ac.kr/dashboard_examples/\n\n샤이니-중심(Shiny-centered) 방식\n\nShiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작\nhttps://sangillee.shinyapps.io/Dashboard_Example/"
+    "text": "Quarto와 Shiny의 결합\n\n\n쿼토-중심(Quarto-centered) 방식\n\nQuarto 대시보드 속에 Shiny 앱을 임베딩하여 제작\nhttps://sangillee.snu.ac.kr/dashboard_examples/\n\n샤이니-중심(Shiny-centered) 방식\n\nShiny 요소를 가진 Quarto 대시보드 전체를 Shiny 앱으로 제작\nhttps://sangillee.shinyapps.io/Dashboard_Example/\n\n새로운 대안: Shinylive"
   },
   {
     "objectID": "index.html#진행",
