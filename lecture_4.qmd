@@ -98,10 +98,8 @@ loading="lazy" style="width: 100%; height: 600px; border:
 
 ## Result
 
-```{=html}
 <iframe src="https://kosis.kr/edu/share.do?shareID=S0500_16" loading="lazy" style="width: 100%; height: 600px; border:
 0px none;" allow="web-share; clipboard-write"></iframe>
-```
 :::
 
 ## 임베딩 [Embedding]{style="font-size:2.5rem;color:gray"}: 사례 2
@@ -215,15 +213,15 @@ gapminder |>
 
 ## 그래프 [Graphs]{style="font-size:2.5rem;color:gray"}
 
-| 자바스크립트 라이브러리                                    | R 래퍼 패키지                                                                |
-|------------------------------------------------------------|------------------------------------------------------------------------------|
-| [Plotly](https://plotly.com/graphing-libraries/)           | [plotly](https://plotly.com/r/)                                              |
-| [D3](https://d3js.org/)                                    | [r2d3](https://rstudio.github.io/r2d3/)                                      |
-| [Highcharts](https://www.highcharts.com/)                  | [highcharter](https://jkunst.com/highcharter/)                               |
-| [ECharts](https://echarts.apache.org/)                     | [echarts4r](https://echarts4r.john-coene.com/)                               |
-| [dygraphs](https://dygraphs.com/)                          | [dygraphs](https://rstudio.github.io/dygraphs/)                              |
+| 자바스크립트 라이브러리 | R 래퍼 패키지 |
+|----|----|
+| [Plotly](https://plotly.com/graphing-libraries/) | [plotly](https://plotly.com/r/) |
+| [D3](https://d3js.org/) | [r2d3](https://rstudio.github.io/r2d3/) |
+| [Highcharts](https://www.highcharts.com/) | [highcharter](https://jkunst.com/highcharter/) |
+| [ECharts](https://echarts.apache.org/) | [echarts4r](https://echarts4r.john-coene.com/) |
+| [dygraphs](https://dygraphs.com/) | [dygraphs](https://rstudio.github.io/dygraphs/) |
 | [Google Charts](https://developers.google.com/chart?hl=ko) | [googleVis](https://mages.github.io/googleVis/articles/googleVis_intro.html) |
-| [Chart.js](https://www.chartjs.org/docs/latest/)           | [chartjs](https://tutuchan.github.io/chartjs/)                               |
+| [Chart.js](https://www.chartjs.org/docs/latest/) | [chartjs](https://tutuchan.github.io/chartjs/) |
 
 : {tbl-colwidths="\[50,50\]"}
 
@@ -564,18 +562,18 @@ qtm(sigungu_shp)
 ::: {style="font-size:1.5rem"}
 -   널리 사용되는 CRS의 EPSG
 
-| 적용 스케일 | EPSG 숫자코드 | 설명                                                   |
-|-------------|---------------|--------------------------------------------------------|
-| 전세계      | EPSG:4326     | WGS84, 측지좌표계, GPS에 사용                          |
-|             | EPSG:3857     | 웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용 |
-|             | EPSG:7789     | ITRF2014                                               |
-| 미국        | EPSG:2163     | 알베르스 정적원추 도법                                 |
-| 유럽        | EPSG:3035     | 람베르트 정적방위 도법                                 |
-| 우리나라    | EPSG:5179     | UTM-K                                                  |
-|             | EPSG:5185     | 서부원점                                               |
-|             | EPSG:5186     | 중부원점                                               |
-|             | EPSG:5187     | 동부원점                                               |
-|             | EPSG:5188     | 동해원점                                               |
+| 적용 스케일 | EPSG 숫자코드 | 설명 |
+|----|----|----|
+| 전세계 | EPSG:4326 | WGS84, 측지좌표계, GPS에 사용 |
+|  | EPSG:3857 | 웹 메르카토르 도법, 구글 맵스, 오픈스트리트맵에서 사용 |
+|  | EPSG:7789 | ITRF2014 |
+| 미국 | EPSG:2163 | 알베르스 정적원추 도법 |
+| 유럽 | EPSG:3035 | 람베르트 정적방위 도법 |
+| 우리나라 | EPSG:5179 | UTM-K |
+|  | EPSG:5185 | 서부원점 |
+|  | EPSG:5186 | 중부원점 |
+|  | EPSG:5187 | 동부원점 |
+|  | EPSG:5188 | 동해원점 |
 
 : {tbl-colwidths="\[20,25,55\]"}
 :::

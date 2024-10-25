@@ -461,17 +461,17 @@ editor: visual
 
 ## 야믈 헤더 [YAML header]{style="font-size:2.5rem;color:gray"} {.smaller}
 
-| key              | 설명                                                               |
-|------------------|--------------------------------------------------------------------|
-| title            | 다큐먼트의 제목                                                    |
-| date             | 다큐먼트 작성 날짜                                                 |
-| author           | 다큐먼트 저자 이름                                                 |
-| format           | 다양한 포맷 관련 사항의 지정                                       |
-| toc              | 목차 삽입                                                          |
-| number-section   | 섹션 제목에 자동 번호 부여 여부                                    |
-| execute: echo    | 소스 코드의 포함 여부를 글로벌하게 설정, 보통 true                 |
+| key | 설명 |
+|----|----|
+| title | 다큐먼트의 제목 |
+| date | 다큐먼트 작성 날짜 |
+| author | 다큐먼트 저자 이름 |
+| format | 다양한 포맷 관련 사항의 지정 |
+| toc | 목차 삽입 |
+| number-section | 섹션 제목에 자동 번호 부여 여부 |
+| execute: echo | 소스 코드의 포함 여부를 글로벌하게 설정, 보통 true |
 | execute: warning | 경고 메시지를 산출물에 나타나게 할지를 글로벌하게 설정, 보통 false |
-| editor           | 비주얼 에디터와 소스 에디터 중 선택, 보통 visual                   |
+| editor | 비주얼 에디터와 소스 에디터 중 선택, 보통 visual |
 
 ## 코드 청크 [Code chunck]{style="font-size:2.5rem;color:gray"} {.smaller}
 
