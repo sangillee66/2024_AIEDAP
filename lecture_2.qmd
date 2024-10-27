@@ -123,12 +123,12 @@ editor: visual
 
 -   HTML 엘리먼트의 선택: [**CSS**]{style="color:coral"} [**선택자**]{style="color:coral"}(casading style sheet selector)
 
-| 선택 대상              | CSS 선택자     | 결과                                                                                      |
-|------------------------|----------------|-------------------------------------------------------------------------------------------|
-| 태그(tag)              | tag1           | "tag1"이라는 이름의 모든 tag                                                              |
-| 클래스(class)          | .class1        | "class1"이라는 class 속성을 갖는 모든 요소                                                |
-| 아이디(id)             | #id1           | "id1"이라는 id 속성을 갖는 모든 요소                                                      |
-| tag와 class의 결합     | tag1.class1    | "tag1"이라는 tag의 "class1"이라는 class 속성을 갖는 모든 요소                             |
+| 선택 대상 | CSS 선택자 | 결과 |
+|----|----|----|
+| 태그(tag) | tag1 | "tag1"이라는 이름의 모든 tag |
+| 클래스(class) | .class1 | "class1"이라는 class 속성을 갖는 모든 요소 |
+| 아이디(id) | #id1 | "id1"이라는 id 속성을 갖는 모든 요소 |
+| tag와 class의 결합 | tag1.class1 | "tag1"이라는 tag의 "class1"이라는 class 속성을 갖는 모든 요소 |
 | class1과 class2의 결합 | .class1.class2 | "class1"이라는 이름의 class 속성과 "class2"라는 이름의 class 속성을 동시에 갖는 모든 요소 |
 :::
 

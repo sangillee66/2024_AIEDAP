@@ -80,16 +80,16 @@ datatable(gapminder)
 
 `datatable` 함수의 `class` 아규먼트를 통해 테이블의 외관을 바꿀 수 있다. 다음과 같은 옵션이 가능하다.
 
-| Class name     | Description                                                          |
-|----------------|----------------------------------------------------------------------|
-| `display`      | `stripe`, `hover`, `row-border`, `order-column`을 동시 적용한 디폴트 |
-| `cell-border`  | 모든 셀의 상하좌우에 경계선 표시                                     |
-| `compact`      | 여백 축소                                                            |
-| `hover`        | 마우스의 위치에 따라 점멸 효과                                       |
-| `nowrap`       | 줄바꿈 없이 텍스트 표시                                              |
-| `order-column` | 정렬의 키가 되는 컬럼에 하이라이트 표시                              |
-| `row-border`   | 행별 경계선 표시                                                     |
-| `stripe`       | 행을 스트라이프로 표시                                               |
+| Class name | Description |
+|----|----|
+| `display` | `stripe`, `hover`, `row-border`, `order-column`을 동시 적용한 디폴트 |
+| `cell-border` | 모든 셀의 상하좌우에 경계선 표시 |
+| `compact` | 여백 축소 |
+| `hover` | 마우스의 위치에 따라 점멸 효과 |
+| `nowrap` | 줄바꿈 없이 텍스트 표시 |
+| `order-column` | 정렬의 키가 되는 컬럼에 하이라이트 표시 |
+| `row-border` | 행별 경계선 표시 |
+| `stripe` | 행을 스트라이프로 표시 |
 
 아래와 같이 cell-border과 compact를 함께 실행해 보고 테이블의 변화를 확인한다.
 
