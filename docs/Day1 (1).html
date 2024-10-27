@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="author" content="이상일(서울대학교 지리교육과) 김세창(서울대학교 지리교육과 석사) 김우형(서울대학교 지리교육과 석사과정)">
+<title>사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍 - Day 1: Quarto를 활용한 대시보드 제작</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><link rel="stylesheet" href="styles.css">
+</head>
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./aiedap_logo.png" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">사회과 예비교사를 위한 AIㆍ디지털 역량 강화 워크숍</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">프로그램 개요</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./material.html"> 
+<span class="menu-text">강의 자료</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./dashboard.html"> 
+<span class="menu-text">교수-학습 대시보드</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./reference.html"> 
+<span class="menu-text">참고문헌</span></a>
+  </li>  
+</ul>
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
+    <a class="nav-link" href="https://sangillee.snu.ac.kr/"> <i class="bi bi-house-door" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="mailto:si_lee@snu.ac.kr"> <i class="bi bi-envelope-arrow-up" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sangillee66"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+   
+  <ul>
+<li><a href="#%EC%8B%A4%EC%8A%B5-%EB%AA%A9%ED%91%9C" id="toc-실습-목표" class="nav-link active" data-scroll-target="#%EC%8B%A4%EC%8A%B5-%EB%AA%A9%ED%91%9C">실습 목표</a></li>
+  <li><a href="#quarto-%EB%AC%B8%EC%84%9C-%EC%83%9D%EC%84%B1" id="toc-quarto-문서-생성" class="nav-link" data-scroll-target="#quarto-%EB%AC%B8%EC%84%9C-%EC%83%9D%EC%84%B1"><span class="header-section-number">1</span> Quarto 문서 생성</a></li>
+  <li>
+<a href="#quarto-%EB%AC%B8%EC%84%9C%EC%9D%98-%EA%B5%AC%EC%A1%B0" id="toc-quarto-문서의-구조" class="nav-link" data-scroll-target="#quarto-%EB%AC%B8%EC%84%9C%EC%9D%98-%EA%B5%AC%EC%A1%B0"><span class="header-section-number">2</span> Quarto 문서의 구조</a>
+  <ul class="collapse">
+<li><a href="#yaml-%ED%97%A4%EB%8D%94" id="toc-yaml-헤더" class="nav-link" data-scroll-target="#yaml-%ED%97%A4%EB%8D%94"><span class="header-section-number">2.1</span> YAML 헤더</a></li>
+  <li><a href="#%EC%BD%94%EB%93%9C-%EC%B2%AD%ED%81%AC" id="toc-코드-청크" class="nav-link" data-scroll-target="#%EC%BD%94%EB%93%9C-%EC%B2%AD%ED%81%AC"><span class="header-section-number">2.2</span> 코드 청크</a></li>
+  <li><a href="#%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%ED%85%8D%EC%8A%A4%ED%8A%B8" id="toc-마크다운-텍스트" class="nav-link" data-scroll-target="#%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-%ED%85%8D%EC%8A%A4%ED%8A%B8"><span class="header-section-number">2.3</span> 마크다운 텍스트</a></li>
+  <li><a href="#quarto-%EB%AC%B8%EC%84%9C-%EC%9E%91%EC%84%B1-%ED%8C%81" id="toc-quarto-문서-작성-팁" class="nav-link" data-scroll-target="#quarto-%EB%AC%B8%EC%84%9C-%EC%9E%91%EC%84%B1-%ED%8C%81"><span class="header-section-number">2.4</span> Quarto 문서 작성 팁</a></li>
+  <li><a href="#quarto-%EB%AC%B8%EC%84%9C-%EC%9E%91%EC%84%B1" id="toc-quarto-문서-작성" class="nav-link" data-scroll-target="#quarto-%EB%AC%B8%EC%84%9C-%EC%9E%91%EC%84%B1"><span class="header-section-number">2.5</span> Quarto 문서 작성</a></li>
+  </ul>
+</li>
+  <li><a href="#%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B5%AC%EC%A1%B0" id="toc-대시보드의-기본-구조" class="nav-link" data-scroll-target="#%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EA%B5%AC%EC%A1%B0"><span class="header-section-number">3</span> 대시보드의 기본 구조</a></li>
+  <li>
+<a href="#%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%84%A4%EC%A0%95%EB%B2%95" id="toc-레이아웃-설정법" class="nav-link" data-scroll-target="#%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%84%A4%EC%A0%95%EB%B2%95"><span class="header-section-number">4</span> 레이아웃 설정법</a>
+  <ul class="collapse">
+<li><a href="#%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9D%98-%EC%84%A4%EC%A0%95" id="toc-페이지의-설정" class="nav-link" data-scroll-target="#%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9D%98-%EC%84%A4%EC%A0%95"><span class="header-section-number">4.1</span> 페이지의 설정</a></li>
+  <li><a href="#%EB%82%B4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%B0%94%EC%9D%98-%EC%84%A4%EC%A0%95" id="toc-내비게이션-바의-설정" class="nav-link" data-scroll-target="#%EB%82%B4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%B0%94%EC%9D%98-%EC%84%A4%EC%A0%95"><span class="header-section-number">4.2</span> 내비게이션 바의 설정</a></li>
+  <li><a href="#%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94%EC%9D%98-%EC%84%A4%EC%A0%95" id="toc-사이드바의-설정" class="nav-link" data-scroll-target="#%EC%82%AC%EC%9D%B4%EB%93%9C%EB%B0%94%EC%9D%98-%EC%84%A4%EC%A0%95"><span class="header-section-number">4.3</span> 사이드바의 설정</a></li>
+  <li><a href="#%ED%96%89%EA%B3%BC-%EC%97%B4%EC%9D%98-%EC%84%A4%EC%A0%95" id="toc-행과-열의-설정" class="nav-link" data-scroll-target="#%ED%96%89%EA%B3%BC-%EC%97%B4%EC%9D%98-%EC%84%A4%EC%A0%95"><span class="header-section-number">4.4</span> 행과 열의 설정</a></li>
+  <li><a href="#%ED%83%AD%EC%85%8B%EC%9D%98-%EC%84%A4%EC%A0%95" id="toc-탭셋의-설정" class="nav-link" data-scroll-target="#%ED%83%AD%EC%85%8B%EC%9D%98-%EC%84%A4%EC%A0%95"><span class="header-section-number">4.5</span> 탭셋의 설정</a></li>
+  <li><a href="#%EA%B8%B0%EB%B3%B8-%EA%B5%AC%EC%A1%B0-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0" id="toc-기본-구조-살펴보기" class="nav-link" data-scroll-target="#%EA%B8%B0%EB%B3%B8-%EA%B5%AC%EC%A1%B0-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0"><span class="header-section-number">4.6</span> 기본 구조 살펴보기</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#%EC%B9%B4%EB%93%9C%EC%99%80-%EB%82%B4%EC%9A%A9-%EC%9A%94%EC%86%8C" id="toc-카드와-내용-요소" class="nav-link" data-scroll-target="#%EC%B9%B4%EB%93%9C%EC%99%80-%EB%82%B4%EC%9A%A9-%EC%9A%94%EC%86%8C"><span class="header-section-number">5</span> 카드와 내용 요소</a>
+  <ul class="collapse">
+<li><a href="#%EA%B7%B8%EB%9E%98%ED%94%84" id="toc-그래프" class="nav-link" data-scroll-target="#%EA%B7%B8%EB%9E%98%ED%94%84"><span class="header-section-number">5.1</span> 그래프</a></li>
+  <li><a href="#%ED%85%8C%EC%9D%B4%EB%B8%94" id="toc-테이블" class="nav-link" data-scroll-target="#%ED%85%8C%EC%9D%B4%EB%B8%94"><span class="header-section-number">5.2</span> 테이블</a></li>
+  <li><a href="#%EC%A7%80%EB%8F%84" id="toc-지도" class="nav-link" data-scroll-target="#%EC%A7%80%EB%8F%84"><span class="header-section-number">5.3</span> 지도</a></li>
+  <li><a href="#%ED%85%8D%EC%8A%A4%ED%8A%B8" id="toc-텍스트" class="nav-link" data-scroll-target="#%ED%85%8D%EC%8A%A4%ED%8A%B8"><span class="header-section-number">5.4</span> 텍스트</a></li>
+  <li><a href="#%EB%B0%B8%EB%A5%98%EB%B0%95%EC%8A%A4" id="toc-밸류박스" class="nav-link" data-scroll-target="#%EB%B0%B8%EB%A5%98%EB%B0%95%EC%8A%A4"><span class="header-section-number">5.5</span> 밸류박스</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#%EC%98%88%EC%8B%9C-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0" id="toc-예시-대시보드-만들기" class="nav-link" data-scroll-target="#%EC%98%88%EC%8B%9C-%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="header-section-number">6</span> 예시 대시보드 만들기</a>
+  <ul class="collapse">
+<li><a href="#yaml-%ED%95%B4%EB%8D%94" id="toc-yaml-해더" class="nav-link" data-scroll-target="#yaml-%ED%95%B4%EB%8D%94"><span class="header-section-number">6.1</span> YAML 해더</a></li>
+  <li><a href="#intro-%ED%8E%98%EC%9D%B4%EC%A7%80" id="toc-intro-페이지" class="nav-link" data-scroll-target="#intro-%ED%8E%98%EC%9D%B4%EC%A7%80"><span class="header-section-number">6.2</span> Intro 페이지</a></li>
+  <li><a href="#graphs-%ED%8E%98%EC%9D%B4%EC%A7%80" id="toc-graphs-페이지" class="nav-link" data-scroll-target="#graphs-%ED%8E%98%EC%9D%B4%EC%A7%80"><span class="header-section-number">6.3</span> Graphs 페이지</a></li>
+  <li><a href="#tables-%ED%8E%98%EC%9D%B4%EC%A7%80" id="toc-tables-페이지" class="nav-link" data-scroll-target="#tables-%ED%8E%98%EC%9D%B4%EC%A7%80"><span class="header-section-number">6.4</span> Tables 페이지</a></li>
+  <li><a href="#maps-%ED%8E%98%EC%9D%B4%EC%A7%80" id="toc-maps-페이지" class="nav-link" data-scroll-target="#maps-%ED%8E%98%EC%9D%B4%EC%A7%80"><span class="header-section-number">6.5</span> Maps 페이지</a></li>
+  <li><a href="#%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EC%9B%B9-%EC%83%81%EC%97%90-%EC%B6%9C%ED%8C%90%ED%95%98%EA%B8%B0" id="toc-대시보드-웹-상에-출판하기" class="nav-link" data-scroll-target="#%EB%8C%80%EC%8B%9C%EB%B3%B4%EB%93%9C-%EC%9B%B9-%EC%83%81%EC%97%90-%EC%B6%9C%ED%8C%90%ED%95%98%EA%B8%B0"><span class="header-section-number">6.6</span> 대시보드 웹 상에 출판하기</a></li>
+  <li><a href="#%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%84%EB%B2%A0%EB%94%A9" id="toc-웹사이트-임베딩" class="nav-link" data-scroll-target="#%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8-%EC%9E%84%EB%B2%A0%EB%94%A9"><span class="header-section-number">6.7</span> 웹사이트 임베딩</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">Day 1: Quarto를 활용한 대시보드 제작</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>이상일(서울대학교 지리교육과)<br>김세창(서울대학교 지리교육과 석사)<br>김우형(서울대학교 지리교육과 석사과정) </p>
+          </div>
+  </div>
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">August 4, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header><section id="실습-목표" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="실습-목표">실습 목표</h2>
+<p>Quarto를 이용하여 데이터 대시보드(dashboard) 만들기</p>
+</section><section id="quarto-문서-생성" class="level2" data-number="1"><h2 data-number="1" class="anchored" data-anchor-id="quarto-문서-생성">
+<span class="header-section-number">1</span> Quarto 문서 생성</h2>
+<p>R studio를 열고 <strong>File</strong> &gt; <strong>New File</strong> &gt; <strong>Quarto Document</strong>를 실행한다. Title과 Author란에 적절한 텍스트를 기입하고 아래에 위치한 Create 버튼을 클릭한다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/new_doc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1" title="새로운 Quarto 문서 생성"><img src="images/new_doc.png" class="img-fluid figure-img" alt="새로운 Quarto 문서 생성"></a></p>
+<figcaption>새로운 Quarto 문서 생성</figcaption></figure>
+</div>
+<p>그렇다면 아래의 화면이 보일 것이다.</p>
+<div id="fig-initial" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-initial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/initial_page.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/initial_page.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-initial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: 새로 생성된 Quarto 문서
+</figcaption></figure>
+</div>
+</section><section id="quarto-문서의-구조" class="level2" data-number="2"><h2 data-number="2" class="anchored" data-anchor-id="quarto-문서의-구조">
+<span class="header-section-number">2</span> Quarto 문서의 구조</h2>
+<div id="fig-example" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/rstudio-source-visual.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-glightbox="description: .lightbox-desc-3"><img src="images/rstudio-source-visual.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Quarto의 기본 구조
+</figcaption></figure>
+</div>
+<p>Quarto 문서는 두 개의 서로 다른 에디터를 사용하여 편집할 수 있다. <a href="#fig-example" class="quarto-xref">Figure&nbsp;2</a> 에서 왼쪽은 비주얼 에디터(visual editor), 오른쪽은 소스 에디터(source editor)를 사용한 것이다. 소스 에디터는 Notion과 유사한 마크다운 형식을 사용하며, 비주얼 에디터는 마치 워드프로세서를 다루듯 Quarto 문서를 작성할 수 있다.</p>
+<p>Quarto 문서는 크게 세 부분으로 나뉘어진다.</p>
+<ul>
+<li><p>YAML 헤더(header)</p></li>
+<li><p>코드 청크(code chunk)</p></li>
+<li><p>마크다운 텍스트</p></li>
+</ul>
+<section id="yaml-헤더" class="level3" data-number="2.1"><h3 data-number="2.1" class="anchored" data-anchor-id="yaml-헤더">
+<span class="header-section-number">2.1</span> YAML 헤더</h3>
+<p>YAML 헤더는 Quarto 문서의 최상단에 위치하는 것으로, 문서의 전반적인 사항을 관장한다. YAML 헤더의 모든 요소는 기본적으로 <code>key: value</code>의 형태를 띤다. <code>key</code>는 항목이고, <code>value</code>는 해당 항목에 대한 옵션값이다. <a href="#fig-initial" class="quarto-xref">Figure&nbsp;1</a> 에는 <code>title</code>, <code>format</code>, <code>editor</code>의 세 key가 사용되었는데, 제목은 “Hello Quarto”, 산출 포맷은 HTML이며, Quarto 다큐먼트 작성을 비주얼 에디터를 통해 할 것이라는 점을 명시하고 있다.</p>
+<p>이 밖에도 다양한 key가 존재하는데, <a href="https://quarto.org/docs/reference/formats/html.html">링크</a>에서 자세한 정보를 확인할 수 있다. 보통 아래의 것들이 중요하다.</p>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 79%">
+</colgroup>
+<thead><tr class="header">
+<th>key</th>
+<th>설명</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>title</td>
+<td>다큐먼트의 제목</td>
+</tr>
+<tr class="even">
+<td>date</td>
+<td>다큐먼트 작성 날짜</td>
+</tr>
+<tr class="odd">
+<td>author</td>
+<td>다큐먼트 저자 이름</td>
+</tr>
+<tr class="even">
+<td>format</td>
+<td>다양한 포맷 관련 사항의 지정</td>
+</tr>
+<tr class="odd">
+<td>toc</td>
+<td>목차 삽입</td>
+</tr>
+<tr class="even">
+<td>number-section</td>
+<td>섹션 제목에 자동 번호 부여 여부</td>
+</tr>
+<tr class="odd">
+<td>execute: echo</td>
+<td>소스 코드의 포함 여부를 글로벌하게 설정, 보통 true</td>
+</tr>
+<tr class="even">
+<td>execute: warning</td>
+<td>경고 메시지를 산출물에 나타나게 할지를 글로벌하게 설정, 보통 false</td>
+</tr>
+<tr class="odd">
+<td>editor</td>
+<td>비주얼 에디터와 소스 에디터 중 선택, 보통 visual</td>
+</tr>
+</tbody>
+</table>
+<p><code>---</code> 으로 둘러싸인 YAML에 아래와 같은 몇 가지 <code>key: value</code> 를 더해보자.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>number<span class="sc">-</span>sections<span class="sc">:</span> true</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    toc<span class="sc">:</span> true</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>execute<span class="sc">:</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  warning<span class="sc">:</span> false</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  error<span class="sc">:</span> false</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  freeze<span class="sc">:</span> auto</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="코드-청크" class="level3" data-number="2.2"><h3 data-number="2.2" class="anchored" data-anchor-id="코드-청크">
+<span class="header-section-number">2.2</span> 코드 청크</h3>
+<p>프로그래밍 언어의 코드가 들어가는 부분이다. R을 사용하는 경우 <code>{r}</code>로 시작한다. 뒤이어 배울 데이터 불러오기, 정리하기, 변형하기, 시각화하기, 탐색하기, 수집하기와 관련된 모든 종류의 코드가 여기에 들어갈 수 있다. 보통 하나의 Quarto 문서 내에 다수의 코드 청크가 포함된다. 각 코드 청크 내에서 코드를 실행할 수 있는데, 한 단위씩 실행할 때는 <strong>ctrl(또는 Cmd) + enter</strong>, 한 코드 청크 내 모든 코드를 실행하고자 할 때는 <strong>ctrl(또는 Cmd) + shift + enter</strong> 단축키를 사용한다.</p>
+<p>각 코드 청크 앞 부분에 해당 코드 청크와 관련된 다양한 옵션을 <code>#|</code> 형태로 삽입할 수 있는데, YAML 헤더에서처럼 <code>key: value</code>의 형태를 띤다. 아래의 옵션들은 코드 청크의 내용이나 실행 결과, 오류 메시지 등이 최종 산출물에 어떻게 표현되는지 결정하는 것들이다. 이 밖에도 다양한 옵션들이 존재하는데, 구글링 혹은 <a href="https://quarto.org/docs/guide/">Quarto 공식 가이드</a>를 참고하자.</p>
+<table class="table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead><tr class="header">
+<th>Option</th>
+<th style="text-align: center;">Run code</th>
+<th style="text-align: center;">Show code</th>
+<th style="text-align: center;">Output</th>
+<th style="text-align: center;">Plots</th>
+<th style="text-align: center;">Messages</th>
+<th style="text-align: center;">Warnings</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>eval: false</code></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="even">
+<td><code>include: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr class="odd">
+<td><code>echo: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td><code>results: hide</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td><code>fig-show: hide</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td><code>message: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td><code>warning: false</code></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+</tr>
+</tbody>
+</table></section><section id="마크다운-텍스트" class="level3" data-number="2.3"><h3 data-number="2.3" class="anchored" data-anchor-id="마크다운-텍스트">
+<span class="header-section-number">2.3</span> 마크다운 텍스트</h3>
+<p>Quarto는 기본적으로 마크다운 텍스트 작성을 기반으로 하고 있다. 마크다운 텍스트 작성에 앞서 언급한 비주얼 에디터는 큰 역할을 하는데, 이는 마크다운 언어의 사용자 편의성을 한번 더 강화한 것으로 볼 수 있다.</p>
+<p>기본적인 Quarto 작성법은 다음과 같다.</p>
+<ul>
+<li><p>텍스트: 그냥 작성</p></li>
+<li><p>코드 청크(Code Chunk): <strong>Insert &gt; Executable Cell &gt; R</strong>(Ctrl+Alt+I)</p></li>
+<li><p>표(Table): <strong>Insert &gt; Table</strong></p></li>
+<li><p>그림(Figure): <strong>Insert &gt; Figure</strong></p></li>
+<li><p>링크(Link): (원하는 텍스트 선택 후) <strong>Insert &gt; Link</strong></p></li>
+<li><p>머릿말(Header): <strong>Normal &gt; Header 1~6</strong> 중 선택</p></li>
+</ul></section><section id="quarto-문서-작성-팁" class="level3" data-number="2.4"><h3 data-number="2.4" class="anchored" data-anchor-id="quarto-문서-작성-팁">
+<span class="header-section-number">2.4</span> Quarto 문서 작성 팁</h3>
+<p>추가로 몇 가지의 팁을 소개한다.</p>
+<p>첫째, R의 패키지나 함수를 다르게 표시할 수 있다. 지금까지의 실습록에서 tidyverse 함수를 <code>tidyverse</code> 와 같이 표시하던 것이 기억날 것이다. 이는 해당 텍스트를 선택한 후, Format에서 Code를 누르면 생성된다. 혹은 Ctrl+D로 실행할 수 있다.</p>
+<p>둘째, <code>Call-out</code> 이다. 문서 중간에 팁이나 주의를 알려주고 있다.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Callout은 문서 중간에 팁이나 주의를 알려주는데 사용할 수 있다.</p>
+</div>
+</div>
+<p>Callout에는 공지(note), 팁(tip), 중요사항(important), 주의(caution), 경고(warning) 등이 있다. 이는 비주얼 에디터 메뉴 Insert-Callout에서 선택할 수 있고, <code>:::</code> 으로 둘러싸인 부분에 글이나 코드 청크를 작성하면 된다. 다양한 Callout의 옵션은 <a href="https://quarto.org/docs/authoring/callouts.html">공식 가이드</a>에서 찾아볼 수 있다.</p>
+</section><section id="quarto-문서-작성" class="level3" data-number="2.5"><h3 data-number="2.5" class="anchored" data-anchor-id="quarto-문서-작성">
+<span class="header-section-number">2.5</span> Quarto 문서 작성</h3>
+<p>위에서 배운 내용을 기반으로 간단한 Quarto 문서를 작성해본다.</p>
+<p><a href="images/quarto_exercise.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/quarto_exercise.png" class="img-fluid"></a></p>
+</section></section><section id="대시보드의-기본-구조" class="level2" data-number="3"><h2 data-number="3" class="anchored" data-anchor-id="대시보드의-기본-구조">
+<span class="header-section-number">3</span> 대시보드의 기본 구조</h2>
+<p>대시보드는 기본적으로 다섯 가지의 구성요소로 이루어진다. 각각은 메인 바디, 헤더, 내비게이터, 사이드바, 푸터이다.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/img/layout.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" data-glightbox="description: .lightbox-desc-5" title="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"><img src="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/img/layout.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset"></a></p>
+<figcaption><a href="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset" class="uri">https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset</a></figcaption></figure>
+</div>
+<p>첫째, 메인 바디(main body)는 대시보드의 핵심 요소이다. 메인 바디는 카드(card)라고 불리는 기본 단위들로 구성된다. 개별 카드는 다양한 내용 요소(텍스트, 그래프, 표, 지도, 밸류박스 등)를 가질 수 있다. 즉, 어떤 카드 속에는 그래프가 들어가며, 어떤 카드 속에는 지도가 들어간다. 이러한 카드들은 특정한 레이아웃 요소(페이지, 행, 열, 탭셋 등)를 통해 메인 바디에 배열된다. 페이지(page)는 대시보드 레이아웃 요소 중 최상위 레벨인데, 개별 페이지는 다수의 행(row) 혹은 열(column)로 구성된다. 행 혹은 열을 또다른 행 혹은 열이 아닌 탭 클릭 방식으로 분할하고 싶을 때 탭셋(tabset)이 사용된다.</p>
+<p>둘째, 헤더(header)는 대시보드의 가장 중요한 메타 정보(로고, 제목, 저자 등)를 포함한다.</p>
+<p>셋째, 내비게이터(navigator)는 최상위 레이아웃인 페이지간 이동을 통제한다.</p>
+<p>넷째, 사이드바(sidebar)는 주로 사용자의 인풋(input)을 받을 때 사용되는 것으로, 동적인 대시보드에서 주로 사용된다. Quarto는 사이드바 외에 툴바(toolbar)와 카드인풋(card input)과 같은 옵션을 제공한다.</p>
+<p>다섯째, 푸터(footer)는 헤더와 유사한 기능을 하는데, 주로 부차적인 매타 정도를 포함한다.</p>
+<p>다섯개의 구성 요소 중 가장 중요한 것은 메인 바디, 해더, 내비게이터이다. Quarto는 헤더와 내비게이터를 통합한 내비게이션바(navigation bar)를 제공한다. 사이드바는 <code>Shiny</code> 페키지를 활용한 동적인 대시보드에서는 매우 중요하지만, 이번 실습에서는 사용하지 않는다. 푸터는 가장 지엽적인 요소이다.</p>
+<p>다음의 대시보드를 살펴보자.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" data-glightbox="description: .lightbox-desc-6" title="https://quarto.org/docs/dashboards/"><img src="https://quarto.org/docs/dashboards/examples/thumbnails/customer-churn-dashboard.png" class="img-fluid figure-img" alt="https://quarto.org/docs/dashboards/"></a></p>
+<figcaption><a href="https://quarto.org/docs/dashboards/" class="uri">https://quarto.org/docs/dashboards/</a></figcaption></figure>
+</div>
+<p>이 대시보드는 크게 내비게이션바와 메인 바디로 구성되어 있다. 네비게이션바에는 다음의 내용이 포함되어 있다.</p>
+<ul>
+<li><p>이 대시보드의 제목(title)은 ’고객이탈(Customer Chrun)’이고 회사 이름은 DEMOCO(로고)이다.</p></li>
+<li><p>이 대시보드는 모두 두 개의 페이지(page)로 구성되어 있다. 페이지의 이름은 각각 ’Churn (Standard)’과 ’Data’이다.</p></li>
+</ul>
+<p>메인 바디는 다음과 같은 레이아웃 요소들로 구성되어 있다.</p>
+<ul>
+<li><p>첫 번째 페이지(Churn (Standard))는 세 개의 행(row)으로 구성되어 있다.</p></li>
+<li><p>첫 번째 페이지의 첫 번째 행은 세 개의 카드(card)로 구성되어 있는데, 내용 요소는 모두 밸류박스(value box)이다.</p></li>
+<li><p>첫 번째 페이지의 두 번째 행은 두 개의 열(즉, 카드)로 구성되어 있는데, 내용 요소는 모두 그래프(graph)이다.</p></li>
+<li><p>첫 번째 페이지의 세 번째 행은 단일한 열(즉, 카드)로 구성되어 있는데, 내용 요소는 테이블(table)이다.</p></li>
+<li><p>두 번째 페이지에도 다양한 사항이 포함되어 있을 것이다.</p></li>
+</ul>
+<p>이 밖에도 다양한 대시보드의 예시를 <a href="https://quarto.org/docs/gallery/">Quarto 갤러리</a>에서 찾아볼 수 있다.</p>
+</section><section id="레이아웃-설정법" class="level2" data-number="4"><h2 data-number="4" class="anchored" data-anchor-id="레이아웃-설정법">
+<span class="header-section-number">4</span> 레이아웃 설정법</h2>
+<section id="페이지의-설정" class="level3" data-number="4.1"><h3 data-number="4.1" class="anchored" data-anchor-id="페이지의-설정">
+<span class="header-section-number">4.1</span> 페이지의 설정</h3>
+<p>페이지(page)는 최상위 레이아웃 요소이다. 기본 원칙은 다음과 같다.</p>
+<ul>
+<li><p>헤더 1(header 1) 레벨이 페이지의 구분을 결정한다.</p></li>
+<li><p>Quarto에서는 페이지가 내비게이션바에 나타난다.</p></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Page A</span></span>
+<span></span>
+<span><span class="co"># Page B</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="내비게이션-바의-설정" class="level3" data-number="4.2"><h3 data-number="4.2" class="anchored" data-anchor-id="내비게이션-바의-설정">
+<span class="header-section-number">4.2</span> 내비게이션 바의 설정</h3>
+<p>내비게이션바는 헤더와 내비게이터로 구성된다. 내비게이터는 페이지가 설정된 경우에만 나타나게 된다. 헤더는 다른 Quarto 문서와 마찬가지로 YAML 헤더를 통해 통제된다.</p>
+<ul>
+<li><p>제목(title): 대시보드 전체의 이름을 결정한다.</p></li>
+<li><p>저자(author): 만든 사람이나 관리 회사의 이름이지만, 부제로 활용되기도 한다.</p></li>
+<li>
+<p>포맷(format): 기본 설정인 대시보드(dashboard) 하에 다양한 하위 설정이 가능하다.</p>
+<ul>
+<li><p>logo: 로고 그림 파일을 지정하면 내비게이션바의 왼쪽 끝에 나타난다.</p></li>
+<li><p>nav-buttons: github이나 이메일 연결을 설정할 수 있다.</p></li>
+<li><p>scrolling: true 설정: 디폴트는 false인데, 레이아웃 요소들의 높이들의 합이 100%가 되도록 일괄적으로 조절된다. true로 지정하면, 개별 내용 요소의 원 크기를 그대로 살리면서 스크롤되게 디자인이 바뀐다. 둘 다를 실험해 보고 자신의 목적에 맞는 것을 고른다.</p></li>
+</ul>
+</li>
+<li><p>테마(theme): 대시보드의 외관을 한꺼번에 바꿀 수 있다. 모두 25개의 <a href="https://quarto.org/docs/dashboards/theming.html">부트스와치(bootswatch)</a> 테마가 존재한다. 여러가지를 실험해 보고 자신의 취향에 맞는 것을 선정한다.</p></li>
+</ul>
+<p>자세한 사항은 아래의 예시 대시보드 만들기에서 확인한다.</p>
+</section><section id="사이드바의-설정" class="level3" data-number="4.3"><h3 data-number="4.3" class="anchored" data-anchor-id="사이드바의-설정">
+<span class="header-section-number">4.3</span> 사이드바의 설정</h3>
+<p>사이드바(sidebar)는 <code>{.sidebar}</code> 태그를 통해 만들 수 있는데, 헤더 1(header 1) 레벨이므로 특정한 페이지에 종속되지 않는다. 사이드바는 주로 사용자의 투입을 받을 때 사용되기 때문에 동적인 대시보드에 주로 사용된다. 정적인 대시보드의 경우에는 텍스트를 통한 특정 정보의 제공에 사용될 수 있다.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># {.sidebar}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Sidebar content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="행과-열의-설정" class="level3" data-number="4.4"><h3 data-number="4.4" class="anchored" data-anchor-id="행과-열의-설정">
+<span class="header-section-number">4.4</span> 행과 열의 설정</h3>
+<p>행(row)과 열(column)은 가장 기본이 되는 레이아웃 요소이다. 기본 원칙은 다음과 같다.</p>
+<ul>
+<li><p>헤더 2(header 2) 레벨이 행과 열의 구분을 일차적으로 결정한다.</p></li>
+<li><p>헤더 3(header 3) 레벨이 하위 행과 열의 구분을 이차적으로 결정한다.</p></li>
+<li><p>Row와 Column 옆에 <code>{height}</code>, <code>{width}</code> 태그를 통해 가로 세로의 상대적인 크기를 정한다.</p></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Row {height=70%}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">1</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Row {height=30%}</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="do">### Column {width=40%}</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">2-1</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="do">### Column {width=60%}</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">2-2</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Page B</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="탭셋의-설정" class="level3" data-number="4.5"><h3 data-number="4.5" class="anchored" data-anchor-id="탭셋의-설정">
+<span class="header-section-number">4.5</span> 탭셋의 설정</h3>
+<p>Row나 Column에 {.tabset}을 표기하면, 하위의 행과 열이 탭으로 구분된다. 이렇게 하면 카드의 크기가 지나치게 줄어드는 단점을 해소할 수 있다.</p>
+</section><section id="기본-구조-살펴보기" class="level3" data-number="4.6"><h3 data-number="4.6" class="anchored" data-anchor-id="기본-구조-살펴보기">
+<span class="header-section-number">4.6</span> 기본 구조 살펴보기</h3>
+<p>위를 바탕으로 대시보드의 골격을 작성해본다.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"dashboard"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> dashboard</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>theme<span class="sc">:</span> default</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>editor_options<span class="sc">:</span> </span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  chunk_output_type<span class="sc">:</span> console</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># {.sidebar}</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>Sidebar content</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Page A</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="do">## Row {height=70%}</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">1</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="do">## Row {height=30%}</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="do">### Column {width=80%} {.tabset}</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="do">#### Tab1</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">2-1</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="do">#### Tab2</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">2-2</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="do">### Column {width=20%}</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">2-3</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Page B</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>Card <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>위와 같이 설정하면 다음과 같은 결과를 얻을 수 있다.</p>
+<p><a href="images/dashboard_example.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/dashboard_example.png" class="img-fluid"></a></p>
+</section></section><section id="카드와-내용-요소" class="level2" data-number="5"><h2 data-number="5" class="anchored" data-anchor-id="카드와-내용-요소">
+<span class="header-section-number">5</span> 카드와 내용 요소</h2>
+<p>카드(card)란 특정한 내용 요소(텍스트, 벨류박스, 테이블, 그래프, 지도 등)를 포함하고 있는, 대시보드의 가장 기본적인 단위이다. 다음의 두 가지 사항이 중요하다.</p>
+<ul>
+<li><p>카드의 제목이 중요하다. 완성된 대시보드 상에 등장하기 때문에 사용자가 이해하기 쉬운 제목이 부여되어야 한다.</p></li>
+<li><p>내용 요소에 따라 카드를 작성하는 방법이 조금 다르다.</p></li>
+</ul>
+<p>내용 요소 제작의 세세한 사항은 아래의 “예시 대시보드 만들기”에서 확인한다.</p>
+<section id="그래프" class="level3" data-number="5.1"><h3 data-number="5.1" class="anchored" data-anchor-id="그래프">
+<span class="header-section-number">5.1</span> 그래프</h3>
+<p>Quarto는 그래프 하나를 만들어내는 코드 청크를 하나의 카드로 인식한다. 그래프 카드의 제목은 코드 청크 내의 <code>#| title:</code> 옵션을 통해 부여된다. <code>ggplot2</code>와 같은 정적인 플롯 도구 뿐만 아니라 <code>plotly</code>와 같은 반응형 플롯 도구를 사용하여 그래프 카드를 생성한다.</p>
+</section><section id="테이블" class="level3" data-number="5.2"><h3 data-number="5.2" class="anchored" data-anchor-id="테이블">
+<span class="header-section-number">5.2</span> 테이블</h3>
+<p>Quarto는 테이블 하나를 디스플레이하는 코드 청크를 하나의 카드로 인식한다. 테이블 카드의 제목은 코드 청크 내의 <code>#| title:</code> 옵션을 통해 부여된다. <a href="https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html"><code>knitr</code> 패키지</a>의 <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable()</a></code> 함수, <a href="https://rstudio.github.io/DT/"><code>DT</code> 패키지</a>의 <code><a href="https://rdrr.io/pkg/DT/man/datatable.html">datatable()</a></code> 함수 등을 이용해 테이블 카드를 생성한다.</p>
+</section><section id="지도" class="level3" data-number="5.3"><h3 data-number="5.3" class="anchored" data-anchor-id="지도">
+<span class="header-section-number">5.3</span> 지도</h3>
+<p>Quarto는 지도 하나를 디스플레이하는 코드 청크를 하나의 카드로 인식한다. 지도 카드의 제목은 코드 청크 내의 <code>#| title:</code> 옵션을 통해 부여된다. <code>ggplot2</code>와 같은 정적인 지도 제작 도구 뿐만 아니라 <a href="https://leafletjs.com/"><code>leaflet</code></a>과 같은 반응형 지도 제작 도구를 사용하여 지도 카드를 생성한다.</p>
+</section><section id="텍스트" class="level3" data-number="5.4"><h3 data-number="5.4" class="anchored" data-anchor-id="텍스트">
+<span class="header-section-number">5.4</span> 텍스트</h3>
+<p>일종의 텍스트 박스도 하나의 카드로 간주된다. 그래프, 테이블, 지도가 하나의 코드 청크가 하나의 카드로 인식되는데 반해 텍스트 카드는 다른 형식을 취한다. <code>::: {.card}</code>&nbsp;div를 사용해야 하며 괄호 내부에 <code>title=</code> 옵션을 사용해 제목을 지정해야 한다. 가령 <code>{.card title="Text"}</code>와 같이 표기해야 한다.</p>
+</section><section id="밸류박스" class="level3" data-number="5.5"><h3 data-number="5.5" class="anchored" data-anchor-id="밸류박스">
+<span class="header-section-number">5.5</span> 밸류박스</h3>
+<p>요약적 수치를 큰 박스 속에 나타내는 것을 밸류박스(value box)라고 하는데, 코드 청크로 표현하지만 형식은 조금 다르다. <code>#| content: valuebox</code>라는 옵션이 반드시 포함되야 하며, 제목을 지정하기 위해 <code>#| title:</code> 옵션도 필요하다. 또한 리스트를 이용해 아이콘(icon), 컬러(color), 수치(value)를 지정해야 한다.</p>
+<p>아이콘은 <a href="https://icons.getbootstrap.com/">부트스트랩 아이콘(bootstrap icon)</a>이 사용된다. 적절한 아이콘을 찾고 그 이름을 <code>#| title:</code> 옵션을 통해 설정하는 것이 중요하다.</p>
+<p>모든 컬러가 다 사용가능한 것은 아니다. 아래의 표를 참조하여 컬러를 설정해야 한다.</p>
+<table class="table">
+<thead><tr class="header">
+<th>Color Alias</th>
+<th>Default Theme Color(s)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>primary</code></td>
+<td>Blue</td>
+</tr>
+<tr class="even">
+<td><code>secondary</code></td>
+<td>Gray</td>
+</tr>
+<tr class="odd">
+<td><code>success</code></td>
+<td>Green</td>
+</tr>
+<tr class="even">
+<td><code>info</code></td>
+<td>Bright Blue</td>
+</tr>
+<tr class="odd">
+<td><code>warning</code></td>
+<td>Yellow/Orange</td>
+</tr>
+<tr class="even">
+<td><code>danger</code></td>
+<td>Red</td>
+</tr>
+<tr class="odd">
+<td><code>light</code></td>
+<td>Light Gray</td>
+</tr>
+<tr class="even">
+<td><code>dark</code></td>
+<td>Black</td>
+</tr>
+</tbody>
+</table></section></section><section id="예시-대시보드-만들기" class="level2" data-number="6"><h2 data-number="6" class="anchored" data-anchor-id="예시-대시보드-만들기">
+<span class="header-section-number">6</span> 예시 대시보드 만들기</h2>
+<p>위의 사항을 바탕으로 예시 대시보드(<a href="https://sechangkim.quarto.pub/my-first-dashboard/" class="uri">https://sechangkim.quarto.pub/my-first-dashboard/</a>)에 접속하여 구성을 살펴본다. 다음의 사항에 주목한다.</p>
+<ul>
+<li><p>내비게이션바에 서울대학교 로고가 있고, 오른쪽 맨 끝애 홈페이지 및 이메일 아이콘이 위치해 있다.</p></li>
+<li><p>대시보드가 네 개의 페이지(Intro, Graphs, Tables, Maps)로 나뉘어져 있고, 각 페이지마다 행, 열, 탭셋과 같은 레이아웃 요소들이 배치되어 있다.</p></li>
+</ul>
+<p>어떤 식으로 제작할 수 있을지 생각해 본다. 새로운 프로젝트를 생성하고 Quarto 다큐먼트를 생성한다. 아래는 해당 대시보드를 만들기 위해 사용된 코드이다. 참고하여 자신만의 대시보드를 만들어 본다. 단, 로고 및 홈페이지 주소는 반드시 자신의 것으로 수정해야 한다.</p>
+<section id="yaml-해더" class="level3" data-number="6.1"><h3 data-number="6.1" class="anchored" data-anchor-id="yaml-해더">
+<span class="header-section-number">6.1</span> YAML 해더</h3>
+<p>특히, <code>nav-buttons:</code> 옵션의 지정 형식에 주의한다. <code>scrolling</code> 옵션과 다양한 <code>theme:</code> 옵션을 시험해 본다.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"My First Dashboard"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> Your name</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  dashboard<span class="sc">:</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    embed<span class="sc">-</span>resources<span class="sc">:</span> true</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    logo<span class="sc">:</span> img<span class="sc">/</span>snu_ui_download.png</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    nav<span class="sc">-</span>buttons<span class="sc">:</span> </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> icon<span class="sc">:</span> house<span class="sc">-</span>door<span class="sc">-</span>fill</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        href<span class="sc">:</span> Your Blog Address</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        aria<span class="sc">-</span>label<span class="sc">:</span> GitHub</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      <span class="sc">-</span> icon<span class="sc">:</span> envelope</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        href<span class="sc">:</span> mailto<span class="sc">:</span>vs5345<span class="sc">@</span>snu.ac.kr</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        aria<span class="sc">-</span>label<span class="sc">:</span> Mail</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># scrolling: true</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>theme<span class="sc">:</span> default</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>editor<span class="sc">:</span> visual</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>editor_options<span class="sc">:</span> </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  chunk_output_type<span class="sc">:</span> console</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="intro-페이지" class="level3" data-number="6.2"><h3 data-number="6.2" class="anchored" data-anchor-id="intro-페이지">
+<span class="header-section-number">6.2</span> Intro 페이지</h3>
+<p>Intro라는 이름의 페이지를 설정한다.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Intro</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="첫번째-행-text-카드" class="level4" data-number="6.2.1"><h4 data-number="6.2.1" class="anchored" data-anchor-id="첫번째-행-text-카드">
+<span class="header-section-number">6.2.1</span> 첫번째 행: Text 카드</h4>
+<p>행을 설정하고 행의 상대적인 높이(10%)를 지정한다.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Row {height="12%"}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>텍스트 카드를 생성한다. 텍스트 카드를 생성하기 위해 <code>{.card}</code> 태그가 사용되어야 하며, 텍스트 카드의 제목을 지정하기 위해 <code>title=</code> 옵션이 사용되어야 함에 주의한다.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.card title<span class="ot">=</span><span class="st">"Text"</span>}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>This is my first dashboard.</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="두번째-행의-탭셋-histogram-of-gdp-per-capita-table-of-mean-values" class="level4" data-number="6.2.2"><h4 data-number="6.2.2" class="anchored" data-anchor-id="두번째-행의-탭셋-histogram-of-gdp-per-capita-table-of-mean-values">
+<span class="header-section-number">6.2.2</span> 두번째 행의 탭셋: Histogram of GDP per capita &amp; Table of Mean Values</h4>
+<p>행을 설정하고 행의 상대적인 높이(70%)를 지정한다. 탭셋을 생성하기 위해 <code>{.tabset}</code> 태그가 사용되어야 함에 주의한다.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Row {.tabset height="70%"}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>그래프 카드를 생성하기 위해 <code>ggplot2</code> 패키지를 활용한다. 그래프 카드의 제목을 지정하기 위해 <code>title=</code> 옵션이 사용되어야 함에 주의한다. 두 개의 그래프를 지난 실습에서 배웠던 <code>patchwork</code> 함수로 가로 배치하였다. 이때 산출될 플롯의 크기는 <code>fig-width</code>와 <code>fig-height</code>로 조정할 수 있다.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: "Histogram of GDP per capita"</span></span>
+<span><span class="co">#| fig-width: 20</span></span>
+<span><span class="co">#| fig-height: 6</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jennybc/gapminder">gapminder</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com">patchwork</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p1</span> <span class="op">&lt;-</span> <span class="va">gapminder</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2007</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">gdpPercap</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p2</span> <span class="op">&lt;-</span> <span class="va">gapminder</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">2007</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">gdpPercap</span>, y<span class="op">=</span><span class="va">lifeExp</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">p1</span><span class="op">|</span><span class="va">p2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>테이블 카드를 생성하기 위해 <code>knitr</code> 패키지의 <code><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable()</a></code> 함수를 활용한다. 테이블 카드의 제목을 지정하기 위해 <code>title=</code> 옵션이 사용되어야 함에 주의한다.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: "Table of Mean Values"</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://yihui.org/knitr/">knitr</a></span><span class="op">)</span></span>
+<span><span class="va">gapminder</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2007</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    GDP_percap <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">gdpPercap</span><span class="op">)</span>,</span>
+<span>    Life_Exp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">lifeExp</span><span class="op">)</span>,</span>
+<span>    Population <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">pop</span><span class="op">)</span>,</span>
+<span>    .by <span class="op">=</span> <span class="va">continent</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="세번째-행의-3개의-밸류박스" class="level4" data-number="6.2.3"><h4 data-number="6.2.3" class="anchored" data-anchor-id="세번째-행의-3개의-밸류박스">
+<span class="header-section-number">6.2.3</span> 세번째 행의 3개의 밸류박스</h4>
+<p>행을 설정하고 행의 상대적인 높이(18%)를 지정한다.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Row {height="18%"}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>첫번째 밸류박스를 생성한다. <code>#| content: valuebox</code> 옵션과 <code>#| title:</code> 옵션이 사용됨에 주의한다.</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| content: valuebox</span></span>
+<span><span class="co">#| title: "Number of Countries"</span></span>
+<span><span class="va">n_countries</span> <span class="op">&lt;-</span> <span class="va">gapminder</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">country</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  icon <span class="op">=</span> <span class="st">"asterisk"</span>,</span>
+<span>  color <span class="op">=</span> <span class="st">"primary"</span>,</span>
+<span>  value <span class="op">=</span> <span class="va">n_countries</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>두번째 밸류박스를 생성한다.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| content: valuebox</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| title: "First Year"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>first_year <span class="ot">&lt;-</span> gapminder <span class="sc">|&gt;</span> <span class="fu">distinct</span>(year) <span class="sc">|&gt;</span> <span class="fu">pull</span>() <span class="sc">|&gt;</span> <span class="fu">first</span>()</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">icon =</span> <span class="st">"airplane"</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"secondary"</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> first_year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>세번째 밸류박스를 생성한다.</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| content: valuebox</span></span>
+<span><span class="co">#| title: "Last Year"</span></span>
+<span><span class="va">last_year</span> <span class="op">&lt;-</span> <span class="va">gapminder</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/nth.html">last</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  icon <span class="op">=</span> <span class="st">"bank"</span>,</span>
+<span>  color <span class="op">=</span> <span class="st">"success"</span>,</span>
+<span>  value <span class="op">=</span> <span class="va">last_year</span></span>
+<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>더 다양한 아이콘이 궁금하다면 <a href="https://icons.getbootstrap.com/">이 웹사이트</a>를 참고할 것.</p>
+</section></section><section id="graphs-페이지" class="level3" data-number="6.3"><h3 data-number="6.3" class="anchored" data-anchor-id="graphs-페이지">
+<span class="header-section-number">6.3</span> Graphs 페이지</h3>
+<p>Graphs라는 이름의 페이지를 설정한다.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Graphs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="첫번째-행의-그래프-카드-gdp-and-life-expectancy" class="level4" data-number="6.3.1"><h4 data-number="6.3.1" class="anchored" data-anchor-id="첫번째-행의-그래프-카드-gdp-and-life-expectancy">
+<span class="header-section-number">6.3.1</span> 첫번째 행의 그래프 카드: GDP and Life Expectancy</h4>
+<p>행을 설정한다.</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>ggplot2</code> 패키지를 활용하여 그래프 카드를 생성한다.</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: GDP and Life Expectancy</span></span>
+<span><span class="va">gapminder</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2007</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">gdpPercap</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">lifeExp</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">continent</span><span class="op">)</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">continent</span>, ncol <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="두번째-행의-그래프-카드-population-life-expectancy" class="level4" data-number="6.3.2"><h4 data-number="6.3.2" class="anchored" data-anchor-id="두번째-행의-그래프-카드-population-life-expectancy">
+<span class="header-section-number">6.3.2</span> 두번째 행의 그래프 카드: Population &amp; Life Expectancy</h4>
+<p>첫번째 그래프(Population)를 위한 열을 설정한다.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### Column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>그래프 카드를 생성한다.</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: Population</span></span>
+<span><span class="va">gapminder</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span></span>
+<span>    sum_pop <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">pop</span><span class="op">)</span>,</span>
+<span>    .by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">continent</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">sum_pop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_ribbon.html">geom_area</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">continent</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Year"</span>, y <span class="op">=</span> <span class="st">"Population"</span>, fill <span class="op">=</span> <span class="st">"Continents"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>두번째 그래프(Life Expectancy)를 위한 열을 설정한다.</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### Column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>그래프 카드를 생성한다.</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: Life Expectancy</span></span>
+<span><span class="va">gapminder</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">lifeExp</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">continent</span>, group <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Year"</span>, y <span class="op">=</span> <span class="st">"Life Expectancy"</span>, color <span class="op">=</span> <span class="st">"Continents"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section><section id="tables-페이지" class="level3" data-number="6.4"><h3 data-number="6.4" class="anchored" data-anchor-id="tables-페이지">
+<span class="header-section-number">6.4</span> Tables 페이지</h3>
+<p>Tables라는 이름의 페이지를 설정한다.</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Tables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>단일 행을 설정한다.</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>DT</code> 패키지를 활용하여 테이블 카드를 생성한다.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: Lookup Table</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/DT">DT</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/DT/man/datatable.html">datatable</a></span><span class="op">(</span><span class="va">gapminder</span>, filter <span class="op">=</span> <span class="st">"top"</span>, </span>
+<span>          options <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>            pageLength <span class="op">=</span> <span class="fl">5</span>, autoWidth <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span>          <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="maps-페이지" class="level3" data-number="6.5"><h3 data-number="6.5" class="anchored" data-anchor-id="maps-페이지">
+<span class="header-section-number">6.5</span> Maps 페이지</h3>
+<p>Maps라는 이름의 페이지를 설정한다.</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Maps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>단일 행을 설정한다.</p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">## Row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>leaflet</code> 패키지를 활용하여 지도 카드를 생성한다.</p>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#| title: A Reference Map </span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/">leaflet</a></span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://rstudio.github.io/leaflet/reference/leaflet.html">leaflet</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span>  </span>
+<span>  <span class="fu"><a href="https://rstudio.github.io/leaflet/reference/map-layers.html">addTiles</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="대시보드-웹-상에-출판하기" class="level3" data-number="6.6"><h3 data-number="6.6" class="anchored" data-anchor-id="대시보드-웹-상에-출판하기">
+<span class="header-section-number">6.6</span> 대시보드 웹 상에 출판하기</h3>
+<p>블로그와 마찬가지로 다음의 절차에 따라 완성된 대시보드를 웹 상에 출판한다. 여기서는 <a href="https://posit.co/">Posit</a>에서 제공하는 무료 출판 사이트인 <a href="https://quartopub.com/">Quarto Pub</a>을 활용한다.</p>
+<ul>
+<li><p><a href="https://quartopub.com/">Quarto Pub</a>에 접속하여 계정을 만든다.</p></li>
+<li><p>RStudio에서, 왼쪽 하단부의 Terminal 탭을 누른다.</p></li>
+<li><p>프롬프트에 다음과 같이 입력하고 실행한다: quarto publish quarto-pub</p></li>
+</ul></section><section id="웹사이트-임베딩" class="level3" data-number="6.7"><h3 data-number="6.7" class="anchored" data-anchor-id="웹사이트-임베딩">
+<span class="header-section-number">6.7</span> 웹사이트 임베딩</h3>
+<p>대시보드의 컨텐츠를 직접 제작하는 방법도 있지만, 대시보드에 보다 쉽게 동적, 반응형 시각화를 실현하는 방법은 이미 동적, 반응형 시각화가 구현되어 있는 웹사이트를 대시보드에 불러오는 것이다. 이것을 임베딩(embedding)이라고 하는데, HTML의 <code>iframe</code> 태그를 사용한다.</p>
+<p>통계청의 통계놀이터(<a href="https://kosis.kr/edu/" class="uri">https://kosis.kr/edu/</a>)는 다양한 주제에 대해 동적, 반응형 시각화를 제작하여 이용자들에게 제공하고 있다. 해당 홈페이지의 [비주얼 통계]에서 “우리나라 출생아 수와 합계 출산율 변화”를 검색하면 동적, 반응형 시각화가 구현된 웹페이지(<a href="https://kosis.kr/edu/visualStats/detail.do" class="uri">https://kosis.kr/edu/visualStats/detail.do</a>)를 볼 수 있다. 아래와 같은 코드를 Quarto에 삽입하면 해당 웹페이지를 임베딩할 수 있다. <code>src=""</code> 부분만 교체하면 대부분의 웹사이트를 임베딩할 수 있다. 단, 광고가 많이 붙어 있는 웹사이트는 잘 안된다. <code>style=""</code> 부분을 적절히 수정하면 임베딩된 웹사이트의 외견을 바꿔볼 수 있다.</p>
+<pre><code>&lt;iframe src="https://kosis.kr/edu/share.do?shareID=S0500_16" 
+loading="lazy" style="width: 100%; height: 600px; border: 
+0px none;" allow="web-share; clipboard-write"&gt;&lt;/iframe&gt;</code></pre>
+<div class="card" title="KOSIS 통계놀이터">
+<iframe src="https://kosis.kr/edu/share.do?shareID=S0500_16" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</div>
+<p>Our World in Data(<a href="https://ourworldindata.org/" class="uri">https://ourworldindata.org/</a>)는 아름다운 동적, 반응형 시각화 자료를 제공하는 것으로 유명하다. 심지어 공유 버튼을 눌렀을 때 <code>&lt;/&gt; Embed</code> 라는 옵션이 나타나는데, 이것을 누르면 위와 같은 iframe 태그 내용이 그대로 나타나기 때문에 복사하여 붙이기만 하면 된다. <code>Chart</code> 탭 뿐만 아니라 <code>Table</code> 탭과 <code>Map</code> 탭도 있으니 눌러서 내용을 확인할 수 있다.</p>
+<pre><code>&lt;iframe src="https://ourworldindata.org/grapher/child-mortality?time=earliest..latest&amp;tab=chart" 
+loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write"&gt;&lt;/iframe&gt;</code></pre>
+<div class="card" title="Our World in Data">
+<iframe src="https://ourworldindata.org/grapher/child-mortality?time=earliest..latest&amp;tab=chart" loading="lazy" style="width: 100%; height: 600px; border: 0px none;" allow="web-share; clipboard-write">
+</iframe>
+</div>
+
+
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-1">새로운 Quarto 문서 생성</span>
+<span class="glightbox-desc lightbox-desc-2">Figure&nbsp;1: 새로 생성된 Quarto 문서</span>
+<span class="glightbox-desc lightbox-desc-3">Figure&nbsp;2: Quarto의 기본 구조</span>
+<span class="glightbox-desc lightbox-desc-5"><a href="https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset" class="uri">https://blog.zarathu.com/posts/2023-12-11-quarto-dashboard/#tabset</a></span>
+<span class="glightbox-desc lightbox-desc-6"><a href="https://quarto.org/docs/dashboards/" class="uri">https://quarto.org/docs/dashboards/</a></span>
+</div>
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
+
+</body></html>

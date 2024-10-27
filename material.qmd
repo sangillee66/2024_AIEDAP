@@ -1,1 +1,36 @@
+---
+title: ""
+date-modified: last-modified
+---
 
+## 사전 학습(동영상)
+
+-   YouTube 채널: AI·디지털 기반 사회과 교육 워크샵
+
+    -   [https://www.youtube.com/\@AIEDAP-social-studies](https://www.youtube.com/@AIEDAP-social-studies)
+
+-   내용 구성
+
+    -   세 가지 사이언스의 융합(강의) [{{< bi youtube size = 1.25rem color = "red" >}}](https://www.youtube.com/watch?v=pVLhGhniMjg&list=PLBhmlKluaonqAygapYjjTQD2YzC8N5CBj&index=1)
+
+    -   구글 어스 스튜디오(실습) [{{< bi youtube size = 1.25rem color = "red" >}}](https://www.youtube.com/watch?v=Z3KlpPhS7hc&list=PLBhmlKluaonqAygapYjjTQD2YzC8N5CBj&index=2&t=4s)
+
+    -   R과 Quarto(실습)
+
+        -   실습 1 [{{< bi youtube size = 1.25em color = "red" >}}](https://www.youtube.com/watch?v=JCxr_ThIg6A&list=PLBhmlKluaonqAygapYjjTQD2YzC8N5CBj&index=3&t=6s)
+
+        -   실습 2 [{{< bi youtube size = 1.25em color = "red" >}}](https://www.youtube.com/watch?v=sOkGRQbOWh0&list=PLBhmlKluaonqAygapYjjTQD2YzC8N5CBj&index=4&t=3s)
+
+        -   실습 3 [{{< bi youtube size = 1.25em color = "red" >}}](https://www.youtube.com/watch?v=Xy5BHPXrqlg&list=PLBhmlKluaonqAygapYjjTQD2YzC8N5CBj&index=5&t=2s)
+
+## 강의 자료
+
+|        Day         | 주제                                                     |                       강의 자료                       |                                              실습 자료                                               |
+|:------------------:|----------------------------------------------------------|:-----------------------------------------------------:|:----------------------------------------------------------------------------------------------------:|
+| Day 1<br> (8월5일) | AIㆍ디지털 역량과 사회 교과                              | [{{< bi filetype-html size=1.5rem >}}](lecture_1.qmd) |                           [{{< bi filetype-html size=1.5rem >}}](Day1.qmd)                           |
+| Day 2<br> (8월6일) | 데이터의 수집 및 정련화                                  | [{{< bi filetype-html size=1.5rem >}}](lecture_2.qmd) |                           [{{< bi filetype-html size=1.5rem >}}](Day2.qmd)                           |
+| Day 3<br> (8월7일) | 탐색적 데이터 분석                                       | [{{< bi filetype-html size=1.5rem >}}](lecture_3.qmd) |                           [{{< bi filetype-html size=1.5rem >}}](Day3.qmd)                           |
+| Day 4<br> (8월8일) | 고급 시각화와 교수-학습 대시보드의 설계                  | [{{< bi filetype-html size=1.5rem >}}](lecture_4.qmd) | [{{< bi filetype-html size=1.5rem >}}](Day4.qmd) [{{< bi file-earmark-zip size=1.5rem >}}](Day4.zip) |
+| Day 5<br> (8월9일) | 고급 인트렉티브 기능과 교수-학습 대시보드의 제작 및 공유 | [{{< bi filetype-html size=1.5rem >}}](lecture_5.qmd) |                                                                                                      |
+
+: {tbl-colwidths="\[14,70,8,8\]"}
